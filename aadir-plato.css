@@ -1,0 +1,378 @@
+.logo-n1-1-icon1 {
+  position: relative;
+  width: 129px;
+  height: 110px;
+  object-fit: cover;
+}
+.reservas1 {
+  position: relative;
+}
+.options-child2 {
+  position: relative;
+  border-right: 1px solid var(--white);
+  box-sizing: border-box;
+  width: 1px;
+  height: 31px;
+}
+.identificarse1 {
+  position: relative;
+  display: inline-block;
+  width: 118px;
+  flex-shrink: 0;
+}
+.options1 {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-35xl);
+}
+.bannercontent1 {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-131xl);
+}
+.banner1 {
+  align-self: stretch;
+  background-color: var(--color-gray);
+  height: 111px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-10xl) var(--padding-3xs);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: var(--font-lobster-two);
+}
+.aadir-plato1 {
+  position: absolute;
+  margin: 0 !important;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 808px;
+  height: 62px;
+  flex-shrink: 0;
+  z-index: 0;
+}
+.texto-aadir-plato {
+  border-radius: var(--br-3xs) var(--br-3xs) 0px 0px;
+  background-color: var(--color-salmon-100);
+  width: 809px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+.nombre-del-plato1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 206px;
+  height: 44px;
+  flex-shrink: 0;
+}
+.nombre-del-plato-child {
+  position: relative;
+  border-radius: var(--br-3xs);
+  background-color: var(--white);
+  width: 456px;
+  height: 27px;
+}
+.nombre-del-plato {
+  width: 805px;
+  height: 46px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 38px;
+}
+.descripcin-del-plato {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 801px;
+  height: 39px;
+  flex-shrink: 0;
+}
+.descripcion-del-plato-child {
+  position: relative;
+  border-radius: var(--br-3xs);
+  background-color: var(--white);
+  width: 652px;
+  height: 129px;
+}
+.descripcion-del-plato {
+  width: 808px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
+}
+.imagen-del-plato1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 808px;
+}
+.subir-imagen {
+  position: absolute;
+  top: 0px;
+  left: -0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 659px;
+  height: 146px;
+}
+.subir-imagen-wrapper {
+  position: relative;
+  border-radius: var(--br-3xs);
+  background-color: var(--white);
+  width: 659px;
+  height: 146px;
+  font-size: var(--font-size-17xl);
+}
+.imagen-del-plato {
+  height: 219px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-lg);
+}
+.seccin {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97px;
+  height: 44px;
+  flex-shrink: 0;
+}
+.ensaladas {
+  position: relative;
+  display: inline-block;
+  width: 66px;
+  height: 21px;
+  flex-shrink: 0;
+}
+.frame-child {
+  position: relative;
+  width: 31px;
+  height: 24px;
+  object-fit: cover;
+}
+.ensaladas-parent {
+  position: absolute;
+  top: 5.5px;
+  left: 12.5px;
+  width: 417px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 300px;
+}
+.boton-seccion {
+  position: relative;
+  border-radius: var(--br-3xs);
+  background-color: var(--white);
+  width: 444px;
+  height: 35px;
+  font-size: var(--font-size-base);
+}
+.seccion-del-plato {
+  width: 808px;
+  height: 46px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 129px;
+}
+.crear-plato {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 679px;
+  height: 29px;
+  flex-shrink: 0;
+}
+.boton-crear-plato {
+  border-radius: var(--br-3xs);
+  background-color: var(--color-salmon-100);
+  width: 735px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-9xs) 7var (--padding-9xs) 4px 0px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: var(--font-size-xl);
+  color: var(--white);
+}
+.nombre-del-plato-parent {
+  flex: 1;
+  background-color: var(--color-lightsalmon);
+  height: 697px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-11xl);
+}
+.menu-aadir-plato {
+  width: 809px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: var(--font-size-5xl);
+  color: var(--color-black);
+}
+.ejemplo {
+  width: 805px;
+  height: 760px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: var(--font-size-17xl);
+}
+.c-nombre1 {
+  margin: 0;
+}
+.c-nombre-container3 {
+  line-break: anywhere;
+  width: 100%;
+}
+.c-nombre-container2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 360px;
+  height: 92px;
+  flex-shrink: 0;
+}
+.direction1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.logo-icon1 {
+  position: relative;
+  border-radius: var(--br-12xs);
+  width: 145px;
+  height: 139px;
+  object-fit: cover;
+}
+.icon-facebook-icon1 {
+  position: relative;
+  width: 55px;
+  height: 48px;
+  object-fit: cover;
+}
+.icon-instagram-icon1 {
+  position: relative;
+  width: 55px;
+  height: 48.13px;
+  object-fit: cover;
+}
+.socialmedia1 {
+  width: 355px;
+  height: 58px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-39xl);
+}
+.logo1 {
+  width: 356px;
+  height: 215px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-21xl);
+}
+.logoandsocialmedia1 {
+  width: 350px;
+  height: 217px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.trminos-y-condiciones1 {
+  position: relative;
+  display: inline-block;
+  width: 360px;
+  height: 11px;
+  flex-shrink: 0;
+}
+.poltica-de-privacidad1 {
+  position: relative;
+  display: inline-block;
+  width: 360px;
+}
+.termsandconditions1 {
+  width: 367px;
+  height: 89px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-10xl);
+}
+.ending-pagina1 {
+  align-self: stretch;
+  background-color: var(--color-gray);
+  height: 330px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-5xs) var(--padding-8xs) var(--padding-5xs)
+    var(--padding-10xs);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-10xl);
+  font-size: var(--font-size-sm);
+}
+.aadir-plato {
+  position: relative;
+  background-color: var(--color-sandybrown-100);
+  width: 100%;
+  height: 1301px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-31xl);
+  text-align: center;
+  font-size: var(--font-size-5xl);
+  color: var(--white);
+  font-family: var(--font-lobster);
+}
