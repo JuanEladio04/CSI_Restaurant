@@ -1,14 +1,4 @@
 {
-  "locofyConfig": {
-    "project_name": "CSI",
-    "id": "652cfc2c8a85df9c63027a58",
-    "framework": "html-css",
-    "typescript": false,
-    "path": "public/",
-    "componentsPath": "c:\\Users\\isaac\\Desktop\\DAW\\DIW\\Código FIGMA PC\\src\\components",
-    "screensPath": "c:\\Users\\isaac\\Desktop\\DAW\\DIW\\Código FIGMA PC\\src\\pages",
-    "styling": "CSS",
-    "unit": "px",
-    "naming": "Kebab Case"
-  }
+    "git.ignoreLimitWarning": true,
+    "liveServer.settings.port": 5502
 }
