@@ -1,35 +1,37 @@
-<footer class="footer text-center">
-        <div class="container">
-            <div class="row">
-                <!-- Footer Location-->
-                <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h4 class="text-uppercase mb-4">Location</h4>
-                    <p class="lead mb-0">
-                        2215 John Daniel Drive
-                        <br />
-                        Clark, MO 65243
-                    </p>
-                </div>
-                <!-- Footer Social Icons-->
-                <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h4 class="text-uppercase mb-4">Around the Web</h4>
-                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i
-                            class="fab fa-fw fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i
-                            class="fab fa-fw fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
-                </div>
-                <!-- Footer About Text-->
-                <div class="col-lg-4">
-                    <h4 class="text-uppercase mb-4">About Freelancer</h4>
-                    <p class="lead mb-0">
-                        Freelance is a free to use, MIT licensed Bootstrap theme created by
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                        .
-                    </p>
+<footer class="footer text-center bg-dark">
+    <div class="container">
+        <div class="row">
+            <!--Div del centro, en el que va el logo del restaurante y los logos de las redes sociales.-->
+            <div class="col-sm-4 mx-sm-5 order-sm-2 d-flex flex-column align-items-center text-center">
+                <img src="/images/logoRestaurante.png" width="300px">
+                <div class="d-flex flex-row ">
+                    <a href="#!" class="mx-4"><i class="fa-brands fa-instagram fa-2xl" style="color: #ff7b75;"></i></a>
+                    <a href="#!" class="mx-4"><i class="fa-brands fa-x-twitter fa-2xl" style="color: #ff7b75;"></i></a>
+                    <a href="#!" class="mx-4"><i class="fa-brands fa-facebook fa-2xl"
+                            style="color: #ff7b75;"></i></i></a>
                 </div>
             </div>
+            <!--Div de la izquierda.-->
+            <div class="mx-auto order-sm-1 col-sm-4 mb-5 mb-lg-0 d-flex justify-content-center align-items-center">
+                <p class="lead mb-0">
+                    C / Nombre de calle
+                    <br>
+                    Nº 0 Datos
+                </p>
+            </div>
+            <!--Div en el que van los enlaces a Términos, avisos legales y políticas-->
+            <div class="mx-auto col-lg-4 order-sm-3 mb-sm-5 d-flex justify-content-center align-items-center">
+                <p class="lead mb-0">
+                    <a>Términos y condiciones</a>
+                    <br>
+                    <br>
+                    <a>Aviso legal</a>
+                    <br>
+                    <br>
+                    <a>Política de privacidad</a>
+                </p>
+            </div>
         </div>
-    </footer>
+    </div>
 
+</footer>
