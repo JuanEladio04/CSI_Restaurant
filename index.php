@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <div class="index1">
+    <div class="index1 text-primary">
       <div class="presentacion">
         <img class="logo-icon" alt="" src="./public/logo@2x.png" />
 
