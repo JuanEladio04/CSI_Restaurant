@@ -10166,6 +10166,33 @@ html {
   }
 }
 
+.greyBg {
+  background-color: #383838;
+}
+
+.roboto {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.lobster {
+  font-family: "Lobster", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.roundedBorder {
+  border-radius: 30px !important; /* Puedes ajustar el valor según tu preferencia */
+  width: 100%;
+}
+
+.roundedButton {
+  border-radius: 10px !important; /* Puedes ajustar el valor según tu preferencia */
+  width: 100%;
+}
+
+.rounded-checkbox {
+  width: 50px !important; /* Ancho personalizado */
+  height: 20px !important; /* Altura personalizada */
+}
+
 .divider-custom {
   margin: 1.25rem 0 1.5rem;
   width: 100%;

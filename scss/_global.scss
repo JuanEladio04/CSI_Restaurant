@@ -29,4 +29,37 @@ html {
     }
 }
 
+@mixin bordeRedondeado($radio) {
+    border-radius: $radio !important;  /* Puedes ajustar el valor según tu preferencia */
+    width: 100%;
 
+}
+
+
+
+.greyBg {
+    background-color: #383838;
+}
+
+.roboto {
+    font-family: $headings-font-family;
+}
+
+.lobster {
+    font-family: $font-family-sans-serif;
+} 
+
+.roundedBorder {
+    @include bordeRedondeado(30px);
+}
+
+.roundedButton {
+    @include bordeRedondeado(10px);
+}
+
+
+
+.rounded-checkbox {
+    width: 50px !important; /* Ancho personalizado */
+    height: 20px !important; /* Altura personalizada */
+  }

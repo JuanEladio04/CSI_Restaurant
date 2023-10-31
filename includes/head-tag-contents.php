@@ -9,7 +9,7 @@
 <!-- Favicon-->
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 <!-- Font Awesome icons (free version)-->
-<script src="https://kit.fontawesome.com/eac34a33f0.js" crossorigin="anonymous"></script>ç
+<script src="https://kit.fontawesome.com/eac34a33f0.js" crossorigin="anonymous"></script>
 <!-- Google fonts-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,5 +17,4 @@
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="css/styles.css" rel="stylesheet" />
 
-//Include Boostrap JS for interactive components
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
