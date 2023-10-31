@@ -20,9 +20,9 @@
 </head>
 
 <body>
-    <div class="index1 text-primary">
-      <div class="presentacion">
-        <img class="logo-icon" alt="" src="./public/logo@2x.png" />
+    <div class="index1 container-fluid row justify-content-around p-0 m-0">
+      <div class="presentacion col-12 text-center col-12">
+        <img class="logo-icon" alt="" src="img\logos\BigLogo.png" />
 
         <div class="socialmedia">
           <img
