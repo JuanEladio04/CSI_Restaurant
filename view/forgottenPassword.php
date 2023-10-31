@@ -1,9 +1,9 @@
-<?php include("includes/a_config.php"); ?>
+<?php include("../includes/a_config.php"); ?>
 <!DOCTYPE html>
 <html>
 
 <head>
-    <?php include("includes/head-tag-contents.php"); ?>
+    <?php include("../includes/head-tag-contents.php"); ?>
 </head>
 
 <body class="greyBg">
@@ -12,10 +12,10 @@
         <div class="col-4"></div>
         <div class="col-4 d-flex flex-column align-items-center">
 
-            <img src="/img/logos/BigLogo.png" width="300px">
+            <img src="../img/logos/BigLogo.png" width="300px">
 
 
-            <div class="container mt-5 pt-5 d-flex flex-column align-items-center">
+            <div class="container mt-5 pt-5 d-flex flex-column align-items-center p-5">
                 <div class="card bg-danger text-light roundedBorder" style="width:500px;">
                     <div class="card-header">
                         <h1 class="text-center lobster">Crear cuenta</h1>
@@ -61,7 +61,7 @@
     <br>
     <br>
 
-    <?php include("includes/footer.php"); ?>
+    <?php include("../includes/footer.php"); ?>
 
 </body>
 
