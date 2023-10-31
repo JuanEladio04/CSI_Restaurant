@@ -10179,13 +10179,18 @@ html {
 }
 
 .roundedBorder {
-  border-radius: 30px !important; /* Puedes ajustar el valor según tu preferencia */
+  border-radius: 20px !important; /* Puedes ajustar el valor según tu preferencia */
   width: 100%;
 }
 
-.roundedButton {
+.roundedInput {
   border-radius: 10px !important; /* Puedes ajustar el valor según tu preferencia */
   width: 100%;
+  font-size: 18px !important;
+}
+
+.divUserForm {
+  height: 40vh;
 }
 
 .rounded-checkbox {

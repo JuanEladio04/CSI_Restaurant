@@ -27,26 +27,26 @@
                                 <div class="row">
                                     <div class="col-sm-6 mb-3">
                                         <label for="FirstN" class="form-label">Nombre</label>
-                                        <input type="text" class="form-control" name="LastN">
+                                        <input type="text" class="roundedInput form-control" name="LastN">
                                     </div>
                                     <div class="col-sm-6">
                                         <label for="LastN" class="form-label">Apellidos</label>
-                                        <input type="text" class="form-control" name="LastN">
+                                        <input type="text" class="roundedInput form-control" name="LastN">
                                     </div>
                                 </div>
                         </div>
                         <div class="mb-3">
                             <label for="Email" class="form-label">Correo electrónico</label>
-                            <input type="Email" class="form-control" id="pwd" name="Email">
+                            <input type="Email" class="roundedInput form-control" id="pwd" name="Email">
                         </div>
 
                         <div class="col mb-3">
                             <label for="Password1" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control">
+                            <input type="password" class="roundedInput form-control">
                         </div>
                         <div class="col mb-3">
                             <label for="Passwordw" class="form-label">Confirmar contraseña</label>
-                            <input type="password" class="form-control" name="Password1">
+                            <input type="password" class="roundedInput form-control" name="Password1">
                         </div>
                         <input type="checkbox" name="mayor" value="mayorEdad" class="rounded-checkbox"> <label
                             for="mayor">Soy mayor de 18</label>
@@ -56,7 +56,7 @@
 
 
                         <div class="d-grid mt-3">
-                            <button type="button" class="btn btn-primary btn-block roundedButton roboto">Crear
+                            <button type="button" class="btn btn-primary btn-block roundedInput roboto">Crear
                                 cuenta</button>
                         </div>
                     </div>

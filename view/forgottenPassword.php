@@ -15,12 +15,12 @@
             <img src="../img/logos/BigLogo.png" width="300px">
 
 
-            <div class="container mt-5 pt-5 d-flex flex-column align-items-center">
-                <div class="card bg-danger text-light roundedBorder" style="width:500px;">
+            <div class="container mt-5 pt-5 d-flex flex-column align-items-center justify-content-center">
+                <div class="card bg-danger text-light roundedBorder divUserForm" style="width:500px;">
                     <div class="card-header">
                         <h1 class="text-center lobster">Contraseña olvidada</h1>
                     </div>
-                    <div class="card-body roboto">
+                    <div class="card-body roboto my-auto">
                         <div class="mb-3 mt-3">
                             <form action="/action_page.php">
 
@@ -28,7 +28,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="Email" class="form-label">Correo electrónico</label>
-                            <input type="Email" class="form-control" id="pwd" name="Email">
+                            <input type="Email" class="roundedInput form-control" id="pwd" name="Email">
                         </div>
 
 
@@ -43,7 +43,7 @@
                                 <a href="register.php" class="nav-link text-light">No estoy registrado</a>
                             </div>
                             <div class="col-6 text-center">
-                                <button type="button" class="btn btn-primary roundedButton roboto">Entrar</button>
+                                <button type="button" class="btn btn-primary roundedInput roboto">Entrar</Input>
                             </div>
 
                         </div>

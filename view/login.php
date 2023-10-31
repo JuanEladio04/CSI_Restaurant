@@ -28,12 +28,12 @@
                         </div>
                         <div class="mb-3">
                             <label for="Email" class="form-label">Correo electrónico</label>
-                            <input type="Email" class="form-control" id="pwd" name="Email">
+                            <input type="Email" class="roundedInput form-control" id="pwd" name="Email">
                         </div>
 
                         <div class="col mb-3">
                             <label for="Password1" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control">
+                            <input type="password" class="roundedInput form-control">
                         </div>
 
 
@@ -48,7 +48,7 @@
                                 <a href="register.php" class="nav-link text-light">No estoy registrado</a>
                             </div>
                             <div class="col-6 text-center">
-                                <button type="button" class="btn btn-primary roundedButton roboto">Entrar</button>
+                                <button type="button" class="btn btn-primary roundedInput roboto">Entrar</button>
                             </div>
 
                         </div>
