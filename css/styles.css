@@ -10185,7 +10185,6 @@ html {
 
 .roundedInput {
   border-radius: 10px !important; /* Puedes ajustar el valor según tu preferencia */
-  width: 100%;
   font-size: 18px !important;
 }
 
@@ -10196,6 +10195,11 @@ html {
 .rounded-checkbox {
   width: 50px !important; /* Ancho personalizado */
   height: 20px !important; /* Altura personalizada */
+}
+
+.gestionUser {
+  height: 80%;
+  width: 80vh;
 }
 
 .divider-custom {

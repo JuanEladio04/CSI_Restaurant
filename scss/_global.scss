@@ -31,7 +31,7 @@ html {
 
 @mixin bordeRedondeado($radio) {
     border-radius: $radio !important;  /* Puedes ajustar el valor según tu preferencia */
-    width: 100%;
+
 
 }
 
@@ -51,6 +51,7 @@ html {
 
 .roundedBorder {
     @include bordeRedondeado(20px);
+    width: 100%;
 }
 
 .roundedInput {
@@ -67,4 +68,9 @@ html {
 .rounded-checkbox {
     width: 50px !important; /* Ancho personalizado */
     height: 20px !important; /* Altura personalizada */
+  }
+
+  .gestionUser {
+    height: 80%;
+    width: 80vh;
   }

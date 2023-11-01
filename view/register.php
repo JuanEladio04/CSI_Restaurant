@@ -8,11 +8,23 @@
 
 <body class="greyBg">
 
+    <!--Creo un div row en el que meto 3 divs que ocupen un tercio del espacio cada uno. Con el fin de que el div en el que estará el cuestionario se quede en el centro.-->
+
+
     <div class="row">
         <div class="col-4"></div>
+
+        <!--Div en el que va el formulario y el contenido.-->
+
         <div class="col-4 d-flex flex-column align-items-center">
 
+
+            <!--Foto del logo del restaurante, que se queda arriba del formulario.-->
+
             <img src="../img/logos/BigLogo.png" width="300px">
+
+
+            <!--Meto el formulario en una carta, en el "header" pongo un texto para especificar el apartado.-->
 
 
             <div class="container mt-5 pt-5 d-flex flex-column align-items-center p-5">
