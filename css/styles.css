@@ -10179,12 +10179,14 @@ html {
 }
 
 .roundedBorder {
-  border-radius: 20px !important; /* Puedes ajustar el valor según tu preferencia */
+  border-radius: 20px !important;
+  /* Puedes ajustar el valor según tu preferencia */
   width: 100%;
 }
 
 .roundedInput {
-  border-radius: 10px !important; /* Puedes ajustar el valor según tu preferencia */
+  border-radius: 10px !important;
+  /* Puedes ajustar el valor según tu preferencia */
   font-size: 18px !important;
 }
 
@@ -10193,13 +10195,22 @@ html {
 }
 
 .rounded-checkbox {
-  width: 50px !important; /* Ancho personalizado */
-  height: 20px !important; /* Altura personalizada */
+  width: 50px !important;
+  /* Ancho personalizado */
+  height: 20px !important;
+  /* Altura personalizada */
 }
 
 .gestionUser {
   height: 80%;
   width: 80vh;
+}
+
+#index {
+  background-image: url(../img/backgrounds/index@3x.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .divider-custom {

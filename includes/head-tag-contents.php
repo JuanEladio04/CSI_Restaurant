@@ -7,7 +7,7 @@
 <meta name="description" content="" />
 <meta name="author" content="" />
 <!-- Favicon-->
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+<link rel="icon" type="..\img\logos\SmallLogoIcon.ico" href="..\img\logos\SmallLogoIcon.ico" />
 <!-- Font Awesome icons (free version)-->
 <script src="https://kit.fontawesome.com/eac34a33f0.js" crossorigin="anonymous"></script>
 <!-- Google fonts-->
