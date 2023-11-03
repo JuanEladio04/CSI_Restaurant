@@ -28,7 +28,7 @@
 
 
                 <div class="container mt-5 mb-5 pt-5 d-flex flex-column align-items-center p-5">
-                    <div class="card bg-danger text-light roundedBorder" style="width:500px;">
+                    <div class="card bg-danger text-light roundedBorder">
                         <div class="card-header">
                             <h1 class="text-center lobster">Crear cuenta</h1>
                         </div>
@@ -64,7 +64,7 @@
                                 for="mayor">Soy mayor de 18</label>
                             <br>
                             <input type="checkbox" name="acepto" value="Aceptar términos" class="rounded-checkbox">
-                            <label for="acepto">Acepto términos y condiciones</label>
+                            <label for="acepto">Acepto términos</label>
 
 
                             <div class="d-grid mt-3">

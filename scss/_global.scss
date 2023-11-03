@@ -52,7 +52,12 @@ html {
 
 .roundedBorder {
     @include bordeRedondeado(20px);
-    width: 100%;
+    min-width: 40vh;
+}
+
+.roundedBorderUserGestion {
+    @include bordeRedondeado(20px);
+    min-width: 60vh;
 }
 
 .roundedInput {
