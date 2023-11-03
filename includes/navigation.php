@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 <nav class="navbar navbar-expand-lg bg-dark text-uppercase fixed-top" id="mainNav">
+=======
+ <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+>>>>>>> Stashed changes
     <div class="container">
         <a class="navbar-brand" href="index.php"><img src="../img/logos/SmallLogo.png" alt="Logo" class="w-25"></a>
         <button class="navbar-toggler text-uppercase font-weight-bold text-white rounded" type="button"
