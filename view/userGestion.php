@@ -62,7 +62,7 @@
 
                             </div>
                             <div class="mb-3">
-                                <input type="text" class="roundedInput form-control" id="userName" name="userName">
+                                <input type="text" class="roundedInput form-control" id="userEmail" name="userEmail">
                             </div>
                             <div class="container d-flex justify-content-center my-2">
 
@@ -98,14 +98,14 @@
                                     <input type="password" class="roundedInput form-control" id="conAct" name="conAct">
                             </div>
                             <div class="mb-3">
-                                <p class="lobster">Contraseña actual:
+                                <p class="lobster">Contraseña nueva:
                                 <p>
-                                    <input type="password" class="roundedInput form-control" id="conAct" name="conAct">
+                                    <input type="password" class="roundedInput form-control" id="conNue" name="conNue">
                             </div>
                             <div class="mb-3">
-                                <p class="lobster">Contraseña actual:
+                                <p class="lobster">Repetir contraseña:
                                 <p>
-                                    <input type="password" class="roundedInput form-control" id="conAct" name="conAct">
+                                    <input type="password" class="roundedInput form-control" id="conNueRep" name="conNueRep">
                             </div>
                             <div class="container d-flex justify-content-center my-2">
 
