@@ -56,7 +56,7 @@
                                     <a href="register.php" class="nav-link text-light">No estoy registrado</a>
                                 </div>
                                 <div class="col-6 text-center">
-                                    <button type="button" class="btn btn-primary roundedInput roboto">Entrar</button>
+                                    <button type="button" class="btn btn-primary btn-block roundedInput roboto">Entrar</button>
                                 </div>
 
                             </div>
