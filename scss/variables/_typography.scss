@@ -34,6 +34,10 @@ $headings-font-weight: 700;
 $font-size-base: 1rem;
 $font-size-lg:                $font-size-base * 1.75;
 
+.tittle{
+    font-size: 2em;
+}
+
 .roboto {
     font-family: $headings-font-family;
 }
