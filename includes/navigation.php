@@ -7,9 +7,7 @@
             <i class="fas fa-bars fa-2x"></i>
         </button>
         <div class="container-fluid  navbar-collapse collapse col-10" id="navbarResponsive">
-
-            <ul class=" navbar-nav w-100 h-100">
-
+            <ul class=" navbar-nav w-100 h-100 lobster">
                 <li class="nav-item mx-0 mx-lg-1 w-100 h-100 text-center"><a class="nav-link p-4" 
                     href="index.php">Reserva</a></li>
                 <li class="nav-item mx-0 mx-lg-1 w-100 h-100 text-center"><a class="nav-link p-4 border-end border-start border-light" 
