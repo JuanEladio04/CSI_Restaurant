@@ -13,8 +13,12 @@
 <!-- Google fonts-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet">
-<!-- Core theme CSS (includes Bootstrap)-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Roboto:wght@100&display=swap" rel="stylesheet">
+
 <link href="../css/styles.css" rel="stylesheet" />
 	
 <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
