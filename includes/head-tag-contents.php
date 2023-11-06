@@ -16,5 +16,5 @@
 <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet">
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="../css/styles.css" rel="stylesheet" />
-
-<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+	
+<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
