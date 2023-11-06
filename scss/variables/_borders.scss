@@ -17,12 +17,13 @@ $border-radius-sm: 0.25rem;
 
 .roundedBorder {
     @include bordeRedondeado(20px);
-    min-width: 40vh;
+    min-width: 40vh !important;
 }
 
 .roundedBorderUserGestion {
     @include bordeRedondeado(20px);
-    min-width: 60vh;
+    min-width: 40vh !important;
+
 }
 
 .roundedInput {
