@@ -7,6 +7,9 @@
 </head>
 
 <body class="">
+
+<?php include("../includes/navigation.php"); ?>
+
     <div class="aboutus">
         <div class="banner7">
             <div class="bannercontent7">

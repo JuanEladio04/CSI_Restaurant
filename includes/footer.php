@@ -4,7 +4,7 @@
             <!--Div del centro, en el que va el logo del restaurante y los logos de las redes sociales.-->
             <div class="col-sm-4 order-sm-2 d-flex flex-column align-items-center text-center">
                 <img src="../img/logos/BigLogo.png" width="300px">
-                <div class="d-flex flex-row ">
+                <div class="d-flex mb-4 flex-row ">
                     <a href="#!" class="mx-4"><i class="fa-brands fa-instagram fa-2xl" style="color: #ff7b75;"></i></a>
                     <a href="#!" class="mx-4"><i class="fa-brands fa-x-twitter fa-2xl" style="color: #ff7b75;"></i></a>
                     <a href="#!" class="mx-4"><i class="fa-brands fa-facebook fa-2xl"
