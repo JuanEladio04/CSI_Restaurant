@@ -1,4 +1,34 @@
 @charset "UTF-8";
+.tittle {
+  font-size: 2em;
+}
+
+.roboto {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.lobster {
+  font-family: "Lobster", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.roundedBorder {
+  border-radius: 20px !important;
+  /* Puedes ajustar el valor según tu preferencia */
+  min-width: 40vh;
+}
+
+.roundedBorderUserGestion {
+  border-radius: 20px !important;
+  /* Puedes ajustar el valor según tu preferencia */
+  min-width: 60vh;
+}
+
+.roundedInput {
+  border-radius: 10px !important;
+  /* Puedes ajustar el valor según tu preferencia */
+  font-size: 18px !important;
+}
+
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -10170,32 +10200,6 @@ html {
   background-color: #383838;
 }
 
-.roboto {
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-.lobster {
-  font-family: "Lobster", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-.roundedBorder {
-  border-radius: 20px !important;
-  /* Puedes ajustar el valor según tu preferencia */
-  min-width: 40vh;
-}
-
-.roundedBorderUserGestion {
-  border-radius: 20px !important;
-  /* Puedes ajustar el valor según tu preferencia */
-  min-width: 60vh;
-}
-
-.roundedInput {
-  border-radius: 10px !important;
-  /* Puedes ajustar el valor según tu preferencia */
-  font-size: 18px !important;
-}
-
 .divUserForm {
   height: 40vh;
 }
@@ -10212,7 +10216,7 @@ html {
   width: 80vh;
 }
 
-#index {
+#background-index {
   background-image: url(../img/backgrounds/index@3x.png);
   background-attachment: fixed;
   background-size: cover;
