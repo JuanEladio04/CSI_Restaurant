@@ -8,6 +8,7 @@
     font-family: $headings-font-family;
     font-weight: $headings-font-weight;
 
+    
     .navbar-brand {
         color: $white;
     }
@@ -33,11 +34,21 @@
                 }
             }
         }
+
+        li:hover{
+            background-color: $danger;
+
+        }
+
+        #invisible{
+            visibility:hidden;
+        }
     }
 
     .navbar-toggler {
         font-size: 80%;
         padding: 0.8rem;
+        visibility: hidden;
     }
 }
 
