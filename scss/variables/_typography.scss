@@ -33,3 +33,11 @@ sans-serif,
 $headings-font-weight: 700;
 $font-size-base: 1rem;
 $font-size-lg:                $font-size-base * 1.75;
+
+.roboto {
+    font-family: $headings-font-family;
+}
+
+.lobster {
+    font-family: $font-family-sans-serif;
+}

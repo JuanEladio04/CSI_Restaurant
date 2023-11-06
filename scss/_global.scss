@@ -29,47 +29,16 @@ html {
     }
 }
 
-@mixin bordeRedondeado($radio) {
-    border-radius: $radio !important;
-    /* Puedes ajustar el valor según tu preferencia */
-
-
-}
-
 
 
 .greyBg {
     background-color: #383838;
 }
 
-.roboto {
-    font-family: $headings-font-family;
-}
-
-.lobster {
-    font-family: $font-family-sans-serif;
-}
-
-.roundedBorder {
-    @include bordeRedondeado(20px);
-    min-width: 40vh;
-}
-
-.roundedBorderUserGestion {
-    @include bordeRedondeado(20px);
-    min-width: 60vh;
-}
-
-.roundedInput {
-    @include bordeRedondeado(10px);
-    font-size: 18px !important;
-}
 
 .divUserForm {
     height: 40vh;
 }
-
-
 
 .rounded-checkbox {
     width: 50px !important;

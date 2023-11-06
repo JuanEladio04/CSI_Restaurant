@@ -6,3 +6,26 @@ $border-width: 0.125rem;
 $border-radius: 0rem;
 $border-radius-lg: 0.75rem;
 $border-radius-sm: 0.25rem;
+
+
+@mixin bordeRedondeado($radio) {
+    border-radius: $radio !important;
+    /* Puedes ajustar el valor según tu preferencia */
+
+
+}
+
+.roundedBorder {
+    @include bordeRedondeado(20px);
+    min-width: 40vh;
+}
+
+.roundedBorderUserGestion {
+    @include bordeRedondeado(20px);
+    min-width: 60vh;
+}
+
+.roundedInput {
+    @include bordeRedondeado(10px);
+    font-size: 18px !important;
+}
