@@ -1,6 +1,6 @@
 <footer class="footer container-fluid text-center bg-dark">
     <div class="container-fluid">
-        <div class="row container-fluid">
+        <div class="row container-fluid ">
             <!--Div del centro, en el que va el logo del restaurante y los logos de las redes sociales.-->
             <div class="col-sm-4 order-sm-2 d-flex flex-column align-items-center text-center">
                 <img src="../img/logos/BigLogo.png"  class="imgFooter">

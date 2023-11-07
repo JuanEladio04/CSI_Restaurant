@@ -1,40 +1,40 @@
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top p-0 m-0" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
 
-        <div class="container-fluid p-0 m-0">
-            <div class="col-1 p-0">
+        <div class="container-fluid contenido">
+            <div class="col-1 todo">
                 <a class="navbar-brand" href="../index.php"><img src="../img/logos/SmallLogo.png" alt="Logo"></a>
             </div>
 
-            <button class="navbar-toggler text-uppercase font-weight-bold text-white rounded" type="button"
-                data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
-                aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler text-uppercase font-weight-bold text-white rounded" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+                    aria-expanded="false" aria-label="Toggle navigation">
 
-                <span class="navbar-toggler-icon "></span>
+                    <span class="navbar-toggler-icon "></span>
 
-            </button>
+                </button>
 
-            <div class="container-fluid  navbar-collapse collapse col-10 m-0 p-0 h-100" id="navbarResponsive">
+            <div class="navbar-collapse collapse col-10 todo" id="navbarResponsive">
 
-                <ul class=" navbar-nav w-100 h-100 lobster m-0">
+                <ul class="navbar-nav w-100 lobster menu">
 
                     <li
                         class="nav-item  w-100 h-100 text-center  ">
-                        <a class="nav-link p-4 " href="index.php">Reserva</a></li>
+                        <a class="nav-link " href="index.php">Reserva</a></li>
 
                     <li class="nav-item  w-100 h-100 text-center "><a
-                            class="nav-link p-4 " href="about.php">Carta</a></li>
+                            class="nav-link" href="about.php">Carta</a></li>
 
                     <li class="nav-item  w-100 h-100 text-center "><a
-                            class="nav-link p-4" href="contact.php">Sobre<span id="invisible">_</span>Nosotros</a></li>
+                            class="nav-link" href="contact.php">Sobre<span id="invisible">_</span>Nosotros</a></li>
 
                     <li class="nav-item  w-100 h-100 text-center "><a
-                            class="nav-link p-4 " href="contact.php">Ofertas</a></li>
+                            class="nav-link" href="contact.php">Ofertas</a></li>
 
                     <li class="nav-item  w-100 h-100 text-center "><a
-                            class="nav-link p-4 " href="contact.php">Opiniones</a></li>
+                            class="nav-link" href="../view/feedback.php">Opiniones</a></li>
 
                     <li class="nav-item  w-100 h-100 text-center  "><a
-                            class="nav-link p-4 " href="../view/login.php">Identificarse</a></li>
+                            class="nav-link " href="../view/login.php">Identificarse</a></li>
 
                 </ul>
 
