@@ -2,7 +2,7 @@
 	switch ($_SERVER["SCRIPT_NAME"]) {
 		case "/index.php":
 			$CURRENT_PAGE = "index"; 
-			$PAGE_TITLE = "Portfolio";
+			$PAGE_TITLE = "Ristorante Luna della Rossa";
 			break;
 		case "/about.php":
 			$CURRENT_PAGE = "About"; 
