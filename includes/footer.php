@@ -3,7 +3,7 @@
         <div class="row container-fluid">
             <!--Div del centro, en el que va el logo del restaurante y los logos de las redes sociales.-->
             <div class="col-sm-4 order-sm-2 d-flex flex-column align-items-center text-center">
-                <img src="../img/logos/BigLogo.png" width="300px">
+                <img src="../img/logos/BigLogo.png"  class="imgFooter">
                 <div class="d-flex mb-4 flex-row ">
                     <a href="#!" class="mx-4"><i class="fa-brands fa-instagram fa-2xl" style="color: #ff7b75;"></i></a>
                     <a href="#!" class="mx-4"><i class="fa-brands fa-x-twitter fa-2xl" style="color: #ff7b75;"></i></a>
@@ -20,7 +20,7 @@
                 </p>
             </div>
             <!--Div en el que van los enlaces a Términos, avisos legales y políticas-->
-            <div class="mx-auto col-lg-4 order-sm-3 mb-sm-5 d-flex justify-content-center align-items-center">
+            <div class="mx-auto col-sm-4 order-sm-3 mb-sm-5 d-flex justify-content-center align-items-center">
                 <p class="lead mb-0">
                     <a>Términos y condiciones</a>
                     <br>

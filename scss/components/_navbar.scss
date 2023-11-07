@@ -7,32 +7,17 @@
     padding-bottom: 1rem;
     font-family: $headings-font-family;
     font-weight: $headings-font-weight;
-
+    font-size: 1.43em;
     
-    .navbar-brand {
-        color: $white;
+    .navbar-brand  img{
+        width: 100%;
     }
 
     .navbar-nav {
         margin-top: 1rem;
 
         li.nav-item {
-            a.nav-link a.dropdown-item {
-                color: $white;
-
-                &:hover {
-                    color: $primary;
-                }
-
-                &:active,
-                &:focus {
-                    color: $white;
-                }
-
-                &.active {
-                    color: $primary;
-                }
-            }
+            letter-spacing: 1px;
         }
 
         li:hover{
@@ -48,9 +33,13 @@
     .navbar-toggler {
         font-size: 80%;
         padding: 0.8rem;
-        visibility: hidden;
+    }
+
+    .navbar-toggler li:hover{
+        background-color: $danger;
     }
 }
+
 
 
 @include media-breakpoint-up(lg) {
@@ -59,9 +48,11 @@
         padding-bottom: 1.5rem;
         transition: padding-top 0.3s, padding-bottom 0.3s;
 
-        .navbar-brand {
-            font-size: 1.75em;
-            transition: font-size 0.3s;
+        .navbar-brand img{
+            // font-size: 1.75em;
+            // transition: font-size 0.3s;
+            width: 60%;
+
         }
 
         .navbar-nav {
