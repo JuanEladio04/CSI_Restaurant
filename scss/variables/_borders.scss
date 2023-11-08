@@ -30,3 +30,8 @@ $border-radius-sm: 0.25rem;
     @include bordeRedondeado(10px);
     font-size: 18px !important;
 }
+
+.roundedButton {
+    @include bordeRedondeado(5px);
+    min-width: 40vh !important;
+}
