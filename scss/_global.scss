@@ -53,7 +53,7 @@ html {
 }
 
 .imgFooter{
-    width: 100%;
+    width: 25vh;
 }
 
 //backgrounds
@@ -68,6 +68,13 @@ html {
     background-image: url(../img/backgrounds/feedback.png);
     background-attachment: fixed;
     background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#background-userGestion{
+    background-image: url(../img/backgrounds/userGestion.jpg);
+    background-attachment: fixed;
+    background-size: cover; 
     background-repeat: no-repeat;
 }
 
