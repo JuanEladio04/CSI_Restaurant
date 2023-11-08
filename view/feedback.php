@@ -40,30 +40,152 @@
                 </div>
                 <div class="comentarybox">
                     <div class="comment1">
-                        <div class="arriba">
-                            <img class="vector-icon" alt="" src="./public/undefined20.png" />
+                        <div class="arriba p-3">
+                            <img class="vector-icon img-user rounded" alt=""
+                                src="../img/stockImages/defaultUserImage.png" />
 
-                            <div class="username">Username</div>
+                            <div class="username lobster">Nombre de Usuario</div>
+
                             <div class="stars">
-                                <img class="estrella-3-selecionada" alt="" src="./public/undefined21.png" />
+                                <i class="fa-solid fa-2x fa-star mx-auto text-danger"></i>
 
-                                <img class="estrella-3-selecionada" alt="" src="./public/undefined22.png" />
+                                <i class="fa-solid fa-2x fa-star mx-auto text-danger"></i>
 
-                                <img class="estrella-3-selecionada" alt="" src="./public/undefined23.png" />
+                                <i class="fa-solid fa-2x fa-star mx-auto text-danger"></i>
 
-                                <img class="estrella-3-selecionada" alt="" src="./public/undefined24.png" />
+                                <i class="fa-solid fa-2x fa-star text-danger"></i>
 
-                                <img class="estrella-3-selecionada" alt="" src="./public/undefined25.png" />
+                                <i class="fa-solid fa-2x fa-star text-danger"></i>
+
+                                <i class="fa-solid fa-2x fa-star text-danger"></i>
+
+                                <i class="fa-regular fa-2x fa-star text-danger"></i>
                             </div>
                         </div>
                         <div class="rectangle-parent7">
                             <div class="frame-child14"></div>
-                            <div class="escriba-su-comentario">Escriba su comentario</div>
+                            <div class="form-group shadow-textarea">
+                                <label class="roboto" id="label">Escriba su comentario:</label>
+                                <textarea class="form-control z-depth-1" id="textarea" rows="5"
+                                    placeholder=""></textarea>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="opinionUsuario">
+                    <div class="tittle">
+                        <div class="partes-texto2">
+                            <div class="deja-tu-opinion">Opiniones de Nuestros Clientes</div>
+                        </div>
+                    </div>
+                    <div class="opinionesclientes">
+                        <div class="frame-interior">
+                            <div class="comentarybox1">
+                                <div class="comment11">
+                                    <div class="arriba1">
+                                        <img class="vector-icon1 rounded" alt="user" src="./public/undefined26.png" />
+                                        <div class="username1">Username</div>
+                                        <div class="stars1">
+                                            <img class="estrella-3-selecionada" alt="" src="./public/undefined27.png" />
 
+                                            <img class="estrella-3-selecionada" alt="" src="./public/undefined28.png" />
+
+                                            <img class="estrella-3-selecionada" alt="" src="./public/undefined29.png" />
+
+                                            <img class="estrella-3-selecionada" alt="" src="./public/undefined30.png" />
+
+                                            <img class="estrella-3-selecionada" alt="" src="./public/undefined31.png" />
+                                        </div>
+                                    </div>
+                                    <div class="lorem-ipsum-es-container">
+                                        Lorem Ipsum es simplemente el texto de relleno de las
+                                        imprentas y archivos de texto. Lorem Ipsum ha sido el texto de
+                                        relleno estándar de las industrias desde el año 1500, cuando
+                                        <span class="span"> </span>un impresor (N. del T. persona que
+                                        se dedica a la imprenta) desconocido usó una galería de textos
+                                        y los mezcló de tal manera que logró hacer un libro de textos
+                                        especimen. No sólo sobrevivió 500 años, sino que tambien
+                                        ingresó como texto de relleno en documentos electrónicos,
+                                        quedando esencialmente igual al original. Fue popularizado en
+                                        los 60s con la creación de las hojas "Letraset", las cuales
+                                        contenian pasajes de Lorem Ipsum, y más recientemente con
+                                        software de autoedición, como por ejemplo Aldus PageMaker, el
+                                        cual incluye versiones de Lorem Ipsum.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comentarybox2">
+                                <div class="comment12">
+                                    <div class="arriba1">
+                                        <img class="vector-icon1" alt="" src="./public/undefined26.png" />
+
+                                        <div class="username1">Username</div>
+                                        <div class="stars1">
+                                            <img class="estrella-3-selecionada" alt="" src="./public/undefined27.png" />
+
+                                            <img class="estrella-3-selecionada" alt="" src="./public/undefined28.png" />
+
+                                            <img class="estrella-3-selecionada" alt="" src="./public/undefined29.png" />
+
+                                            <img class="estrella-3-selecionada" alt="" src="./public/undefined30.png" />
+
+                                            <img class="estrella-3-selecionada" alt="" src="./public/undefined31.png" />
+                                        </div>
+                                    </div>
+                                    <div class="lorem-ipsum-es-container">
+                                        Lorem Ipsum es simplemente el texto de relleno de las
+                                        imprentas y archivos de texto. Lorem Ipsum ha sido el texto de
+                                        relleno estándar de las industrias desde el año 1500, cuando
+                                        <span class="span"> </span>un impresor (N. del T. persona que
+                                        se dedica a la imprenta) desconocido usó una galería de textos
+                                        y los mezcló de tal manera que logró hacer un libro de textos
+                                        especimen. No sólo sobrevivió 500 años, sino que tambien
+                                        ingresó como texto de relleno en documentos electrónicos,
+                                        quedando esencialmente igual al original. Fue popularizado en
+                                        los 60s con la creación de las hojas "Letraset", las cuales
+                                        contenian pasajes de Lorem Ipsum, y más recientemente con
+                                        software de autoedición, como por ejemplo Aldus PageMaker, el
+                                        cual incluye versiones de Lorem Ipsum.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comentarybox3">
+                                <div class="comment13">
+                                    <div class="arriba1">
+                                        <img class="vector-icon1" alt="" src="./public/undefined26.png" />
+
+                                        <div class="username1">Username</div>
+                                        <div class="stars1">
+                                            <img class="estrella-3-selecionada" alt="" src="./public/undefined32.png" />
+
+                                            <img class="estrella-3-selecionada" alt="" src="./public/undefined33.png" />
+
+                                            <img class="estrella-3-selecionada" alt="" src="./public/undefined34.png" />
+
+                                            <img class="estrella-3-selecionada" alt="" src="./public/undefined35.png" />
+
+                                            <img class="estrella-3-selecionada" alt="" src="./public/undefined36.png" />
+                                        </div>
+                                    </div>
+                                    <div class="lorem-ipsum-es-container2">
+                                        Lorem Ipsum es simplemente el texto de relleno de las
+                                        imprentas y archivos de texto. Lorem Ipsum ha sido el texto de
+                                        relleno estándar de las industrias desde el año 1500, cuando
+                                        <span class="span"> </span>un impresor (N. del T. persona que
+                                        se dedica a la imprenta) desconocido usó una galería de textos
+                                        y los mezcló de tal manera que logró hacer un libro de textos
+                                        especimen. No sólo sobrevivió 500 años, sino que tambien
+                                        ingresó como texto de relleno en documentos electrónicos,
+                                        quedando esencialmente igual al original. Fue popularizado en
+                                        los 60s con la creación de las hojas "Letraset", las cuales
+                                        contenian pasajes de Lorem Ipsum, y más recientemente con
+                                        software de autoedición, como por ejemplo Aldus PageMaker, el
+                                        cual incluye versiones de Lorem Ipsum.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

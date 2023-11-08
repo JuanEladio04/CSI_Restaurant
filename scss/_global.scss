@@ -52,35 +52,35 @@ html {
     width: 80vh;
 }
 
-.imgFooter{
+.imgFooter {
     width: 25vh;
 }
 
 // PAGINA OPINIONES 
 
-.crearOpiniones{
- margin: 0px;
- padding: 0px;
- width: 100%;
+.crearOpiniones {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
 }
 
-.titulo{
+.titulo {
     margin-top: 10%;
     padding: 1% 0% 2% 0%;
     display: block;
     text-align: center;
-    background-color: $info ;
+    background-color: $info;
     color: $light;
     letter-spacing: 3px;
 }
 
-.contenedor{
+.contenedor {
     width: 100%;
     margin: 0;
     padding: 0;
 }
 
-.texto{
+.texto {
     background-color: $primary;
     width: 100%;
     margin: 0;
@@ -94,15 +94,15 @@ html {
     flex-shrink: 0;
     font-size: 4em;
     margin-bottom: 5%;
-  }
+}
 
-  .en-nuestro-restaurante {
+.en-nuestro-restaurante {
     display: block;
     width: 100%;
     font-size: 2em;
-  }
+}
 
-  .en-nuestro-restaurante-container {
+.en-nuestro-restaurante-container {
     align-self: stretch;
     position: relative;
     font-size: var(--font-size-5xl);
@@ -113,7 +113,37 @@ html {
     flex-shrink: 0;
     padding-bottom: 0.5%;
     border-bottom: 2px solid $light;
-  }
+}
+
+.arriba {
+    display: flex;
+    justify-content: left;
+}
+
+.img-user {
+    width: 3%;
+}
+
+.username {
+    margin: 0% 1%;
+    font-size: 2em;
+    white-space: nowrap;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+}
+
+#label{
+    font-size: 2em;
+}
+
+#textarea{
+    resize: none;
+    border-radius: 10px;
+    font-size: 1.5em;
+}
 
 //BACKGROUNDS
 #background-index {
@@ -123,17 +153,16 @@ html {
     background-repeat: no-repeat;
 }
 
-#opinion{
+#opinion {
     background-image: url(../img/backgrounds/feedback.png);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-#background-userGestion{
+#background-userGestion {
     background-image: url(../img/backgrounds/userGestion.jpg);
     background-attachment: fixed;
-    background-size: cover; 
+    background-size: cover;
     background-repeat: no-repeat;
 }
-
