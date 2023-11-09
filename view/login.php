@@ -26,7 +26,7 @@
 
                 <!--Meto el formulario en una carta, en el "header" pongo un texto para especificar el apartado.-->
                 <div class="container mt-5 mb-5 pt-5 d-flex flex-column align-items-center">
-                    <div class="card bg-danger text-light roundedBorder">
+                    <div class="card bg-danger text-light roundedBorder divLoginForm">
                         <div class="card-header">
                             <h1 class="text-center lobster">Identificarse</h1>
                         </div>
