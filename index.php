@@ -40,9 +40,9 @@
           </div>
 
           <div class="prev card bg-danger roundedBorder text-center text-light">
-            <img src="img\stockImages\index\ofertImg.jpg" class="card-img-top roundedBorder" alt="reseravs">
-            <div class="card-body">
-              <h5 class="card-title lobster">Ofertas</h5>
+            <img src="img\stockImages\index\ofertImg.jpg" class="card-img-top roundedBorder mt-auto" alt="reseravs">
+            <div class="card-body container-fluid bg-danger roundedBorder">
+              <h5 class="card-title lobster bg-danger container-fluid">Ofertas</h5>
               <p class="card-text roboto">¡Mira nuestras ofertas diarias y semanales! Hazle un favor a tu bolsillo.</p>
               <a href="#" class="btn btn-primary">Reserva ahora</a>
             </div>
@@ -50,17 +50,17 @@
 
           <div class="selected card bg-danger roundedBorder text-center text-light">
             <img src="img\stockImages\index\ofertImg.jpg" class="card-img-top roundedBorder" alt="reseravs">
-            <div class="card-body">
-              <h5 class="card-title lobster">Ofertas</h5>
-              <p class="card-text roboto">¡Mira nuestras ofertas diarias y semanales! Hazle un favor a tu bolsillo.</p>
-              <a href="#" class="btn btn-primary">Reserva ahora</a>
+            <div class="card-body container-fluid bg-danger roundedBorder">
+              <h5 class="card-title lobster">Carta</h5>
+              <p class="card-text roboto">Comprueba toda una carta llena de platos variados para todo tipo de personas y estómagos</p>
+              <a href="#" class="btn btn-primary">Muéstrame</a>
             </div>
           </div>
 
           <div class="next card bg-danger roundedBorder text-center text-light">
             <img src="img\stockImages\index\ofertImg.jpg" class="card-img-top roundedBorder" alt="reseravs">
-            <div class="card-body">
-              <h5 class="card-title lobster">Ofertas</h5>
+            <div class="card-body container-fluid bg-danger roundedBorder">
+              <h5 class="card-title lobster">Reserva</h5>
               <p class="card-text roboto">¡Mira nuestras ofertas diarias y semanales! Hazle un favor a tu bolsillo.</p>
               <a href="#" class="btn btn-primary">Reserva ahora</a>
             </div>
@@ -87,23 +87,25 @@
           </button>
         </div>
       </div>
-      <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+      <script src='js/personalCarouselJQuery.js'></script>
       <script src="js/personalCarousel.js"></script>
 
       <!--About us-->
-      <div class="bg-secondary row p-5 my-5">
-        <div class="col-12 tittle text-light">Sobre nosotros</div>
-        <div class="col-12 roboto text-light">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum
-        </div>
-        <div class="align-items-right col-12">
-          <button type="button" class="btn btn-danger col-3" onclick="location.href='view/about-us.php'">Opina</button>
+      <div class="bg-secondary row p-5 my-5 container-fluid">
+        <div class="row m-0 p-0">
+          <div class="col-12 tittle text-light">Sobre nosotros</div>
+          <div class="col-12 roboto text-light">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum
+          </div>
+          <div class="align-items-right col-12">
+            <button type="button" class="btn btn-danger col-3" onclick="location.href='view/about-us.php'">Opina</button>
+          </div>
         </div>
       </div>
 

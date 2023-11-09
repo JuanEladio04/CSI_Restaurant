@@ -26,9 +26,9 @@
 
         }
 
-        #invisible{
-            visibility:hidden;
-        }
+        // #invisible{
+        //     visibility:hidden;
+        // }
     }
 
     .navbar-toggler {
@@ -43,7 +43,7 @@
 
 
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(sm) {
     #mainNav {
         // padding-top: 1.5rem;
         // padding-bottom: 1.5rem;
@@ -100,3 +100,4 @@
         }
     }
 }
+
