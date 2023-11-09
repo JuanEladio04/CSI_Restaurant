@@ -16,6 +16,10 @@ switch ($_SERVER["SCRIPT_NAME"]) {
 		$CURRENT_PAGE = "userGestion";
 		$PAGE_TITLE = "Cuenta de usuario";
 		break;
+	case "/view/aboutUs.php":
+		$CURRENT_PAGE = "aboutUs";
+		$PAGE_TITLE = "Sobre nosotros";
+		break;
 	default:
 		$CURRENT_PAGE = "Index";
 		$PAGE_TITLE = "Welcome to my homepage!";
