@@ -6,7 +6,7 @@
     <?php include("../includes/head-tag-contents.php"); ?>
 </head>
 
-<body class="greyBg">
+<body class="bg-dark" id="background-<?php echo $CURRENT_PAGE;?>">
 
     <!--Creo un div row en el que meto 3 divs que ocupen un tercio del espacio cada uno. Con el fin de que el div en el que estará el cuestionario se quede en el centro.-->
 
@@ -21,7 +21,7 @@
 
                 <!--Foto del logo del restaurante, que se queda arriba del formulario.-->
 
-                <img src="../img/logos/BigLogo.png" width="300px">
+                <a href="../index.php"><img src="../img/logos/BigLogo.png" width="300px"></a>
 
 
                 <!--Meto el formulario en una carta, en el "header" pongo un texto para especificar el apartado.-->

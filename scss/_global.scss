@@ -35,6 +35,10 @@ html {
     background-color: #383838;
 }
 
+.inputForgottenPass {
+    width: 50vh;
+}
+
 
 .divUserForm {
     height: auto;
@@ -68,6 +72,10 @@ html {
  margin: 0px;
  padding: 0px;
  width: 100%;
+}
+
+.textoNoWrap {
+    white-space: nowrap;
 }
 
 .titulo{
@@ -138,6 +146,25 @@ html {
 
 #background-userGestion{
     background-image: url(../img/backgrounds/userGestion.jpg);
+    background-attachment: fixed;
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+
+#background-login{
+    background-image: url(../img/backgrounds/tableDraw.jpg);
+    background-attachment: fixed;
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+#background-register{
+    background-image: url(../img/backgrounds/tableDraw.jpg);
+    background-attachment: fixed;
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+#background-forgottenPassword{
+    background-image: url(../img/backgrounds/tableDraw.jpg);
     background-attachment: fixed;
     background-size: cover; 
     background-repeat: no-repeat;
