@@ -27,7 +27,7 @@
                 <!--Meto el formulario en una carta, en el "header" pongo un texto para especificar el apartado.-->
 
                 <div class="container mt-5 mb-5 pt-5 d-flex flex-column align-items-center justify-content-center">
-                    <div class="card bg-danger text-light roundedBorder divUserForm ">
+                    <div class="card bg-danger text-light roundedBorder col-lg-12 col-sm-6 ">
                         <div class="card-header">
                             <h1 class="text-center lobster">Contraseña olvidada</h1>
                         </div>
@@ -55,8 +55,8 @@
                                 <div class="col-6">
                                 <a href="register.php" class="nav-link text-light">No estoy registrado</a>
                                 </div>
-                                <div class="col-6 text-center">
-                                    <button type="button" class="btn btn-primary btn-block roundedInput roboto">Enviar correo </Input>
+                                <div class="col-6 text-center d-flex justify-content-end">
+                                    <button type="button" class="btn btn-primary px-3 roundedInput roboto">Enviar correo </Input>
                                 </div>
 
                             </div>

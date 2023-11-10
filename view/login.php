@@ -6,7 +6,7 @@
     <?php include("../includes/head-tag-contents.php"); ?>
 </head>
 
-<body class="bg-dark" id="background-<?php echo $CURRENT_PAGE;?>">
+<body class="bg-dark" id="background-<?php echo $CURRENT_PAGE; ?>">
 
 
     <!--Creo un div row en el que meto 3 divs que ocupen un tercio del espacio cada uno. Con el fin de que el div en el que estará el cuestionario se quede en el centro.-->
@@ -26,7 +26,7 @@
 
                 <!--Meto el formulario en una carta, en el "header" pongo un texto para especificar el apartado.-->
                 <div class="container mt-5 mb-5 pt-5 d-flex flex-column align-items-center">
-                    <div class="card bg-danger text-light roundedBorder divLoginForm">
+                    <div class="card bg-danger text-light roundedBorder col-lg-12 col-sm-6">
                         <div class="card-header">
                             <h1 class="text-center lobster">Identificarse</h1>
                         </div>
@@ -52,18 +52,21 @@
                         <div class="card-footer text-start">
                             <a href="forgottenPassword.php" class="nav-link text-light">Contraseña olvidada</a>
                             <div class="row">
-                                <div class="col-6">
-                                    <a href="register.php" class="nav-link text-light textoNoWrap">No estoy registrado</a>
+                                <div class="col-4">
+                                    <a href="register.php" class="nav-link text-light textoNoWrap">No estoy
+                                        registrado</a>
                                 </div>
-                                <div class="col-6 text-center">
-                                    <button type="button" class="btn btn-primary btn-block roundedInput roboto">Entrar</button>
+                                <div class="col-8 text-center d-flex justify-content-end">
+                                    <button type="button"
+                                        class="btn btn-primary px-5 roundedInput roboto">Entrar</button>
                                 </div>
 
+                                </form>
                             </div>
 
                         </div>
 
-                        </form>
+
                     </div>
 
                 </div>
