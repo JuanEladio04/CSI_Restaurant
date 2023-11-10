@@ -6,7 +6,7 @@
     <?php include("../includes/head-tag-contents.php"); ?>
 </head>
 
-<body class="greyBg">
+<body class="bg-dark" id="background-<?php echo $CURRENT_PAGE;?>">
 
 
     <!--Creo un div row en el que meto 3 divs que ocupen un tercio del espacio cada uno. Con el fin de que el div en el que estará el cuestionario se quede en el centro.-->
@@ -20,7 +20,7 @@
 
                 <!--Foto del logo del restaurante, que se queda arriba del formulario.-->
 
-                <img src="../img/logos/BigLogo.png" width="300px">
+                <a href="../index.php"><img src="../img/logos/BigLogo.png" width="300px"></a>
 
 
 
@@ -53,7 +53,7 @@
                             <a href="forgottenPassword.php" class="nav-link text-light">Contraseña olvidada</a>
                             <div class="row">
                                 <div class="col-6">
-                                    <a href="register.php" class="nav-link text-light">No estoy registrado</a>
+                                    <a href="register.php" class="nav-link text-light textoNoWrap">No estoy registrado</a>
                                 </div>
                                 <div class="col-6 text-center">
                                     <button type="button" class="btn btn-primary btn-block roundedInput roboto">Entrar</button>

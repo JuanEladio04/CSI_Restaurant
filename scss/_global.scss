@@ -35,6 +35,10 @@ html {
     background-color: #383838;
 }
 
+.inputForgottenPass {
+    width: 50vh;
+}
+
 
 .divUserForm {
     height: auto;
@@ -68,6 +72,10 @@ html {
  margin: 0px;
  padding: 0px;
  width: 100%;
+}
+
+.textoNoWrap {
+    white-space: nowrap;
 }
 
 .titulo{
@@ -144,9 +152,30 @@ html {
     background-repeat: no-repeat;
 }
 
+<<<<<<< HEAD
+#background-login{
+    background-image: url(../img/backgrounds/tableDraw.jpg);
+=======
 #background-aboutUs{
     background-image: url(../img/backgrounds/backGround02.jpg);
+>>>>>>> 40806a41baa827af242900f2d0e2657fb88624c4
     background-attachment: fixed;
     background-size: cover; 
     background-repeat: no-repeat;
 }
+<<<<<<< HEAD
+#background-register{
+    background-image: url(../img/backgrounds/tableDraw.jpg);
+    background-attachment: fixed;
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+#background-forgottenPassword{
+    background-image: url(../img/backgrounds/tableDraw.jpg);
+    background-attachment: fixed;
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+
+=======
+>>>>>>> 40806a41baa827af242900f2d0e2657fb88624c4
