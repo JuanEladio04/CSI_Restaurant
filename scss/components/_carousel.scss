@@ -15,7 +15,7 @@ html, body, main {
   div {
     position: absolute;
     transition: transform 1s, left 1s, opacity 1s, z-index 0s;
-    opacity: 1;
+    //opacity: 1;
 
     img {
       width: 400px;
@@ -24,7 +24,7 @@ html, body, main {
 
     &.hideLeft {
       left: 0%;
-      opacity: 0;
+      //opacity: 0;
       transform: translateY(50%) translateX(-50%);
 
       img {
@@ -34,7 +34,7 @@ html, body, main {
 
     &.hideRight {
       left: 100%;
-      opacity: 0;
+      //opacity: 0;
       transform: translateY(50%) translateX(-50%);
 
       img {
@@ -56,7 +56,7 @@ html, body, main {
       z-index: 4;
       left: 15%;
       transform: translateY(50%) translateX(-50%);
-      opacity: .7;
+     // opacity: .7;
 
       img {
         width: 200px;
@@ -83,7 +83,7 @@ html, body, main {
       z-index: 4;
       left: 85%;
       transform: translateY(50%) translateX(-50%);
-      opacity: .7;
+      //opacity: .7;
 
       img {
         width: 200px;
@@ -91,7 +91,7 @@ html, body, main {
     }
   }
   .selected, .next, .prev {
-    opacity: 1;
+    //opacity: 1;
   }
   
 }
