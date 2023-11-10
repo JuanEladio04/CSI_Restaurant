@@ -1,8 +1,8 @@
 <footer class="footer container-fluid text-center bg-dark">
     <div class="container-fluid">
-        <div class="row container-fluid ">
+        <div class="row container-fluid">
             <!--Div del centro, en el que va el logo del restaurante y los logos de las redes sociales.-->
-            <div class="col-sm-4 order-sm-2 d-flex flex-column align-items-center text-center">
+            <div class="col-sm-4 order-sm-2 d-flex flex-column align-items-center text-center border-bottom d-sm-block">
                 <img src="../img/logos/BigLogo.png"  class="imgFooter">
                 <div class="d-flex mb-4 flex-row ">
                     <a href="#!" class="mx-4"><i class="fa-brands fa-instagram fa-2xl" style="color: #ff7b75;"></i></a>
