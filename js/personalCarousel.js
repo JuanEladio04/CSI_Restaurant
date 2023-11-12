@@ -3,13 +3,11 @@ function moveToSelected(element) {
   if (element == "next") {
     selected = $(".selected").next();
     if ($(selected).length == 0) {
-      // Si no existe, es porque estamos al final del carrusel, por lo que seleccionamos el primer elemento
       selected = $(".carousel .item").first();
     }
   } else if (element == "prev") {
     selected = $(".selected").prev();
     if ($(selected).length == 0) {
-      // Si no existe, es porque estamos al principio del carrusel, por lo que seleccionamos el último elemento
       selected = $(".carousel .item").last();
     }
   } else {
@@ -55,7 +53,6 @@ function moveToSelected(element) {
   }
 }
 
-// Asegúrate de llamar a la función moveToSelected cuando se cargue la página para deshabilitar los botones correctamente
 $(document).ready(function() {
   moveToSelected($(".selected"));
 });
