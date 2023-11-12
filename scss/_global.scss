@@ -44,10 +44,11 @@ html {
     height: auto;
     width: auto;
 }
+
 .divLoginForm {
     height: auto;
     width: auto;
-    
+
 }
 
 .rounded-checkbox {
@@ -62,23 +63,23 @@ html {
     width: 80vh;
 }
 
-.imgFooter{
+.imgFooter {
     width: 25vh;
 }
 
 // PAGINA OPINIONES 
 
-.crearOpiniones{
- margin: 0px;
- padding: 0px;
- width: 100%;
+.crearOpiniones {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
 }
 
 .textoNoWrap {
     white-space: nowrap;
 }
 
-.titulo{
+.titulo {
     margin-top: 10%;
     padding: 1% 0% 2% 0%;
     display: block;
@@ -88,13 +89,13 @@ html {
     letter-spacing: 3px;
 }
 
-.contenedor{
+.contenedor {
     width: 100%;
     margin: 0;
     padding: 0;
 }
 
-.texto{
+.texto {
     background-color: $primary;
     width: 100%;
     margin: 0;
@@ -108,16 +109,16 @@ html {
     flex-shrink: 0;
     font-size: 4em;
     margin-bottom: 5%;
-  }
+}
 
-  .en-nuestro-restaurante {
+.en-nuestro-restaurante {
     display: block;
     width: 100%;
     font-size: 2em;
-  }
+}
 
 
-  .en-nuestro-restaurante-container {
+.en-nuestro-restaurante-container {
     align-self: stretch;
     position: relative;
     font-size: var(--font-size-5xl);
@@ -128,47 +129,42 @@ html {
     flex-shrink: 0;
     padding-bottom: 0.5%;
     border-bottom: 2px solid $light;
-  }
+}
+
+@mixin background {
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 
 //BACKGROUNDS
 #background-index {
     background-image: url(../img/backgrounds/backGround02.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
+    @include background;
 }
 
-#opinion{
+#opinion {
     background-image: url(../img/backgrounds/feedback.png);
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
+    @include background;
 }
 
-#background-userGestion{
+#background-userGestion {
     background-image: url(../img/backgrounds/userGestion.jpg);
-    background-attachment: fixed;
-    background-size: cover; 
-    background-repeat: no-repeat;
+    @include background;
 }
 
-#background-login{
+#background-login {
     background-image: url(../img/backgrounds/tableDraw.jpg);
-    background-attachment: fixed;
-    background-size: cover; 
-    background-repeat: no-repeat;
-}
-#background-register{
-    background-image: url(../img/backgrounds/tableDraw.jpg);
-    background-attachment: fixed;
-    background-size: cover; 
-    background-repeat: no-repeat;
-}
-#background-forgottenPassword{
-    background-image: url(../img/backgrounds/tableDraw.jpg);
-    background-attachment: fixed;
-    background-size: cover; 
-    background-repeat: no-repeat;
+    @include background;
 }
 
+#background-register {
+    background-image: url(../img/backgrounds/tableDraw.jpg);
+    @include background;
+}
+
+#background-forgottenPassword {
+    background-image: url(../img/backgrounds/tableDraw.jpg);
+    @include background;
+}
