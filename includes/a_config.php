@@ -10,15 +10,15 @@ switch ($_SERVER["SCRIPT_NAME"]) {
 		break;
 	case "/view/login.php":
 		$CURRENT_PAGE = "login";
-		$PAGE_TITLE = "Cuenta de usuario";
+		$PAGE_TITLE = "Identificarse";
 		break;
 	case "/view/register.php":
-		$CURRENT_PAGE = "login";
-		$PAGE_TITLE = "Cuenta de usuario";
+		$CURRENT_PAGE = "register";
+		$PAGE_TITLE = "Registro";
 		break;
 	case "/view/forgottenPassword.php":
-		$CURRENT_PAGE = "login";
-		$PAGE_TITLE = "Cuenta de usuario";
+		$CURRENT_PAGE = "forgottenPassword";
+		$PAGE_TITLE = "Contraseña olvidada";
 		break;
 	default:
 		$CURRENT_PAGE = "Index";
