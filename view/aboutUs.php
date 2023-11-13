@@ -71,12 +71,9 @@
                         </p>
                     </aside>
                 </section>
-            </section>
-            <div class="p-5 mt-5"></div>
-            <div class="mt-3">
-                <?php include("../includes/footer.php"); ?>
-            </div>
+            </section>               
         </div>
+        <?php include("../includes/footer.php"); ?>
     </body>
 
 </html>
