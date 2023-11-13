@@ -6,17 +6,15 @@
     <?php include("../includes/head-tag-contents.php"); ?>
 </head>
 
-<<<<<<< HEAD <body id="fondoAboutUs">
-    =======
-
-    <body>
+    <body id="background-<?php echo $CURRENT_PAGE; ?>">
 
         <?php include("../includes/navigation.php"); ?>
 
 
-        <div class="aboutus" id="background-<?php echo $CURRENT_PAGE; ?>">
+        <div class="container-fluid">
             <div class="p-5 mt-5"></div>
-            <section class="row mb-5 bg-secondary p-5 bg-info mt-5">
+            
+            <section class="row row-md-6 mb-5 bg-secondary p-5 bg-info mt-5">
                 <article>
                     <p class="fs-1 mb-5 text-center text-white">Sobre nosotros...</p>
                 </article>
@@ -32,10 +30,10 @@
             </section>
 
 
-            <div class="p-5 mt-3"></div>
+            <div class="p-5"></div>
 
 
-            <section class="row bg-secondary mb-5 bg-danger">
+            <section class="row row-md-6 bg-secondary mb-5 bg-danger">
                 <article class="col fs-1 text-white p-5">
                     <p>Un pequeño vistazo</p>
                     <p class="fs-3 mt-5 text-white roboto">
@@ -56,7 +54,7 @@
 
             <div class="p-4"></div>
 
-            <section class="col mt-5">
+            <section class="row-12 row-md-6 mt-5">
                 <section class="row bg-secondary mb-5 bg-danger">
                     <article class="col-md-6 align-items-center text-white roboto position-relative bg-dark">
                         <img class="position-absolute align-self-center top-0 start-0 w-100 h-100 border-0"
