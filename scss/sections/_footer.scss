@@ -7,9 +7,15 @@
     padding-bottom: 5rem;
     background-color: $secondary;
     color: $white;
-    img {
-        width: 25vh;
-    }
+}
+
+a {
+    font-family: $headings-font-family;
+}
+
+p {
+    font-family: $headings-font-family;
+ 
 }
 
 .copyright {

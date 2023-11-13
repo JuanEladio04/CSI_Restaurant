@@ -1,3 +1,4 @@
+<!--Algunas partes del código han sido escritas mediante IA.-->
 <?php include("../includes/a_config.php"); ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -7,9 +8,7 @@
 </head>
 
 <body class="bg-dark" id="background-<?php echo $CURRENT_PAGE; ?>">
-    <header>
-        <?php include("../includes/navigation.php"); ?>
-    </header>
+
     <section>
         <!-- Creating a row div with 3 divs to center the form -->
         <div class="container-fluid">

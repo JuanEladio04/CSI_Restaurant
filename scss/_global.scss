@@ -208,3 +208,8 @@ html {
     background-image: url(../img/backgrounds/tableDraw.jpg);
     @include background;
 }
+
+#background-aboutus {
+    background-image: url(../img/backgrounds/backGround03.jpg);
+    @include background;
+}
