@@ -1,3 +1,4 @@
+<!--Algunas partes del código han sido escritas mediante IA.-->
 <?php include("../includes/a_config.php"); ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -8,9 +9,9 @@
 
 <body class="bg-primary" id="background-<?php echo $CURRENT_PAGE; ?>">
 
-    <header>
+
         <?php include("../includes/navigation.php"); ?>
-    </header>
+
     <div class="container-fluid mt-5">
         <section>
             <div class="row">

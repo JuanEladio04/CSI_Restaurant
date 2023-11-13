@@ -1,3 +1,4 @@
+<!--Algunas partes del código han sido escritas mediante IA.-->
 <?php include("../includes/a_config.php"); ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -8,9 +9,6 @@
 
 <body class="bg-dark" id="background-<?php echo $CURRENT_PAGE; ?>">
 
-    <header>
-        <?php include("../includes/header.php"); ?>
-    </header>
 
     <section>
         <!-- Creating a row div with 3 divs to center the form -->
