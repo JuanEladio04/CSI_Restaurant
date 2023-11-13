@@ -104,7 +104,7 @@ html {
     flex-shrink: 0;
     font-size: 3em;
     margin-bottom: 5%;
-} 
+}
 
 .en-nuestro-restaurante {
     display: block;
@@ -145,27 +145,27 @@ html {
     align-items: center;
 }
 
-.comentario{
+.comentario {
     padding: 1.5%;
     text-align: justify;
     font-size: 1.3em;
 }
 
-#label{
+#label {
     font-size: 2em;
 }
 
-#textarea{
+#textarea {
     resize: none;
     border-radius: 10px;
     font-size: 1.5em;
 }
 
-.opinionUsuario{
+.opinionUsuario {
     margin-bottom: 7%;
 }
 
-.opinionesclientes{
+.opinionesclientes {
     background-color: $primary;
 }
 
@@ -173,6 +173,16 @@ html {
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+//INDEX
+
+@media (max-width: map-get($grid-breakpoints, 'sm')){
+    #opinion-description {
+        border-bottom: 3px solid white;
+        border-right: none !important;
+        margin-bottom: 5%;
+    }
 }
 
 //BACKGROUNDS
