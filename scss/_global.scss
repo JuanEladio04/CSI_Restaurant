@@ -76,7 +76,7 @@ html {
 
 .titulo {
     margin-top: 10%;
-    padding: 1% 0% 2% 0%;
+    padding: 2% 0% 2% 0%;
     display: block;
     text-align: center;
     background-color: $info;
@@ -102,9 +102,9 @@ html {
     display: inline-block;
     height: 28px;
     flex-shrink: 0;
-    font-size: 4em;
+    font-size: 3em;
     margin-bottom: 5%;
-}
+} 
 
 .en-nuestro-restaurante {
     display: block;
@@ -148,6 +148,7 @@ html {
 .comentario{
     padding: 1.5%;
     text-align: justify;
+    font-size: 1.3em;
 }
 
 #label{

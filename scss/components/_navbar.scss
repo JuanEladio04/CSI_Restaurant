@@ -26,9 +26,11 @@
 
         }
 
-        // #invisible{
-        //     visibility:hidden;
-        // }
+        #invisible{
+            // visibility:hidden;
+            white-space: nowrap;
+
+        }
     }
 
     .navbar-toggler {
