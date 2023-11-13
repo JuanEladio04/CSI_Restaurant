@@ -3,12 +3,11 @@
         <div class="row container-fluid">
             <!--Div del centro, en el que va el logo del restaurante y los logos de las redes sociales.-->
             <div class="col-sm-4 order-sm-2 d-flex flex-column align-items-center text-center">
-                <img src="../img/logos/BigLogo.png">
+                <img src="../img/logos/BigLogo.png" width="250vh">
                 <div class="d-flex mb-4 flex-row ">
-                    <a href="#!" class="mx-4"><i class="fa-brands fa-instagram fa-2xl" style="color: #ff7b75;"></i></a>
-                    <a href="#!" class="mx-4"><i class="fa-brands fa-x-twitter fa-2xl" style="color: #ff7b75;"></i></a>
-                    <a href="#!" class="mx-4"><i class="fa-brands fa-facebook fa-2xl"
-                            style="color: #ff7b75;"></i></i></a>
+                    <a href="#!" class="mx-4"><i class="fa-brands fa-instagram text-danger fa-2xl"></i></a>
+                    <a href="#!" class="mx-4"><i class="fa-brands fa-x-twitter text-danger fa-2xl"></i></a>
+                    <a href="#!" class="mx-4"><i class="fa-brands fa-facebook text-danger fa-2xl"></i></i></a>
                 </div>
             </div>
             <!--Div de la izquierda.-->
