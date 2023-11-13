@@ -176,13 +176,8 @@ html {
 }
 
 //INDEX
-#opinion-description {
-    border-bottom: 3px solid white;
-    border-right: none !important;
-    margin-bottom: 5%;
-}
 
-@media (max-width: map-get($grid-breakpoints, 'sm')) {
+@media (max-width: map-get($grid-breakpoints, 'sm')){
     #opinion-description {
         border-bottom: 3px solid white;
         border-right: none !important;
