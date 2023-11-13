@@ -29,15 +29,20 @@ html {
     }
 }
 
-
-
-.greyBg {
-    background-color: #383838;
+.inputForgottenPass {
+    width: 50vh;
 }
 
 
 .divUserForm {
-    height: 40vh;
+    height: auto;
+    width: auto;
+}
+
+.divLoginForm {
+    height: auto;
+    width: auto;
+
 }
 
 .rounded-checkbox {
@@ -56,12 +61,17 @@ html {
     width: 25vh;
 }
 
+
 // PAGINA OPINIONES 
 
 .crearOpiniones {
     margin: 0px;
     padding: 0px;
     width: 100%;
+}
+
+.textoNoWrap {
+    white-space: nowrap;
 }
 
 .titulo {
@@ -158,19 +168,21 @@ html {
     background-color: $primary;
 }
 
-//BACKGROUNDS
-#background-index {
-    background-image: url(../img/backgrounds/index@3x.png);
+@mixin background {
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+//BACKGROUNDS
+#background-index {
+    background-image: url(../img/backgrounds/backGround02.jpg);
+    @include background;
+}
+
 #opinion {
     background-image: url(../img/backgrounds/feedback.png);
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
+    @include background;
 }
 
 #background-userGestion {
@@ -178,4 +190,20 @@ html {
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    @include background;
+}
+
+#background-login {
+    background-image: url(../img/backgrounds/tableDraw.jpg);
+    @include background;
+}
+
+#background-register {
+    background-image: url(../img/backgrounds/tableDraw.jpg);
+    @include background;
+}
+
+#background-forgottenPassword {
+    background-image: url(../img/backgrounds/tableDraw.jpg);
+    @include background;
 }

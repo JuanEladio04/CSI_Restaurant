@@ -1,55 +1,71 @@
 function moveToSelected(element) {
-
-    if (element == "next") {
-      var selected = $(".selected").next();
-    } else if (element == "prev") {
-      var selected = $(".selected").prev();
-    } else {
-      var selected = element;
+  var selected;
+  if (element == "next") {
+    selected = $(".selected").next();
+    if ($(selected).length == 0) {
+      selected = $(".carousel .item").first();
     }
-  
-    var next = $(selected).next();
-    var prev = $(selected).prev();
-    var prevSecond = $(prev).prev();
-    var nextSecond = $(next).next();
-  
-    $(selected).removeClass().addClass("selected");
-  
-    $(prev).removeClass().addClass("prev");
-    $(next).removeClass().addClass("next");
-  
-    $(nextSecond).removeClass().addClass("nextRightSecond");
-    $(prevSecond).removeClass().addClass("prevLeftSecond");
-  
-    $(nextSecond).nextAll().removeClass().addClass('hideRight');
-    $(prevSecond).prevAll().removeClass().addClass('hideLeft');
-  
+  } else if (element == "prev") {
+    selected = $(".selected").prev();
+    if ($(selected).length == 0) {
+      selected = $(".carousel .item").last();
+    }
+  } else {
+    selected = element;
   }
-  
-  // Eventos teclado
-  $(document).keydown(function(e) {
-      switch(e.which) {
-          case 37: // left
-          moveToSelected('prev');
-          break;
-  
-          case 39: // right
-          moveToSelected('next');
-          break;
-  
-          default: return;
-      }
-      e.preventDefault();
-  });
-  
-  $('#carousel div').click(function() {
-    moveToSelected($(this));
-  });
-  
-  $('#prev').click(function() {
-    moveToSelected('prev');
-  });
-  
-  $('#next').click(function() {
-    moveToSelected('next');
-  });
+
+  var next = $(selected).next();
+  var prev = $(selected).prev();
+  var prevSecond = $(prev).prev();
+  var nextSecond = $(next).next();
+
+  // Elimina solo las clases necesarias
+  $(".selected").removeClass("selected");
+  $(selected).addClass("selected");
+
+  $(".prev").removeClass("prev");
+  $(prev).addClass("prev");
+
+  $(".next").removeClass("next");
+  $(next).addClass("next");
+
+  $(".nextRightSecond").removeClass("nextRightSecond");
+  $(nextSecond).addClass("nextRightSecond");
+
+  $(".prevLeftSecond").removeClass("prevLeftSecond");
+  $(prevSecond).addClass("prevLeftSecond");
+
+  // Asegúrate de que solo los elementos necesarios tengan las clases hideRight y hideLeft
+  $(nextSecond).nextAll().not('.nextRightSecond').removeClass('hideRight').addClass('hideRight');
+  $(prevSecond).prevAll().not('.prevLeftSecond').removeClass('hideLeft').addClass('hideLeft');
+
+  // Deshabilita los botones si estamos al principio o al final del carrusel
+  if ($(".selected").is(":first-child")) {
+    $("#prev").prop("disabled", true);
+  } else {
+    $("#prev").prop("disabled", false);
+  }
+
+  if ($(".selected").is(":last-child")) {
+    $("#next").prop("disabled", true);
+  } else {
+    $("#next").prop("disabled", false);
+  }
+}
+
+$(document).ready(function() {
+  moveToSelected($(".selected"));
+});
+
+
+$('#carousel div').click(function () {
+  moveToSelected($(this));
+});
+
+$('#prev').click(function () {
+  moveToSelected('prev');
+});
+
+$('#next').click(function () {
+  moveToSelected('next');
+});
