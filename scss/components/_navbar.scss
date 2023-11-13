@@ -39,6 +39,12 @@
     .navbar-toggler li:hover{
         background-color: $danger;
     }
+
+    .contenido {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
 }
 
 
@@ -56,6 +62,7 @@
 
         }
 
+
         .navbar-nav {
             margin-top: 0;
         }
@@ -72,11 +79,7 @@
             }
         }
 
-        .contenido {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
+
 
         .todo {
             height: 100%;
@@ -84,11 +87,6 @@
             padding: 0;
         }
 
-        .navbar-nav{
-            li a {
-                padding: 9.9% 0%;
-            }
-        }
     }
 
     #mainNav.navbar-shrink {
@@ -97,6 +95,14 @@
 
         .navbar-brand {
             font-size: 1.5em;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg){
+    .navbar-nav{
+        li a {
+            padding: 9.9% 0%;
         }
     }
 }
