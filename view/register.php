@@ -23,7 +23,7 @@
 
                     <!-- Form in a card -->
                     <div class="container mt-5 mb-5 pt-5 d-flex flex-column align-items-center p-5">
-                        <div class="card bg-danger text-light roundedBorder">
+                        <div class="card formUser bg-danger text-light roundedBorder">
                             <div class="card-header">
                                 <h1 class="text-center lobster">Crear cuenta</h1>
                             </div>
