@@ -20,6 +20,10 @@ switch ($_SERVER["SCRIPT_NAME"]) {
 		$CURRENT_PAGE = "forgottenPassword";
 		$PAGE_TITLE = "Contraseña olvidada";
 		break;
+	case "/view/aboutUs.php":
+		$CURRENT_PAGE = "aboutus";
+		$PAGE_TITLE = "Sobre nosotros";
+		break;	
 	default:
 		$CURRENT_PAGE = "Index";
 		$PAGE_TITLE = "Welcome to my homepage!";
