@@ -57,6 +57,11 @@ html {
     width: 80vh;
 }
 
+.imgFooter {
+    width: 25vh;
+}
+
+
 // PAGINA OPINIONES 
 
 .crearOpiniones {
@@ -71,10 +76,10 @@ html {
 
 .titulo {
     margin-top: 10%;
-    padding: 1% 0% 2% 0%;
+    padding: 2% 0% 2% 0%;
     display: block;
     text-align: center;
-    background-color: $info ;
+    background-color: $info;
     color: $light;
     letter-spacing: 3px;
 }
@@ -97,16 +102,15 @@ html {
     display: inline-block;
     height: 28px;
     flex-shrink: 0;
-    font-size: 4em;
+    font-size: 3em;
     margin-bottom: 5%;
-}
+} 
 
 .en-nuestro-restaurante {
     display: block;
     width: 100%;
     font-size: 2em;
 }
-
 
 .en-nuestro-restaurante-container {
     align-self: stretch;
@@ -121,12 +125,55 @@ html {
     border-bottom: 2px solid $light;
 }
 
+.arriba {
+    display: flex;
+    justify-content: left;
+}
+
+.img-user {
+    width: 3%;
+}
+
+.username {
+    margin: 0% 1%;
+    font-size: 2em;
+    white-space: nowrap;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+}
+
+.comentario{
+    padding: 1.5%;
+    text-align: justify;
+    font-size: 1.3em;
+}
+
+#label{
+    font-size: 2em;
+}
+
+#textarea{
+    resize: none;
+    border-radius: 10px;
+    font-size: 1.5em;
+}
+
+.opinionUsuario{
+    margin-bottom: 7%;
+}
+
+.opinionesclientes{
+    background-color: $primary;
+}
+
 @mixin background {
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
 }
-
 
 //BACKGROUNDS
 #background-index {
@@ -141,6 +188,9 @@ html {
 
 #background-userGestion {
     background-image: url(../img/backgrounds/userGestion.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
     @include background;
 }
 

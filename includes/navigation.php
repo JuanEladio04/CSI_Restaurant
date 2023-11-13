@@ -25,7 +25,7 @@
                             class="nav-link" href="about.php">Carta</a></li>
 
                     <li class="nav-item  w-100 h-100 text-center "><a
-                            class="nav-link" href="contact.php">Sobre <!--<span id="invisible">_</span>--> Nosotros</a></li>
+                            class="nav-link" id="invisible" href="contact.php">Sobre <!--<span id="invisible">_</span>--> Nosotros</a></li>
 
                     <li class="nav-item  w-100 h-100 text-center "><a
                             class="nav-link" href="contact.php">Ofertas</a></li>
