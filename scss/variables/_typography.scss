@@ -2,7 +2,7 @@
 // Typography
 // 
 
-$font-family-sans-serif: "Lobster Two",
+$font-family-sans-serif: "Roboto",
 -apple-system,
 BlinkMacSystemFont,
 "Segoe UI",
@@ -16,7 +16,7 @@ sans-serif,
 "Segoe UI Symbol",
 'Noto Color Emoji';
 
-$headings-font-family: "Roboto",
+$headings-font-family: "Lobster Two",
 -apple-system,
 BlinkMacSystemFont,
 "Segoe UI",
@@ -38,10 +38,3 @@ $font-size-lg:                $font-size-base * 1.75;
     font-size: 2em;
 }
 
-.roboto {
-    font-family: $headings-font-family;
-}
-
-.lobster {
-    font-family: $font-family-sans-serif;
-}

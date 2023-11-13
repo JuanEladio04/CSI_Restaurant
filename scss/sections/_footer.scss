@@ -9,6 +9,15 @@
     color: $white;
 }
 
+a {
+    font-family: $headings-font-family;
+}
+
+p {
+    font-family: $headings-font-family;
+ 
+}
+
 .copyright {
     background-color: darken($secondary, 10%);
 }

@@ -24,11 +24,11 @@
 
                     <!-- Form in a card -->
                     <div class="container mt-5 mb-5 pt-5 d-flex flex-column align-items-center">
-                        <div class="card bg-danger text-light roundedBorder col-lg-12 col-sm-6">
+                        <div class="card formUser bg-danger text-light roundedBorder col-lg-12 col-sm-6">
                             <div class="card-header">
-                                <h1 class="text-center lobster">Identificarse</h1>
+                                <h1 class="text-center">Identificarse</h1>
                             </div>
-                            <div class="card-body roboto">
+                            <div class="card-body">
                                 <div class="mb-3 mt-3">
                                     <!-- Form -->
                                     <form action="/action_page.php">
@@ -56,7 +56,7 @@
                                     </div>
                                     <div class="col-8 text-center d-flex justify-content-end">
                                         <button type="button"
-                                            class="btn btn-primary px-5 roundedInput roboto">Entrar</button>
+                                            class="btn btn-primary px-5 roundedInput">Entrar</button>
                                     </div>
                                 </div>
                             </div>
