@@ -7,16 +7,18 @@
     padding-bottom: 5rem;
     background-color: $secondary;
     color: $white;
+
+    a {
+        font-family: $headings-font-family;
+    }
+    
+    p {
+        font-family: $headings-font-family;
+     
+    }
 }
 
-a {
-    font-family: $headings-font-family;
-}
 
-p {
-    font-family: $headings-font-family;
- 
-}
 
 .copyright {
     background-color: darken($secondary, 10%);
