@@ -3,6 +3,12 @@
 // 
 
 // Custom extra large button size
+
+.btn {
+    font-family: $headings-font-family;
+}
+
+
 .btn-xl {
     padding: 1rem 1.75rem;
     font-size: 1.25rem;
