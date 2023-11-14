@@ -14,7 +14,7 @@
     <?php include("../includes/head-tag-contents.php"); ?>
 </head>
 
-<body id="opinion">
+<body id="background-opinion">
     <nav>
         <?php include("../includes/navigation.php"); ?>
     </nav>
