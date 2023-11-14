@@ -47,8 +47,8 @@
             <img src="img\stockImages\index\ofertImg.jpg" class="card-img-top roundedBorder mt-auto" alt="reseravs">
             <div class="card-body container-fluid bg-danger roundedBorder">
               <h3 class="card-title lobster bg-danger container-fluid ">Ofertas</h3>
-              <p class="card-text roboto">¡Mira nuestras ofertas diarias y semanales! Hazle un favor a tu bolsillo.</p>
-              <a href="#" class="btn btn-primary rounded-2">Reserva ahora</a>
+              <p class="card-text roboto text-justify">¡Mira nuestras ofertas diarias y semanales! Hazle un favor a tu bolsillo.</p>
+              <a href="#" class="btn btn-primary rounded-2">Visitar ofertas</a>
             </div>
           </div>
 
@@ -56,7 +56,7 @@
             <img src="img\stockImages\index\cardImg.jpg" class="card-img-top roundedBorder" alt="reseravs">
             <div class="card-body container-fluid bg-danger roundedBorder">
               <h3 class="card-title lobster ">Carta</h3>
-              <p class="card-text roboto">Comprueba toda una carta llena de platos variados para todo tipo de personas y estómagos</p>
+              <p class="card-text roboto text-justify">Comprueba toda una carta llena de platos variados para todo tipo de personas y estómagos</p>
               <a href="#" class="btn btn-primary rounded-2">Muéstrame</a>
             </div>
           </div>
@@ -65,8 +65,8 @@
             <img src="img\stockImages\index\reserveImg.jpg" class="card-img-top roundedBorder" alt="reseravs">
             <div class="card-body container-fluid bg-danger roundedBorder">
               <h3 class="card-title lobster ">Reserva</h3>
-              <p class="card-text roboto">¿Quieres asegurarte de no quedarte sin sitio? ¡Reserva ahora!</p>
-              <a href="#" class="btn btn-primary rounded-2">Reserva ahora</a>
+              <p class="card-text roboto text-justify">¿Quieres asegurarte de no quedarte sin sitio? ¡Reserva ahora!</p>
+              <a href="view\reserve.php" class="btn btn-primary rounded-2">Reserva ahora</a>
             </div>
           </div>
 
@@ -106,7 +106,7 @@
           <h3 class="col-12 text-light">
             ¿Te apetece saborear la auténtica cocina italiana, elaborada con los mejores ingredientes y el cariño de nuestra familia?
           </h3>
-          <p class="col-12 text-light">
+          <p class="col-12 text-light text-justify">
             Te esperamos en el siguiente enlace, donde podrás conocer más sobre nuestro restaurante, nuestra tradición y nuestra pasión por la gastronomía. En este sitio, podrás ver las fotos de nuestros platos, nuestro personal y nuestro ambiente. También podrás leer las opiniones de nuestros clientes, nuestras recetas y nuestras ofertas. No dejes pasar esta oportunidad de disfrutar de una experiencia única y deliciosa.
           </p>
           <div class="align-items-right col-12">
@@ -155,7 +155,7 @@
                   </div>
                   <div>
                     <div class="row">
-                      <p class="col-12">
+                      <p class="col-12 text-justify">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis molestiae voluptas qui fugiat omnis placeat, cumque rerum amet, quo tenetur dolores esse aliquam reiciendis consequatur. Saepe, consequuntur? Reprehenderit, molestias nobis.
                       </p>
                     </div>
@@ -178,7 +178,7 @@
                   </div>
                   <div>
                     <div class="row">
-                      <p class="col-12">
+                      <p class="col-12 text-justify">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ad consequuntur possimus?
                       </p>
                     </div>
@@ -201,7 +201,7 @@
                   </div>
                   <div>
                     <div class="row">
-                      <p class="col-12">
+                      <p class="col-12 text-justify">
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit dolor repellat dolores nostrum vitae eius. Reiciendis aliquid ea odio ipsum quia voluptatibus rerum quos, consequatur est accusamus ab libero, repellat accusantium quae qui magni at quas pariatur nisi veritatis vitae, quisquam aliquam labore perspiciatis? Obcaecati beatae quaerat, nobis nesciunt vitae adipisci maiores optio repudiandae. At corrupti neque dolorum repellendus accusamus ipsa modi, quod ea est enim sunt inventore dolorem sequi ipsam architecto, laboriosam fuga voluptates, blanditiis earum. Veritatis numquam quidem nobis illo odio excepturi adipisci, pariatur inventore repellat totam culpa vero tempore itaque accusantium fugit minus nihil tempora! Amet, unde!
                       </p>
                     </div>
