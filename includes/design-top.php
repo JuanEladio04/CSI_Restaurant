@@ -1,5 +1,5 @@
-<header class="masthead bg-primary text-white text-center">
+<header class="masthead text-white text-center">
         <div class="container d-flex align-items-center flex-column">
-            <p class="masthead-subheading font-weight-light mb-0">PHP + Bootstrap Miniframework</p>
+            <h1><?php echo $PAGE_TITLE; ?></h1>
         </div>
 </header>

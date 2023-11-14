@@ -96,7 +96,7 @@ html {
     margin: 0;
 }
 
-.tu-opinin {
+.opinion {
     align-self: stretch;
     position: relative;
     display: inline-block;
@@ -106,13 +106,13 @@ html {
     margin-bottom: 5%;
 }
 
-.en-nuestro-restaurante {
+.parrafo {
     display: block;
     width: 100%;
     font-size: 2em;
 }
 
-.en-nuestro-restaurante-container {
+.parrafo-container {
     align-self: stretch;
     position: relative;
     font-size: var(--font-size-5xl);
@@ -126,12 +126,12 @@ html {
 }
 
 .arriba {
-    display: flex;
+    display: inline;
     justify-content: left;
 }
 
 .img-user {
-    width: 3%;
+    width: 40%;
 }
 
 .username {
@@ -141,7 +141,7 @@ html {
 }
 
 .stars {
-    display: flex;
+    display: block;
     align-items: center;
 }
 
@@ -169,6 +169,17 @@ html {
     background-color: $primary;
 }
 
+@include media-breakpoint-up(sm) {
+    .arriba{
+        display: flex;
+
+        .img-user {
+        width: 3%;
+        }   
+    }
+}
+
+
 @mixin background {
     background-attachment: fixed;
     background-size: cover;
@@ -191,9 +202,13 @@ html {
     @include background;
 }
 
-#opinion {
+#aboutUs-index {
+    background-image: url(../img/backgrounds/aboutUsIndex.png);
+}
+
+#background-opinion {
     background-image: url(../img/backgrounds/feedback.png);
-    @include background;
+    background-size: cover;
 }
 
 #background-userGestion {

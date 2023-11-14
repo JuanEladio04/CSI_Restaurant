@@ -23,9 +23,12 @@ switch ($_SERVER["SCRIPT_NAME"]) {
 	case "/view/aboutUs.php":
 		$CURRENT_PAGE = "aboutus";
 		$PAGE_TITLE = "Sobre nosotros";
-		break;	
+		break;
+	case "/view/reserve.php":
+		$CURRENT_PAGE = "reserva";
+		$PAGE_TITLE = "Reservas";
+		break;
 	default:
 		$CURRENT_PAGE = "Index";
 		$PAGE_TITLE = "Welcome to my homepage!";
 }
-?>

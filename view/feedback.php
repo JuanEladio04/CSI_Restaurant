@@ -14,12 +14,11 @@
     <?php include("../includes/head-tag-contents.php"); ?>
 </head>
 
-<body id="opinion">
+<body id="background-opinion">
     <nav>
         <?php include("../includes/navigation.php"); ?>
     </nav>
 
-    <!------------------------ Crear Comentario ------------------------>
     <section class="container-fluid crearOpiniones">
         <article>
             <div class="titulo">
@@ -29,17 +28,17 @@
         <article class="contenedor">
             <div class="texto column p-5">
 
-                <div class="col-6 tu-opinin lobster">Tu opinión</div>
+                <div class="col-6 opinion lobster">Tu opinión</div>
 
-                <div class="col-6 en-nuestro-restaurante-container">
+                <div class="col-6 parrafo-container">
 
-                    <p class="en-nuestro-restaurante roboto">
+                    <p class="parrafo roboto">
                         En nuestro restaurante tu voz importa.
                     </p>
 
-                    <p class="en-nuestro-restaurante roboto">¿Quieres hablar?</p>
+                    <p class="parrafo roboto">¿Quieres hablar?</p>
 
-                    <p class="en-nuestro-restaurante roboto">
+                    <p class="parrafo roboto">
                         Deja tu opinión a continuación:
                     </p>
 
