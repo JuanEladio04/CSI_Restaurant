@@ -33,11 +33,11 @@
                                     <form action="/action_page.php">
                                         <!-- Name and Last Name inputs -->
                                         <div class="row">
-                                            <div class="col-sm-6 mb-3">
+                                            <div class="col-sm-6 mb-1">
                                                 <label for="FirstN" class="form-label">Nombre</label>
                                                 <input type="text" class="roundedInput form-control" name="FirstN">
                                             </div>
-                                            <div class="col-sm-6">
+                                            <div class="col-sm-6 mb-2">
                                                 <label for="LastN" class="form-label">Apellidos</label>
                                                 <input type="text" class="roundedInput form-control" name="LastN">
                                             </div>
