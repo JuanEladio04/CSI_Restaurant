@@ -12,7 +12,7 @@
 
         <div class="container-fluid">
             
-            <section class="row row-md-6 mb-5 p-5 bg-info">
+            <section class="row row-md-6 mb-5 mt-5 bg-info">
                 <article class="articulo col p-5">
                     <h1 class="mt-3 text-center">Terminos y condiciones</h1>   
                     <p class="mt-5">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
@@ -26,8 +26,8 @@
             </section>  
 
 
-            <section class="row row-md-6 mb-5 p-5 bg-info">
-                <article class="articulo col">
+            <section class="row row-md-6 mb-5 mt-5 bg-info">
+                <article class="articulo col p-5">
                     <h1 class="text-center">Aviso legal</h1>
                     <p class="mt-5">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                         industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
@@ -40,8 +40,8 @@
             </section>
 
 
-            <section class="row row-md-6 mb-5 p-5 bg-info">
-                <article class="articulo col">
+            <section class="row row-md-6 mb-5 mt-5 bg-info">
+                <article class="articulo col p-5">
                     <h1 class="text-center">Política de privacidad</h1>
                     <p class="mt-5">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                         industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
@@ -54,7 +54,7 @@
             </section>
 
 
-            <section class="row row-md-6 mb-5 bg-secondary p-5 mt-5">
+            <section class="row row-md-6 mb-5 mt-5 bg-secondary">
                 <article class="articuloTC">
                     <h1 class="text-center">Finalidad</h1>
                 </article>
@@ -84,17 +84,13 @@
                 </article>
                 <article class="articuloTC">
                     <h2 class="text-center mt-5">4. Proovedores y terceros</h2>
-                    <p class="text-center"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae doloribus odio
+                    <p class="text-center mb-5"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae doloribus odio
                         suscipit deleniti
                         impedit repellat quibusdam ex nam, numquam, voluptas nihil ducimus corporis necessitatibus
                         molestiae quis, repudiandae quasi. Repellendus, pariatur.
                     </p>
                 </article>
-            </section>
-
-
-            
-            
+            </section>          
         </div>
         <?php include("../includes/footer.php"); ?>
 

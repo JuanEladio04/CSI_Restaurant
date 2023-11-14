@@ -10,7 +10,7 @@
     <?php include("../includes/navigation.php"); ?>
     <div class="container-fluid">
 
-        <section class="row row-md-6 mb-5 p-5 bg-danger">
+        <section class="row row-md-6 mb-5 mt-5 bg-danger">
             <article class="articulo col p-5">
                 <h1 class="mt-3 text-center">Sobre nosotros...</h1>         
                 <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
