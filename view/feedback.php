@@ -28,17 +28,17 @@
         <article class="contenedor">
             <div class="texto column p-5">
 
-                <div class="col-6 tu-opinin lobster">Tu opinión</div>
+                <div class="col-6 opinion lobster">Tu opinión</div>
 
-                <div class="col-6 en-nuestro-restaurante-container">
+                <div class="col-6 parrafo-container">
 
-                    <p class="en-nuestro-restaurante roboto">
+                    <p class="parrafo roboto">
                         En nuestro restaurante tu voz importa.
                     </p>
 
-                    <p class="en-nuestro-restaurante roboto">¿Quieres hablar?</p>
+                    <p class="parrafo roboto">¿Quieres hablar?</p>
 
-                    <p class="en-nuestro-restaurante roboto">
+                    <p class="parrafo roboto">
                         Deja tu opinión a continuación:
                     </p>
 
@@ -87,7 +87,7 @@
             <div class="frame-interior">
                 <article class="comentarybox1">
                     <div class="comment11">
-                        <div class="arriba d-flex">
+                        <div class="arriba">
                             <img class="vector-icon img-user rounded" alt=""
                                 src="../img/stockImages/defaultUserImage.png" />
 
