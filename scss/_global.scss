@@ -191,9 +191,13 @@ html {
     @include background;
 }
 
+#aboutUs-index {
+    background-image: url(../img/backgrounds/aboutUsIndex.png);
+}
+
 #opinion {
     background-image: url(../img/backgrounds/feedback.png);
-    @include background;
+    background-size: cover;
 }
 
 #background-userGestion {
