@@ -24,7 +24,7 @@
 
                     <!-- Form in a card -->
                     <div class="container mt-5 mb-5 pt-5 d-flex flex-column align-items-center justify-content-center">
-                        <div class="card bg-danger text-light roundedBorder col-lg-12 col-sm-6 ">
+                        <div class="card formUser bg-danger text-light roundedBorder col-lg-12 col-sm-6 ">
                             <div class="card-header">
                                 <h1 class="text-center lobster">Contraseña olvidada</h1>
                             </div>

@@ -48,13 +48,13 @@
 
                             <!-- Footer with links and login button -->
                             <div class="card-footer text-start">
-                                <a href="forgottenPassword.php" class="nav-link text-light">Contraseña olvidada</a>
+                                <a href="forgottenPassword.php" class="nav-link text-light col-sm-12 col-lg-8 text-center d-lg-flex justify-content-start">Contraseña olvidada</a>
                                 <div class="row">
-                                    <div class="col-4">
+                                    <div class="col-sm-12 col-lg-8 text-center d-lg-flex justify-content-start">
                                         <a href="register.php" class="nav-link text-light textoNoWrap">No estoy
                                             registrado</a>
                                     </div>
-                                    <div class="col-8 text-center d-flex justify-content-end">
+                                    <div class="col-sm-12 col-lg-8 text-center d-lg-flex justify-content-end">
                                         <button type="button"
                                             class="btn btn-primary px-5 roundedInput">Entrar</button>
                                     </div>

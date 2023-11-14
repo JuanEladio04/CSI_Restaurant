@@ -23,7 +23,7 @@
 
                     <!-- Form in a card -->
                     <div class="container mt-5 mb-5 pt-5 d-flex flex-column align-items-center p-5">
-                        <div class="card bg-danger text-light roundedBorder">
+                        <div class="card formUser bg-danger text-light roundedBorder">
                             <div class="card-header">
                                 <h1 class="text-center lobster">Crear cuenta</h1>
                             </div>
@@ -33,11 +33,11 @@
                                     <form action="/action_page.php">
                                         <!-- Name and Last Name inputs -->
                                         <div class="row">
-                                            <div class="col-sm-6 mb-3">
+                                            <div class="col-sm-6 mb-1">
                                                 <label for="FirstN" class="form-label">Nombre</label>
                                                 <input type="text" class="roundedInput form-control" name="FirstN">
                                             </div>
-                                            <div class="col-sm-6">
+                                            <div class="col-sm-6 mb-2">
                                                 <label for="LastN" class="form-label">Apellidos</label>
                                                 <input type="text" class="roundedInput form-control" name="LastN">
                                             </div>
