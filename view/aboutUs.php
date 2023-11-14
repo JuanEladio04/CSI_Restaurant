@@ -10,12 +10,10 @@
     <?php include("../includes/navigation.php"); ?>
     <div class="container-fluid">
 
-        <section class="row row-md-6 mb-5 bg-secondary p-5 bg-info mt-5">
-            <article class="articulo">
-                <h1 class="mb-5 text-center">Sobre nosotros...</h1>
-            </article>
-            <article class="articulo ">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        <section class="row row-md-6 mb-5 p-5 bg-danger">
+            <article class="articulo col p-5">
+                <h1 class="mt-3 text-center">Sobre nosotros...</h1>         
+                <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
                     ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                     aliquip ex ea commodo consequat. Duis aute irure dolor in
@@ -30,20 +28,20 @@
         <section class="row row-md-6 mb-5 bg-danger">
             <article class="articulo col p-5">
                 <h1>Un pequeño vistazo</h1>
-                <p>
+                <p class="mt-5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                     enim ad minim veniam, quis nostrud exercitation ullamco laboris
                     nisi ut aliquip ex ea commodo consequat.
                 </p>
             </article>
-            <aside class="col-md-6 align-items-center roboto position-relative bg-dark">
+            <article class="col-md-6 align-items-center position-relative">
                 <iframe class="position-absolute top-0 start-0 w-100 h-100 border-0"
                     src="https://www.youtube.com/embed/4pg7EaYo7hM" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
                 </iframe>
-            </aside>
+            </article>
         </section>
 
 
@@ -54,9 +52,9 @@
                     src="..\img\stockImages\aboutUs_StockImages\imagen-cocinero-aboutUs.jpg" frameborder="0">
                 </img>
             </article>
-            <article class="articulo col-md-6 p-5">
+            <article class="articulo col p-5">
                 <h1>Nuestros chefs</h1>
-                <p class=" mt-5 roboto">
+                <p class=" mt-5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                     enim ad minim veniam, quis nostrud exercitation ullamco laboris
