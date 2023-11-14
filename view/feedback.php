@@ -19,7 +19,6 @@
         <?php include("../includes/navigation.php"); ?>
     </nav>
 
-    <!------------------------ Crear Comentario ------------------------>
     <section class="container-fluid crearOpiniones">
         <article>
             <div class="titulo">
@@ -88,7 +87,7 @@
             <div class="frame-interior">
                 <article class="comentarybox1">
                     <div class="comment11">
-                        <div class="arriba">
+                        <div class="arriba d-flex">
                             <img class="vector-icon img-user rounded" alt=""
                                 src="../img/stockImages/defaultUserImage.png" />
 
