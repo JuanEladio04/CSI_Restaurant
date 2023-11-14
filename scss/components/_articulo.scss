@@ -1,9 +1,11 @@
 .articulo {
     h1 {
         font-family: $headings-font-family;
-
+        color: $light !important;
     }
     p {
-        color: $light;
+        color: $light !important;
+        font-family: $font-family-sans-serif;
+        font-size: 28px;
     }
 }
