@@ -23,17 +23,17 @@
                     <a href="../index.php"><img src="../img/logos/BigLogo.png" width="300px"></a>
 
                     <!-- Form in a card -->
-                    <div class="container mt-5 mb-5 pt-5 d-flex flex-column align-items-center justify-content-center">
+                    <div class="container  d-flex flex-column align-items-center justify-content-center">
                         <div class="card formUser bg-danger text-light roundedBorder col-lg-12 col-sm-6 ">
                             <div class="card-header">
-                                <h1 class="text-center lobster">Contraseña olvidada</h1>
+                                <h1 class="text-center">Contraseña olvidada</h1>
                             </div>
-                            <div class="card-body roboto my-auto">
-                                <div class="mb-3 mt-3">
+                            <div class="card-body my-auto">
+                                <div class="mt-3">
                                     <!-- Form -->
                                     <form action="/action_page.php">
                                         <!-- Email input -->
-                                        <div class="mb-3">
+                                        <div class="margenInferior">
                                             <label for="Email" class="form-label">Correo electrónico</label>
                                             <input type="email" class="roundedInput form-control" id="email"
                                                 name="Email">

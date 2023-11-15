@@ -23,22 +23,22 @@
                     <a href="../index.php"><img src="../img/logos/BigLogo.png" width="300px"></a>
 
                     <!-- Form in a card -->
-                    <div class="container mt-5 mb-5 pt-5 d-flex flex-column align-items-center">
+                    <div class="container d-flex flex-column align-items-center">
                         <div class="card formUser bg-danger text-light roundedBorder col-lg-12 col-sm-6">
                             <div class="card-header">
                                 <h1 class="text-center">Identificarse</h1>
                             </div>
                             <div class="card-body">
-                                <div class="mb-3 mt-3">
+                                <div class="mt-3">
                                     <!-- Form -->
                                     <form action="/action_page.php">
                                         <!-- Email input -->
-                                        <div class="mb-3">
+                                        <div class="margenInferior">
                                             <label for="Email" class="form-label">Correo electrónico</label>
                                             <input type="Email" class="roundedInput form-control" id="pwd" name="Email">
                                         </div>
                                         <!-- Password input -->
-                                        <div class="col mb-3">
+                                        <div class="col margenInferior">
                                             <label for="Password1" class="form-label">Contraseña</label>
                                             <input type="password" class="roundedInput form-control">
                                         </div>

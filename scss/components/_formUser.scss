@@ -1,8 +1,14 @@
 .formUser {
+    margin-top: 12vh;
+    margin-bottom: 8vh;
     a{
         font-family: $headings-font-family;
     }
     .btn{
         font-family: $font-family-sans-serif !important;
+    }
+
+    .margenInferior {
+        margin-bottom: 1vh;
     }
 }
