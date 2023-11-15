@@ -61,8 +61,12 @@ html {
     width: 25vh;
 }
 
+.textoNoWrap {
+    white-space: nowrap;
+}
 
-// PAGINA OPINIONES 
+
+// PAGINA OPINIONES *************************************************************************************
 
 .crearOpiniones {
     margin: 0px;
@@ -70,18 +74,12 @@ html {
     width: 100%;
 }
 
-.textoNoWrap {
-    white-space: nowrap;
-}
-
-.titulo {
+.contenedor-titulo {
     margin-top: 10%;
     padding: 2% 0% 2% 0%;
     display: block;
-    text-align: center;
     background-color: $info;
-    color: $light;
-    letter-spacing: 3px;
+    
 }
 
 .contenedor {
@@ -96,15 +94,7 @@ html {
     margin: 0;
 }
 
-.opinion {
-    align-self: stretch;
-    position: relative;
-    display: inline-block;
-    height: 28px;
-    flex-shrink: 0;
-    font-size: 3em;
-    margin-bottom: 5%;
-}
+
 
 .parrafo {
     display: block;
@@ -125,30 +115,12 @@ html {
     border-bottom: 2px solid $light;
 }
 
-.arriba {
-    display: inline;
-    justify-content: left;
-}
-
-.img-user {
-    width: 40%;
-}
-
-.username {
-    margin: 0% 1%;
-    font-size: 2em;
-    white-space: nowrap;
-}
-
-.stars {
-    display: block;
-    align-items: center;
-}
-
 .comentario {
+    margin-top: 5%;
     padding: 1.5%;
     text-align: justify;
     font-size: 1.3em;
+    border-bottom: 2px solid $light;
 }
 
 #label {
@@ -170,15 +142,20 @@ html {
 }
 
 @include media-breakpoint-up(sm) {
-    .arriba{
-        display: flex;
+    .opinion {
+        margin-bottom: 2%;
+    }
 
-        .img-user {
-        width: 3%;
-        }   
+    
+
+    .comentario{
+        margin-top: 0%;
+
     }
 }
 
+
+// ****************************************************************************************************
 
 @mixin background {
     background-attachment: fixed;

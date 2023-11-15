@@ -21,22 +21,22 @@
 
     <section class="container-fluid crearOpiniones">
         <article>
-            <div class="titulo">
-                <h1 class="lobster">Deja tu opinion</h1>
+            <div class="contenedor-titulo titulo">
+                <h1>Deja tu opinion</h1>
             </div>
         </article>
         <article class="contenedor">
-            <div class="texto column p-5">
+            <div class="texto column p-5 tituloh2">
 
-                <div class="col-6 opinion lobster">Tu opinión</div>
+                <h2 class="col-6 opinion ">Tu opinión</h2>
 
-                <div class="col-6 parrafo-container">
+                <div class="col-6 parrafo-container p">
 
-                    <p class="parrafo roboto">
+                    <p class="parrafo ">
                         En nuestro restaurante tu voz importa.
                     </p>
 
-                    <p class="parrafo roboto">¿Quieres hablar?</p>
+                    <p class="parrafo ">¿Quieres hablar?</p>
 
                     <p class="parrafo roboto">
                         Deja tu opinión a continuación:
@@ -45,12 +45,14 @@
                 </div>
 
                 <div class="comentarybox">
-                    <div class="comment1">
+                    <div>
                         <div class="arriba mt-4 mb-2">
-                            <img class="vector-icon img-user rounded" alt=""
-                                src="../img/stockImages/defaultUserImage.png" />
+                            <div class="img">
+                                <img class="vector-icon img-user rounded" alt=""
+                                    src="../img/stockImages/defaultUserImage.png" />
+                            </div>
 
-                            <div class="username lobster">Nombre de Usuario</div>
+                            <div class="username">Nombre de Usuario</div>
 
                             <div class="stars">
                                 <i class="fa-solid fa-2x fa-star mx-auto text-danger"></i>
@@ -79,18 +81,19 @@
     </section>
     <section class="opinionUsuario ">
         <article>
-            <div class="titulo">
-                <h1 class="lobster title">Opiniones de Nuestros Clientes</h1>
+            <div class="contenedor-titulo titulo">
+                <h1>Opiniones de Nuestros Clientes</h1>
             </div>
         </article>
         <div class="opinionesclientes p-5">
             <div class="frame-interior">
-                <article class="comentarybox1">
-                    <div class="comment11">
+                <article>
+                    <div>
                         <div class="arriba">
-                            <img class="vector-icon img-user rounded" alt=""
-                                src="../img/stockImages/defaultUserImage.png" />
-
+                            <div class="img">
+                                <img class="vector-icon img-user rounded" alt=""
+                                    src="../img/stockImages/defaultUserImage.png" />
+                            </div>
                             <div class="username lobster">Nombre de Usuario</div>
 
                             <div class="stars">
@@ -126,11 +129,13 @@
                         </div>
                     </div>
                 </article>
-                <article class="comentarybox2">
-                    <div class="comment11">
+                <article>
+                    <div>
                         <div class="arriba">
-                            <img class="vector-icon img-user rounded" alt=""
-                                src="../img/stockImages/defaultUserImage.png" />
+                            <div class="img">
+                                <img class="vector-icon img-user rounded" alt=""
+                                    src="../img/stockImages/defaultUserImage.png" />
+                            </div>
 
                             <div class="username lobster">Nombre de Usuario</div>
 
@@ -167,11 +172,13 @@
                         </div>
                     </div>
                 </article>
-                <article class="comentarybox3">
-                    <div class="comment11">
+                <article>
+                    <div>
                         <div class="arriba">
-                            <img class="vector-icon img-user rounded" alt=""
-                                src="../img/stockImages/defaultUserImage.png" />
+                            <div class="img">
+                                <img class="vector-icon img-user rounded" alt=""
+                                    src="../img/stockImages/defaultUserImage.png" />
+                            </div>
 
                             <div class="username lobster">Nombre de Usuario</div>
 
