@@ -206,6 +206,11 @@ html {
     background-image: url(../img/backgrounds/aboutUsIndex.png);
 }
 
+#background-reserve {
+    background-image: url(../img/backgrounds/reservesBackground.jpg);
+    @include background;
+}
+
 #background-opinion {
     background-image: url(../img/backgrounds/feedback.png);
     background-size: cover;
