@@ -33,7 +33,7 @@
                                                 src="../img/stockImages/defaultUserImage.png" />
                                         </div>
                                         <div class="container d-flex justify-content-center my-2">
-                                            <button class="btn text-light bg-danger roundedInput" type="submit">
+                                            <button class="btn text-light bg-danger roundedInput textoNoWrap" type="submit">
                                                 Cambiar foto de perfil
                                             </button>
                                         </div>
@@ -57,7 +57,7 @@
                                                 name="userName">
                                         </div>
                                         <div class="container d-flex justify-content-center my-2">
-                                            <button class="btn text-light bg-danger roundedInput" type="submit">
+                                            <button class="btn text-light bg-danger roundedInput textoNoWrap" type="submit">
                                                 Cambiar nombre de usuario
                                             </button>
                                         </div>
@@ -81,7 +81,7 @@
                                                 name="userEmail">
                                         </div>
                                         <div class="container d-flex justify-content-center my-2">
-                                            <button class="btn text-light bg-danger roundedInput" type="submit">
+                                            <button class="btn text-light bg-danger roundedInput textoNoWrap" type="submit">
                                                 Cambiar correo electrónico
                                             </button>
                                         </div>
