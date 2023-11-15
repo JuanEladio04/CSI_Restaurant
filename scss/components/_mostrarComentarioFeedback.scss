@@ -1,0 +1,15 @@
+.comentario{
+    margin-top: 5%;
+    padding: 1.5%;
+    text-align: justify;
+    font-size: 0.9em;
+    border-bottom: 2px solid $light;
+}
+
+@include media-breakpoint-up(sm) {
+
+    .comentario{
+        margin-top: 0%;
+        font-size: 1.3em;
+    }
+}

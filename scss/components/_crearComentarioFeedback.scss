@@ -1,0 +1,27 @@
+.crearComentario{
+    padding-top: 1%;
+
+    label{
+        font-size: 1.3em;
+    }
+
+    textarea{
+        resize: none;
+        border-radius: 10px;
+        font-size: 1em;
+    }
+}
+
+@include media-breakpoint-up(sm){
+    .crearComentario{
+        label{
+            font-size: 1.7em;
+        }
+    
+        textarea{
+            resize: none;
+            border-radius: 10px;
+            font-size: 1.3em;
+        }
+    }
+}

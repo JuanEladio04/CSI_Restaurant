@@ -21,7 +21,7 @@
 
     <section class="container-fluid crearOpiniones">
         <article>
-            <div class="contenedor-titulo titulo">
+            <div class="titulo">
                 <h1>Deja tu opinion</h1>
             </div>
         </article>
@@ -70,7 +70,7 @@
                                 <i class="fa-regular fa-2x fa-star text-danger"></i>
                             </div>
                         </div>
-                        <div class="form-group shadow-textarea">
+                        <div class="crearComentario">
                             <label class="roboto" id="label">Escriba su comentario:</label>
                             <textarea class="form-control z-depth-1" id="textarea" rows="4"></textarea>
                         </div>
