@@ -1,4 +1,4 @@
-<footer class="footer container-fluid text-center bg-dark mt-5 fixed-bottom">
+<footer class="footer container-fluid text-center bg-dark mt-5">
     <div class="container-fluid">
         <div class="row container-fluid">
             <!--Div del centro, en el que va el logo del restaurante y los logos de las redes sociales.-->
@@ -13,13 +13,13 @@
             <!--Div de la izquierda.-->
             <div class="mx-auto col-sm-4 order-sm-1 mb-sm-5 my-auto">
                 <p class="lead mb-0 mb-2">
-                    C / Nombre de calle
+                    <a href="https://www.google.com/maps/place/C.+Juego+de+Pelota,+14900+Lucena,+C%C3%B3rdoba/data=!4m2!3m1!1s0xd6d7734a3a1046f:0x37967444a4027296?sa=X&ved=2ahUKEwi116fU1saCAxVT1AIHHSxoAiIQ8gF6BAg9EAA">C / Juego de Pelota</a>
                 </p>
                 <p class="lead mb-0 mb-2">
                     Nº 0 Datos
                 </p>
                 <p class="lead">
-                    Lucena
+                    +34 333333333
                 </p>
             </div>
             <!--Div en el que van los enlaces a Términos, avisos legales y políticas-->
