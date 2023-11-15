@@ -12,7 +12,7 @@
 
         <div class="container-fluid">
             
-            <section class="row row-md-6 mb-5 mt-5 bg-info">
+            <section class="row mb-5 mt-5 bg-info">
                 <article class="articulo col p-5">
                     <h1 class="mt-3 text-center">Terminos y condiciones</h1>   
                     <p class="mt-5">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
@@ -26,7 +26,7 @@
             </section>  
 
 
-            <section class="row row-md-6 mb-5 mt-5 bg-info">
+            <section class="row mb-5 mt-5 bg-info">
                 <article class="articulo col p-5">
                     <h1 class="text-center">Aviso legal</h1>
                     <p class="mt-5">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
@@ -40,7 +40,7 @@
             </section>
 
 
-            <section class="row row-md-6 mb-5 mt-5 bg-info">
+            <section class="row mb-5 mt-5 bg-info">
                 <article class="articulo col p-5">
                     <h1 class="text-center">Política de privacidad</h1>
                     <p class="mt-5">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
@@ -54,8 +54,8 @@
             </section>
 
 
-            <section class="row row-md-6 mb-5 mt-5 bg-secondary">
-                <article class="articuloTC">
+            <section class="row mb-5 mt-5 bg-secondary">
+                <article class="articuloTC col-md-6">
                     <h1 class="text-center">Finalidad</h1>
                 </article>
                 <article class="articuloTC">

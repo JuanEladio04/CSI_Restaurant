@@ -10,8 +10,8 @@
     <?php include("../includes/navigation.php"); ?>
     <div class="container-fluid">
 
-        <section class="row row-md-6 mb-5 mt-5 bg-danger">
-            <article class="articulo col p-5">
+        <section class="row mb-5 mt-5 bg-danger">
+            <article class="articulo col p-4">
                 <h1 class="mt-3 text-center">Sobre nosotros...</h1>         
                 <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -25,8 +25,8 @@
         </section>
 
 
-        <section class="row row-md-6 mb-5 bg-danger">
-            <article class="articulo col p-5">
+        <section class="row mb-5 bg-danger">
+            <article class="articulo col-md-6 p-5">
                 <h1>Un pequeño vistazo</h1>
                 <p class="mt-5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -35,7 +35,7 @@
                     nisi ut aliquip ex ea commodo consequat.
                 </p>
             </article>
-            <article class="col-md-6 align-items-center position-relative">
+            <article class="col-md-6 align-items-center position-relative d-none d-md-block">
                 <iframe class="position-absolute top-0 start-0 w-100 h-100 border-0"
                     src="https://www.youtube.com/embed/4pg7EaYo7hM" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -47,12 +47,12 @@
 
 
         <section class="row mb-5 bg-danger">
-            <article class="col-md-6 align-items-center position-relative">
+            <article class="col-md-6 align-items-center position-relative d-none d-md-block">
                 <img class="position-absolute align-self-center top-0 start-0 w-100 h-100 border-0"
                     src="..\img\stockImages\aboutUs_StockImages\imagen-cocinero-aboutUs.jpg" frameborder="0">
                 </img>
             </article>
-            <article class="articulo col p-5">
+            <article class="articulo col-md-6 p-5">
                 <h1>Nuestros chefs</h1>
                 <p class=" mt-5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
