@@ -22,13 +22,13 @@
                     <a href="../index.php"><img src="../img/logos/BigLogo.png" width="300px"></a>
 
                     <!-- Form in a card -->
-                    <div class="container mt-5 mb-5 pt-5 d-flex flex-column align-items-center p-5">
-                        <div class="card formUser bg-danger text-light roundedBorder">
+                    <div class="container formUser">
+                        <div class="card bg-danger text-light roundedBorder">
                             <div class="card-header">
                                 <h1 class="text-center lobster">Crear cuenta</h1>
                             </div>
                             <div class="card-body roboto">
-                                <div class="mb-3 mt-3">
+                                <div class="">
                                     <!-- Form -->
                                     <form action="/action_page.php">
                                         <!-- Name and Last Name inputs -->
@@ -43,17 +43,17 @@
                                             </div>
                                         </div>
                                         <!-- Email input -->
-                                        <div class="mb-3">
+                                        <div class="margenInferior">
                                             <label for="Email" class="form-label">Correo electrónico</label>
                                             <input type="email" class="roundedInput form-control" id="email"
                                                 name="Email">
                                         </div>
                                         <!-- Password inputs -->
-                                        <div class="col mb-3">
+                                        <div class="col margenInferior">
                                             <label for="Password1" class="form-label">Contraseña</label>
                                             <input type="password" class="roundedInput form-control" name="Password1">
                                         </div>
-                                        <div class="col mb-3">
+                                        <div class="col margenInferior">
                                             <label for="Passwordw" class="form-label">Confirmar contraseña</label>
                                             <input type="password" class="roundedInput form-control" name="Password2">
                                         </div>
@@ -67,7 +67,7 @@
                                         <!-- Create account button -->
                                         <div class="d-grid mt-3">
                                             <button type="button"
-                                                class="btn btn-primary btn-block roundedInput roboto">Crear
+                                                class="btn btn-primary btn-block roundedInput roboto textoNoWrap">Crear
                                                 cuenta</button>
                                         </div>
                                     </form>

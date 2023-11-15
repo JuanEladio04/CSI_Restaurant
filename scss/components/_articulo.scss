@@ -1,9 +1,29 @@
 .articulo {
     h1 {
         font-family: $headings-font-family;
-
+        color: $light !important;
     }
     p {
-        color: $light;
+        color: $light !important;
+        font-family: $font-family-sans-serif;
+        font-size: 28px;
+    }
+}
+
+.articuloTC{
+    h1{
+        font-family: $headings-font-family;
+        color: $dark !important; 
+        padding: 40px;
+    }
+    h2{
+        font-family: $headings-font-family;
+        color: $dark !important; 
+        font-size: 35px;
+    }
+    p{
+        color: $dark !important;
+        font-family: $font-family-sans-serif;
+        font-size: 28px;
     }
 }
