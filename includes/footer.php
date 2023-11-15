@@ -22,7 +22,7 @@
             <!--Div en el que van los enlaces a Términos, avisos legales y políticas-->
             <div class="mx-auto col-sm-4 order-sm-3 mb-sm-5 my-auto">
                 <p class="lead mb-2">
-                    <a>Términos y condiciones</a>
+                    <a href="../view/terminosCondiciones.php">Términos y condiciones</a>
                 </p>
                 <p class="lead mb-2">
                     <a>Aviso legal</a>

@@ -25,7 +25,7 @@ switch ($_SERVER["SCRIPT_NAME"]) {
 		$PAGE_TITLE = "Sobre nosotros";
 		break;
 	case "/view/reserve.php":
-		$CURRENT_PAGE = "reserva";
+		$CURRENT_PAGE = "reserve";
 		$PAGE_TITLE = "Reservas";
 		break;
 	case "/view/terminosCondiciones.php":

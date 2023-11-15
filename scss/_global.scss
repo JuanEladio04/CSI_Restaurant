@@ -29,21 +29,6 @@ html {
     }
 }
 
-.inputForgottenPass {
-    width: 50vh;
-}
-
-
-.divUserForm {
-    height: auto;
-    width: auto;
-}
-
-.divLoginForm {
-    height: auto;
-    width: auto;
-
-}
 
 .rounded-checkbox {
     width: 50px !important;
@@ -52,14 +37,6 @@ html {
     /* Altura personalizada */
 }
 
-.gestionUser {
-    height: 80%;
-    width: 80vh;
-}
-
-.imgFooter {
-    width: 25vh;
-}
 
 .textoNoWrap {
     white-space: nowrap;
@@ -114,6 +91,11 @@ html {
 
 #aboutUs-index {
     background-image: url(../img/backgrounds/aboutUsIndex.png);
+}
+
+#background-reserve {
+    background-image: url(../img/backgrounds/reservesBackground.jpg);
+    @include background;
 }
 
 #background-opinion {

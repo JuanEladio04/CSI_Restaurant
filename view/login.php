@@ -56,7 +56,7 @@
                                             registrado</a>
                                     </div>
                                     <div class="col-sm-12 text-center">
-                                        <button type="button" class="btn btn-primary roundedInput">Entrar</button>
+                                        <button type="button" class="btn btn-primary roundedInput">Identificarse</button>
                                     </div>
                                 </div>
                             </div>

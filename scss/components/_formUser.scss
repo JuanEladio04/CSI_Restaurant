@@ -14,9 +14,9 @@
         font-family: $font-family-sans-serif !important;
         height: 3.5vh;
         @include media-breakpoint-up(sm) {
-            padding: 0% 15vh;
+            padding: 0% 7vh;
         }
-        padding: 0% 10vh;
+        padding: 0% 5vh;
     }
 
     .margenInferior {

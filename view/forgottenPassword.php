@@ -51,7 +51,7 @@
                                     </div>
                                     <div class="col-sm-12 text-center">
                                         <button type="button"
-                                            class="btn btn-primary roundedInput">Entrar</button>
+                                            class="btn btn-primary roundedInput">Enviar correo</button>
                                     </div>
                                 </div>
                             </div>

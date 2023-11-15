@@ -26,7 +26,7 @@
             <div class="row lobster">
               <a href="#" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Carta</a>
               <a href="#" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Ofertas</a>
-              <a href="#" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Reservas</a>
+              <a href="view/reserve.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Reservas</a>
               <a href="view/login.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Iniciar Sesión</a>
             </div>
           </nav>
@@ -84,14 +84,10 @@
         <div class="buttons container-fluid row mt-5">
           <div class="row mt-5">
             <button id="prev" type="button" class="btn btn-danger col-1 me-auto rounded-pill">
-              <span class="material-symbols-outlined">
-                chevron_left
-              </span>
+              <i class="fa-solid fa-angle-left"></i>
             </button>
             <button id="next" type="button" class="btn btn-danger col-1 ms-auto rounded-pill">
-              <span class="material-symbols-outlined">
-                chevron_right
-              </span>
+              <i class="fa-solid fa-angle-right"></i>
             </button>
           </div>
         </div>
@@ -106,7 +102,7 @@
           <h3 class="col-12 text-light">
             ¿Te apetece saborear la auténtica cocina italiana, elaborada con los mejores ingredientes y el cariño de nuestra familia?
           </h3>
-          <p class="col-12 text-light text-justify">
+          <p class="col-12 text-light text-justify"> 
             Te esperamos en el siguiente enlace, donde podrás conocer más sobre nuestro restaurante, nuestra tradición y nuestra pasión por la gastronomía. En este sitio, podrás ver las fotos de nuestros platos, nuestro personal y nuestro ambiente. También podrás leer las opiniones de nuestros clientes, nuestras recetas y nuestras ofertas. No dejes pasar esta oportunidad de disfrutar de una experiencia única y deliciosa.
           </p>
           <div class="align-items-right col-12">
@@ -117,7 +113,7 @@
 
       <!--Feedback section-->
       <section class="bg-primary container-fluid p-5 my-5 col-12">
-        <h2 class="d.none">Feed back</h2>
+        <h2 class="d-none">Feed back</h2>
         <div class="row">
           <!--Comentaries description-->
           <article id="opinion-description" class="col-lg-3 border-end border-light pb-5">

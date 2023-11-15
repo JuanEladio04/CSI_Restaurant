@@ -1,0 +1,20 @@
+.rForm{
+    border-radius: $border-radius-lg !important;
+    .rFormContent{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        label{
+            text-align: right;
+        }
+    
+        input, select{
+            border-radius: $border-radius-lg;
+            padding: 0.5rem;
+            border: $danger;
+        }
+
+        #sDinners{
+            display: none;
+        }
+    }
+}
