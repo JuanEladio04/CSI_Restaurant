@@ -23,8 +23,8 @@
                     <a href="../index.php"><img src="../img/logos/BigLogo.png" width="300px"></a>
 
                     <!-- Form in a card -->
-                    <div class="container  d-flex flex-column align-items-center justify-content-center">
-                        <div class="card formUser bg-danger text-light roundedBorder col-lg-12 col-sm-6 ">
+                    <div class="container formUser">
+                        <div class="card bg-danger text-light roundedBorder col-lg-12 col-sm-6 ">
                             <div class="card-header">
                                 <h1 class="text-center">Contraseña olvidada</h1>
                             </div>
@@ -43,15 +43,15 @@
                             </div>
 
                             <!-- Footer with links to login and registration -->
-                            <div class="card-footer text-start">
-                                <a href="login.php" class="nav-link text-light">Identificarse</a>
+                            <div class="card-footer text-center">
+                                <a href="register.php" class="nav-link text-light col-sm-12 text-center">No tengo cuenta</a>
                                 <div class="row">
-                                    <div class="col-6">
-                                        <a href="register.php" class="nav-link text-light">No estoy registrado</a>
+                                    <div class="col-sm-12 text-center">
+                                        <a href="login.php" class="nav-link text-light textoNoWrap">Identificarse</a>
                                     </div>
-                                    <div class="col-6 text-center d-flex justify-content-end">
-                                        <button type="button" class="btn btn-primary px-3 roundedInput roboto">Enviar
-                                            correo</button>
+                                    <div class="col-sm-12 text-center">
+                                        <button type="button"
+                                            class="btn btn-primary roundedInput">Enviar correo</button>
                                     </div>
                                 </div>
                             </div>

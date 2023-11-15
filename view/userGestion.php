@@ -19,21 +19,21 @@
 
                 <!-- Main content container -->
                 <div class="col-4 d-flex flex-column justify-content-center align-items-center">
-
-                    <div class="container mt-5 pt-5 d-flex flex-column align-items-center">
+                    <!-- User photo container -->
+                    <div class="container formUser mt-5 pt-5 d-flex flex-column align-items-center">
                         <div class="card bg-danger text-dark roundedBorderUserGestion bg-light">
-                            <div class="card-body roboto my-auto">
-                                <h1 class="text-center lobster">Foto de perfil</h1>
+                            <div class="card-body my-auto">
+                                <h1 class="text-center">Foto de perfil</h1>
 
-                                <div class="mb-3 mt-3">
+                                <div class="">
                                     <!-- Form -->
                                     <form action="/action_page.php">
                                         <div class="d-flex justify-content-center">
-                                        <img class="" width = "200vh"alt="Imagen de usuario"
-                                            src="../img/stockImages/defaultUserImage.png" />
+                                            <img class="" width="200vh" alt="Imagen de usuario"
+                                                src="../img/stockImages/defaultUserImage.png" />
                                         </div>
                                         <div class="container d-flex justify-content-center my-2">
-                                            <button class="btn text-light bg-danger roundedInput" type="submit">
+                                            <button class="btn text-light bg-danger roundedInput textoNoWrap" type="submit">
                                                 Cambiar foto de perfil
                                             </button>
                                         </div>
@@ -44,20 +44,20 @@
                     </div>
 
                     <!-- User name change form -->
-                    <div class="container mb-5 pt-5 d-flex flex-column align-items-center">
+                    <div class="container formUser">
                         <div class="card bg-danger text-dark roundedBorderUserGestion bg-light">
-                            <div class="card-body roboto my-auto">
+                            <div class="card-body  my-auto">
                                 <h1 class="text-center lobster">Nombre de usuario</h1>
 
-                                <div class="mb-3 mt-3">
+                                <div class="">
                                     <!-- Form -->
                                     <form action="/action_page.php">
-                                        <div class="mb-3">
+                                        <div class="">
                                             <input type="text" class="roundedInput form-control" id="userName"
                                                 name="userName">
                                         </div>
                                         <div class="container d-flex justify-content-center my-2">
-                                            <button class="btn text-light bg-danger roundedInput" type="submit">
+                                            <button class="btn text-light bg-danger roundedInput textoNoWrap" type="submit">
                                                 Cambiar nombre de usuario
                                             </button>
                                         </div>
@@ -68,20 +68,20 @@
                     </div>
 
                     <!-- User email change form -->
-                    <div class="container-fluid mb-5 d-flex flex-column align-items-center justify-content-center">
+                    <div class="container formUser">
                         <div class="card bg-danger text-dark roundedBorderUserGestion bg-light">
-                            <div class="card-body roboto my-auto">
+                            <div class="card-body my-auto">
                                 <h1 class="text-center lobster">Correo electrónico</h1>
 
-                                <div class="mb-3">
+                                <div class="">
                                     <!-- Form -->
                                     <form action="/action_page.php">
-                                        <div class="mb-3">
+                                        <div class="">
                                             <input type="text" class="roundedInput form-control" id="userEmail"
                                                 name="userEmail">
                                         </div>
                                         <div class="container d-flex justify-content-center my-2">
-                                            <button class="btn text-light bg-danger roundedInput" type="submit">
+                                            <button class="btn text-light bg-danger roundedInput textoNoWrap" type="submit">
                                                 Cambiar correo electrónico
                                             </button>
                                         </div>
@@ -92,9 +92,9 @@
                     </div>
 
                     <!-- Password change form -->
-                    <div class="container-fluid mb-5 d-flex flex-column align-items-center justify-content-center">
+                    <div class="container-fluid formUser">
                         <div class="card bg-danger text-dark roundedBorderUserGestion bg-light">
-                            <div class="card-body roboto my-auto">
+                            <div class="card-body my-auto">
                                 <h1 class="text-center lobster">Cambiar contraseña</h1>
 
                                 <div class="mb-3">

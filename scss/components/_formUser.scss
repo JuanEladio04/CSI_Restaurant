@@ -1,11 +1,22 @@
 .formUser {
-    margin-top: 12vh;
-    margin-bottom: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3vh;
+    .card {
+        padding: 0% 5%;
+        width: 50vh;
+    }
     a{
         font-family: $headings-font-family;
     }
     .btn{
         font-family: $font-family-sans-serif !important;
+        height: 3.5vh;
+        @include media-breakpoint-up(sm) {
+            padding: 0% 7vh;
+        }
+        padding: 0% 5vh;
     }
 
     .margenInferior {
