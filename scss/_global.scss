@@ -238,3 +238,8 @@ html {
     background-image: url(../img/backgrounds/backGround03.jpg);
     @include background;
 }
+
+#background-terminosCondiciones {
+    background-image: url(../img/backgrounds/termins-y-condcones@3x.png);
+    @include background;
+}
