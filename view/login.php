@@ -23,8 +23,8 @@
                     <a href="../index.php"><img src="../img/logos/BigLogo.png" width="300px"></a>
 
                     <!-- Form in a card -->
-                    <div class="container d-flex flex-column align-items-center">
-                        <div class="card formUser bg-danger text-light roundedBorder col-lg-12 col-sm-6">
+                    <div class="container formUser">
+                        <div class="card bg-danger text-light roundedBorder col-lg-12 col-sm-6">
                             <div class="card-header">
                                 <h1 class="text-center">Identificarse</h1>
                             </div>
@@ -47,16 +47,16 @@
                             </div>
 
                             <!-- Footer with links and login button -->
-                            <div class="card-footer text-start">
-                                <a href="forgottenPassword.php" class="nav-link text-light col-sm-12 col-lg-8 text-center d-lg-flex justify-content-start">Contraseña olvidada</a>
+                            <div class="card-footer text-center">
+                                <a href="forgottenPassword.php"
+                                    class="nav-link text-light col-sm-12 text-center">Contraseña olvidada</a>
                                 <div class="row">
-                                    <div class="col-sm-12 col-lg-8 text-center d-lg-flex justify-content-start">
+                                    <div class="col-sm-12 text-center ">
                                         <a href="register.php" class="nav-link text-light textoNoWrap">No estoy
                                             registrado</a>
                                     </div>
-                                    <div class="col-sm-12 col-lg-8 text-center d-lg-flex justify-content-end">
-                                        <button type="button"
-                                            class="btn btn-primary px-5 roundedInput">Entrar</button>
+                                    <div class="col-sm-12 text-center">
+                                        <button type="button" class="btn btn-primary roundedInput">Entrar</button>
                                     </div>
                                 </div>
                             </div>
