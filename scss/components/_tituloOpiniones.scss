@@ -1,0 +1,17 @@
+.titulo{
+    h1{
+        font-family: $headings-font-family;
+        text-align: center;
+        color: $light;
+        letter-spacing: 3px;
+        font-size: 2em;
+    }
+}
+
+@include media-breakpoint-up(sm) { 
+    .titulo{
+        h1{
+            font-size: 4em;
+        }
+    }
+}

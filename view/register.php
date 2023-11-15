@@ -22,8 +22,8 @@
                     <a href="../index.php"><img src="../img/logos/BigLogo.png" width="300px"></a>
 
                     <!-- Form in a card -->
-                    <div class="container  d-flex flex-column align-items-center">
-                        <div class="card formUser bg-danger text-light roundedBorder">
+                    <div class="container formUser">
+                        <div class="card bg-danger text-light roundedBorder">
                             <div class="card-header">
                                 <h1 class="text-center lobster">Crear cuenta</h1>
                             </div>
@@ -67,7 +67,7 @@
                                         <!-- Create account button -->
                                         <div class="d-grid mt-3">
                                             <button type="button"
-                                                class="btn btn-primary btn-block roundedInput roboto">Crear
+                                                class="btn btn-primary btn-block roundedInput roboto textoNoWrap">Crear
                                                 cuenta</button>
                                         </div>
                                     </form>
