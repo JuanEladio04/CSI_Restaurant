@@ -1,0 +1,42 @@
+.arriba {
+    display: inline;
+    justify-content: left;
+
+    .img{
+        width: 100%;
+        text-align: center;
+        padding-top: 10%;
+    
+    }
+    
+    .img-user {
+        width: 40%;
+        text-align: center;
+    }
+
+    .username {
+        margin: 0% 1%;
+        font-size: 2em;
+        white-space: nowrap;
+    }
+    
+    .stars {
+        display: block;
+        align-items: center;
+    }
+}
+
+@include media-breakpoint-up(sm){
+    .arriba{
+        display: flex;
+
+        .img-user {
+        width: 100%;
+        } 
+        
+        .img{
+            width: 3%;
+            padding-top: 0%;
+        }
+    }
+}

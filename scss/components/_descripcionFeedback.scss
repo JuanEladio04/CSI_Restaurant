@@ -1,0 +1,29 @@
+.tituloh2{
+    h2{
+        font-family: $font-family-sans-serif;
+        font-weight: normal;
+        font-size: 1em;
+
+    }
+}
+
+.p{
+    p{
+        font-size: 1em;
+    
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .tituloh2{
+        h2{
+            font-size: 3em;
+        }
+    }
+
+    .p{
+        p{
+            font-size: 2em;
+        }
+    }
+}
