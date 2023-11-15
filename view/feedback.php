@@ -22,7 +22,7 @@
     <section class="container-fluid crearOpiniones">
         <article>
             <div class="titulo">
-                <h1>Deja tu opinion</h1>
+                <h1>Deja tu opinión</h1>
             </div>
         </article>
         <article class="contenedor">
