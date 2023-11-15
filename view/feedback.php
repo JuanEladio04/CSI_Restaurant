@@ -55,17 +55,17 @@
                             <div class="username">Nombre de Usuario</div>
 
                             <div class="stars">
-                                <i class="fa-solid fa-2x fa-star mx-auto text-danger"></i>
+                            <i class="fa-regular fa-2x fa-star text-danger"></i>
 
-                                <i class="fa-solid fa-2x fa-star mx-auto text-danger"></i>
+                                <i class="fa-regular fa-2x fa-star text-danger"></i>
 
-                                <i class="fa-solid fa-2x fa-star mx-auto text-danger"></i>
+                                <i class="fa-regular fa-2x fa-star text-danger"></i>
 
-                                <i class="fa-solid fa-2x fa-star text-danger"></i>
+                                <i class="fa-regular fa-2x fa-star text-danger"></i>
 
-                                <i class="fa-solid fa-2x fa-star text-danger"></i>
+                                <i class="fa-regular fa-2x fa-star text-danger"></i>
 
-                                <i class="fa-solid fa-2x fa-star text-danger"></i>
+                                <i class="fa-regular fa-2x fa-star text-danger"></i>
 
                                 <i class="fa-regular fa-2x fa-star text-danger"></i>
                             </div>
@@ -85,7 +85,7 @@
                 <h1>Opiniones de Nuestros Clientes</h1>
             </div>
         </article>
-        <div class="opinionesclientes p-5">
+        <div class="opinionesclientes p-5"> 
             <div class="frame-interior">
                 <article>
                     <div>
