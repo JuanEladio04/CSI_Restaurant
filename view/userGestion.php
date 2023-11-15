@@ -32,7 +32,7 @@
                                             <img class="" width="200vh" alt="Imagen de usuario"
                                                 src="../img/stockImages/defaultUserImage.png" />
                                         </div>
-                                        <div class="container d-flex justify-content-center my-2">
+                                        <div class="container d-flex justify-content-center margenSuperior">
                                             <button class="btn text-light bg-danger roundedInput textoNoWrap" type="submit">
                                                 Cambiar foto de perfil
                                             </button>
@@ -56,7 +56,7 @@
                                             <input type="text" class="roundedInput form-control" id="userName"
                                                 name="userName">
                                         </div>
-                                        <div class="container d-flex justify-content-center my-2">
+                                        <div class="container d-flex justify-content-center margenSuperior">
                                             <button class="btn text-light bg-danger roundedInput textoNoWrap" type="submit">
                                                 Cambiar nombre de usuario
                                             </button>
@@ -80,7 +80,7 @@
                                             <input type="text" class="roundedInput form-control" id="userEmail"
                                                 name="userEmail">
                                         </div>
-                                        <div class="container d-flex justify-content-center my-2">
+                                        <div class="container d-flex justify-content-center margenSuperior">
                                             <button class="btn text-light bg-danger roundedInput textoNoWrap" type="submit">
                                                 Cambiar correo electrónico
                                             </button>
@@ -97,25 +97,25 @@
                             <div class="card-body my-auto">
                                 <h1 class="text-center lobster">Cambiar contraseña</h1>
 
-                                <div class="mb-3">
+                                <div class="margenInferior">
                                     <!-- Form -->
                                     <form action="/action_page.php">
-                                        <div class="mb-3">
+                                        <div class="margenInferior">
                                             <p class="lobster">Contraseña actual:</p>
                                             <input type="password" class="roundedInput form-control" id="conAct"
                                                 name="conAct">
                                         </div>
-                                        <div class="mb-3">
+                                        <div class="margenInferior">
                                             <p class="lobster">Contraseña nueva:</p>
                                             <input type="password" class="roundedInput form-control" id="conNue"
                                                 name="conNue">
                                         </div>
-                                        <div class="mb-3">
+                                        <div class="margenInferior">
                                             <p class="lobster">Repetir contraseña:</p>
                                             <input type="password" class="roundedInput form-control" id="conNueRep"
                                                 name="conNueRep">
                                         </div>
-                                        <div class="container d-flex justify-content-center my-2">
+                                        <div class="container d-flex justify-content-center margenSuperior">
                                             <button class="btn text-light bg-danger roundedInput" type="submit">
                                                 Cambiar contraseña
                                             </button>

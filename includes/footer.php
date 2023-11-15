@@ -11,12 +11,15 @@
                 </div>
             </div>
             <!--Div de la izquierda.-->
-            <div class="mx-auto col-sm-4 order-sm-1 mb-sm-5 my-auto ">
+            <div class="mx-auto col-sm-4 order-sm-1 mb-sm-5 my-auto">
                 <p class="lead mb-0 mb-2">
                     C / Nombre de calle
                 </p>
-                <p class="lead mb-0 mb-3">
+                <p class="lead mb-0 mb-2">
                     Nº 0 Datos
+                </p>
+                <p class="lead">
+                    Lucena
                 </p>
             </div>
             <!--Div en el que van los enlaces a Términos, avisos legales y políticas-->

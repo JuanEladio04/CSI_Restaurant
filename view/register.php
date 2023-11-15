@@ -25,19 +25,19 @@
                     <div class="container formUser">
                         <div class="card bg-danger text-light roundedBorder">
                             <div class="card-header">
-                                <h1 class="text-center lobster">Crear cuenta</h1>
+                                <h1 class="text-center">Crear cuenta</h1>
                             </div>
-                            <div class="card-body roboto">
+                            <div class="card-body">
                                 <div class="">
                                     <!-- Form -->
                                     <form action="/action_page.php">
                                         <!-- Name and Last Name inputs -->
                                         <div class="row">
-                                            <div class="col-sm-6 mb-1">
+                                            <div class="col-sm-6 margenInferior">
                                                 <label for="FirstN" class="form-label">Nombre</label>
                                                 <input type="text" class="roundedInput form-control" name="FirstN">
                                             </div>
-                                            <div class="col-sm-6 mb-2">
+                                            <div class="col-sm-6 margenInferior">
                                                 <label for="LastN" class="form-label">Apellidos</label>
                                                 <input type="text" class="roundedInput form-control" name="LastN">
                                             </div>
@@ -65,9 +65,9 @@
                                             class="rounded-checkbox"> <label for="acepto">Acepto términos</label>
 
                                         <!-- Create account button -->
-                                        <div class="d-grid mt-3">
+                                        <div class="d-grid margenSuperior">
                                             <button type="button"
-                                                class="btn btn-primary btn-block roundedInput roboto textoNoWrap">Crear
+                                                class="btn btn-primary btn-block roundedInput textoNoWrap">Crear
                                                 cuenta</button>
                                         </div>
                                     </form>

@@ -29,7 +29,7 @@
                                 <h1 class="text-center">Identificarse</h1>
                             </div>
                             <div class="card-body">
-                                <div class="mt-3">
+                                <div class="">
                                     <!-- Form -->
                                     <form action="/action_page.php">
                                         <!-- Email input -->
