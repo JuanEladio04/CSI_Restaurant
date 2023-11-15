@@ -10,6 +10,15 @@
         border-radius: 10px;
         font-size: 1em;
     }
+
+    #boton{
+        text-align: right;
+
+        button{
+            margin-top: 7%; 
+        }
+    }
+
 }
 
 @include media-breakpoint-up(sm){
@@ -24,4 +33,14 @@
             font-size: 1.3em;
         }
     }
-}
+
+    #boton{
+        text-align: right;
+
+        button{
+            margin-top: 1% !important; 
+            font-size: 1.7em;
+
+        }
+    }
+} 

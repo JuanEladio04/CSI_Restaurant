@@ -32,6 +32,16 @@ switch ($_SERVER["SCRIPT_NAME"]) {
 		$CURRENT_PAGE = "terminosCondiciones";
 		$PAGE_TITLE = "Términos y Condiciones";
 		break;
+	
+	case "/view/feedback.php":
+		$CURRENT_PAGE = "feedback";
+		$PAGE_TITLE = "Opiniones";
+		break;
+
+	case "/view/offers.php":
+		$CURRENT_PAGE = "offers";
+		$PAGE_TITLE = "Ofertas";
+		break;
 	default:
 		$CURRENT_PAGE = "Index";
 		$PAGE_TITLE = "Welcome to my homepage!";

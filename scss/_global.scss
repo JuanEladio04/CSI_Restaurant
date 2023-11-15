@@ -72,7 +72,7 @@ html {
     background-size: cover;
     background-repeat: no-repeat;
 }
-
+ 
 //INDEX
 
 @media (max-width: map-get($grid-breakpoints, 'sm')){
@@ -98,8 +98,13 @@ html {
     @include background;
 }
 
-#background-opinion {
+#background-feedback {
     background-image: url(../img/backgrounds/feedback.png);
+    background-size: cover;
+}
+
+#background-offers {
+    background-image: url(../img/backgrounds/offers.png);
     background-size: cover;
 }
 

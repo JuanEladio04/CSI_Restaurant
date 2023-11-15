@@ -9,15 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Pagina opiniones del restaurante">
     <meta name="author" content="CSI">
-    <title>Opiniones</title>
 
     <?php include("../includes/head-tag-contents.php"); ?>
 </head>
 
-<body id="background-opinion">
-    <nav>
-        <?php include("../includes/navigation.php"); ?>
-    </nav>
+<body id="background-<?php echo $CURRENT_PAGE; ?>">
+    <?php include("../includes/navigation.php"); ?>
+    <?php include("../includes/design-top.php"); ?>
+
 
     <section class="container-fluid crearOpiniones">
         <article>
@@ -55,7 +54,7 @@
                             <div class="username">Nombre de Usuario</div>
 
                             <div class="stars">
-                            <i class="fa-regular fa-2x fa-star text-danger"></i>
+                                <i class="fa-regular fa-2x fa-star text-danger"></i>
 
                                 <i class="fa-regular fa-2x fa-star text-danger"></i>
 
@@ -72,7 +71,12 @@
                         </div>
                         <div class="crearComentario">
                             <label class="roboto" id="label">Escriba su comentario:</label>
-                            <textarea class="form-control z-depth-1" id="textarea" rows="4"></textarea>
+                            <form>
+                                <textarea class="form-control z-depth-1" id="textarea" rows="4"></textarea>
+                                <div id="boton">
+                                    <button type="button" class="btn btn-danger">Enviar</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -85,7 +89,7 @@
                 <h1>Opiniones de Nuestros Clientes</h1>
             </div>
         </article>
-        <div class="opinionesclientes p-5"> 
+        <div class="opinionesclientes p-5">
             <div class="frame-interior">
                 <article>
                     <div>

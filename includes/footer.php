@@ -1,4 +1,4 @@
-<footer class="footer container-fluid text-center bg-dark mt-5">
+<footer class="footer container-fluid text-center bg-dark mt-5 fixed-bottom">
     <div class="container-fluid">
         <div class="row container-fluid">
             <!--Div del centro, en el que va el logo del restaurante y los logos de las redes sociales.-->

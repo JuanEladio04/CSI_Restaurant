@@ -19,7 +19,7 @@
 
                     <li
                         class="nav-item  w-100 h-100 text-center  ">
-                        <a class="nav-link " href="index.php">Reserva</a></li>
+                        <a class="nav-link " href="../view/reserve.php">Reserva</a></li>
 
                     <li class="nav-item  w-100 h-100 text-center "><a
                             class="nav-link" href="about.php">Carta</a></li>
@@ -28,7 +28,7 @@
                             class="nav-link" id="invisible" href="../view/aboutUs.php">Sobre <!--<span id="invisible">_</span>--> Nosotros</a></li>
 
                     <li class="nav-item  w-100 h-100 text-center "><a
-                            class="nav-link" href="contact.php">Ofertas</a></li>
+                            class="nav-link" href="../view/offers.php">Ofertas</a></li>
 
                     <li class="nav-item  w-100 h-100 text-center "><a
                             class="nav-link" href="../view/feedback.php">Opiniones</a></li>
