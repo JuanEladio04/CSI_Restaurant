@@ -24,8 +24,8 @@
 
           <nav class="container-fluid col-12 d-lg-none d-sm-block">
             <div class="row lobster">
-              <a href="#" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Carta</a>
-              <a href="#" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Ofertas</a>
+              <a href="view/card.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Carta</a>
+              <a href="view/offers.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Ofertas</a>
               <a href="view/reserve.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Reservas</a>
               <a href="view/login.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Iniciar Sesión</a>
             </div>
@@ -48,7 +48,7 @@
             <div class="card-body container-fluid bg-danger roundedBorder">
               <h3 class="card-title lobster bg-danger container-fluid ">Ofertas</h3>
               <p class="card-text roboto text-justify">¡Mira nuestras ofertas diarias y semanales! Hazle un favor a tu bolsillo.</p>
-              <a href="#" class="btn btn-primary rounded-2">Visitar ofertas</a>
+              <a href="view/offers.php" class="btn btn-primary rounded-2">Visitar ofertas</a>
             </div>
           </div>
 
@@ -57,7 +57,7 @@
             <div class="card-body container-fluid bg-danger roundedBorder">
               <h3 class="card-title lobster ">Carta</h3>
               <p class="card-text roboto text-justify">Comprueba toda una carta llena de platos variados para todo tipo de personas y estómagos</p>
-              <a href="#" class="btn btn-primary rounded-2">Muéstrame</a>
+              <a href="view/card.php" class="btn btn-primary rounded-2">Muéstrame</a>
             </div>
           </div>
 
