@@ -8,14 +8,14 @@
 
 <body id="background-<?php echo $CURRENT_PAGE; ?>">
     <?php include("../includes/navigation.php"); ?>
+    <?php include("../includes/design-top.php"); ?>
 
 
     <div class="container-fluid">
 
-        <section class="row mb-5 mt-5 bg-info">
+        <section class="row mb-5 bg-info">
             <article class="articulo col p-5">
-                <h1 class="mt-3 text-center">Terminos y condiciones</h1>
-                <p class="mt-5">¡Bienvenido al restaurante Lunna Di La Rosa. Antes de explorar nuestra deliciosa oferta
+                <p class="mt-2">¡Bienvenido al restaurante Lunna Di La Rosa. Antes de explorar nuestra deliciosa oferta
                     en línea, te pedimos que revises detenidamente los siguientes términos y condiciones que rigen el
                     uso de este sitio. Al acceder y utilizar nuestro sitio web, aceptas cumplir con estos términos y
                     condiciones. Si no estás de acuerdo con alguna parte de estos términos, te recomendamos que no

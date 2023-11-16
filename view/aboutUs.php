@@ -8,12 +8,13 @@
 
 <body id="background-<?php echo $CURRENT_PAGE; ?>">
     <?php include("../includes/navigation.php"); ?>
+    <?php include("../includes/design-top.php"); ?>
+
     <div class="container-fluid">
 
-        <section class="row mb-5 mt-5 bg-danger">
-            <article class="articulo col p-4">
-                <h1 class="mt-3 text-center">Sobre nosotros...</h1>         
-                <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        <section class="row mb-5 bg-danger">
+            <article class="articulo col p-5">       
+                <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
                     ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                     aliquip ex ea commodo consequat. Duis aute irure dolor in
@@ -25,17 +26,17 @@
         </section>
 
 
-        <section class="row mb-5 bg-danger">
-            <article class="articulo col-md-6 p-5">
+        <section class="row mb-5 bg-danger flex-lg-row flex-column-reverse">
+            <article class="articulo col-lg-6 p-5">
                 <h1>Un pequeño vistazo</h1>
-                <p class="mt-5">
+                <p class="mt-5 d-none d-lg-block">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                     enim ad minim veniam, quis nostrud exercitation ullamco laboris
                     nisi ut aliquip ex ea commodo consequat.
                 </p>
             </article>
-            <article class="col-md-6 align-items-center position-relative d-none d-md-block">
+            <article class="col-lg-6 position-relative">
                 <iframe class="position-absolute top-0 start-0 w-100 h-100 border-0"
                     src="https://www.youtube.com/embed/4pg7EaYo7hM" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -47,12 +48,12 @@
 
 
         <section class="row mb-5 bg-danger">
-            <article class="col-md-6 align-items-center position-relative d-none d-md-block">
+            <article class="col-lg-6 align-items-center position-relative d-none d-lg-block">
                 <img class="position-absolute align-self-center top-0 start-0 w-100 h-100 border-0"
                     src="..\img\stockImages\aboutUs_StockImages\imagen-cocinero-aboutUs.jpg" frameborder="0">
                 </img>
             </article>
-            <article class="articulo col-md-6 p-5">
+            <article class="articulo col-lg-6 p-5">
                 <h1>Nuestros chefs</h1>
                 <p class=" mt-5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
