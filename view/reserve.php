@@ -11,59 +11,57 @@
 
     <?php include("../includes/design-top.php"); ?>
     <!--Reserves formulary-->
-    <section class="container-fluid bg-danger w-75 rounded rounded-25 rForm">
+    <section class="container-fluid bg-danger rForm">
         <!--Presentation-->
         <h2 class="d-none">Formulario de reservas</h2>
-        <div class="row">
-            <div class="dropdown col-12 text-center p-0">
-                <h3 class="p-5">
-                    ¿Desea reservar mesa? Hágalo ahora mismo desde aqui.
-                </h3>
-                <!--Formulary-->
-                <div class="container-fluid col-12 p-3 bg-primary" aria-labelledby="dropdownMenuButton">
-                    <div class="row justify-content-around alight-items-center">
-                        <form class="col-12 row" action="" method="POST">
-                            <div class="row col-lg-6 col-sm-12 rFormContent">
-                                <label class="col-lg-6 col-sm-3" for="">Nombre:</label>
-                                <input class="col-lg-6 col-sm-8" type="text" name="ittName">
-                            </div>
+        <div class="row justify-content-around text-center">
+            <h3 class="p-5">
+                ¿Desea reservar mesa? Hágalo ahora mismo desde aqui.
+            </h3>
+            <!--Formulary-->
+            <form class="col-12 row bg-primary p-0 form row" action="" method="POST">
+                <div class="row p-3 text-center mx-auto justify-content-around col-10">
+                    <div class="row col-lg-6 col-sm-12 rFormContent">
+                        <label class="col-12" for="">Nombre:</label>
+                        <input class="col-12" type="text" name="ittName" required pattern="^[A-Za-z]+$">
+                    </div>
 
-                            <div class="row col-lg-6 col-sm-12 rFormContent">
-                                <label class="col-6" for="">Apellidos:</label>
-                                <input class="col-6" type="text" name="ittSecondName">
-                            </div>
+                    <div class="row col-lg-6 col-sm-12 rFormContent">
+                        <label class="col-12" for="">Apellidos:</label>
+                        <input class="col-12" type="text" name="ittSecondName"  required pattern="^[A-Za-z]+$">
+                    </div>
 
-                            <div class="row col-lg-6 col-sm-12 rFormContent">
-                                <label class="col-6" for="">Número de teléfono:</label>
-                                <input class="col-6" type="tel" name="ittelPhoneNumber">
-                            </div>
+                    <div class="row col-lg-6 col-sm-12 rFormContent">
+                        <label class="col-12" for="">Número de teléfono:</label>
+                        <input class="col-12" type="tel" name="ittelPhoneNumber"  required pattern="^\\+?[0-9]{1,4}?[-.\\s]?\\(?[0-9]{1,3}?\\)?[-.\\s]?[0-9]{1,4}[-.\\s]?[0-9]{1,9}$">
+                    </div>
 
-                            <div class="row col-lg-6 col-sm-12 rFormContent">
-                                <label class="col-6" for="">Comensales:</label>
-                                <label class="col-4 ms-auto" for="">¿Viene acompañado?</label>
-                                <input class="col-1 ms-auto" type="checkbox" name="itcbNotAlone" id="notAlone">
-                                <select name="sDinners" id="sDinners" class="col-1"></select>
-                            </div>
+                    <div class="row col-lg-6 col-sm-12 rFormContent">
+                        <label class="col-4" for="">Comensales:</label>
+                        <label class="col-lg-6 col-sm-11" for="">¿Viene acompañado?</label>
+                        <input class="col-sm-1" type="checkbox" name="itcbNotAlone" id="notAlone">
+                        <select name="sDinners" id="sDinners" class="col-12"></select>
+                    </div>  
 
-                            <div class="row col-lg-6 col-sm-12 rFormContent">
-                                <label class="col-6" for="">Fecha:</label>
-                                <input class="col-6" type="date" name="itdDate">
-                            </div>
+                    <div class="row col-lg-6 col-sm-12 rFormContent">
+                        <label class="col-12" for="">Fecha:</label>
+                        <input class="col-12" type="date" name="itdDate">
+                    </div>
 
-                            <div class="row col-lg-6 col-sm-12 rFormContent">
-                                <label class="col-6" for="">Hora:</label>
-                                <input class="col-6" type="time" name="ittimeHour">
-                            </div>
+                    <div class="row col-lg-6 col-sm-12 rFormContent">
+                        <label class="col-12" for="">Hora:</label>
+                        <input class="col-12" type="time" name="ittimeHour">
+                    </div>
 
-                            <div class="roow col-12 rFormContent">
-                                <label for="">Especificaciones:</label>
-                                <textarea class="form-control z-depth-1" id="textarea" rows="4" name="taSpecifications"></textarea>
-                            </div>
-                        </form>
+                    <div class="row col-12 rFormContent">
+                        <label for="">Especificaciones:</label>
+                        <textarea class="form-control z-depth-1" id="textarea" rows="4" name="taSpecifications"></textarea>
                     </div>
                 </div>
-
-            </div>
+                <button type="submit" value="" class="btn btn-danger p-3">
+                    Confirmar reserva
+                </button>
+            </form>
         </div>
     </section>
 
