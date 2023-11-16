@@ -11,7 +11,7 @@
 
     <?php include("../includes/design-top.php"); ?>
     <!--Reserves formulary-->
-    <section class="container-fluid bg-primary w-75 rounded rounded-25 rForm">
+    <section class="container-fluid bg-danger w-75 rounded rounded-25 rForm">
         <!--Presentation-->
         <h2 class="d-none">Formulario de reservas</h2>
         <div class="row">
@@ -20,43 +20,43 @@
                     ¿Desea reservar mesa? Hágalo ahora mismo desde aqui.
                 </h3>
                 <!--Formulary-->
-                <div class="container-fluid col-12 p-3 bg-info" aria-labelledby="dropdownMenuButton">
+                <div class="container-fluid col-12 p-3 bg-primary" aria-labelledby="dropdownMenuButton">
                     <div class="row justify-content-around alight-items-center">
                         <form class="col-12 row" action="" method="POST">
                             <div class="row col-lg-6 col-sm-12 rFormContent">
-                                <label class="col-6" for="">Nombre</label>
-                                <input class="col-6" type="text" name="ittName">
+                                <label class="col-lg-6 col-sm-3" for="">Nombre:</label>
+                                <input class="col-lg-6 col-sm-8" type="text" name="ittName">
                             </div>
 
                             <div class="row col-lg-6 col-sm-12 rFormContent">
-                                <label class="col-6" for="">Apellidos</label>
+                                <label class="col-6" for="">Apellidos:</label>
                                 <input class="col-6" type="text" name="ittSecondName">
                             </div>
 
                             <div class="row col-lg-6 col-sm-12 rFormContent">
-                                <label class="col-6" for="">Número de teléfono</label>
+                                <label class="col-6" for="">Número de teléfono:</label>
                                 <input class="col-6" type="tel" name="ittelPhoneNumber">
                             </div>
 
                             <div class="row col-lg-6 col-sm-12 rFormContent">
-                                <label class="col-12" for="">Comensales</label>
-                                <label class="col-11" for="">¿Viene acompañado?</label>
-                                <input class="col-1" type="checkbox" name="itcbNotAlone" id="notAlone">
-                                <select name="sDinners" id="sDinners" class="col-6"></select>
+                                <label class="col-6" for="">Comensales:</label>
+                                <label class="col-4 ms-auto" for="">¿Viene acompañado?</label>
+                                <input class="col-1 ms-auto" type="checkbox" name="itcbNotAlone" id="notAlone">
+                                <select name="sDinners" id="sDinners" class="col-1"></select>
                             </div>
 
                             <div class="row col-lg-6 col-sm-12 rFormContent">
-                                <label class="col-6" for="">Fecha</label>
+                                <label class="col-6" for="">Fecha:</label>
                                 <input class="col-6" type="date" name="itdDate">
                             </div>
 
                             <div class="row col-lg-6 col-sm-12 rFormContent">
-                                <label class="col-6" for="">Hora</label>
+                                <label class="col-6" for="">Hora:</label>
                                 <input class="col-6" type="time" name="ittimeHour">
                             </div>
 
                             <div class="roow col-12 rFormContent">
-                                <label for="">Especificaciones</label>
+                                <label for="">Especificaciones:</label>
                                 <textarea class="form-control z-depth-1" id="textarea" rows="4" name="taSpecifications"></textarea>
                             </div>
                         </form>

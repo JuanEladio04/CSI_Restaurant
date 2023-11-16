@@ -102,11 +102,11 @@
           <h3 class="col-12 text-light">
             ¿Te apetece saborear la auténtica cocina italiana, elaborada con los mejores ingredientes y el cariño de nuestra familia?
           </h3>
-          <p class="col-12 text-light text-justify"> 
+          <p class="col-12 text-light text-justify">
             Te esperamos en el siguiente enlace, donde podrás conocer más sobre nuestro restaurante, nuestra tradición y nuestra pasión por la gastronomía. En este sitio, podrás ver las fotos de nuestros platos, nuestro personal y nuestro ambiente. También podrás leer las opiniones de nuestros clientes, nuestras recetas y nuestras ofertas. No dejes pasar esta oportunidad de disfrutar de una experiencia única y deliciosa.
           </p>
           <div class="align-items-right col-12">
-            <button type="button" class="btn btn-danger col-3 rounded-2" onclick="location.href='view/aboutUs.php'">Muéstrame</button>
+            <button type="button" class="btn btn-danger col-lg-3 col-sm-12 rounded-2 ms-auto" onclick="location.href='view/aboutUs.php'">Muéstrame</button>
           </div>
         </article>
       </section>
@@ -128,7 +128,7 @@
               </p>
             </div>
             <div class="align-items-right col-12">
-              <button type="button" class="btn btn-danger col-3 rounded-2" onclick="location.href='view/aboutUs.php'">Opina</button>
+              <button type="button" class="btn btn-danger col-lg-4 col-sm-12" onclick="location.href='view/feedback.php'">Quiero opinar</button>
             </div>
           </article>
 

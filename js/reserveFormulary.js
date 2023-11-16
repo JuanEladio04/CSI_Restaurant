@@ -11,6 +11,5 @@ document.getElementById('notAlone').addEventListener('change', function () {
         }
     } else {
         select.style.display = 'none';
-        select.innerHTML = '<option selected>Elige...</option>';
     }
 });

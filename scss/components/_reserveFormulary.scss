@@ -1,19 +1,40 @@
-.rForm{
+.rForm {
     border-radius: $border-radius-lg !important;
-    .rFormContent{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+
+    /* Añade sombra */
+    form {
+        border-radius: $border-radius-lg !important;
+    }
+
+    .rFormContent {
+        align-items: center;
         margin-top: 1rem;
         margin-bottom: 1rem;
-        label{
+
+        label {
             text-align: right;
         }
-    
-        input, select{
+
+        @mixin inputPropperties {
             border-radius: $border-radius-lg;
+            border: none;
             padding: 0.5rem;
-            border: $danger;
+            resize: none;
         }
 
-        #sDinners{
+        input,
+        select {
+            @include inputPropperties();
+        }
+
+        textarea {
+            @include inputPropperties;
+            resize: none !important;
+        }
+
+
+        #sDinners {
             display: none;
         }
     }
