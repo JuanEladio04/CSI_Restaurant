@@ -140,3 +140,8 @@ html {
     background-image: url(../img/backgrounds/termins-y-condcones@3x.png);
     @include background;
 }
+
+#background-card {
+    background-image: url(../img/backgrounds/cardBackground.jpg);
+    @include background;
+}

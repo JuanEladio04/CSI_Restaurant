@@ -23,10 +23,10 @@
                 border: 0px;
                 padding: 0.5rem;
                 resize: none;
+                margin-top: 0.5rem;
             }
 
-            input,
-            select {
+            input, select {
                 @include inputPropperties();
             }
 
