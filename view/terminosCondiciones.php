@@ -6,14 +6,14 @@
     <?php include("../includes/head-tag-contents.php"); ?>
 </head>
 
-<body id="background-<?php echo $CURRENT_PAGE; ?>">
+<body class="bg-dark" id="background-<?php echo $CURRENT_PAGE; ?>">
     <?php include("../includes/navigation.php"); ?>
     <?php include("../includes/design-top.php"); ?>
 
 
-    <div class="container-fluid">
+    <div class="container">
 
-        <section class="row mb-5 bg-info">
+        <section class="row mb-5 bg-info roundedBorder">
             <article class="articulo col p-5">
                 <p class="mt-2">¡Bienvenido al restaurante Lunna Di La Rosa. Antes de explorar nuestra deliciosa oferta
                     en línea, te pedimos que revises detenidamente los siguientes términos y condiciones que rigen el
@@ -26,7 +26,7 @@
         </section>
 
 
-        <section class="row mb-5 mt-5 bg-info">
+        <section class="row mb-5 bg-info roundedBorder margin">
             <article class="articulo col p-5">
                 <h1 class="text-center">Aviso legal</h1>
                 <p class="mt-5">El Usuario se compromete a utilizar el Sitio Web de conformidad con la ley y con las
@@ -43,7 +43,7 @@
         </section>
 
 
-        <section class="row mb-5 mt-5 bg-info">
+        <section class="row mb-5 bg-info roundedBorder margin">
             <article class="articulo col p-5">
                 <h1 class="text-center">Política de privacidad</h1>
                 <p class="mt-5">El presente Política de Privacidad establece los términos en que usa y protege la
@@ -57,7 +57,7 @@
         </section>
 
 
-        <section class="row mb-5 mt-5 bg-secondary">
+        <section class="row mb-5 bg-secondary roundedBorder margin">
             <article class="articuloTC col">
                 <h1 class="text-center">Finalidad</h1>
             </article>
