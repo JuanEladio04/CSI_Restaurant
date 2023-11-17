@@ -13,8 +13,9 @@
 <script src="https://kit.fontawesome.com/eac34a33f0.js" crossorigin="anonymous"></script>
 <!-- Google fonts-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Roboto&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni&family=Lobster+Two&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
 <link href="../css/styles.css" rel="stylesheet" />

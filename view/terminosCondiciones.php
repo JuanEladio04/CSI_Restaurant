@@ -8,14 +8,14 @@
 
 <body id="background-<?php echo $CURRENT_PAGE; ?>">
     <?php include("../includes/navigation.php"); ?>
+    <?php include("../includes/design-top.php"); ?>
 
 
     <div class="container-fluid">
 
-        <section class="row mb-5 mt-5 bg-info">
+        <section class="row mb-5 bg-info">
             <article class="articulo col p-5">
-                <h1 class="mt-3 text-center">Terminos y condiciones</h1>
-                <p class="mt-5">¡Bienvenido al restaurante Lunna Di La Rosa. Antes de explorar nuestra deliciosa oferta
+                <p class="mt-2">¡Bienvenido al restaurante Lunna Di La Rosa. Antes de explorar nuestra deliciosa oferta
                     en línea, te pedimos que revises detenidamente los siguientes términos y condiciones que rigen el
                     uso de este sitio. Al acceder y utilizar nuestro sitio web, aceptas cumplir con estos términos y
                     condiciones. Si no estás de acuerdo con alguna parte de estos términos, te recomendamos que no
@@ -69,27 +69,21 @@
             </article>
             <article class="articuloTC">
                 <h2 class="text-center mt-5">2. Prestación de servicios a clientes y/o actuales</h2>
-                <p class="text-center"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae doloribus odio
-                    suscipit deleniti
-                    impedit repellat quibusdam ex nam, numquam, voluptas nihil ducimus corporis necessitatibus
-                    molestiae quis, repudiandae quasi. Repellendus, pariatur.
+                <p class="text-center"> En nuestro servicio, nos comprometemos a prestar los mejores servicios para nuestros clientes.
+                    Tus sensaciones aquí nos importan. Por lo tanto, intentaremos darte el mejor trato posible con nuestros experimentados 
+                    camareros.
                 </p>
             </article>
             <article class="articuloTC">
                 <h2 class="text-center mt-5">3. Recursos humanos</h2>
-                <p class="text-center"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae doloribus odio
-                    suscipit deleniti
-                    impedit repellat quibusdam ex nam, numquam, voluptas nihil ducimus corporis necessitatibus
-                    molestiae quis, repudiandae quasi. Repellendus, pariatur.
+                <p class="text-center"> Ha tenido algún problema en nuestro restaurante? Disponemos de una sección de recursos humanos, donde puedes
+                    reclamar por algún incoveniente que haya tenido en nuestro establecimiento referente a nuestra comida u/o personal.
                 </p>
             </article>
             <article class="articuloTC">
                 <h2 class="text-center mt-5">4. Proovedores y terceros</h2>
-                <p class="text-center mb-5"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae doloribus
-                    odio
-                    suscipit deleniti
-                    impedit repellat quibusdam ex nam, numquam, voluptas nihil ducimus corporis necessitatibus
-                    molestiae quis, repudiandae quasi. Repellendus, pariatur.
+                <p class="text-center mb-5">En Lunna Di La Rossa, disponemos de los mejores productos exportados por los mejores proovedores del sector.
+                    Nuestros productos son de la mejor calidad y en este restaurante, se preservan en las mejores condiciones.
                 </p>
             </article>
         </section>

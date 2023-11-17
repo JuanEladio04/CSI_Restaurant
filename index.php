@@ -24,8 +24,8 @@
 
           <nav class="container-fluid col-12 d-lg-none d-sm-block">
             <div class="row lobster">
-              <a href="#" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Carta</a>
-              <a href="#" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Ofertas</a>
+              <a href="view/card.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Carta</a>
+              <a href="view/offers.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Ofertas</a>
               <a href="view/reserve.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Reservas</a>
               <a href="view/login.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Iniciar Sesión</a>
             </div>
@@ -48,7 +48,7 @@
             <div class="card-body container-fluid bg-danger roundedBorder">
               <h3 class="card-title lobster bg-danger container-fluid ">Ofertas</h3>
               <p class="card-text roboto text-justify">¡Mira nuestras ofertas diarias y semanales! Hazle un favor a tu bolsillo.</p>
-              <a href="#" class="btn btn-primary rounded-2">Visitar ofertas</a>
+              <a href="view/offers.php" class="btn btn-primary rounded-2">Visitar ofertas</a>
             </div>
           </div>
 
@@ -57,7 +57,7 @@
             <div class="card-body container-fluid bg-danger roundedBorder">
               <h3 class="card-title lobster ">Carta</h3>
               <p class="card-text roboto text-justify">Comprueba toda una carta llena de platos variados para todo tipo de personas y estómagos</p>
-              <a href="#" class="btn btn-primary rounded-2">Muéstrame</a>
+              <a href="view/card.php" class="btn btn-primary rounded-2">Muéstrame</a>
             </div>
           </div>
 
@@ -102,11 +102,11 @@
           <h3 class="col-12 text-light">
             ¿Te apetece saborear la auténtica cocina italiana, elaborada con los mejores ingredientes y el cariño de nuestra familia?
           </h3>
-          <p class="col-12 text-light text-justify"> 
+          <p class="col-12 text-light text-justify">
             Te esperamos en el siguiente enlace, donde podrás conocer más sobre nuestro restaurante, nuestra tradición y nuestra pasión por la gastronomía. En este sitio, podrás ver las fotos de nuestros platos, nuestro personal y nuestro ambiente. También podrás leer las opiniones de nuestros clientes, nuestras recetas y nuestras ofertas. No dejes pasar esta oportunidad de disfrutar de una experiencia única y deliciosa.
           </p>
           <div class="align-items-right col-12">
-            <button type="button" class="btn btn-danger col-3 rounded-2" onclick="location.href='view/aboutUs.php'">Muéstrame</button>
+            <button type="button" class="btn btn-danger col-lg-3 col-sm-12 rounded-2 ms-auto" onclick="location.href='view/aboutUs.php'">Muéstrame</button>
           </div>
         </article>
       </section>
@@ -128,7 +128,7 @@
               </p>
             </div>
             <div class="align-items-right col-12">
-              <button type="button" class="btn btn-danger col-3 rounded-2" onclick="location.href='view/aboutUs.php'">Opina</button>
+              <button type="button" class="btn btn-danger col-lg-4 col-sm-12" onclick="location.href='view/feedback.php'">Quiero opinar</button>
             </div>
           </article>
 
