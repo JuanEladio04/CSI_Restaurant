@@ -1,0 +1,60 @@
+.addPlate {
+    background-color: $secondary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0%;
+    width: 50%;
+    font-family: $headings-font-family;
+    margin-top: 20vh;
+
+    .btn {
+        font-size: 20px !important;
+    }
+
+
+    .titulo {
+        background-color: $danger;
+        text-align: center;
+        color: $light;
+        border-radius: 20px 20px 0% 0%;
+    }
+
+    .centrado {
+        margin-top: 5vh;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .inputCentrado {
+        align-items: center;
+        justify-content: center;
+
+        input {
+            width: 80%;
+            margin-left: 5vh;
+        }
+
+        select {
+            width: 80%;
+            text-align: center;
+            margin-bottom: 3vh;
+            border-radius: 10px;
+        }
+    }
+
+    .descripcion {
+        flex-direction: column;
+
+        textarea {
+            resize: none;
+            width: 80%;
+        }
+    }
+
+    .prueba {
+        text-align: center;
+        width: 100%;
+    }
+}
