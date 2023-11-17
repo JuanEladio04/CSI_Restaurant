@@ -34,23 +34,25 @@
                                         <div class="margenInferior">
                                             <label for="Email" class="form-label">Correo electrónico</label>
                                             <input type="email" class="roundedInput form-control" id="email"
-                                                name="Email">
+                                                name="Email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                                                required>
                                         </div>
-                                    </form>
                                 </div>
                             </div>
 
                             <!-- Footer with links to login and registration -->
                             <div class="card-footer text-center">
-                                <a href="register.php" class="nav-link text-light col-sm-12 text-center">No tengo cuenta</a>
+                                <a href="register.php" class="nav-link text-light col-sm-12 text-center">No tengo
+                                    cuenta</a>
                                 <div class="row">
                                     <div class="col-sm-12 text-center">
                                         <a href="login.php" class="nav-link text-light textoNoWrap">Identificarse</a>
                                     </div>
                                     <div class="col-sm-12 text-center">
-                                        <button type="button"
-                                            class="btn btn-primary roundedInput">Enviar correo</button>
+                                        <input type="submit" class="btn btn-primary roundedInput" name="enviarCorreo" value="Enviar correo">
                                     </div>
+                                    </form>
+
                                 </div>
                             </div>
                         </div>

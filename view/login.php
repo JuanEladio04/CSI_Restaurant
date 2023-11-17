@@ -29,18 +29,18 @@
                             <div class="card-body">
                                 <div class="">
                                     <!-- Form -->
-                                    <form action="/action_page.php">
+                                    <form action="/action_page.php" method="post">
                                         <!-- Email input -->
                                         <div class="margenInferior">
                                             <label for="Email" class="form-label">Correo electrónico</label>
-                                            <input type="Email" class="roundedInput form-control" id="pwd" name="Email">
+                                            <input type="Email" class="roundedInput form-control" id="pwd" name="Email"
+                                                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
                                         </div>
                                         <!-- Password input -->
                                         <div class="col margenInferior">
                                             <label for="Password1" class="form-label">Contraseña</label>
-                                            <input type="password" class="roundedInput form-control">
+                                            <input type="password" class="roundedInput form-control" required>
                                         </div>
-                                    </form>
                                 </div>
                             </div>
 
@@ -54,9 +54,12 @@
                                             registrado</a>
                                     </div>
                                     <div class="col-sm-12 text-center">
-                                        <button type="button" class="btn btn-primary roundedInput">Identificarse</button>
+                                        <input type="submit"
+                                            class="btn btn-primary roundedInput" value="Identificarse">
                                     </div>
                                 </div>
+                                </form>
+
                             </div>
                         </div>
                     </div>

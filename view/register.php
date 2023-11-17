@@ -37,39 +37,39 @@
                                         <div class="row">
                                             <div class="col-sm-6 margenInferior">
                                                 <label for="FirstN" class="form-label">Nombre</label>
-                                                <input type="text" class="roundedInput form-control" name="FirstN">
+                                                <input type="text" class="roundedInput form-control" name="FirstN"  pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required>
                                             </div>
                                             <div class="col-sm-6 margenInferior">
                                                 <label for="LastN" class="form-label">Apellido</label>
-                                                <input type="text" class="roundedInput form-control" name="LastN">
+                                                <input type="text" class="roundedInput form-control" name="LastN"  pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required>
                                             </div>
                                         </div>
                                         <!-- Email input with margin -->
                                         <div class="margenInferior">
                                             <label for="Email" class="form-label">Email</label>
                                             <input type="email" class="roundedInput form-control" id="email"
-                                                name="Email">
+                                                name="Email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
                                         </div>
                                         <!-- Password inputs with margin -->
                                         <div class="col margenInferior">
                                             <label for="Password1" class="form-label">Contraseña</label>
-                                            <input type="password" class="roundedInput form-control" name="Password1">
+                                            <input type="password" class="roundedInput form-control" name="Password1" required>
                                         </div>
                                         <div class="col margenInferior">
                                             <label for="Passwordw" class="form-label">Confirmar contraseña</label>
-                                            <input type="password" class="roundedInput form-control" name="Password2">
+                                            <input type="password" class="roundedInput form-control" name="Password2" required>
                                         </div>
                                         <!-- Checkboxes for age and terms acceptance -->
-                                        <input type="checkbox" name="mayor" value="mayorEdad" class="rounded-checkbox">
+                                        <input type="checkbox" name="mayor" value="mayorEdad" class="rounded-checkbox" required>
                                         <label for="mayor">Soy mayor de 18</label>
                                         <br>
                                         <input type="checkbox" name="acepto" value="Aceptar términos"
-                                            class="rounded-checkbox"> <label for="acepto">Acepto los términos</label>
+                                            class="rounded-checkbox" required> <label for="acepto">Acepto los términos</label>
 
                                         <!-- Create account button -->
                                         <div class="d-grid margenSuperior">
-                                            <button type="button"
-                                                class="btn btn-primary btn-block roundedInput textoNoWrap">Crear cuenta</button>
+                                            <input type="submit" value="Crear cuenta" name="crear" id="crear"
+                                                class="btn btn-primary btn-block roundedInput textoNoWrap">
                                         </div>
                                     </form>
                                 </div>
@@ -77,7 +77,7 @@
 
                             <!-- Card footer with a link to the login page -->
                             <div class="card-footer text-center">
-                                <a href="login.php" class="nav-link text-light">Ya estoy registrrado</a>
+                                <a href="login.php" class="nav-link text-light">Ya estoy registrado</a>
                             </div>
                         </div>
                     </div>
