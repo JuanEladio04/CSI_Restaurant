@@ -59,6 +59,8 @@ html {
 
 .opinionUsuario {
     margin-bottom: 7%;
+    margin-top: 7%;
+
 }
 
 .opinionesclientes {
@@ -101,11 +103,15 @@ html {
 #background-feedback {
     background-image: url(../img/backgrounds/feedback.png);
     background-size: cover;
+    @include background;
+
 }
 
 #background-offers {
     background-image: url(../img/backgrounds/offers.png);
     background-size: cover;
+    @include background;
+
 }
 
 #background-userGestion {

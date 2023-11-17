@@ -1,0 +1,37 @@
+.ofertasSemana {
+    background-color: $secondary;
+    border-radius: 10px;
+    width: 90%;
+    height: auto;
+    margin-bottom: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+.ofertasMes {
+    background-color: $secondary;
+    border-radius: 10px;
+    width: 90%;
+    height: auto;
+    margin-bottom: 10%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+@include media-breakpoint-up(lg) {
+    .ofertasMes {
+        width: 44%;
+        margin-right: 5%;
+        margin-left: 1%;
+        padding-bottom: 1.5%;
+
+    }
+
+    .ofertasSemana{
+        width: 44%;
+        margin-left: 5%;
+        margin-right: 1%;
+        padding-bottom: 1.5%;
+    }
+}

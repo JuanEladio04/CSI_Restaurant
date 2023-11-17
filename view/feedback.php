@@ -21,13 +21,13 @@
     <section class="container-fluid crearOpiniones">
         <article>
             <div class="titulo">
-                <h1>Deja tu opinión</h1>
+                <h2>Deja tu opinión</h2>
             </div>
         </article>
         <article class="contenedor">
             <div class="texto column p-5 tituloh2">
 
-                <h2 class="col-6 opinion ">Tu opinión</h2>
+                <h3 class="col-6 opinion ">Tu opinión</h3>
 
                 <div class="col-6 parrafo-container p">
 
@@ -86,7 +86,7 @@
     <section class="opinionUsuario ">
         <article>
             <div class="contenedor-titulo titulo">
-                <h1>Opiniones de Nuestros Clientes</h1>
+                <h2>Opiniones de Nuestros Clientes</h2>
             </div>
         </article>
         <div class="opinionesclientes p-5">

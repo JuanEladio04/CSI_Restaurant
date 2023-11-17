@@ -1,7 +1,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
 
         <div class="container-fluid contenido">
-            <div class="col-1 todo">
+            <div class="col-sm-1 todo">
                 <a class="navbar-brand" href="../index.php"><img src="../img/logos/SmallLogo.png" alt="Logo"></a>
             </div>
 
@@ -22,7 +22,7 @@
                         <a class="nav-link " href="../view/reserve.php">Reserva</a></li>
 
                     <li class="nav-item  w-100 h-100 text-center "><a
-                            class="nav-link" href="about.php">Carta</a></li>
+                            class="nav-link" href="../view/card.php">Carta</a></li>
 
                     <li class="nav-item  w-100 h-100 text-center "><a
                             class="nav-link" id="invisible" href="../view/aboutUs.php">Sobre <!--<span id="invisible">_</span>--> Nosotros</a></li>
