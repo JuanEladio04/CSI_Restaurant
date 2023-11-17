@@ -47,11 +47,11 @@
 
 
         <section class="row mb-5 bg-danger">
-            <article class="col articulo align-items-center">
+            <article class="col articulo">
                 <div class="row">
-                    <div class="col-lg-6 d-none d-lg-block">
-                        <img class=" align-self-center top-0 img-fluid border-0"
-                            src="..\img\stockImages\aboutUs_StockImages\imagen-cocinero-aboutUs.jpg" frameborder="0">
+                    <div class="col-lg-6 d-none d-lg-flex justify-content-center">
+                        <img class=""
+                            src="..\img\stockImages\aboutUs_StockImages\pexels-rene-asmussen-2544829 (1).jpg" frameborder="0">
                         </img>
                     </div>
                     <div class="col-lg-6 p-5">
