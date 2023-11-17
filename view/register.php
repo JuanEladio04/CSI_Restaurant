@@ -10,81 +10,85 @@
 
 <body class="bg-dark" id="background-<?php echo $CURRENT_PAGE; ?>">
 
+    <!-- Link to the home page with the restaurant logo -->
+    <header class="col-12 text-center">
+        <a href="../index.php"><img src="../img/logos/BigLogo.png" width="300px"></a>
+    </header>
+
     <!-- Main section containing the registration form -->
-    <section>
-        <div class="container-fluid">
-            <div class="row">
+    <main class="container-fluid">
+        <div class="row">
+            <!-- Form wrapped in a card with styling -->
+            <article class="col d-flex justify-content-center align-items-center">
 
-                <!-- Main content container using the entire width -->
-                <article class="col-12 d-flex flex-column align-items-center">
+                <div class="container formUser">
+                    <div class="card bg-danger text-light roundedBorder">
+                        <!-- Card header with a centered title -->
+                        <div class="card-header">
+                            <h1 class="text-center">Registro</h1>
+                        </div>
+                        <!-- Card body containing the registration form -->
+                        <div class="card-body">
+                            <div class="">
+                                <!-- Registration form -->
+                                <form action="/action_page.php">
+                                    <!-- Name and Last Name inputs in a row -->
+                                    <div class="row">
+                                        <div class="col-sm-6 margenInferior">
+                                            <label for="FirstN" class="form-label">Nombre</label>
+                                            <input type="text" class="roundedInput form-control" name="FirstN"
+                                                pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required>
+                                        </div>
+                                        <div class="col-sm-6 margenInferior">
+                                            <label for="LastN" class="form-label">Apellido</label>
+                                            <input type="text" class="roundedInput form-control" name="LastN"
+                                                pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required>
+                                        </div>
+                                    </div>
+                                    <!-- Email input with margin -->
+                                    <div class="margenInferior">
+                                        <label for="Email" class="form-label">Email</label>
+                                        <input type="email" class="roundedInput form-control" id="email" name="Email"
+                                            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+                                    </div>
+                                    <!-- Password inputs with margin -->
+                                    <div class="col margenInferior">
+                                        <label for="Password1" class="form-label">Contraseña</label>
+                                        <input type="password" class="roundedInput form-control" name="Password1"
+                                            required>
+                                    </div>
+                                    <div class="col margenInferior">
+                                        <label for="Passwordw" class="form-label">Confirmar contraseña</label>
+                                        <input type="password" class="roundedInput form-control" name="Password2"
+                                            required>
+                                    </div>
+                                    <!-- Checkboxes for age and terms acceptance -->
+                                    <input type="checkbox" name="mayor" value="mayorEdad" class="rounded-checkbox"
+                                        required>
+                                    <label for="mayor">Soy mayor de 18</label>
+                                    <br>
+                                    <input type="checkbox" name="acepto" value="Aceptar términos"
+                                        class="rounded-checkbox" required> <label for="acepto">Acepto los
+                                        términos</label>
 
-                    <!-- Link to the home page with the restaurant logo -->
-                    <a href="../index.php"><img src="../img/logos/BigLogo.png" width="300px"></a>
-
-                    <!-- Form wrapped in a card with styling -->
-                    <div class="container formUser">
-                        <div class="card bg-danger text-light roundedBorder">
-                            <!-- Card header with a centered title -->
-                            <div class="card-header">
-                                <h1 class="text-center">Registro</h1>
-                            </div>
-                            <!-- Card body containing the registration form -->
-                            <div class="card-body">
-                                <div class="">
-                                    <!-- Registration form -->
-                                    <form action="/action_page.php">
-                                        <!-- Name and Last Name inputs in a row -->
-                                        <div class="row">
-                                            <div class="col-sm-6 margenInferior">
-                                                <label for="FirstN" class="form-label">Nombre</label>
-                                                <input type="text" class="roundedInput form-control" name="FirstN"  pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required>
-                                            </div>
-                                            <div class="col-sm-6 margenInferior">
-                                                <label for="LastN" class="form-label">Apellido</label>
-                                                <input type="text" class="roundedInput form-control" name="LastN"  pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required>
-                                            </div>
-                                        </div>
-                                        <!-- Email input with margin -->
-                                        <div class="margenInferior">
-                                            <label for="Email" class="form-label">Email</label>
-                                            <input type="email" class="roundedInput form-control" id="email"
-                                                name="Email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
-                                        </div>
-                                        <!-- Password inputs with margin -->
-                                        <div class="col margenInferior">
-                                            <label for="Password1" class="form-label">Contraseña</label>
-                                            <input type="password" class="roundedInput form-control" name="Password1" required>
-                                        </div>
-                                        <div class="col margenInferior">
-                                            <label for="Passwordw" class="form-label">Confirmar contraseña</label>
-                                            <input type="password" class="roundedInput form-control" name="Password2" required>
-                                        </div>
-                                        <!-- Checkboxes for age and terms acceptance -->
-                                        <input type="checkbox" name="mayor" value="mayorEdad" class="rounded-checkbox" required>
-                                        <label for="mayor">Soy mayor de 18</label>
-                                        <br>
-                                        <input type="checkbox" name="acepto" value="Aceptar términos"
-                                            class="rounded-checkbox" required> <label for="acepto">Acepto los términos</label>
-
-                                        <!-- Create account button -->
-                                        <div class="d-grid margenSuperior">
-                                            <input type="submit" value="Crear cuenta" name="crear" id="crear"
-                                                class="btn btn-primary btn-block roundedInput textoNoWrap">
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-
-                            <!-- Card footer with a link to the login page -->
-                            <div class="card-footer text-center">
-                                <a href="login.php" class="nav-link text-light">Ya estoy registrado</a>
+                                    <!-- Create account button -->
+                                    <div class="d-grid margenSuperior">
+                                        <input type="submit" value="Crear cuenta" name="crear" id="crear"
+                                            class="btn btn-primary btn-block roundedInput textoNoWrap">
+                                    </div>
+                                </form>
                             </div>
                         </div>
+
+                        <!-- Card footer with a link to the login page -->
+                        <div class="card-footer text-center">
+                            <a href="login.php" class="nav-link text-light">Ya estoy registrado</a>
+                        </div>
                     </div>
-                </article>
-            </div>
+                </div>
+            </article>
         </div>
-    </section>
+    </main>
 
     <!-- Include the footer -->
     <?php include("../includes/footer.php"); ?>

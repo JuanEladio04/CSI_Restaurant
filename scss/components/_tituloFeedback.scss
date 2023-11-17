@@ -3,7 +3,7 @@
     display: block;
     background-color: $info;
 
-    h1{
+    h2{
         font-family: $headings-font-family;
         text-align: center;
         color: $light;
@@ -11,10 +11,10 @@
         font-size: 2em;
     }
 }
-
+ 
 @include media-breakpoint-up(sm) { 
     .titulo{
-        h1{
+        h2{
             font-size: 4em;
         }
     }

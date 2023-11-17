@@ -1,0 +1,70 @@
+.articuloOferta, .articuloOferta2{
+    width: 90%;  
+       
+    border-radius: 10px;
+    margin-top: 2% !important;
+    margin-bottom: 3.3% !important;
+    margin: auto;
+    padding: 0;
+    
+    img{
+        width: 100%;
+        margin: 0;
+        border-radius: 10px 10px 0px 0px;
+
+    }
+
+    .contenedor {
+        padding: 0% !important;
+        font-size: 1.3em;
+    }
+
+    .fila{
+        margin: 0% !important;
+    }
+
+    .precio{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: $danger ;
+        margin: 0%;
+        padding: 2%  0% !important;
+        border-radius: 0px 0px 0px 10px;
+    }
+
+    .nombrePlato{
+        display: flex;
+        background-color: $primary;
+        margin: 0%;
+        padding: 0% !important;
+        padding-left: 5% !important;
+        align-items: center;
+        text-align: center;
+
+        border-radius: 0px 0px 10px 0px;
+    }
+}
+
+@include media-breakpoint-up(sm){
+    
+    .articuloOferta, .articuloOferta2{
+      width: 40%;
+      margin: auto;
+    }
+
+  }
+
+@include media-breakpoint-up(lg){
+    
+  .articuloOferta{
+    width: 20%;
+    margin: auto;
+  }
+
+  .articuloOferta2{
+    width: 40% ; 
+    margin: auto ;
+  }
+}
