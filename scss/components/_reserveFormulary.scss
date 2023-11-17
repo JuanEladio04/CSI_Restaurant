@@ -5,6 +5,7 @@
 
     .form {
         padding: none !important;
+        border-radius: 0px 0px 20px 20px !important;
 
         .rFormContent {
             align-items: center;
@@ -23,10 +24,10 @@
                 border: 0px;
                 padding: 0.5rem;
                 resize: none;
-                margin-top: 0.5rem;
             }
 
-            input, select {
+            input,
+            select {
                 @include inputPropperties();
             }
 
@@ -42,6 +43,8 @@
 
         .btn {
             font-size: 1.6em;
+            border-radius: 0px 0px 20px 20px !important;
+
         }
     }
 }
@@ -50,12 +53,12 @@
     .rForm {
         width: 75%;
 
-        h2{
-            border-radius: 20px, 20px, 0, 0 !important;
-        }
+        // h2{
+        //     border-radius: 20px, 20px, 0, 0 !important;
+        // }
 
-        .btn{
-            border-radius: 0, 0, 20px, 20px !important;
-        }
+        // .btn{
+        //     border-radius: 0, 0, 20px, 20px !important;
+        // }
     }
 }
