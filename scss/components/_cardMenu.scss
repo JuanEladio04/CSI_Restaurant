@@ -1,9 +1,15 @@
 .cardMenu{
     .menuSection{
-        padding: 2vh;
         text-align: center;
+        border-right: solid 2px $light;
+        border-left: solid 2px $light;
+        padding: none !important;
+        padding: 2vh;
+
+
         :hover{
-            background-color: $info;
+            background-color: $success;
         }
+
     }
 }
