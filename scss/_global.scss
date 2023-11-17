@@ -103,11 +103,15 @@ html {
 #background-feedback {
     background-image: url(../img/backgrounds/feedback.png);
     background-size: cover;
+    @include background;
+
 }
 
 #background-offers {
     background-image: url(../img/backgrounds/offers.png);
     background-size: cover;
+    @include background;
+
 }
 
 #background-userGestion {
