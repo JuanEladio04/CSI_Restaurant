@@ -17,34 +17,34 @@
             <div class="container-fluid">
                 <div class="row bg-danger text-light justify-content-around">
                     <div class="col-2 menuSection">
-                        <h3>
+                        <h2>
                             Entrantes
-                        </h3>
+                        </h2>
                     </div>
                     <div class="col-2 menuSection">
-                        <h3>
+                        <h2>
                             Ensaladas
-                        </h3>
+                        </h2>
                     </div>
                     <div class="col-2 menuSection">
-                        <h3>
+                        <h2>
                             Pizzas
-                        </h3>
+                        </h2>
                     </div>
                     <div class="col-2 menuSection">
-                        <h3>
+                        <h2>
                             Pastas
-                        </h3>
+                        </h2>
                     </div>
                     <div class="col-2 menuSection">
-                        <h3>
+                        <h2>
                             Carnes
-                        </h3>
+                        </h2>
                     </div>
                     <div class="col-2 menuSection">
-                        <h3>
+                        <h2>
                             Postres
-                        </h3>
+                        </h2>
                     </div>
                 </div>
             </div>
@@ -70,43 +70,115 @@
         <!--Card content------------------------------------------------>
 
         <article class="container-fluid bg-primary">
-            <div class="row p-4 justify-content-around">
+            <div class="row p-5 justify-content-around">
 
-                <div class="row bg-info col-3 m-2">
-                    <div class="col-8 p-3">
-                        <h5 class="card-title">Plato</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="container-fluid col-lg-3 col-10 m-2 cardItem">
+                    <div class="row bg-info">
+                        <div class="col-8 p-2">
+                            <h3>Pizza 4 quesos</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
+                        </div>
+                        <div class="col-3">
+                            <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
+                        </div>
                     </div>
-                    <img class="col-3 rounded-right m-0 p-0" src="../img/backgrounds/aboutUsIndex.png" alt="Card image cap">
+                </div>
+                
+                <div class="container-fluid col-lg-3 col-10 m-2 cardItem">
+                    <div class="row bg-info">
+                        <div class="col-8 p-2">
+                            <h3>Pizza 4 quesos</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
+                        </div>
+                        <div class="col-3">
+                            <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
+                        </div>
+                    </div>
                 </div>
 
-                <div class="row bg-info col-3 m-2 p-0">
-                    <div class="col-8 p-3">
-                        <h5 class="card-title">Plato</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                
+                <div class="container-fluid col-lg-3 col-10 m-2 cardItem">
+                    <div class="row bg-info">
+                        <div class="col-8 p-2">
+                            <h3>Pizza 4 quesos</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
+                        </div>
+                        <div class="col-3">
+                            <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
+                        </div>
                     </div>
-                    <img class="col-3" src="..." alt="Card image cap">
                 </div>
 
-                <div class="row bg-info col-3 m-2">
-                    <div class="col-8 p-3">
-                        <h5 class="card-title">Plato</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                
+                <div class="container-fluid col-lg-3 col-10 m-2 cardItem">
+                    <div class="row bg-info">
+                        <div class="col-8 p-2">
+                            <h3>Pizza 4 quesos</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
+                        </div>
+                        <div class="col-3">
+                            <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
+                        </div>
                     </div>
-                    <img class="col-3" src="..." alt="Card image cap">
                 </div>
 
-                <div class="row bg-info col-3 m-2">
-                    <div class="col-8 p-3">
-                        <h5 class="card-title">Plato</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                
+                <div class="container-fluid col-lg-3 col-10 m-2 cardItem">
+                    <div class="row bg-info">
+                        <div class="col-8 p-2">
+                            <h3>Pizza 4 quesos</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
+                        </div>
+                        <div class="col-3">
+                            <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
+                        </div>
                     </div>
-                    <img class="col-3" src="..." alt="Card image cap">
+                </div>
+
+                
+                <div class="container-fluid col-lg-3 col-10 m-2 cardItem">
+                    <div class="row bg-info">
+                        <div class="col-8 p-2">
+                            <h3>Pizza 4 quesos</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
+                        </div>
+                        <div class="col-3">
+                            <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="container-fluid col-lg-3 col-10 m-2 cardItem">
+                    <div class="row bg-info">
+                        <div class="col-8 p-2">
+                            <h3>Pizza 4 quesos</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
+                        </div>
+                        <div class="col-3">
+                            <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="container-fluid col-lg-3 col-10 m-2 cardItem">
+                    <div class="row bg-info">
+                        <div class="col-8 p-2">
+                            <h3>Pizza 4 quesos</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
+                        </div>
+                        <div class="col-3">
+                            <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </article>
     </section>
+
+    <script src="../js/cardItem.js"></script>
 
 
     <?php include("../includes/footer.php"); ?>

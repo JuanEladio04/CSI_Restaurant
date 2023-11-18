@@ -14,7 +14,7 @@
           Ristorante luna della rossa
         </h1>
         <div class="row align-items-center justify-content-around">
-          <img class="col-12 w-50" alt="" src="img\logos\BigLogo.png" />
+          <img class="col-12 headerLogo" alt="" src="img\logos\BigLogo.png" />
 
           <div class="socialmedia col-12">
             <a href="#!" class="mx-4 text-danger"><i class="fa-brands fa-instagram fa-2xl"></i></a>
@@ -40,7 +40,15 @@
         </h2>
         <div id="carousel" class="mb-5">
 
-          <div class="prevLeftSecond">
+
+        <div class="prevLeftSecond card bg-danger roundedBorder text-center text-light">
+            <img src="img\stockImages\index\ofertImg.jpg" class="card-img-top roundedBorder mt-auto" alt="reseravs">
+            <div class="card-body container-fluid bg-danger roundedBorder">
+              <h3 class="card-title lobster bg-danger container-fluid ">Datos de contacto</h3>
+              <p class="card-text roboto text-justify">Teléfono: +34 333333333</p>
+              <p class="card-text roboto text-justify">Correo electrónico: lunaDellaRossa@gmail.com</p>
+              <p class="card-text roboto text-justify">¡Puedes hablarnos al mensaje directo de todas nuestras redes!</p>
+            </div>
           </div>
 
           <div class="prev card bg-danger roundedBorder text-center text-light">
@@ -150,7 +158,7 @@
                     </div>
                   </div>
                   <div>
-                    <div class="row">
+                    <div class="row scrola">
                       <p class="col-12 text-justify">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis molestiae voluptas qui fugiat omnis placeat, cumque rerum amet, quo tenetur dolores esse aliquam reiciendis consequatur. Saepe, consequuntur? Reprehenderit, molestias nobis.
                       </p>
