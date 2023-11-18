@@ -38,11 +38,11 @@
                 </p>
                 <p class="lead">
                     <!-- Placeholder link to Legal Notice. -->
-                    <a>Aviso legal</a>
+                    <a  href="../view/terminosCondiciones.php">Aviso legal</a>
                 </p>
                 <p class="lead">
                     <!-- Placeholder link to Privacy Policy. -->
-                    <a>Política de privacidad</a>
+                    <a  href="../view/terminosCondiciones.php">Política de privacidad</a>
                 </p>
             </div>
         </div>

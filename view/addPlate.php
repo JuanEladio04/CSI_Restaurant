@@ -60,6 +60,8 @@
                                 <option value="pastas">Pastas</option>
                                 <option value="postres">Postres</option>
                                 <option value="carnes">Carnes</option>
+                                <option value="entrantes">Entrantes</option>
+
                             </select>
                         </div>
                     </div>

@@ -60,7 +60,7 @@
                             <div class="text-center">
                                 <!-- Submit button for sending the password recovery email -->
                                 <input type="submit" class="btn btn-primary roundedInput" name="enviarCorreo"
-                                    value="Send Email">
+                                    value="Enviar correo">
                             </div>
                             </form>
 
