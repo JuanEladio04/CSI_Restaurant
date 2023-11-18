@@ -1,7 +1,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
 
         <div class="container-fluid contenido">
-            <div class="col-sm-1 todo">
+            <div class=" todo1">
                 <a class="navbar-brand" href="../index.php"><img src="../img/logos/SmallLogo.png" alt="Logo"></a>
             </div>
 
@@ -13,9 +13,9 @@
 
                 </button>
 
-            <div class="navbar-collapse collapse col-10 todo" id="navbarResponsive">
+            <div class="navbar-collapse collapse  todo" id="navbarResponsive">
 
-                <ul class="navbar-nav w-100 lobster menu">
+                <ul class="navbar-nav w-100 menu">
 
                     <li
                         class="nav-item  w-100 h-100 text-center  ">

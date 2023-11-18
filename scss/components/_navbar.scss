@@ -68,16 +68,20 @@
         // padding-bottom: 1.5rem;
         // transition: padding-top 0.3s, padding-bottom 0.3s;
 
+        .todo1{
+            width: 100%;
+        }
+
         .navbar-brand img{
             // font-size: 1.75em;
             // transition: font-size 0.3s;
-            width: 60%;
+            width: 20%;
             margin-left: 10%;
             margin-top: 0%;
             margin-bottom: 0%;
-            display: inline ;
-            margin: none;
-            text-align: none;
+            display: block ;
+            margin: auto;
+            text-align: center;
         }
 
 
@@ -120,7 +124,20 @@
 @include media-breakpoint-up(lg){
     .navbar-nav{
         li a {
-            padding: 9.9% 0%;
+            padding: 15% 0%;
+        }
+    }
+
+    .todo1{
+        width: 10% !important;
+        display: flex;
+    }
+
+    .navbar-brand{
+
+
+        img{
+            width: 60% !important;
         }
     }
 }
