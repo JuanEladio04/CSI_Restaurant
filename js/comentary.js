@@ -2,7 +2,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     var ps = document.querySelectorAll('article p');
 
     ps.forEach((p, index) => {
-        var maxLength = 200;
+        var maxLength;
+        if (window.innerWidth <= 576) { // Tamaño de ventana para sm
+            maxLength = 200;
+        } else { // Tamaño de ventana para lg
+            maxLength = 400;
+        }
 
         if (p.textContent.length > maxLength) {
             var shortText = p.textContent.substring(0, maxLength) + '... ';
