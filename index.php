@@ -17,9 +17,9 @@
           <img class="col-12 headerLogo" alt="" src="img\logos\BigLogo.png" />
 
           <div class="socialmedia col-12">
-            <a href="#!" class="mx-4 text-danger"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-            <a href="#!" class="mx-4 text-danger"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
-            <a href="#!" class="mx-4 text-danger"><i class="fa-brands fa-facebook fa-2xl"></i></i></a>
+            <a href="https://www.instagram.com/ristaurantelunadellarosa/" class="mx-4 text-danger" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+            <a href="https://twitter.com/RistauranteDLR" class="mx-4 text-danger" target="_blank"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61553606555788" class="mx-4 text-danger" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></i></a>
           </div>
 
           <nav class="container-fluid col-12 d-lg-none d-sm-block">
@@ -46,7 +46,7 @@
             <div class="card-body container-fluid bg-danger roundedBorder">
               <h3 class="card-title lobster bg-danger container-fluid ">Datos de contacto</h3>
               <p class="card-text roboto text-justify">Teléfono: +34 333333333</p>
-              <p class="card-text roboto text-justify">Correo electrónico: lunaDellaRossa@gmail.com</p>
+              <p class="card-text roboto text-justify">Correo electrónico: ristaurantelunadellarosa@gmail.com</p>
               <p class="card-text roboto text-justify">¡Puedes hablarnos al mensaje directo de todas nuestras redes!</p>
             </div>
           </div>
@@ -106,7 +106,7 @@
       <!--About us-->
       <section id="aboutUs-<?php echo $CURRENT_PAGE; ?>" class="p-5 my-5 container-fluid">
         <h2 class="col-12  text-light lobster d-none">Sobre nosotros</h2>
-        <article class="row m-0 p-0">
+        <article class="row m-0 p-0 justificar">
           <h3 class="col-12 text-light">
             ¿Te apetece saborear la auténtica cocina italiana, elaborada con los mejores ingredientes y el cariño de nuestra familia?
           </h3>
@@ -152,14 +152,16 @@
                     <div class="container-fluid col-lg-8 col-sm-12 text-lg-start">
                       <i class="fa-solid fa-star mx-auto text-danger"></i>
                       <i class="fa-solid fa-star mx-auto text-danger"></i>
+                      <i class="fa-solid fa-star mx-auto text-danger"></i>
+                      <i class="fa-regular fa-star text-danger"></i>
                       <i class="fa-regular fa-star text-danger"></i>
                       <i class="fa-regular fa-star text-danger"></i>
                       <i class="fa-regular fa-star text-danger"></i>
                     </div>
                   </div>
                   <div>
-                    <div class="row scrola">
-                      <p class="col-12 text-justify">
+                    <div class="row scrola justificar">
+                      <p class="col-12">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis molestiae voluptas qui fugiat omnis placeat, cumque rerum amet, quo tenetur dolores esse aliquam reiciendis consequatur. Saepe, consequuntur? Reprehenderit, molestias nobis.
                       </p>
                     </div>
@@ -178,11 +180,13 @@
                       <i class="fa-solid fa-star mx-auto text-danger"></i>
                       <i class="fa-solid fa-star mx-auto text-danger"></i>
                       <i class="fa-regular fa-star text-danger"></i>
+                      <i class="fa-regular fa-star text-danger"></i>
+                      <i class="fa-regular fa-star text-danger"></i>
                     </div>
                   </div>
                   <div>
-                    <div class="row">
-                      <p class="col-12 text-justify">
+                    <div class="row justificar">
+                      <p class="col-12">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ad consequuntur possimus?
                       </p>
                     </div>
@@ -199,13 +203,15 @@
                       <i class="fa-solid fa-star mx-auto text-danger"></i>
                       <i class="fa-solid fa-star mx-auto text-danger"></i>
                       <i class="fa-solid fa-star mx-auto text-danger"></i>
+                      <i class="fa-solid fa-star mx-auto text-danger"></i>
+                      <i class="fa-solid fa-star mx-auto text-danger"></i>
                       <i class="fa-regular fa-star text-danger"></i>
                       <i class="fa-regular fa-star text-danger"></i>
                     </div>
                   </div>
                   <div>
-                    <div class="row">
-                      <p class="col-12 text-justify">
+                    <div class="row justificar">
+                      <p class="col-12">
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit dolor repellat dolores nostrum vitae eius. Reiciendis aliquid ea odio ipsum quia voluptatibus rerum quos, consequatur est accusamus ab libero, repellat accusantium quae qui magni at quas pariatur nisi veritatis vitae, quisquam aliquam labore perspiciatis? Obcaecati beatae quaerat, nobis nesciunt vitae adipisci maiores optio repudiandae. At corrupti neque dolorum repellendus accusamus ipsa modi, quod ea est enim sunt inventore dolorem sequi ipsam architecto, laboriosam fuga voluptates, blanditiis earum. Veritatis numquam quidem nobis illo odio excepturi adipisci, pariatur inventore repellat totam culpa vero tempore itaque accusantium fugit minus nihil tempora! Amet, unde!
                       </p>
                     </div>

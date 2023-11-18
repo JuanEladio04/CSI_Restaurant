@@ -42,6 +42,9 @@ html {
     white-space: nowrap;
 }
 
+.justificar{
+    text-align: justify;
+}
 
 // PAGINA FEEDBACK *************************************************************************************
 
@@ -102,23 +105,18 @@ html {
 
 #background-feedback {
     background-image: url(../img/backgrounds/feedback.png);
-    background-size: cover;
     @include background;
 
 }
 
 #background-offers {
     background-image: url(../img/backgrounds/offers.png);
-    background-size: cover;
     @include background;
 
 }
 
 #background-userGestion {
     background-image: url(../img/backgrounds/userGestion.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
     @include background;
 }
 
