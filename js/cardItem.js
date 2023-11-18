@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             var shortText = p.textContent.substring(0, 70) + '... ';
             var fullText = p.textContent;
             p.textContent = shortText;
-            p.insertAdjacentHTML('beforeend', '<a href="#" data-bs-toggle="modal" data-bs-target="#myModal' + index + '">Leer más</a>');
+            p.insertAdjacentHTML('beforeend', '<a href="#" class="text-light" data-bs-toggle="modal" data-bs-target="#myModal' + index + '">Leer más</a>');
 
             document.body.insertAdjacentHTML('beforeend', `
                 <div class="modal fade" id="myModal${index}">
