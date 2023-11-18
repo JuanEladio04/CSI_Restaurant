@@ -14,7 +14,7 @@
 
     .btn {
         font-family: $font-family-sans-serif !important;
-        height: auto;
+        height: 5vh;
 
         @include media-breakpoint-up(sm) {
             padding: 0% 7vh;
