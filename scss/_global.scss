@@ -149,3 +149,8 @@ html {
     background-image: url(../img/backgrounds/cardBackground.jpg);
     @include background;
 }
+
+#background-addPlate {
+    background-image: url(../img/backgrounds/addPlate.jpg);
+    @include background;
+}
