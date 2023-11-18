@@ -173,7 +173,7 @@
                     </div>
                   </div>
                     <div class="row scrola justificar">
-                      <p class="col-12">
+                      <p class="col-12 userCommentText">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis molestiae voluptas qui fugiat
                         omnis placeat, cumque rerum amet, quo tenetur dolores esse aliquam reiciendis consequatur.
                         Saepe, consequuntur? Reprehenderit, molestias nobis.
@@ -198,8 +198,8 @@
                       <i class="fa-regular fa-star text-danger"></i>
                     </div>
                     <div>
-                      <div class="row justificar">
-                        <p class="col-12">
+                      <div class="row justificar scrola">
+                        <p class="col-12 userCommentText">
                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ad consequuntur possimus?
                         </p>
                       </div>
@@ -222,8 +222,8 @@
                       <i class="fa-regular fa-star text-danger"></i>
                     </div>
                   </div>
-                  <div class="row justificar">
-                    <p class="col-12">
+                  <div class="row justificar scrola">
+                    <p class="col-12 userCommentText">
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit dolor repellat dolores nostrum
                       vitae eius. Reiciendis aliquid ea odio ipsum quia voluptatibus rerum quos, consequatur est
                       accusamus ab libero, repellat accusantium quae qui magni at quas pariatur nisi veritatis vitae,
