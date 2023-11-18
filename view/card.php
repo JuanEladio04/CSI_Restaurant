@@ -12,60 +12,43 @@
 
     <!--Carta-->
     <section class=" cardMenu">
-        <!--PC menu card------------------------------------------------>
-        <article class="d-lg-block d-none">
-            <div class="container-fluid">
-                <div class="row bg-danger text-light justify-content-around">
-                    <div class="col-2 menuSection">
-                        <h2>
-                            Entrantes
-                        </h2>
-                    </div>
-                    <div class="col-2 menuSection">
-                        <h2>
-                            Ensaladas
-                        </h2>
-                    </div>
-                    <div class="col-2 menuSection">
-                        <h2>
-                            Pizzas
-                        </h2>
-                    </div>
-                    <div class="col-2 menuSection">
-                        <h2>
-                            Pastas
-                        </h2>
-                    </div>
-                    <div class="col-2 menuSection">
-                        <h2>
-                            Carnes
-                        </h2>
-                    </div>
-                    <div class="col-2 menuSection">
-                        <h2>
-                            Postres
-                        </h2>
-                    </div>
+        <!--Card Menu------------------------------------------------>
+
+        <nav class="navbar navbar-expand-lg navbar-info bg-info fixed-top" id="mainNav">
+
+            <div class="container-fluid contenido">
+                <button class="navbar-toggler text-uppercase font-weight-bold text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#cardResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon "></span>
+                </button>
+                <div class="navbar-collapse collapse col-10 todo" id="cardResponsive">
+                    <ul class="navbar-nav w-100 lobster menu">
+
+                        <li class="nav-item  w-100 h-100 text-center  ">
+                            <a class="nav-link text-dark" href="">Entrantes</a>
+                        </li>
+
+                        <li class="nav-item  w-100 h-100 text-center ">
+                            <a class="nav-link text-dark" href="">Ensaladas</a>
+                        </li>
+
+                        <li class="nav-item  w-100 h-100 text-center ">
+                            <a class="nav-link text-dark" href="">Pizzas</a>
+                        </li>
+
+                        <li class="nav-item  w-100 h-100 text-center ">
+                            <a class="nav-link text-dark" href="">Pastas</a>
+                        </li>
+
+                        <li class="nav-item  w-100 h-100 text-center ">
+                            <a class="nav-link text-dark" href="">Carnes</a>
+                        </li>
+
+                        <li class="nav-item  w-100 h-100 text-center  "><a class="nav-link text-dark " href="">Postres</a></li>
+
+                    </ul>
                 </div>
             </div>
-        </article>
-
-        <!--small devices menu------------------------------------------------>
-        <article class="container-fluid">
-            <div class="dropdown row d-lg-none d-block">
-                <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                    Carta
-                </button>
-                <ul class="dropdown-menu bg-info text-center text-light" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item text-light p-2" href="#">Entrantes</a></li>
-                    <li><a class="dropdown-item text-light p-2" href="#">Ensaladas</a></li>
-                    <li><a class="dropdown-item text-light p-2" href="#">Pizzas</a></li>
-                    <li><a class="dropdown-item text-light p-2" href="#">Pastas</a></li>
-                    <li><a class="dropdown-item text-light p-2" href="#">Carnes</a></li>
-                    <li><a class="dropdown-item text-light p-2" href="#">Postres</a></li>
-                </ul>
-            </div>
-        </article>
+        </nav>
 
         <!--Card content------------------------------------------------>
 
@@ -83,7 +66,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
                     <div class="row bg-info">
                         <div class="col-lg-8 col-sm-12 p-2">
@@ -95,7 +78,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
                     <div class="row bg-info">
                         <div class="col-lg-8 col-sm-12 p-2">
@@ -107,7 +90,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
                     <div class="row bg-info">
                         <div class="col-lg-8 col-sm-12 p-2">
@@ -119,7 +102,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
                     <div class="row bg-info">
                         <div class="col-lg-8 col-sm-12 p-2">
@@ -131,7 +114,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
                     <div class="row bg-info">
                         <div class="col-lg-8 col-sm-12 p-2">
@@ -143,7 +126,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
                     <div class="row bg-info">
                         <div class="col-lg-8 col-sm-12 p-2">
@@ -155,7 +138,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
                     <div class="row bg-info">
                         <div class="col-lg-8 col-sm-12 p-2">
@@ -167,7 +150,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
                     <div class="row bg-info">
                         <div class="col-lg-8 col-sm-12 p-2">
@@ -179,7 +162,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
                     <div class="row bg-info">
                         <div class="col-lg-8 col-sm-12 p-2">
@@ -191,7 +174,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
                     <div class="row bg-info">
                         <div class="col-lg-8 col-sm-12 p-2">
