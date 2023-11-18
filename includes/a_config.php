@@ -32,7 +32,7 @@ switch ($_SERVER["SCRIPT_NAME"]) {
 		$CURRENT_PAGE = "terminosCondiciones";
 		$PAGE_TITLE = "Términos y Condiciones";
 		break;
-	
+
 	case "/view/feedback.php":
 		$CURRENT_PAGE = "feedback";
 		$PAGE_TITLE = "Opiniones";
@@ -47,7 +47,11 @@ switch ($_SERVER["SCRIPT_NAME"]) {
 		$CURRENT_PAGE = "card";
 		$PAGE_TITLE = "Carta";
 		break;
-		
+	case "/view/addPlate.php":
+		$CURRENT_PAGE = "addPlate";
+		$PAGE_TITLE = "Añadir plato";
+		break;
+
 	default:
 		$CURRENT_PAGE = "Index";
 		$PAGE_TITLE = "Welcome to my homepage!";
