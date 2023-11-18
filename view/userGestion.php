@@ -20,7 +20,7 @@
                 <!-- Main content container -->
                 <div class="col-4 d-flex flex-column justify-content-center align-items-center">
                     <!-- User photo container -->
-                    <div class="container formUser mt-5 pt-5 d-flex flex-column align-items-center">
+                    <div class="container formUserGestion mt-5 pt-5 d-flex flex-column align-items-center">
                         <div class="card bg-danger text-dark roundedBorderUserGestion bg-light">
                             <div class="card-body my-auto">
                                 <h1 class="text-center">Foto de perfil</h1>
@@ -44,7 +44,7 @@
                     </div>
 
                     <!-- User name change form -->
-                    <div class="container formUser">
+                    <div class="container formUserGestion">
                         <div class="card bg-danger text-dark roundedBorderUserGestion bg-light">
                             <div class="card-body  my-auto">
                                 <h1 class="text-center lobster">Nombre de usuario</h1>
@@ -68,7 +68,7 @@
                     </div>
 
                     <!-- User email change form -->
-                    <div class="container formUser">
+                    <div class="container formUserGestion">
                         <div class="card bg-danger text-dark roundedBorderUserGestion bg-light">
                             <div class="card-body my-auto">
                                 <h1 class="text-center lobster">Correo electrónico</h1>
@@ -92,7 +92,7 @@
                     </div>
 
                     <!-- Password change form -->
-                    <div class="container-fluid formUser">
+                    <div class="container-fluid formUserGestion">
                         <div class="card bg-danger text-dark roundedBorderUserGestion bg-light">
                             <div class="card-body my-auto">
                                 <h1 class="text-center lobster">Cambiar contraseña</h1>

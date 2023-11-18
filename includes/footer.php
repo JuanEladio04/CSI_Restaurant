@@ -3,7 +3,7 @@
     <!-- Outer container for the footer content. -->
     <div class="container-fluid">
         <!-- Row container to organize content in a row. -->
-        <div class="row container-fluid">
+        <div class="row">
             <!-- Centered column for the restaurant logo and social media icons. -->
             <div class="col-sm-4 order-sm-2 d-flex flex-column align-items-center text-center">
                 <!-- Link to the home page with the restaurant logo. -->

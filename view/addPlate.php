@@ -31,7 +31,7 @@
                 <!-- Row for dish description input -->
                 <div class="row centrado descripcion">
                     <div class="col">
-                        Descripción del plato:
+                        <p>Descripción del plato:</p>
                     </div>
                     <!-- Textarea for entering the dish description -->
                     <div class="col inputCentrado">
@@ -41,7 +41,7 @@
                 <!-- Row for changing the dish photo -->
                 <div class="row centrado descripcion">
                     <div class="col">
-                        Imagen del plato:
+                        <p>Imagen del plato:</p>
                     </div>
                     <div class="container">
                         <button class="btn text-light bg-danger roundedInput textoNoWrap" type="submit">
