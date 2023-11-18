@@ -20,7 +20,7 @@
     <section class="ofertasDia">
         <article class="tituloOffers">
             <div>
-                <h2>OFERTAS DEL DIA</h2>
+                <h2>OFERTAS DEL DÍA</h2>
             </div>
         </article>
         <div class="container-fluid">
