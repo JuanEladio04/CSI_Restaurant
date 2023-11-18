@@ -17,9 +17,12 @@
           <img class="col-12 headerLogo" alt="" src="img\logos\BigLogo.png" />
 
           <div class="socialmedia col-12">
-            <a href="https://www.instagram.com/ristaurantelunadellarosa/" class="mx-4 text-danger" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-            <a href="https://twitter.com/RistauranteDLR" class="mx-4 text-danger" target="_blank"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61553606555788" class="mx-4 text-danger" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></i></a>
+            <a href="https://www.instagram.com/ristaurantelunadellarosa/" class="mx-4 text-danger" target="_blank"><i
+                class="fa-brands fa-instagram fa-2xl"></i></a>
+            <a href="https://twitter.com/RistauranteDLR" class="mx-4 text-danger" target="_blank"><i
+                class="fa-brands fa-x-twitter fa-2xl"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61553606555788" class="mx-4 text-danger" target="_blank"><i
+                class="fa-brands fa-facebook fa-2xl"></i></i></a>
           </div>
 
           <nav class="container-fluid col-12 d-lg-none d-sm-block">
@@ -41,7 +44,7 @@
         <div id="carousel" class="mb-5">
 
 
-        <div class="prevLeftSecond card bg-danger roundedBorder text-center text-light">
+          <div class="prevLeftSecond card bg-danger roundedBorder text-center text-light">
             <img src="img\stockImages\index\ofertImg.jpg" class="card-img-top roundedBorder mt-auto" alt="reseravs">
             <div class="card-body container-fluid bg-danger roundedBorder">
               <h3 class="card-title lobster bg-danger container-fluid ">Datos de contacto</h3>
@@ -55,7 +58,8 @@
             <img src="img\stockImages\index\ofertImg.jpg" class="card-img-top roundedBorder mt-auto" alt="reseravs">
             <div class="card-body container-fluid bg-danger roundedBorder">
               <h3 class="card-title lobster bg-danger container-fluid ">Ofertas</h3>
-              <p class="card-text roboto text-justify">¡Mira nuestras ofertas diarias y semanales! Hazle un favor a tu bolsillo.</p>
+              <p class="card-text roboto text-justify">¡Mira nuestras ofertas diarias y semanales! Hazle un favor a tu
+                bolsillo.</p>
               <a href="view/offers.php" class="btn btn-primary rounded-2">Visitar ofertas</a>
             </div>
           </div>
@@ -64,7 +68,8 @@
             <img src="img\stockImages\index\cardImg.jpg" class="card-img-top roundedBorder" alt="reseravs">
             <div class="card-body container-fluid bg-danger roundedBorder">
               <h3 class="card-title lobster ">Carta</h3>
-              <p class="card-text roboto text-justify">Comprueba toda una carta llena de platos variados para todo tipo de personas y estómagos</p>
+              <p class="card-text roboto text-justify">Comprueba toda una carta llena de platos variados para todo tipo
+                de personas y estómagos</p>
               <a href="view/card.php" class="btn btn-primary rounded-2">Muéstrame</a>
             </div>
           </div>
@@ -108,13 +113,18 @@
         <h2 class="col-12  text-light lobster d-none">Sobre nosotros</h2>
         <article class="row m-0 p-0 justificar">
           <h3 class="col-12 text-light">
-            ¿Te apetece saborear la auténtica cocina italiana, elaborada con los mejores ingredientes y el cariño de nuestra familia?
+            ¿Te apetece saborear la auténtica cocina italiana, elaborada con los mejores ingredientes y el cariño de
+            nuestra familia?
           </h3>
           <p class="col-12 text-light text-justify">
-            Te esperamos en el siguiente enlace, donde podrás conocer más sobre nuestro restaurante, nuestra tradición y nuestra pasión por la gastronomía. En este sitio, podrás ver las fotos de nuestros platos, nuestro personal y nuestro ambiente. También podrás leer las opiniones de nuestros clientes, nuestras recetas y nuestras ofertas. No dejes pasar esta oportunidad de disfrutar de una experiencia única y deliciosa.
+            Te esperamos en el siguiente enlace, donde podrás conocer más sobre nuestro restaurante, nuestra tradición y
+            nuestra pasión por la gastronomía. En este sitio, podrás ver las fotos de nuestros platos, nuestro personal
+            y nuestro ambiente. También podrás leer las opiniones de nuestros clientes, nuestras recetas y nuestras
+            ofertas. No dejes pasar esta oportunidad de disfrutar de una experiencia única y deliciosa.
           </p>
           <div class="align-items-right col-12">
-            <button type="button" class="btn btn-danger col-lg-3 col-sm-12 rounded-2 ms-auto" onclick="location.href='view/aboutUs.php'">Muéstrame</button>
+            <button type="button" class="btn btn-danger col-lg-3 col-sm-12 rounded-2 ms-auto"
+              onclick="location.href='view/aboutUs.php'">Muéstrame</button>
           </div>
         </article>
       </section>
@@ -136,20 +146,23 @@
               </p>
             </div>
             <div class="align-items-right col-12">
-              <button type="button" class="btn btn-danger col-lg-4 col-sm-12" onclick="location.href='view/feedback.php'">Quiero opinar</button>
+              <button type="button" class="btn btn-danger col-lg-4 col-sm-12"
+                onclick="location.href='view/feedback.php'">Quiero opinar</button>
             </div>
           </article>
 
           <!--Comentaries carousel-->
-          <section id="carouselExampleAutoplaying" class="carousel container-fluid slide col-lg-9 col-sm-12" data-bs-ride="carousel">
+          <section id="carouselExampleAutoplaying" class="carousel container-fluid slide col-lg-9 col-sm-12"
+            data-bs-ride="carousel">
             <div class="carousel-inner row">
               <!--Carousel items-->
               <article class="carousel-item active align-items-center justify-content-around">
                 <div class="container-fluid w-75">
                   <div class="row align-items-center text-center mb-3">
-                    <img class="col-lg-1 col-sm-12 w-sm-75" alt="Imagen de usuario" src="img\stockImages\defaultUserImage.png" />
+                    <img class="col-lg-1 col-sm-12 w-sm-75" alt="Imagen de usuario"
+                      src="img\stockImages\defaultUserImage.png" />
                     <div class="col-lg-1 col-sm-12">Username</div>
-                    <div class="container-fluid col-lg-8 col-sm-12 text-lg-start">
+                    <div class="container-fluid col-lg-8 col-sm-12 text-center text-lg-start">
                       <i class="fa-solid fa-star mx-auto text-danger"></i>
                       <i class="fa-solid fa-star mx-auto text-danger"></i>
                       <i class="fa-solid fa-star mx-auto text-danger"></i>
@@ -159,22 +172,23 @@
                       <i class="fa-regular fa-star text-danger"></i>
                     </div>
                   </div>
-                  <div>
                     <div class="row scrola justificar">
                       <p class="col-12">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis molestiae voluptas qui fugiat omnis placeat, cumque rerum amet, quo tenetur dolores esse aliquam reiciendis consequatur. Saepe, consequuntur? Reprehenderit, molestias nobis.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis molestiae voluptas qui fugiat
+                        omnis placeat, cumque rerum amet, quo tenetur dolores esse aliquam reiciendis consequatur.
+                        Saepe, consequuntur? Reprehenderit, molestias nobis.
                       </p>
                     </div>
-                  </div>
                 </div>
               </article>
 
               <article class="carousel-item align-items-center justify-content-around">
                 <div class="container-fluid w-75">
                   <div class="row align-items-center text-center mb-3">
-                    <img class="col-lg-1 col-sm-12 w-sm-75" alt="Imagen de usuario" src="img\stockImages\defaultUserImage.png" />
+                    <img class="col-lg-1 col-sm-12 w-sm-75" alt="Imagen de usuario"
+                      src="img\stockImages\defaultUserImage.png" />
                     <div class="col-lg-1 col-sm-12">Username</div>
-                    <div class="container-fluid col-lg-9 col-sm-12 text-start">
+                    <div class="container-fluid col-lg-9 col-sm-12 text-center text-lg-start">
                       <i class="fa-solid fa-star mx-auto text-danger"></i>
                       <i class="fa-solid fa-star mx-auto text-danger"></i>
                       <i class="fa-solid fa-star mx-auto text-danger"></i>
@@ -183,23 +197,22 @@
                       <i class="fa-regular fa-star text-danger"></i>
                       <i class="fa-regular fa-star text-danger"></i>
                     </div>
-                  </div>
-                  <div>
-                    <div class="row justificar">
-                      <p class="col-12">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ad consequuntur possimus?
-                      </p>
+                    <div>
+                      <div class="row justificar">
+                        <p class="col-12">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ad consequuntur possimus?
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </div>
               </article>
 
               <article class="carousel-item align-items-center justify-content-around">
                 <div class="container-fluid w-75">
                   <div class="row align-items-center text-center mb-3">
-                    <img class="col-lg-1 col-sm-12 w-sm-75" alt="Imagen de usuario" src="img\stockImages\defaultUserImage.png" />
+                    <img class="col-lg-1 col-sm-12 w-sm-75" alt="Imagen de usuario"
+                      src="img\stockImages\defaultUserImage.png" />
                     <div class="col-lg-1 col-sm-12">Username</div>
-                    <div class="container-fluid col-lg-9 col-sm-12 text-start">
+                    <div class="container-fluid col-lg-9 col-sm-12 text-center text-lg-start">
                       <i class="fa-solid fa-star mx-auto text-danger"></i>
                       <i class="fa-solid fa-star mx-auto text-danger"></i>
                       <i class="fa-solid fa-star mx-auto text-danger"></i>
@@ -209,23 +222,30 @@
                       <i class="fa-regular fa-star text-danger"></i>
                     </div>
                   </div>
-                  <div>
-                    <div class="row justificar">
-                      <p class="col-12">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit dolor repellat dolores nostrum vitae eius. Reiciendis aliquid ea odio ipsum quia voluptatibus rerum quos, consequatur est accusamus ab libero, repellat accusantium quae qui magni at quas pariatur nisi veritatis vitae, quisquam aliquam labore perspiciatis? Obcaecati beatae quaerat, nobis nesciunt vitae adipisci maiores optio repudiandae. At corrupti neque dolorum repellendus accusamus ipsa modi, quod ea est enim sunt inventore dolorem sequi ipsam architecto, laboriosam fuga voluptates, blanditiis earum. Veritatis numquam quidem nobis illo odio excepturi adipisci, pariatur inventore repellat totam culpa vero tempore itaque accusantium fugit minus nihil tempora! Amet, unde!
-                      </p>
-                    </div>
+                  <div class="row justificar">
+                    <p class="col-12">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit dolor repellat dolores nostrum
+                      vitae eius. Reiciendis aliquid ea odio ipsum quia voluptatibus rerum quos, consequatur est
+                      accusamus ab libero, repellat accusantium quae qui magni at quas pariatur nisi veritatis vitae,
+                      quisquam aliquam labore perspiciatis? Obcaecati beatae quaerat, nobis nesciunt vitae adipisci
+                      maiores optio repudiandae. At corrupti neque dolorum repellendus accusamus ipsa modi, quod ea
+                      est enim sunt inventore dolorem sequi ipsam architecto, laboriosam fuga voluptates, blanditiis
+                      earum. Veritatis numquam quidem nobis illo odio excepturi adipisci, pariatur inventore repellat
+                      totam culpa vero tempore itaque accusantium fugit minus nihil tempora! Amet, unde!
+                    </p>
                   </div>
                 </div>
               </article>
 
             </div>
             <div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
               </button>
