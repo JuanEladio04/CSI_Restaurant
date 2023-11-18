@@ -1,17 +1,27 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    var ps = document.querySelectorAll('article p');
+function updateText() {
+    // Primero, elimina todos los modales existentes
+    document.querySelectorAll('.modal').forEach(modal => modal.remove());
+
+    var ps = document.querySelectorAll('.scrola p');
 
     ps.forEach((p, index) => {
-        var maxLength = 200;
+        var maxLength;
+        if (window.innerWidth <= 576) { 
+            maxLength = 200;
+        } else { 
+            maxLength = 400;
+        }
 
         if (p.textContent.length > maxLength) {
             var shortText = p.textContent.substring(0, maxLength) + '... ';
             var fullText = p.textContent;
             p.textContent = shortText;
-            p.insertAdjacentHTML('beforeend', '<a href="#" class="text-light" data-bs-toggle="modal" data-bs-target="#myModal' + index + '">Leer más</a>');
+
+            var modalId = 'myModal' + Date.now() + index;
+            p.insertAdjacentHTML('beforeend', '<a href="#" class="text-light" data-bs-toggle="modal" data-bs-target="#' + modalId + '">Leer más</a>');
 
             document.body.insertAdjacentHTML('beforeend', `
-                <div class="modal fade" id="myModal${index}">
+                <div class="modal fade" id="${modalId}">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -30,4 +40,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             `);
         }
     });
-});
+}
+
+document.addEventListener('DOMContentLoaded', updateText);
+window.addEventListener('resize', updateText);

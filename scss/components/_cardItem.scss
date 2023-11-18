@@ -1,9 +1,18 @@
-.cardItem{
-    img{
-        border-radius: 0 20px 20px 0;
+.cardItem {
+
+    div {
+        border-radius: 20px;
     }
 
-    div{
-        border-radius: 20px;
+    img {
+        border-radius: 0 0 20px 20px;
+        width: 100%;
+    }
+
+    @media (min-width: map-get($grid-breakpoints, 'lg')) {
+        img {
+            border-radius: 0 20px 20px 0;
+            width: auto;
+        }
     }
 }
