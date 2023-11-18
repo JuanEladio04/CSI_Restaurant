@@ -234,6 +234,8 @@
         </div>
       </section>
 
+      <script src="js/comentary.js"></script>
+
 
     </section>
     <?php include("includes/footer.php"); ?>
