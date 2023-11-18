@@ -72,103 +72,133 @@
         <article class="container-fluid bg-primary">
             <div class="row p-5 justify-content-around">
 
-                <div class="container-fluid col-lg-3 col-10 m-2 cardItem">
+                <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
                     <div class="row bg-info">
-                        <div class="col-8 p-2">
+                        <div class="col-lg-8 col-sm-12 p-2">
                             <h3>Pizza 4 quesos</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
                         </div>
-                        <div class="col-3">
+                        <div class="col-lg-3 col-sm-12 text-center p-0">
                             <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
                         </div>
                     </div>
                 </div>
                 
-                <div class="container-fluid col-lg-3 col-10 m-2 cardItem">
+                <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
                     <div class="row bg-info">
-                        <div class="col-8 p-2">
+                        <div class="col-lg-8 col-sm-12 p-2">
                             <h3>Pizza 4 quesos</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
                         </div>
-                        <div class="col-3">
+                        <div class="col-lg-3 col-sm-12 text-center p-0">
                             <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
                         </div>
                     </div>
                 </div>
-
                 
-                <div class="container-fluid col-lg-3 col-10 m-2 cardItem">
+                <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
                     <div class="row bg-info">
-                        <div class="col-8 p-2">
+                        <div class="col-lg-8 col-sm-12 p-2">
                             <h3>Pizza 4 quesos</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
                         </div>
-                        <div class="col-3">
+                        <div class="col-lg-3 col-sm-12 text-center p-0">
                             <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
                         </div>
                     </div>
                 </div>
-
                 
-                <div class="container-fluid col-lg-3 col-10 m-2 cardItem">
+                <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
                     <div class="row bg-info">
-                        <div class="col-8 p-2">
+                        <div class="col-lg-8 col-sm-12 p-2">
                             <h3>Pizza 4 quesos</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
                         </div>
-                        <div class="col-3">
+                        <div class="col-lg-3 col-sm-12 text-center p-0">
                             <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
                         </div>
                     </div>
                 </div>
-
                 
-                <div class="container-fluid col-lg-3 col-10 m-2 cardItem">
+                <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
                     <div class="row bg-info">
-                        <div class="col-8 p-2">
+                        <div class="col-lg-8 col-sm-12 p-2">
                             <h3>Pizza 4 quesos</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
                         </div>
-                        <div class="col-3">
+                        <div class="col-lg-3 col-sm-12 text-center p-0">
                             <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
                         </div>
                     </div>
                 </div>
-
                 
-                <div class="container-fluid col-lg-3 col-10 m-2 cardItem">
+                <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
                     <div class="row bg-info">
-                        <div class="col-8 p-2">
+                        <div class="col-lg-8 col-sm-12 p-2">
                             <h3>Pizza 4 quesos</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
                         </div>
-                        <div class="col-3">
+                        <div class="col-lg-3 col-sm-12 text-center p-0">
                             <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
                         </div>
                     </div>
                 </div>
-
                 
-                <div class="container-fluid col-lg-3 col-10 m-2 cardItem">
+                <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
                     <div class="row bg-info">
-                        <div class="col-8 p-2">
+                        <div class="col-lg-8 col-sm-12 p-2">
                             <h3>Pizza 4 quesos</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
                         </div>
-                        <div class="col-3">
+                        <div class="col-lg-3 col-sm-12 text-center p-0">
                             <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
                         </div>
                     </div>
                 </div>
-
                 
-                <div class="container-fluid col-lg-3 col-10 m-2 cardItem">
+                <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
                     <div class="row bg-info">
-                        <div class="col-8 p-2">
+                        <div class="col-lg-8 col-sm-12 p-2">
                             <h3>Pizza 4 quesos</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
                         </div>
-                        <div class="col-3">
+                        <div class="col-lg-3 col-sm-12 text-center p-0">
+                            <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
+                    <div class="row bg-info">
+                        <div class="col-lg-8 col-sm-12 p-2">
+                            <h3>Pizza 4 quesos</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
+                        </div>
+                        <div class="col-lg-3 col-sm-12 text-center p-0">
+                            <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
+                    <div class="row bg-info">
+                        <div class="col-lg-8 col-sm-12 p-2">
+                            <h3>Pizza 4 quesos</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
+                        </div>
+                        <div class="col-lg-3 col-sm-12 text-center p-0">
+                            <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
+                    <div class="row bg-info">
+                        <div class="col-lg-8 col-sm-12 p-2">
+                            <h3>Pizza 4 quesos</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
+                        </div>
+                        <div class="col-lg-3 col-sm-12 text-center p-0">
                             <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
                         </div>
                     </div>
