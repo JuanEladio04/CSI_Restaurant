@@ -44,13 +44,9 @@
         <div id="carousel" class="mb-5">
 
 
-<<<<<<< HEAD
+
         <div class="prevLeftSecond card bg-danger roundedBorder text-center text-light">
             <img src="img\stockImages\index\contactoImg.jpeg" class="card-img-top roundedBorder mt-auto" alt="reseravs">
-=======
-          <div class="prevLeftSecond card bg-danger roundedBorder text-center text-light">
-            <img src="img\stockImages\index\ofertImg.jpg" class="card-img-top roundedBorder mt-auto" alt="reseravs">
->>>>>>> 4a48bc69f591e0bfa1874b378295e5bf306db53c
             <div class="card-body container-fluid bg-danger roundedBorder">
               <h3 class="card-title lobster bg-danger container-fluid ">Datos de contacto</h3>
               <p class="card-text roboto text-justify">Teléfono: +34 333333333</p>
