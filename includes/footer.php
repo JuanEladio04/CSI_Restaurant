@@ -34,15 +34,15 @@
             <div class="mx-auto col-sm-4 order-sm-3 my-sm-auto">
                 <p class="lead">
                     <!-- Link to the Terms and Conditions page. -->
-                    <a href="../view/terminosCondiciones.php">Términos y condiciones</a>
+                    <a href="../view/termsAndConditions.php">Términos y condiciones</a>
                 </p>
                 <p class="lead">
                     <!-- Placeholder link to Legal Notice. -->
-                    <a  href="../view/terminosCondiciones.php#legalWarn">Aviso legal</a>
+                    <a  href="../view/termsAndConditions.php#legalWarn">Aviso legal</a>
                 </p>
                 <p class="lead">
                     <!-- Placeholder link to Privacy Policy. -->
-                    <a  href="../view/terminosCondiciones.php#privPol">Política de privacidad</a>
+                    <a  href="../view/termsAndConditions.php#privPol">Política de privacidad</a>
                 </p>
             </div>
         </div>
