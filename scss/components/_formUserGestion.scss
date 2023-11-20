@@ -1,0 +1,29 @@
+.formUserGestion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3vh;
+    
+
+    .card {
+        height: auto;
+    }
+
+    a {
+        font-family: $headings-font-family;
+    }
+
+    .btn {
+        font-family: $font-family-sans-serif !important;
+        height: 5vh;
+        font-size: 18px !important;
+    }
+
+    .margenInferior {
+        margin-bottom: 1vh;
+    }
+
+    .margenSuperior {
+        margin-top: 1.5vh;
+    }
+}

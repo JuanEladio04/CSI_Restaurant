@@ -1,0 +1,23 @@
+// 
+// Colors
+// 
+
+//- Override and add to color system
+$ocher: #FFCA75;
+$coffee: #E8A76B;
+$clay: #FEAA81;
+$terracotta: #E8826B;
+$softRed: #FF7B75;
+$black : #2B2B2B;
+
+//- Override primary color
+$primary: $ocher;
+$secondary : $coffee;
+$danger: $softRed;
+$info: $terracotta;
+$success: $clay;
+$dark: $black;
+// $danger: yellow;
+// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
+// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
+$min-contrast-ratio: 2.4;

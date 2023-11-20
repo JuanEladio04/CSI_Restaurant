@@ -1,0 +1,144 @@
+// 
+// Navbar
+// 
+
+#mainNav {
+    // padding-top: 1rem;
+    // padding-bottom: 1rem;
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+    font-size: 1.43em;
+    padding-top: 3% !important;
+    padding-bottom: 0% !important;
+    position: relative;
+    z-index: 1;
+
+    .navbar-brand  img{
+        width: 20%;
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+
+
+    .navbar-nav {
+        // margin-top: 1rem;
+
+        li.nav-item {
+            letter-spacing: 1px;
+        }
+
+        li:hover{
+            background-color: $danger;
+
+        }
+
+        #invisible{
+            // visibility:hidden;
+            white-space: nowrap;
+        }
+    }
+
+    .navbar-toggler {
+        font-size: 80%;
+        text-align: center;
+        width: 100%;
+        border: 0px;
+        // padding: 0.8rem;
+    }
+
+    .navbar-toggler li:hover{
+        background-color: $danger;
+    }
+
+    .contenido {
+        height: 90%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+
+@include media-breakpoint-up(sm) {
+    #mainNav {
+        padding-top: 0% !important;
+        padding-bottom: 0% !important;
+        // padding-top: 1.5rem;
+        // padding-bottom: 1.5rem;
+        // transition: padding-top 0.3s, padding-bottom 0.3s;
+
+        .todo1{
+            width: 100%;
+        }
+
+        .navbar-brand img{
+            // font-size: 1.75em;
+            // transition: font-size 0.3s;
+            width: 20%;
+            margin-left: 10%;
+            margin-top: 0%;
+            margin-bottom: 0%;
+            display: block ;
+            margin: auto;
+            text-align: center;
+        }
+
+
+        .navbar-nav {
+            margin-top: 0;
+        }
+
+        .navbar-nav>li.nav-item>a.nav-link.active {
+            color: $white;
+            background: $primary;
+
+            &:active,
+            &:focus,
+            &:hover {
+                color: $white;
+                background: $primary;
+            }
+        }
+
+
+
+        .todo {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+    }
+
+    #mainNav.navbar-shrink {
+        // padding-top: 0.5rem;
+        // padding-bottom: 0.5rem;
+
+        .navbar-brand {
+            font-size: 1.5em;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg){
+    .navbar-nav{
+        li a {
+            padding: 15% 0%;
+        }
+    }
+
+    .todo1{
+        width: 10% !important;
+        display: flex;
+    }
+
+    .navbar-brand{
+
+
+        img{
+            width: 60% !important;
+        }
+    }
+}
+

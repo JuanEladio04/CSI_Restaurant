@@ -1,0 +1,64 @@
+.rForm {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+    width: 100%;
+    border-radius: $border-radius-lg !important;
+
+    .form {
+        padding: none !important;
+        border-radius: 0px 0px 20px 20px !important;
+
+        .rFormContent {
+            align-items: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+
+            label {
+                text-align: left;
+                font-weight: bolder;
+                font-size: 1.3em;
+                white-space: nowrap;
+            }
+
+            @mixin inputPropperties {
+                border-radius: $border-radius-lg;
+                border: 0px;
+                padding: 0.5rem;
+                resize: none;
+            }
+
+            input,
+            select {
+                @include inputPropperties();
+            }
+
+            textarea {
+                @include inputPropperties();
+                resize: none !important;
+            }
+
+            #sDinners {
+                display: none;
+            }
+        }
+
+        .btn {
+            font-size: 1.6em;
+            border-radius: 0px 0px 20px 20px !important;
+
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, 'lg')) {
+    .rForm {
+        width: 75%;
+
+        // h2{
+        //     border-radius: 20px, 20px, 0, 0 !important;
+        // }
+
+        // .btn{
+        //     border-radius: 0, 0, 20px, 20px !important;
+        // }
+    }
+}

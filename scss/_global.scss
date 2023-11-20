@@ -1,0 +1,156 @@
+// 
+// Global
+// 
+
+// Scroll padding for all scroll targets on page used with
+// native CSS smooth scrolling
+// 
+// https://caniuse.com/?search=scroll-padding
+
+html {
+    height: 100%;
+    scroll-padding-top: calc(#{$navbar-height} - 1px);
+}
+
+// Styling for page sections
+.page-section {
+    padding: 6rem 0;
+
+    .page-section-heading {
+        font-size: 2.25rem;
+        line-height: 2rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        .page-section-heading {
+            font-size: 3rem;
+            line-height: 2.5rem;
+        }
+    }
+}
+
+
+.rounded-checkbox {
+    width: 50px !important;
+    /* Ancho personalizado */
+    height: 20px !important;
+    /* Altura personalizada */
+}
+
+
+.textoNoWrap {
+    white-space: nowrap;
+}
+
+.justificar{
+    text-align: justify;
+}
+
+// PAGINA FEEDBACK *************************************************************************************
+
+.crearOpiniones {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.contenedor {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.opinionUsuario {
+    margin-bottom: 7%;
+    margin-top: 7%;
+
+}
+
+.opinionesclientes {
+    background-color: $primary;
+}
+
+// FIN PAGINA FEEDBACK ********************************************************************************** 
+
+@mixin background {
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+ 
+//INDEX
+
+@media (max-width: map-get($grid-breakpoints, 'sm')){
+    #opinion-description {
+        border-bottom: 3px solid white;
+        border-right: none !important;
+        margin-bottom: 5%;
+    }
+}
+
+//BACKGROUNDS
+#background-index {
+    background-image: url(../img/backgrounds/backGround.jpg);
+    @include background;
+}
+
+#aboutUs-index {
+    background-image: url(../img/backgrounds/aboutUsIndex.png);
+}
+
+#background-reserve {
+    background-image: url(../img/backgrounds/reservesBackground.jpg);
+    @include background;
+}
+
+#background-feedback {
+    background-image: url(../img/backgrounds/feedback.png);
+    @include background;
+
+}
+
+#background-offers {
+    background-image: url(../img/backgrounds/offers.png);
+    @include background;
+
+}
+
+#background-userGestion {
+    background-image: url(../img/backgrounds/userGestion.jpg);
+    @include background;
+}
+
+#background-login {
+    background-image: url(../img/backgrounds/tableDraw.jpg);
+    @include background;
+}
+
+#background-register {
+    background-image: url(../img/backgrounds/tableDraw.jpg);
+    @include background;
+}
+
+#background-forgottenPassword {
+    background-image: url(../img/backgrounds/tableDraw.jpg);
+    @include background;
+}
+
+#background-aboutus {
+    background-image: url(../img/backgrounds/backGround03.jpg);
+    @include background;
+}
+
+#background-terminosCondiciones {
+    background-image: url(../img/backgrounds/termins-y-condcones@3x.png);
+    @include background;
+}
+
+#background-card {
+    background-image: url(../img/backgrounds/cardBackground.jpg);
+    @include background;
+}
+
+#background-addPlate {
+    background-image: url(../img/backgrounds/addPlate.jpg);
+    @include background;
+}

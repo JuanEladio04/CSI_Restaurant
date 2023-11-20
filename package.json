@@ -1,14 +1,15 @@
 {
-  "name": "csi",
+  "name": "phpboostrap5framework",
   "version": "1.0.0",
   "description": "",
+  "main": "index.php",
   "scripts": {
-    "start": "parcel ./*.html ",
-    "build": "parcel build ./*.html  --dist-dir ./build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "parcel": "^2.7.0"
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "php": "^1.0.2"
   }
 }

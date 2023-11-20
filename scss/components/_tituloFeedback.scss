@@ -1,0 +1,21 @@
+.titulo{
+    padding: 2% 0% 2% 0%;
+    display: block;
+    background-color: $info;
+
+    h2{
+        font-family: $headings-font-family;
+        text-align: center;
+        color: $light;
+        letter-spacing: 3px;
+        font-size: 2em;
+    }
+}
+ 
+@include media-breakpoint-up(sm) { 
+    .titulo{
+        h2{
+            font-size: 4em;
+        }
+    }
+}

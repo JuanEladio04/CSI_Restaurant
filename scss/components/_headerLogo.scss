@@ -1,0 +1,10 @@
+.headerLogo {
+    width: 50%;
+}
+
+
+@media (min-width: map-get($grid-breakpoints, 'lg')) {
+    .headerLogo {
+        width: 25%;
+    }
+}
