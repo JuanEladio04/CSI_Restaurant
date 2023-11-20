@@ -166,8 +166,6 @@
                       <i class="fa-solid fa-star mx-auto text-danger"></i>
                       <i class="fa-regular fa-star text-danger"></i>
                       <i class="fa-regular fa-star text-danger"></i>
-                      <i class="fa-regular fa-star text-danger"></i>
-                      <i class="fa-regular fa-star text-danger"></i>
                     </div>
                   </div>
                     <div class="row scrola justificar">
@@ -187,8 +185,6 @@
                       src="img\stockImages\defaultUserImage.png" />
                     <div class="col-lg-1 col-sm-12">Username</div>
                     <div class="container-fluid col-lg-9 col-sm-12 text-center text-lg-start">
-                      <i class="fa-solid fa-star mx-auto text-danger"></i>
-                      <i class="fa-solid fa-star mx-auto text-danger"></i>
                       <i class="fa-solid fa-star mx-auto text-danger"></i>
                       <i class="fa-solid fa-star mx-auto text-danger"></i>
                       <i class="fa-regular fa-star text-danger"></i>
@@ -211,8 +207,6 @@
                       src="img\stockImages\defaultUserImage.png" />
                     <div class="col-lg-1 col-sm-12">Username</div>
                     <div class="container-fluid col-lg-9 col-sm-12 text-center text-lg-start">
-                      <i class="fa-solid fa-star mx-auto text-danger"></i>
-                      <i class="fa-solid fa-star mx-auto text-danger"></i>
                       <i class="fa-solid fa-star mx-auto text-danger"></i>
                       <i class="fa-solid fa-star mx-auto text-danger"></i>
                       <i class="fa-solid fa-star mx-auto text-danger"></i>

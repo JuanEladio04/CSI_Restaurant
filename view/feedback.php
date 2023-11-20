@@ -63,10 +63,6 @@
                                 <i class="fa-regular fa-2x fa-star text-danger"></i>
 
                                 <i class="fa-regular fa-2x fa-star text-danger"></i>
-
-                                <i class="fa-regular fa-2x fa-star text-danger"></i>
-
-                                <i class="fa-regular fa-2x fa-star text-danger"></i>
                             </div>
                         </div>
                         <div class="crearComentario">
@@ -110,10 +106,6 @@
                                 <i class="fa-solid fa-2x fa-star text-danger"></i>
 
                                 <i class="fa-solid fa-2x fa-star text-danger"></i>
-
-                                <i class="fa-solid fa-2x fa-star text-danger"></i>
-
-                                <i class="fa-solid fa-2x fa-star text-danger"></i>
                             </div>
                         </div>
                         <div class="comentario">
@@ -153,10 +145,6 @@
                                 <i class="fa-solid fa-2x fa-star text-danger"></i>
 
                                 <i class="fa-solid fa-2x fa-star text-danger"></i>
-
-                                <i class="fa-regular fa-2x fa-star text-danger"></i>
-
-                                <i class="fa-regular fa-2x fa-star text-danger"></i>
                             </div>
                         </div>
                         <div class="comentario">
@@ -188,10 +176,6 @@
 
                             <div class="stars">
                                 <i class="fa-solid fa-2x fa-star mx-auto text-danger"></i>
-
-                                <i class="fa-regular fa-2x fa-star text-danger"></i>
-
-                                <i class="fa-regular fa-2x fa-star text-danger"></i>
 
                                 <i class="fa-regular fa-2x fa-star text-danger"></i>
 
