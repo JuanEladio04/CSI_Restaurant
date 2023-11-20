@@ -17,11 +17,11 @@
           <img class="col-12 headerLogo" alt="" src="img\logos\BigLogo.png" />
 
           <div class="socialmedia col-12">
-            <a href="https://www.instagram.com/ristaurantelunadellarosa/" class="mx-4 text-danger" target="_blank"><i
+            <a href="https://www.instagram.com/ristaurantelunadellarosa/" class="mx-4 text-dark" target="_blank"><i
                 class="fa-brands fa-instagram fa-2xl"></i></a>
-            <a href="https://twitter.com/RistauranteDLR" class="mx-4 text-danger" target="_blank"><i
+            <a href="https://twitter.com/RistauranteDLR" class="mx-4 text-dark" target="_blank"><i
                 class="fa-brands fa-x-twitter fa-2xl"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61553606555788" class="mx-4 text-danger" target="_blank"><i
+            <a href="https://www.facebook.com/profile.php?id=61553606555788" class="mx-4 text-dark" target="_blank"><i
                 class="fa-brands fa-facebook fa-2xl"></i></i></a>
           </div>
 
