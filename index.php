@@ -43,12 +43,12 @@
         </h2>
         <div id="carousel" class="mb-5">
         <div class="prevLeftSecond card bg-danger roundedBorder text-center text-dark">
-            <img src="img\stockImages\index\contactoImg.jpeg" class="card-img-top roundedBorder mt-auto" alt="reseravs">
+            <img src="img\stockImages\index\gamesImage.jpg" class="card-img-top roundedBorder mt-auto" alt="reseravs">
             <div class="card-body container-fluid bg-success roundedBorder">
-              <h3 class="card-title lobster container-fluid ">Datos de contacto</h3>
-              <p class="card-text roboto text-justify">Teléfono: +34 333333333</p>
-              <p class="card-text roboto text-justify">Correo electrónico: ristaurantelunadellarosa@gmail.com</p>
-              <p class="card-text roboto text-justify">¡Puedes hablarnos al mensaje directo de todas nuestras redes!</p>
+              <h3 class="card-title lobster container-fluid ">Minijuegos</h3>
+              <p class="card-text roboto text-justify">¿Necesitas entretenerte?</p>
+              <p class="card-text roboto text-justify">No te pierdas nuestra colección de minijuegos, ideales para pasar el tiempo mientras esperas o saboreas tu comida.</p>
+              <a href="view\games.php" class="btn btn-danger rounded-2">¡Jugar ahora!</a>
             </div>
           </div>
 

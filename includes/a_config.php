@@ -51,6 +51,10 @@ switch ($_SERVER["SCRIPT_NAME"]) {
 		$CURRENT_PAGE = "addPlate";
 		$PAGE_TITLE = "Añadir plato";
 		break;
+	case "/view/games.php":
+		$CURRENT_PAGE = "games";
+		$PAGE_TITLE = "Juegos";
+		break;
 
 	default:
 		$CURRENT_PAGE = "Index";

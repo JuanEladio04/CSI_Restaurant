@@ -154,3 +154,8 @@ html {
     background-image: url(../img/backgrounds/addPlate.jpg);
     @include background;
 }
+
+#background-games {
+    background-image: url(../img/backgrounds/gamesPage.jpg);
+    @include background;
+}
