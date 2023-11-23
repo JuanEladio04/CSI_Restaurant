@@ -10,9 +10,9 @@
                 <a href="../index.php"><img src="../img/logos/BigLogo.png" width="250vh"></a>
                 <!-- Social media icons in a horizontal row. -->
                 <div class="d-flex mb-4 flex-row ">
-                    <a href="https://www.instagram.com/ristaurantelunadellarosa/" class="mx-4"><i class="fa-brands fa-instagram text-danger fa-2xl"></i></a>
-                    <a href="https://twitter.com/RistauranteDLR" class="mx-4"><i class="fa-brands fa-x-twitter text-danger fa-2xl"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=61553606555788" class="mx-4"><i class="fa-brands fa-facebook text-danger fa-2xl"></i></i></a>
+                    <a href="https://www.instagram.com/ristaurantelunadellarosa/" class="mx-4"><i class="fa-brands fa-instagram text-primary fa-2xl"></i></a>
+                    <a href="https://twitter.com/RistauranteDLR" class="mx-4"><i class="fa-brands fa-x-twitter text-primary fa-2xl"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61553606555788" class="mx-4"><i class="fa-brands fa-facebook text-primary fa-2xl"></i></i></a>
                 </div>
             </div>
             <!-- Left column with address, contact information, and order information. -->

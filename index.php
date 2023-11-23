@@ -17,11 +17,11 @@
           <img class="col-12 headerLogo" alt="" src="img\logos\BigLogo.png" />
 
           <div class="socialmedia col-12">
-            <a href="https://www.instagram.com/ristaurantelunadellarosa/" class="mx-4 text-dark" target="_blank"><i
+            <a href="https://www.instagram.com/ristaurantelunadellarosa/" class="mx-4 text-danger" target="_blank"><i
                 class="fa-brands fa-instagram fa-2xl"></i></a>
-            <a href="https://twitter.com/RistauranteDLR" class="mx-4 text-dark" target="_blank"><i
+            <a href="https://twitter.com/RistauranteDLR" class="mx-4 text-danger" target="_blank"><i
                 class="fa-brands fa-x-twitter fa-2xl"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61553606555788" class="mx-4 text-dark" target="_blank"><i
+            <a href="https://www.facebook.com/profile.php?id=61553606555788" class="mx-4 text-danger" target="_blank"><i
                 class="fa-brands fa-facebook fa-2xl"></i></i></a>
           </div>
 
@@ -42,51 +42,51 @@
           Manú carousel
         </h2>
         <div id="carousel" class="mb-5">
-        <div class="prevLeftSecond card bg-danger roundedBorder text-center text-light">
+        <div class="prevLeftSecond card bg-danger roundedBorder text-center text-dark">
             <img src="img\stockImages\index\contactoImg.jpeg" class="card-img-top roundedBorder mt-auto" alt="reseravs">
-            <div class="card-body container-fluid bg-danger roundedBorder">
-              <h3 class="card-title lobster bg-danger container-fluid ">Datos de contacto</h3>
+            <div class="card-body container-fluid bg-success roundedBorder">
+              <h3 class="card-title lobster container-fluid ">Datos de contacto</h3>
               <p class="card-text roboto text-justify">Teléfono: +34 333333333</p>
               <p class="card-text roboto text-justify">Correo electrónico: ristaurantelunadellarosa@gmail.com</p>
               <p class="card-text roboto text-justify">¡Puedes hablarnos al mensaje directo de todas nuestras redes!</p>
             </div>
           </div>
 
-          <div class="prev card bg-danger roundedBorder text-center text-light">
+          <div class="prev card bg-danger roundedBorder text-center text-dark">
             <img src="img\stockImages\index\ofertImg.jpg" class="card-img-top roundedBorder mt-auto" alt="reseravs">
-            <div class="card-body container-fluid bg-danger roundedBorder">
-              <h3 class="card-title lobster bg-danger container-fluid ">Ofertas</h3>
+            <div class="card-body container-fluid bg-success roundedBorder">
+              <h3 class="card-title lobster container-fluid ">Ofertas</h3>
               <p class="card-text roboto text-justify">¡Mira nuestras ofertas diarias y semanales! Hazle un favor a tu
                 bolsillo.</p>
-              <a href="view/offers.php" class="btn btn-primary rounded-2">Visitar ofertas</a>
+              <a href="view/offers.php" class="btn btn-danger rounded-2">Visitar ofertas</a>
             </div>
           </div>
 
-          <div class="selected card bg-danger roundedBorder text-center text-light">
+          <div class="selected card bg-danger roundedBorder text-center text-dark">
             <img src="img\stockImages\index\cardImg.jpg" class="card-img-top roundedBorder" alt="reseravs">
-            <div class="card-body container-fluid bg-danger roundedBorder">
+            <div class="card-body container-fluid bg-success roundedBorder">
               <h3 class="card-title lobster ">Carta</h3>
               <p class="card-text roboto text-justify">Comprueba toda una carta llena de platos variados para todo tipo
                 de personas y estómagos</p>
-              <a href="view/card.php" class="btn btn-primary rounded-2">Muéstrame</a>
+              <a href="view/card.php" class="btn btn-danger rounded-2">Muéstrame</a>
             </div>
           </div>
 
-          <div class="next card bg-danger roundedBorder text-center text-light">
+          <div class="next card bg-danger roundedBorder text-center text-dark">
             <img src="img\stockImages\index\reserveImg.jpg" class="card-img-top roundedBorder" alt="reseravs">
-            <div class="card-body container-fluid bg-danger roundedBorder">
+            <div class="card-body container-fluid bg-success roundedBorder">
               <h3 class="card-title lobster ">Reserva</h3>
               <p class="card-text roboto text-justify">¿Quieres asegurarte de no quedarte sin sitio? ¡Reserva ahora!</p>
-              <a href="view\reserve.php" class="btn btn-primary rounded-2">Reserva ahora</a>
+              <a href="view\reserve.php" class="btn btn-danger rounded-2">Reserva ahora</a>
             </div>
           </div>
 
-          <div class="nextRightSecond card bg-danger roundedBorder text-center text-light">
+          <div class="nextRightSecond card bg-danger roundedBorder text-center text-dark">
             <img src="img\stockImages\index\loginImg.jpg" class="card-img-top roundedBorder" alt="reseravs">
-            <div class="card-body container-fluid bg-danger roundedBorder">
+            <div class="card-body container-fluid bg-success roundedBorder">
               <h3 class="card-title lobster ">Cuentas de usuario</h3>
               <p class="card-text roboto">Inicia sesión para aprovechar todas nuestras ventajas</p>
-              <a href="view/login.php" class="btn btn-primary rounded-2">Iniciar sesión</a>
+              <a href="view/login.php" class="btn btn-danger rounded-2">Iniciar sesión</a>
             </div>
           </div>
 
