@@ -8,7 +8,7 @@
         border-radius: 0 0 20px 20px;
         width: 100%;
     }
-
+//CF2: @include media-breakpoint-up(sm)
     @media (min-width: map-get($grid-breakpoints, 'lg')) {
         img {
             border-radius: 0 20px 20px 0;
