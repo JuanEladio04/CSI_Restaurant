@@ -43,7 +43,7 @@
         </h2>
         <div id="carousel" class="mb-5">
         <div class="prevLeftSecond card bg-danger roundedBorder text-center text-dark">
-            <img src="img\stockImages\index\gamesImage.jpg" class="card-img-top roundedBorder mt-auto" alt="reseravs">
+            <img src="img\stockImages\index\gamesImage.png" class="card-img-top roundedBorder mt-auto" alt="reseravs">
             <div class="card-body container-fluid bg-success roundedBorder">
               <h3 class="card-title lobster container-fluid ">Minijuegos</h3>
               <p class="card-text roboto text-justify">¿Necesitas entretenerte?</p>
@@ -53,7 +53,7 @@
           </div>
 
           <div class="prev card bg-danger roundedBorder text-center text-dark">
-            <img src="img\stockImages\index\ofertImg.jpg" class="card-img-top roundedBorder mt-auto" alt="reseravs">
+            <img src="img\stockImages\index\ofertImg.png" class="card-img-top roundedBorder mt-auto" alt="reseravs">
             <div class="card-body container-fluid bg-success roundedBorder">
               <h3 class="card-title lobster container-fluid ">Ofertas</h3>
               <p class="card-text roboto text-justify">¡Mira nuestras ofertas diarias y semanales! Hazle un favor a tu
@@ -63,7 +63,7 @@
           </div>
 
           <div class="selected card bg-danger roundedBorder text-center text-dark">
-            <img src="img\stockImages\index\cardImg.jpg" class="card-img-top roundedBorder" alt="reseravs">
+            <img src="img\stockImages\index\cardImg.png" class="card-img-top roundedBorder" alt="reseravs">
             <div class="card-body container-fluid bg-success roundedBorder">
               <h3 class="card-title lobster ">Carta</h3>
               <p class="card-text roboto text-justify">Comprueba toda una carta llena de platos variados para todo tipo
@@ -73,7 +73,7 @@
           </div>
 
           <div class="next card bg-danger roundedBorder text-center text-dark">
-            <img src="img\stockImages\index\reserveImg.jpg" class="card-img-top roundedBorder" alt="reseravs">
+            <img src="img\stockImages\index\reserveImg.png" class="card-img-top roundedBorder" alt="reseravs">
             <div class="card-body container-fluid bg-success roundedBorder">
               <h3 class="card-title lobster ">Reserva</h3>
               <p class="card-text roboto text-justify">¿Quieres asegurarte de no quedarte sin sitio? ¡Reserva ahora!</p>
@@ -82,7 +82,7 @@
           </div>
 
           <div class="nextRightSecond card bg-danger roundedBorder text-center text-dark">
-            <img src="img\stockImages\index\loginImg.jpg" class="card-img-top roundedBorder" alt="reseravs">
+            <img src="img\stockImages\index\loginImg.png" class="card-img-top roundedBorder" alt="reseravs">
             <div class="card-body container-fluid bg-success roundedBorder">
               <h3 class="card-title lobster ">Cuentas de usuario</h3>
               <p class="card-text roboto">Inicia sesión para aprovechar todas nuestras ventajas</p>
