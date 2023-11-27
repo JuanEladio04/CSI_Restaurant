@@ -29,7 +29,7 @@
         </section>
 
 
-        <section id="legalWarn" class="row mb-5 bg-primary roundedBorder margin">
+        <section id="legalWarn" class="row mb-5 bg-primary roundedBorder margin-top">
             <article class="articulo col p-5">
                 <!-- Section with the legal advice -->
                 <h1 class="text-center">Aviso Legal</h1>
@@ -261,7 +261,7 @@
         </section>
 
 
-        <section id="privPol" class="row mb-5 bg-primary roundedBorder margin">
+        <section id="privPol" class="row mb-5 bg-primary roundedBorder margin-top">
             <article class="articulo col p-5">
                 <!-- Section with the politics privacy -->
                 <h1 class="text-center">Política de Privacidad</h1>
@@ -338,7 +338,8 @@
 
                     <h3 class="mt-5">Principios aplicables al tratamiento de los datos personales</h3>
 
-                    <p class="mt-5">El tratamiento de los datos personales del Usuario se someterá a los siguientes principios
+                    <p class="mt-5">El tratamiento de los datos personales del Usuario se someterá a los siguientes
+                        principios
                         recogidos
                         en el artículo 5 del RGPD y en el artículo 4 y siguientes de la Ley Orgánica 3/2018, de 5 de
                         diciembre, de Protección de Datos Personales y garantía de los derechos digitales:</p>
@@ -495,7 +496,8 @@
 
                     <h3 class="mt-5">Derechos derivados del tratamiento de los datos personales</h3>
 
-                    <p class="mt-5">El Usuario tiene sobre Restaurante Luna Della Rossa y podrá, por tanto, ejercer frente al
+                    <p class="mt-5">El Usuario tiene sobre Restaurante Luna Della Rossa y podrá, por tanto, ejercer
+                        frente al
                         Responsable del tratamiento los siguientes derechos reconocidos en el RGPD y la Ley Orgánica
                         3/2018,
                         de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales:</p>
@@ -588,7 +590,8 @@
 
                     <h3 class="mt-5">Reclamaciones ante la autoridad de control</h3>
 
-                    <p class="mt-5">En caso de que el Usuario considere que existe un problema o infracción de la normativa vigente
+                    <p class="mt-5">En caso de que el Usuario considere que existe un problema o infracción de la
+                        normativa vigente
                         en
                         la forma en la que se están tratando sus datos personales, tendrá derecho a la tutela judicial
                         efectiva y a presentar una reclamación ante una autoridad de control, en particular, en el
@@ -600,7 +603,8 @@
 
                     <h2 class="mt-5">II. ACEPTACIÓN Y CAMBIOS EN ESTA POLÍTICA DE PRIVACIDAD</h2>
 
-                    <p class="mt-5">Es necesario que el Usuario haya leído y esté conforme con las condiciones sobre la protección de
+                    <p class="mt-5">Es necesario que el Usuario haya leído y esté conforme con las condiciones sobre la
+                        protección de
                         datos de carácter personal contenidas en esta Política de Privacidad, así como que acepte el
                         tratamiento de sus datos personales para que el Responsable del tratamiento pueda proceder al
                         mismo
@@ -631,33 +635,39 @@
         </section>
 
 
-        <section class="row mb-5 bg-danger roundedBorder margin">
+        <section class="row mb-5 bg-danger roundedBorder margin-top">
             <!-- Section with the purpose of various activities -->
             <article class="articuloTC col">
-                <h1 class="text-center">Finalidad</h1>
-            </article>
-            <article class="articuloTC">
-                <h2 class="text-center mt-5">1. Compromiso con su Seguridad</h2>
-                <p class="text-center">Todos sus datos están seguros en nuestro sitio web. En el restaurante Lunna Di La
-                    Rosa, nos comprometemos a mantener la seguridad de los datos de nuestros clientes.</p>
-            </article>
-            <article class="articuloTC">
-                <h2 class="text-center mt-5">2. Prestación de Servicios a Clientes y/o Actuales</h2>
-                <p class="text-center">En nuestro servicio, nos comprometemos a prestar los mejores servicios para
-                    nuestros clientes. Tus experiencias aquí nos importan. Por lo tanto, intentaremos darte el mejor
-                    trato posible con nuestro experimentado personal de servicio.</p>
-            </article>
-            <article class="articuloTC">
-                <h2 class="text-center mt-5">3. Recursos Humanos</h2>
-                <p class="text-center">¿Has tenido algún problema en nuestro restaurante? Disponemos de una sección de
-                    recursos humanos donde puedes presentar una queja sobre cualquier inconveniente que hayas tenido en
-                    nuestro establecimiento con respecto a nuestra comida y/o personal.</p>
-            </article>
-            <article class="articuloTC">
-                <h2 class="text-center mt-5">4. Proveedores y Terceros</h2>
-                <p class="text-center mb-5">En Lunna Di La Rossa, contamos con los mejores productos exportados por los
-                    principales proveedores de la industria. Nuestros productos son de la más alta calidad y, en este
-                    restaurante, se conservan en las mejores condiciones.</p>
+                <h1>Finalidad</h1>
+                <article class="articuloTC marginAll">
+                    <h2 class="mt-5">1. Compromiso con su Seguridad</h2>
+                    <p>Todos sus datos están seguros en nuestro sitio web. En el restaurante Lunna Di La
+                        Rosa, nos comprometemos a mantener la seguridad de los datos de nuestros clientes.
+                    </p>
+                </article>
+                <article class="articuloTC marginAll">
+                    <h2 class="mt-5">2. Prestación de Servicios a Clientes y/o Actuales</h2>
+                    <p>En nuestro servicio, nos comprometemos a prestar los mejores servicios para
+                        nuestros clientes. Tus experiencias aquí nos importan. Por lo tanto, intentaremos darte el mejor
+                        trato posible con nuestro experimentado personal de servicio.
+                    </p>
+                </article>
+                <article class="articuloTC marginAll">
+                    <h2 class="mt-5">3. Recursos Humanos</h2>
+                    <p>¿Has tenido algún problema en nuestro restaurante? Disponemos de una sección de
+                        recursos humanos donde puedes presentar una queja sobre cualquier inconveniente que hayas tenido
+                        en
+                        nuestro establecimiento con respecto a nuestra comida y/o personal.
+                    </p>
+                </article>
+                <article class="articuloTC marginAll">
+                    <h2 class="mt-5">4. Proveedores y Terceros</h2>
+                    <p class="mb-5">En Lunna Di La Rossa, contamos con los mejores productos exportados por los
+                        principales proveedores de la industria. Nuestros productos son de la más alta calidad y, en
+                        este
+                        restaurante, se conservan en las mejores condiciones.
+                    </p>
+                </article>
             </article>
         </section>
     </div>
