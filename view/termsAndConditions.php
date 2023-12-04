@@ -15,7 +15,7 @@
     <?php include("../includes/design-top.php"); ?>
     <!-- Including superior design file -->
 
-    <div class="container">
+    <div class="container-fluid">
 
         <section class="row mb-5 bg-primary roundedBorder">
             <article class="articulo col p-5">
@@ -638,21 +638,21 @@
         <section class="row mb-5 bg-danger roundedBorder margin-top">
             <!-- Section with the purpose of various activities -->
             <article class="articuloTC col">
-                <h1>Finalidad</h1>
-                <article class="articuloTC marginAll">
+                <h1 class="text-center">Finalidad</h1>
+                <article class="articuloTC marginAllSides">
                     <h2 class="mt-5">1. Compromiso con su Seguridad</h2>
                     <p>Todos sus datos están seguros en nuestro sitio web. En el restaurante Lunna Di La
                         Rosa, nos comprometemos a mantener la seguridad de los datos de nuestros clientes.
                     </p>
                 </article>
-                <article class="articuloTC marginAll">
+                <article class="articuloTC marginAllSides">
                     <h2 class="mt-5">2. Prestación de Servicios a Clientes y/o Actuales</h2>
                     <p>En nuestro servicio, nos comprometemos a prestar los mejores servicios para
                         nuestros clientes. Tus experiencias aquí nos importan. Por lo tanto, intentaremos darte el mejor
                         trato posible con nuestro experimentado personal de servicio.
                     </p>
                 </article>
-                <article class="articuloTC marginAll">
+                <article class="articuloTC marginAllSides">
                     <h2 class="mt-5">3. Recursos Humanos</h2>
                     <p>¿Has tenido algún problema en nuestro restaurante? Disponemos de una sección de
                         recursos humanos donde puedes presentar una queja sobre cualquier inconveniente que hayas tenido
@@ -660,7 +660,7 @@
                         nuestro establecimiento con respecto a nuestra comida y/o personal.
                     </p>
                 </article>
-                <article class="articuloTC marginAll">
+                <article class="articuloTC marginAllSides">
                     <h2 class="mt-5">4. Proveedores y Terceros</h2>
                     <p class="mb-5">En Lunna Di La Rossa, contamos con los mejores productos exportados por los
                         principales proveedores de la industria. Nuestros productos son de la más alta calidad y, en

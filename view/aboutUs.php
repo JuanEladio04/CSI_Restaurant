@@ -17,17 +17,16 @@
 
     <div class="container-fluid">
 
-        <section class="row mb-5 bg-danger">
-            <article class="articuloSN col p-5">
-                <!-- Section with welcome message -->
-                <p class="mt-3">Bienvenido a Luna della Rosa, donde la auténtica pasión italiana se fusiona con la
-                    elegancia y el encanto en cada plato. En nuestro restaurante, nos enorgullece ofrecer una
-                    experiencia culinaria única que transporta a nuestros comensales a las pintorescas calles de Italia,
-                    donde la comida es una celebración de sabores frescos y auténticos. En Luna di Rosa, nuestra
-                    historia es tan rica como nuestros sabores. Fundado por amantes de la cocina italiana con décadas de
-                    experiencia, nuestro restaurante nació de la creencia apasionada de que la verdadera esencia de
-                    Italia puede ser transmitida a través de cada bocado.</p>
-            </article>
+        <section class="row articuloSN p-5 mb-5 bg-danger">
+            <!-- Section with welcome message -->
+            <p class="mt-3">Bienvenido a Luna della Rosa, donde la auténtica pasión italiana se fusiona con la
+                elegancia y el encanto en cada plato. En nuestro restaurante, nos enorgullece ofrecer una
+                experiencia culinaria única que transporta a nuestros comensales a las pintorescas calles de Italia,
+                donde la comida es una celebración de sabores frescos y auténticos. En Luna di Rosa, nuestra
+                historia es tan rica como nuestros sabores. Fundado por amantes de la cocina italiana con décadas de
+                experiencia, nuestro restaurante nació de la creencia apasionada de que la verdadera esencia de
+                Italia puede ser transmitida a través de cada bocado.
+            </p>
         </section>
 
 
@@ -43,20 +42,19 @@
             </article>
             <article class="col-lg-6 position-relative videoAU">
                 <!-- Section with a youtube video -->
-                <iframe class="w-100 h-100 border-0" src="https://www.youtube.com/embed/4pg7EaYo7hM" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
+                <video id="video" class="w-100 h-100 border-0">
+                    <source src="../videos/videoPizza.mp4" type="video/mp4">
+                </video>
                 <!-- Video Controls -->
                 <div id="video-controls">
-                    <button type="button" id="play-pause">Play</button>
+                    <button class="rounded" type="button" id="play-pause">Play</button>
                     <input type="range" id="seek-bar" value="0">
-                    <button type="button" id="mute">Mute</button>
+                    <button class="rounded" type="button" id="mute">Mute</button>
                     <input type="range" id="volume-bar" min="0" max="1" step="0.1" value="1">
-                    <button type="button" id="full-screen">Full-Screen</button>
+                    <button class="rounded" type="button" id="full-screen">Full-Screen</button>
                 </div>
             </article>
-
+            <script src="..\js\videoScript.js"></script>
         </section>
 
 
