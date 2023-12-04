@@ -19,8 +19,10 @@
     <main class="container-fluid">
         <div class="row">
             <!-- Form wrapped in a card with styling -->
+            <!--CF2: Esto no sería un article, es un form-->
             <article class="col d-flex justify-content-center align-items-center">
-
+                
+                <!--CF2: ¿Container dentro de otro container?-->
                 <div class="container formUser">
                     <div class="card bg-danger text-light roundedBorder">
                         <!-- Card header with a centered title -->
@@ -29,11 +31,13 @@
                         </div>
                         <!-- Card body containing the registration form -->
                         <div class="card-body">
+                            ¿Para qué sirve este div sin nada?
                             <div class="">
                                 <!-- Registration form -->
                                 <form action="/action_page.php">
                                     <!-- Name and Last Name inputs in a row -->
                                     <div class="row">
+                                        <!--CF2: ¿Por qué usas sm-6 si tus compañeros usan md y lg-->
                                         <div class="col-sm-6 margenInferior">
                                             <label for="FirstN" class="form-label">Nombre</label>
                                             <input type="text" class="roundedInput form-control" name="FirstN"

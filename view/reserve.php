@@ -13,12 +13,15 @@
     <!--Reserves formulary-->
     <section class="container-fluid bg-danger rForm">
         <!--Presentation-->
+        <!--CF: ¿Dónde está el h1?-->
+        <!-- el siguiente elemento no se ve por d-none, por qué ponerlo-->
         <h2 class="d-none">Formulario de reservas</h2>
         <div class="row justify-content-around text-center">
             <h3 class="p-5">
                 ¿Desea reservar mesa? Hágalo ahora mismo desde aqui.
             </h3>
             <!--Formulary-->
+            <!--CF: ERROR GRAVE: No se puede usar row y col en un mismo elemento!-->
             <form class="col-12 row bg-primary p-0 form row" action="" method="POST">
                 <div class="row p-3 text-center mx-auto justify-content-around col-10">
                     <div class="row col-lg-6 col-sm-12 rFormContent">

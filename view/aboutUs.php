@@ -14,7 +14,7 @@
     <!-- Including navigation bar -->
     <?php include("../includes/design-top.php"); ?>
     <!-- Including superior design file -->
-
+    <!--CF2: ¿Por qué usas aquí container-fluid y termsAndConditios.php usas container?-->
     <div class="container-fluid">
 
         <section class="row mb-5 bg-danger margin">

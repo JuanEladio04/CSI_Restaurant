@@ -22,9 +22,13 @@
             <!-- Restaurant logo -->
 
             <!-- Form in a card -->
-            <article class="col d-flex justify-content-center align-items-center">
+            <!--CF2: Esto no es un article, es un form-->    
 
+            <article class="col d-flex justify-content-center align-items-center">
+                
+                <!--CF2: el container no se pone aquí sino antes de la estructura row/col-->
                 <div class="container formUser">
+                    
                     <div class="card bg-danger text-light roundedBorder col-lg-5 col-sm-4">
                         <div class="card-header">
                             <h1 class="text-center">Identificarse</h1>

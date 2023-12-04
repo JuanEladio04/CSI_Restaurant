@@ -13,6 +13,7 @@
         font-size: 20px !important;
     }
 
+    
     p {
         @include media-breakpoint-down(sm) {
             font-size: 18px;

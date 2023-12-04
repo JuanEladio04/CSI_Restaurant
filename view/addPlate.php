@@ -6,7 +6,7 @@
 <head>
     <?php include("../includes/head-tag-contents.php"); ?>
 </head>
-
+<!--CF2: El diseño responsivo de esta página no ha quedado bien-->
 <body class="bg-primary" id="background-<?php echo $CURRENT_PAGE; ?>">
     <?php include("../includes/navigation.php"); ?>
     <main class="container-fluid d-flex justify-content-center">

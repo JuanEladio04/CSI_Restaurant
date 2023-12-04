@@ -5,6 +5,7 @@
 <html>
 
 <head>
+    <!--CF: Todos estos metas están incluidos en head-tag-contents!!!--->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Pagina opiniones del restaurante">
@@ -17,10 +18,12 @@
     <?php include("../includes/navigation.php"); ?>
     <?php include("../includes/design-top.php"); ?>
 
-
+    <!--CF: Error grave, la página carece de una estructura row/col-->
     <section class="container-fluid crearOpiniones">
+        <!--CF: Esto no es un article!!! tan solo un título-->
         <article>
             <div class="titulo">
+                <!--CF: ¿Dónde está el h1--->
                 <h2>Deja tu opinión</h2>
             </div>
         </article>
