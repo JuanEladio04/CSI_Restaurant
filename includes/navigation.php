@@ -15,21 +15,33 @@
 
                 <ul class="navbar-nav w-100 menu">
 
-                    <li class="nav-item  w-100 h-100 text-center  ">
+                    <li class="nav-item  w-100  text-center  <?php if ($CURRENT_PAGE == "reserve") {?>active<?php }?>">
                         <a class="nav-link " href="../view/reserve.php">Reserva</a>
                     </li>
 
-                    <li class="nav-item  w-100 h-100 text-center "><a class="nav-link" href="../view/card.php">Carta</a></li>
+                    <li class="nav-item  w-100  text-center <?php if ($CURRENT_PAGE == "card") {?>active<?php }?>">
+                        <a class="nav-link" href="../view/card.php">Carta</a>
+                    </li>
 
-                    <li class="nav-item  w-100 h-100 text-center "><a class="nav-link" id="invisible" href="../view/aboutUs.php">Sobre <!--<span id="invisible">_</span>--> Nosotros</a></li>
+                    <li class="nav-item  w-100  text-center <?php if ($CURRENT_PAGE == "aboutus") {?>active<?php }?>">
+                        <a class="nav-link" id="invisible" href="../view/aboutUs.php">Sobre <!--<span id="invisible">_</span>--> Nosotros</a>
+                    </li>
 
-                    <li class="nav-item  w-100 h-100 text-center "><a class="nav-link" href="../view/offers.php">Ofertas</a></li>
+                    <li class="nav-item  w-100  text-center <?php if ($CURRENT_PAGE == "offers") {?>active<?php }?>">
+                        <a class="nav-link" href="../view/offers.php">Ofertas</a>
+                    </li>
 
-                    <li class="nav-item  w-100 h-100 text-center "><a class="nav-link" href="../view/feedback.php">Opiniones</a></li>
+                    <li class="nav-item  w-100  text-center <?php if ($CURRENT_PAGE == "feedback") {?>active<?php }?>">
+                        <a class="nav-link" href="../view/feedback.php">Opiniones</a>
+                    </li>
 
-                    <li class="nav-item  w-100 h-100 text-center  "><a class="nav-link " href="../view/games.php">Minijuegos</a></li>
+                    <li class="nav-item  w-100  text-center  <?php if ($CURRENT_PAGE == "games") {?>active<?php }?>">
+                        <a class="nav-link " href="../view/games.php">Minijuegos</a>
+                    </li>
 
-                    <li class="nav-item  w-100 h-100 text-center  "><a class="nav-link " href="../view/login.php">Identificarse</a></li>
+                    <li class="nav-item  w-100  text-center  <?php if ($CURRENT_PAGE == "login") {?>active<?php }?>">
+                        <a class="nav-link " href="../view/login.php">Identificarse</a>
+                    </li>
 
                 </ul>
 
