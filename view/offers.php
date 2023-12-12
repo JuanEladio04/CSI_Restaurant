@@ -20,7 +20,7 @@
             <div class="row">
                 <article class="articuloOferta col-lg-3 col-sm-6">
                     <div class="img">
-                        <img alt="" src="../img/dish/Lentejas_de_Fernando_Alonso.png" />
+                        <img alt="" src="../img/dish/Entrantes/LentejasDeFernandoAlonso.png" />
                         <div class="container-fluid contenedor">
                             <div class="row fila">
                                 <div class="col-4 precio">33,33€</div>
@@ -31,7 +31,7 @@
                 </article>
                 <article class="articuloOferta col-lg-3 col-sm-6">
                     <div class="img">
-                        <img alt="" src="../img/dish/Lentejas_de_Fernando_Alonso.png" />
+                        <img alt="" src="../img/dish/Entrantes/LentejasDeFernandoAlonso.png" />
                         <div class="container-fluid contenedor">
                             <div class="row fila">
                                 <div class="col-4 precio">33,33€</div>
@@ -42,7 +42,7 @@
                 </article>
                 <article class="articuloOferta col-lg-3 col-sm-6">
                     <div class="img">
-                        <img alt="" src="../img/dish/Pasta_a_lo_Doraemon.png" />
+                        <img alt="" src="../img/dish/Pastas/PastaALoDoraemon.png" />
                         <div class="container-fluid contenedor">
                             <div class="row fila">
                                 <div class="col-4 precio">06,33€</div>
@@ -53,7 +53,7 @@
                 </article>
                 <article class="articuloOferta col-lg-3 col-sm-6">
                     <div class="img">
-                        <img alt="" src="../img/dish/Pasta_a_lo_Doraemon.png" />
+                        <img alt="" src="../img/dish/Pastas/PastaALoDoraemon.png" />
                         <div class="container-fluid contenedor">
                             <div class="row fila">
                                 <div class="col-4 precio">06,33€</div>
@@ -77,7 +77,7 @@
                     <div class="row">
                         <article class="articuloOferta2 col-sm-6">
                             <div class="img">
-                                <img alt="" src="../img/dish/Lentejas_de_Fernando_Alonso.png" />
+                                <img alt="" src="../img/dish/Entrantes/LentejasDeFernandoAlonso.png" />
                                 <div class="container-fluid contenedor">
                                     <div class="row fila">
                                         <div class="col-4 precio">33,33€</div>
@@ -88,7 +88,7 @@
                         </article>
                         <article class="articuloOferta2 col-sm-6">
                             <div class="img">
-                                <img alt="" src="../img/dish/Pasta_a_lo_Doraemon.png" />
+                                <img alt="" src="../img/dish/Pastas/PastaALoDoraemon.png" />
                                 <div class="container-fluid contenedor">
                                     <div class="row fila">
                                         <div class="col-4 precio">06,33€</div>
@@ -109,7 +109,7 @@
                     <div class="row ">
                         <article class="articuloOferta2 col-sm-6">
                             <div class="img">
-                                <img alt="" src="../img/dish/Lentejas_de_Fernando_Alonso.png" />
+                                <img alt="" src="../img/dish/Entrantes/LentejasDeFernandoAlonso.png" />
                                 <div class="container-fluid contenedor">
                                     <div class="row fila">
                                         <div class="col-4 precio">33,33€</div>
@@ -120,7 +120,7 @@
                         </article>
                         <article class="articuloOferta2 col-sm-6">
                             <div class="img">
-                                <img alt="" src="../img/dish/Pasta_a_lo_Doraemon.png" />
+                                <img alt="" src="../img/dish/Pastas/PastaALoDoraemon.png" />
                                 <div class="container-fluid contenedor">
                                     <div class="row fila">
                                         <div class="col-4 precio">06,33€</div>
