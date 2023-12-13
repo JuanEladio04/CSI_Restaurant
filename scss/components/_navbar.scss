@@ -8,7 +8,7 @@
     font-family: $headings-font-family;
     font-weight: $headings-font-weight;
     font-size: 1.43em;
-    padding-top: 3% !important;
+    padding-top: 0%;
     padding-bottom: 0% !important;
     position: relative;
     z-index: 1;
@@ -26,6 +26,11 @@
 
         li.nav-item {
             letter-spacing: 1px;
+
+
+            .nav-link{
+                height: 100%;
+            }
         }
 
         li:hover{
@@ -55,6 +60,15 @@
         height: 90%;
         margin: 0;
         padding: 0;
+    }
+
+    .active {
+        background-color: $danger;
+
+        .nav-link{
+            color: $white;
+            font-style: oblique;
+        }
     }
 }
 
@@ -90,7 +104,7 @@
         }
 
         .navbar-nav>li.nav-item>a.nav-link.active {
-            color: $white;
+            // color: $white;
             background: $primary;
 
             &:active,

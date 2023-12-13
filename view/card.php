@@ -14,7 +14,7 @@
     <section class=" cardMenu">
         <!--Card Menu------------------------------------------------>
 
-        <nav class="navbar navbar-expand-lg navbar-danger bg-danger fixed-top" id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top" id="mainNav">
 
             <div class="container-fluid contenido">
                 <button class="navbar-toggler text-uppercase font-weight-bold text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#cardResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +24,7 @@
                     <ul class="navbar-nav w-100 lobster menu">
 
                         <li class="nav-item  w-100 h-100 text-center  ">
-                            <a class="nav-link text-light" href="">Entrantes</a>
+                            <a class="nav-link text-light " href="">Entrantes</a>
                         </li>
 
                         <li class="nav-item  w-100 h-100 text-center ">
@@ -43,7 +43,12 @@
                             <a class="nav-link text-light" href="">Carnes</a>
                         </li>
 
-                        <li class="nav-item  w-100 h-100 text-center  "><a class="nav-link text-light " href="">Postres</a></li>
+                        <li class="nav-item  w-100 h-100 text-center  ">
+                            <a class="nav-link text-light " href="">Postres</a>
+                        </li>
+                        <li class="nav-item  w-100 h-100 text-center  ">
+                            <a class="nav-link text-light " href="">Bebida</a>
+                        </li>
 
                     </ul>
                 </div>
