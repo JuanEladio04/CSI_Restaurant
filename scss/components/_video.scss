@@ -1,21 +1,35 @@
-.videoAU{
-  iframe{
+.videoAboutUs{
+  position: relative;
+  video{
     width: 100%;
     height: 100%;
     border: 0;
   }  
-
+  
   div{
     position: absolute;
+    align-items: center;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: $danger;
+    display: flex;
+    justify-content: space-around; // Distribuye el espacio alrededor de los elementos
+    padding: 4px;
   }
 
-  #play-pause{
-    border-radius: 10px;
+  button{
+    display: flex;
+    align-items:center;
+    background-color: $primary;
   }
 
+  img{
+    width: 20px;
+    height: 20px;
+  }
 
+  input[id="seek-bar"]{
+    width: 100%;
+  }
 
-}
+};

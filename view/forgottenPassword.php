@@ -1,3 +1,5 @@
+
+
 <!-- Some parts of the code have been written using AI. -->
 <?php include("../includes/a_config.php"); ?>
 <!DOCTYPE html>
