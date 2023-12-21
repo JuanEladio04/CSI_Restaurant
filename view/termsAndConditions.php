@@ -719,7 +719,8 @@
                 </td>
                 <td>ChuletasDeCorderoALaParrilla.png, Ensalada_AtúnNicoise.png, Ensalada_Cesar.png,
                     Ensalada_EspinacasConFresas.png, Ensalada_PolloLaParrilla.png, EnsaladaDeCangrejo.png,
-                    FrituraDeCalamardo.png, PolentaconToad.png, PastaALoDoraemon.png, Pizza_Barbacoa.png</td>
+                    FrituraDeCalamardo.png, PolentaconToad.png, PastaALoDoraemon.png, Pizza_Barbacoa.png,
+                    cardBackground.png</td>
             </tr>
             <tr>
                 <td>AboutUs</td>
@@ -759,6 +760,12 @@
                 <td>reservesBackground.png</td>
             </tr>
             <tr>
+                <td>addPlate</td>
+                <td>Imágenes generadas por IA.</td>
+                <td>Imagen de un montón de comida italiana con la mayor cantidad de colores planos.</td>
+                <td>addPlate.png</td>
+            </tr>
+            <tr>
                 <td>PizzaCraft</td>
                 <td>Imágenes generadas por IA</td>
                 <td>
@@ -768,7 +775,8 @@
                         <li>Hazme un trozo de bacon para pizza visto desde arriba sin ningún fondo.</li>
                         <li>Hazme una loncha de tomate sin ningún fondo y vista desde arriba.</li>
                         <li>Hazme una pizza vista desde arriba sin ningún topping y sin ningún fondo.</li>
-                        <li>Créame una imagen para un background de una página con ingredientes para una pizza en el que los colores que predominen sean el blanco y el negro.</li>
+                        <li>Créame una imagen para un background de una página con ingredientes para una pizza en el que
+                            los colores que predominen sean el blanco y el negro.</li>
                     </ul>
                 </td>
                 <td>Todos los assets del juego pizzacrafter.</td>
@@ -792,6 +800,18 @@
 
                     </ul>
                 </td>
+                <td>feedback.png, offers.png, userGestion.png, Cerveza.png, Champan.png, CocaCola.png, VinoBlanco.png,
+                    VodkaConLimon.png, BrochetasDePollo.png, CarrilladaDeTerneraConRissotoAlFernandoAlonso.png,
+                    EntrecotAlFernandoAlonso.png, ParrilladaAlFernandoAlonso.png, PinchitosDeCordero.png,
+                    PolloAlFernandoAlonso.png, PresaIbericaAlFernandoAlonso.png, SolomilloAlFernandoAlonso.png,
+                    Ensalada_Caprese.png, Ensalada_Couscous.png, Ensalada_Griega.png, Ensalada_Quinoa.png,
+                    Ensalada_Waldorf.png, Antipasto.png, Arancini.png, Bruschetta.png, Caprese.png, Carpaccio.png,
+                    FrituraDeCalamardo.png, LentejasDeFernandoAlonso.png, PolentaconToad.png, FarfalleConPesto.png,
+                    FettuccineAlfredo.png, LinguineConMariscos.png, Orecchiette.png, PenneLaVodka.png,
+                    RavioliDeEspinacasyRicotta.png, SpaghettiBolognese.png, Tortellini.png, Pizza_4quesos.png,
+                    Pizza_Carbonara.png, Pizza_Diavola.png, Pizza_hawaiana.png, Pizza_Margarita.png, Pizza_Marinera.png,
+                    Pizza_Pepperoni.png, Pizza_PulledPork.png, ArrozConLeche.png, Brownie.png, Cannoli.png, Flan.png.
+                    Helado.png, PannaCotta.png, PlatoDeFruta.png, TartaDeQueso.png, Tiramisu.png</td>
             </tr>
         </table>
     </article>
