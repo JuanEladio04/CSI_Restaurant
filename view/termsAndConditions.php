@@ -671,6 +671,119 @@
             </article>
         </section>
     </div>
+
+    <article class="bg-light">
+        <table class="table">
+            <tr>
+                <th>Página</th>
+                <th>Licencia</th>
+                <th>Promt o autor</th>
+                <th>Recursos</th>
+            </tr>
+            <tr>
+                <td>Index</td>
+                <td>Imágenes creadas por el grupo</td>
+                <td>Juan Eladio</td>
+                <td>BigLogo.png, BigLocoIcon.ico, SmallLogo.png, SmallLogoIcon.ico</td>
+            </tr>
+            <tr>
+                <td>Index</td>
+                <td>Imágenes generadas por IA</td>
+                <td>
+                    <ul>
+                        <li>Imagen de un restaurante con temática italiana con meseros poniendo de comer.</li>
+                        <li>Imagen del exterior de un restaurante con temática italiana con la mayor cantidad de colores
+                            neutros.</li>
+                        <li>Imagen que relacione pizza y videojuegos.</li>
+                        <li>Cartel de oferta de un restaurante italiano.</li>
+                        <li>Carta de un restaurante italiano.</li>
+                        <li>Personas realizando una reserva online en un restaurante</li>
+                        <li>Imagen que represente la gestión de cuenta de un usuario.</li>
+
+                    </ul>
+                </td>
+                <td>aboutUsIndex.png, background.png, gamesImage.png, ofertaImg.png, cardImg.png, reserveImg.png,
+                    loginImg.png </td>
+            </tr>
+            <tr>
+                <td>Carta</td>
+                <td>Imágenes generadas por el grupo</td>
+                <td>José María</td>
+                <td>AguaDeCristianoRonaldo.png, BidonDeplasma.png, Escudo.png, Sorbete.png</td>
+            </tr>
+            <tr>
+                <td>Carta</td>
+                <td>Imágenes generadas por IA</td>
+                <td>
+                    Las imágenes han sido generadas usando de prompt el nombre del respectivo plato.
+                </td>
+                <td>ChuletasDeCorderoALaParrilla.png, Ensalada_AtúnNicoise.png, Ensalada_Cesar.png,
+                    Ensalada_EspinacasConFresas.png, Ensalada_PolloLaParrilla.png, EnsaladaDeCangrejo.png,
+                    FrituraDeCalamardo.png, PolentaconToad.png, PastaALoDoraemon.png, Pizza_Barbacoa.png</td>
+            </tr>
+            <tr>
+                <td>AboutUs</td>
+                <td>Imágenes generadas por IA</td>
+                <td>Chef haciendo pizza</td>
+                <td>cocineroFoto.png</td>
+            </tr>
+            <tr>
+                <td>AboutUs</td>
+                <td>Vídeo con Creative Commons</td>
+                <td>Indra Ibrahim</td>
+                <td>https://www.youtube.com/watch?v=4pg7EaYo7hM</td>
+            </tr>
+            <tr>
+                <td>Minijuegos</td>
+                <td>Imágenes generadas por IA</td>
+                <td>
+                    <ul>
+                        <li>Dibuja un mando con comida italiana alrededor, en el dibujo tienen que predominar los colores neutros.</li>
+                        <li>Hazme la portada de un juego que se base en hacer pizzas y en la que aparezca Fernando Alonso.</li>
+                    </ul>
+                </td>
+                <td>gamesPage.png, PizzCraft.png</td>
+            </tr>
+            <tr>
+                <td>Login, Register y ForgottenPassword</td>
+                <td>Imágenes generadas por IA</td>
+                <td>Dibuja un fondo en el que haya comida italiana y predominen colores neutros</td>
+                <td>tableDraw.png</td>
+            </tr>
+            <tr>
+                <td>Reserve</td>
+                <td>Imágenes generadas por IA</td>
+                <td>Dibuja un fondo en el que haya comida italiana y predominen colores neutros</td>
+                <td>reservesBackground.png</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Toda la página</td>
+                <td>Imágenes con licencia Creative Commons</td>
+                <td>
+                    <ul>
+                        <li>Pexels.</li>
+                        <li>Behance.</li>
+                        <li>Freepik.</li>
+                        <li>Pixabay.</li>
+                        <li>Flickr.</li>
+                        <li>Onnoth.</li>
+                        <li>PxHere</li>
+                        <li>Serena Vasta</li>
+                        <li>Mariela Morales</li>
+                        <li>CC Null</li>
+                        <li>Wikipedia Commons</li>
+
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </article>
     <?php include("../includes/footer.php"); ?>
 
 </body>
