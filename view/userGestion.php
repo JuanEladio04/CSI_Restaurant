@@ -20,7 +20,7 @@
                 <!-- Main content container -->
                 <div class="col-4 d-flex flex-column justify-content-center align-items-center">
                     <!-- User photo container -->
-                    <div class="container formUserGestion mt-5 pt-5 d-flex flex-column align-items-center">
+                    <div class="formUserGestion mt-5 pt-5 d-flex flex-column align-items-center">
                         <div class="card bg-danger text-dark roundedBorderUserGestion bg-light">
                             <div class="card-body my-auto">
                                 <h1 class="text-center">Foto de perfil</h1>
