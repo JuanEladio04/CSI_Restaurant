@@ -56,6 +56,11 @@ switch ($_SERVER["SCRIPT_NAME"]) {
 		$PAGE_TITLE = "Juegos";
 		break;
 
+	case "/view/games/PizzaInvader/pizzaInvader.php":
+		$CURRENT_PAGE = "pizzaInvader";
+		$PAGE_TITLE = "Pizza Invader";
+		break;
+
 	default:
 		$CURRENT_PAGE = "Index";
 		$PAGE_TITLE = "Welcome to my homepage!";

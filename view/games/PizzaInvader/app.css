@@ -1,0 +1,74 @@
+/* LOBBY */
+
+#lobby-container{
+    text-align: center;
+    background-image: url(assets/lobby.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 60%;
+    margin: 5%;
+    border-radius: 10px;
+}
+
+/* GAME-CONTAINER */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('assets/fondo.png' );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin: 0;
+}
+
+#game-container {
+    display: none;
+    text-align: center;
+    background-image: url(assets/fondoJuego.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 60%;
+    margin: 5%;
+    border-radius: 10px;
+
+}
+
+
+/* GAME-OVER */
+#game-over {
+    display: none;
+    text-align: center;
+    background-image: url(assets/game-over.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 60%;
+    margin: 5%;
+    border-radius: 10px;
+}
+
+#game-over p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#game-over button {
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#game-over button:hover {
+    background-color: #45a049; /* Cambia el color de fondo al pasar el ratón sobre el botón */
+}

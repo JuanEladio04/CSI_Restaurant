@@ -27,7 +27,7 @@ lobby.draw();
 var botonExit = new Image();
 botonExit.src = 'assets/botonExit.png';
 
-var botonSalirlobby = new Konva.Image({
+var botonEx = new Konva.Image({
     x: (lobby.width() - 400) / 2,
     y: lobby.height() - 120,
     width: 500,
@@ -37,16 +37,12 @@ var botonSalirlobby = new Konva.Image({
 });
 
 // Agregar el botón a la capa
-button.add(botonSalirlobby);
+button.add(botonEx);
 lobby.draw();
 
-botonSalirlobby.on('click', function(){
-    salirLobby();
+botonEx.on('click', function () {
+    salir();
 });
-
-function salirLobby() {
-    window.location.href = "../../games.php";
-}
 
 // Manejar el evento de clic en el botón
 botonIniciar.on('click', function () {
@@ -66,6 +62,12 @@ playerImage.src = 'assets/player.png';
 
 var botonReplay = new Image();
 botonReplay.src = 'assets/botonReplay.png';
+
+var pelo = new Image();
+pelo.src = 'assets/superSaiyan.png';
+
+var playerImageSuperSaiyan = new Image();
+playerImageSuperSaiyan.src = 'assets/BocaSuperSaiyan.png';
 
 
 
@@ -94,6 +96,8 @@ function iniciarJuego() {
 
 
     // **************************** PUNTUACION ********************************* //
+    var num = 70
+
     var cuadroTexto = new Konva.Layer();
 
     var marcador = new Konva.Group({
@@ -185,7 +189,7 @@ function iniciarJuego() {
     gameLayer.add(player);
 
     // Variables de configuración
-    const velocidadMaxima = 400; // Puedes ajustar según tus necesidades
+    var velocidadMaxima = 400; // Puedes ajustar según tus necesidades
     const desaceleracion = 0.2;
     const framerate = 165; // Frames por segundo
     var velocidad = 500000; // Esta es la velocidad en la que aparecen los aliens por pantalla
@@ -282,6 +286,43 @@ function iniciarJuego() {
 
 
 
+    // *************************** SUPER SAIYAN ****************************** //
+    var layerpowerUp = new Konva.Layer();
+    stage.add(layerpowerUp); // Agrega la capa al escenario
+
+    function powerUp() {
+        var supeS = new Konva.Image({
+            image: pelo,
+            width: 50,
+            height: 50,
+            x: 0,
+            y: Math.random() * (stage.height() - 50)
+        });
+
+        layerpowerUp.add(supeS);
+
+        // Animación de movimiento de izquierda a derecha
+        var animation = new Konva.Animation(function (frame) {
+            var speed = 200; // Ajusta la velocidad según sea necesario
+            var newX = (supeS.x() + speed * frame.timeDiff / 1000) % stage.width();
+            supeS.x(newX);
+
+            // Verificar si la imagen ha salido del límite derecho del div
+            if (newX < 0) {
+                // Eliminar la imagen
+                supeS.destroy();
+                // Detener la animación para evitar errores
+                animation.stop();
+            }
+        }, layerpowerUp);
+
+        animation.start();
+    }
+
+    // *************************** SUPER SAIYAN ****************************** //
+
+
+
     // **************************** EVENTOS DE MOVIMIENTOS ******************** //
     // Función para manejar el evento de tecla presionada
     window.addEventListener('keydown', function (e) {
@@ -349,8 +390,8 @@ function iniciarJuego() {
         // Obtener las coordenadas
         const iz = 20;
         const ar = 20;
-        const de = stage.width() - 70;
-        const ab = stage.height() - 70;
+        const de = stage.width() - num;
+        const ab = stage.height() - num;
 
 
 
@@ -452,7 +493,34 @@ function iniciarJuego() {
             }
         });
 
+        // COLISIONES PLAYER Y POWER UP
+        var powers = layerpowerUp.children; // Obtén la lista de hijos de los Aliens
+        powers.forEach(function (power) {
+            if (detectCollisionPlayer(power)) {
+                power.destroy();
+                power.remove();
 
+                cambiarTamañoVelocidad();
+            }
+        });
+
+        // COLISIONES ALIEN Y POWER UP
+        aliens.forEach(function (alien) {
+            powers.forEach(function (power) {
+                if (detectarColisionPizzaAlien(alien, power)) {
+                    power.remove();
+
+                    //Cambiar velocidad
+                    velocidadMaxima = 100;
+
+                    // Volver a la velocidad
+                    setTimeout(function () {
+                        // Restaurar la velocidad original
+                        velocidadMaxima = 400;
+                    }, 10000);  
+                }
+            });
+        });
 
         // COLISIONES PLAYER Y PIZZAS
         var Pizzas = layerPizza.children; // Obtén la lista de hijos de las Pizzas
@@ -506,7 +574,38 @@ function iniciarJuego() {
         stage.draw();
     }
 
+    // Funcion para el powerUp
+    function cambiarTamañoVelocidad() {
+        // Guardar las propiedades actuales del jugador
+        var playerX = player.x();
+        var playerY = player.y();
+        var playerWidth = player.width();
+        var playerHeight = player.height();
 
+        // Cambiar el tamaño del jugador
+        player.width(100);
+        player.height(100);
+        num = 120
+
+        // Cambiar la imagen del jugador
+        player.image(playerImageSuperSaiyan);
+
+        //Cambiar velocidad
+        velocidadMaxima = 800;
+
+        // Volver al tamaño original y a la imagen original después de 5 segundos
+        setTimeout(function () {
+            // Restaurar el tamaño original del jugador
+            player.width(playerWidth);
+            player.height(playerHeight);
+
+            // Restaurar la imagen original del jugador
+            player.image(playerImage);
+
+            // Restaurar la velocidad original
+            velocidadMaxima = 400;
+        }, 10000);
+    }
 
     // Función de interpolación lineal (lerp)
     function lerp(valorInicial, valorFinal, alpha) {
@@ -531,6 +630,7 @@ function iniciarJuego() {
     // **************************** BUCLES  DEL JUEGO ************************** //
     // Entidades 
     setInterval(pizzas, 500000 / framerate);
+    setInterval(powerUp, 3000000 / framerate);
 
     var intervaloJuego;
     iniciarJuego();

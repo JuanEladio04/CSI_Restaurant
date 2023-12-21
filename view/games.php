@@ -86,7 +86,7 @@
                         mientras te conviertes en el defensor de la cocina italiana!</p>
                     </div>
                     <div class="mt-auto">
-                        <a href=".\games\PizzaInvader\pizzaInvader.html" class="btn btn-danger rounded-2">¡Jugar ahora!</a>
+                        <a href=".\games\PizzaInvader\pizzaInvader.php" class="btn btn-danger rounded-2">¡Jugar ahora!</a>
                     </div>
                 </div>
             </div>
