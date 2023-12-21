@@ -29,7 +29,7 @@
         </section>
 
 
-        <section id="legalWarn" class="row mb-5 bg-primary roundedBorder margin-top">
+        <section id="legalWarn" class="row mb-5 bg-primary roundedBorder marginOnlyTop">
             <article class="articulo col p-5">
                 <!-- Section with the legal advice -->
                 <h1 class="text-center">Aviso Legal</h1>
@@ -261,7 +261,7 @@
         </section>
 
 
-        <section id="privPol" class="row mb-5 bg-primary roundedBorder margin-top">
+        <section id="privPol" class="row mb-5 bg-primary roundedBorder marginOnlyTop">
             <article class="articulo col p-5">
                 <!-- Section with the politics privacy -->
                 <h1 class="text-center">Política de Privacidad</h1>
@@ -635,7 +635,7 @@
         </section>
 
 
-        <section class="row mb-5 bg-danger roundedBorder margin-top">
+        <section class="row mb-5 bg-danger roundedBorder marginOnlyTop">
             <!-- Section with the purpose of various activities -->
             <article class="articuloTC col">
                 <h1 class="text-center">Finalidad</h1>

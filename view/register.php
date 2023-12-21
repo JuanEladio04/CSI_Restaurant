@@ -19,9 +19,9 @@
     <main class="container-fluid">
         <div class="row">
             <!-- Form wrapped in a card with styling -->
-            <article class="col d-flex justify-content-center align-items-center">
+            <div class="col d-flex justify-content-center align-items-center">
 
-                <div class="container formUser">
+                <div class="formUser">
                     <div class="card bg-danger text-light roundedBorder">
                         <!-- Card header with a centered title -->
                         <div class="card-header">
@@ -29,55 +29,50 @@
                         </div>
                         <!-- Card body containing the registration form -->
                         <div class="card-body">
-                            <div class="">
-                                <!-- Registration form -->
-                                <form action="/action_page.php">
-                                    <!-- Name and Last Name inputs in a row -->
-                                    <div class="row">
-                                        <div class="col-sm-6 margenInferior">
-                                            <label for="FirstN" class="form-label">Nombre</label>
-                                            <input type="text" class="roundedInput form-control" name="FirstN"
-                                                pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required>
-                                        </div>
-                                        <div class="col-sm-6 margenInferior">
-                                            <label for="LastN" class="form-label">Apellido</label>
-                                            <input type="text" class="roundedInput form-control" name="LastN"
-                                                pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required>
-                                        </div>
+                            <!-- Registration form -->
+                            <form action="/action_page.php">
+                                <!-- Name and Last Name inputs in a row -->
+                                <div class="row">
+                                    <div class="col-sm-6 margenInferior">
+                                        <label for="FirstN" class="form-label">Nombre</label>
+                                        <input type="text" class="roundedInput form-control" name="FirstN"
+                                            pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required>
                                     </div>
-                                    <!-- Email input with margin -->
-                                    <div class="margenInferior">
-                                        <label for="Email" class="form-label">Email</label>
-                                        <input type="email" class="roundedInput form-control" id="email" name="Email"
-                                            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+                                    <div class="col-sm-6 margenInferior">
+                                        <label for="LastN" class="form-label">Apellido</label>
+                                        <input type="text" class="roundedInput form-control" name="LastN"
+                                            pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required>
                                     </div>
-                                    <!-- Password inputs with margin -->
-                                    <div class="col margenInferior">
-                                        <label for="Password1" class="form-label">Contraseña</label>
-                                        <input type="password" class="roundedInput form-control" name="Password1"
-                                            required>
-                                    </div>
-                                    <div class="col margenInferior">
-                                        <label for="Passwordw" class="form-label">Confirmar contraseña</label>
-                                        <input type="password" class="roundedInput form-control" name="Password2"
-                                            required>
-                                    </div>
-                                    <!-- Checkboxes for age and terms acceptance -->
-                                    <input type="checkbox" name="mayor" value="mayorEdad" class="rounded-checkbox"
-                                        required>
-                                    <label for="mayor">Soy mayor de 18</label>
-                                    <br>
-                                    <input type="checkbox" name="acepto" value="Aceptar términos"
-                                        class="rounded-checkbox" required> <label for="acepto">Acepto los
-                                        términos</label>
+                                </div>
+                                <!-- Email input with margin -->
+                                <div class="margenInferior">
+                                    <label for="Email" class="form-label">Email</label>
+                                    <input type="email" class="roundedInput form-control" id="email" name="Email"
+                                        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+                                </div>
+                                <!-- Password inputs with margin -->
+                                <div class="col margenInferior">
+                                    <label for="Password1" class="form-label">Contraseña</label>
+                                    <input type="password" class="roundedInput form-control" name="Password1" required>
+                                </div>
+                                <div class="col margenInferior">
+                                    <label for="Passwordw" class="form-label">Confirmar contraseña</label>
+                                    <input type="password" class="roundedInput form-control" name="Password2" required>
+                                </div>
+                                <!-- Checkboxes for age and terms acceptance -->
+                                <input type="checkbox" name="mayor" value="mayorEdad" class="rounded-checkbox" required>
+                                <label for="mayor">Soy mayor de 18</label>
+                                <br>
+                                <input type="checkbox" name="acepto" value="Aceptar términos" class="rounded-checkbox"
+                                    required> <label for="acepto">Acepto los
+                                    términos</label>
 
-                                    <!-- Create account button -->
-                                    <div class="d-grid margenSuperior">
-                                        <input type="submit" value="Crear cuenta" name="crear" id="crear"
-                                            class="btn btn-primary btn-block roundedInput textoNoWrap">
-                                    </div>
-                                </form>
-                            </div>
+                                <!-- Create account button -->
+                                <div class="d-grid margenSuperior">
+                                    <input type="submit" value="Crear cuenta" name="crear" id="crear"
+                                        class="btn btn-primary btn-block roundedInput textoNoWrap">
+                                </div>
+                            </form>
                         </div>
 
                         <!-- Card footer with a link to the login page -->
@@ -86,7 +81,7 @@
                         </div>
                     </div>
                 </div>
-            </article>
+            </div>
         </div>
     </main>
 

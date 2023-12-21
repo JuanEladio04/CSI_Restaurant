@@ -40,21 +40,45 @@
                     asegurar que su calidad sea nada menos que excelente.
                 </p>
             </article>
-            <article class="col-lg-6 position-relative videoAU">
-                <!-- Section with a youtube video -->
-                <video id="video" class="w-100 h-100 border-0">
-                    <source src="../videos/videoPizza.mp4" type="video/mp4">
-                </video>
-                <!-- Video Controls -->
-                <div id="video-controls">
-                    <button class="rounded" type="button" id="play-pause">Play</button>
-                    <input type="range" id="seek-bar" value="0">
-                    <button class="rounded" type="button" id="mute">Mute</button>
-                    <input type="range" id="volume-bar" min="0" max="1" step="0.1" value="1">
-                    <button class="rounded" type="button" id="full-screen">Full-Screen</button>
+            <article class="col-lg-6 justify-content-end">
+                <!-- Video Player START -->
+                <div class="videoplayer" id="player-9">
+                    <div class="ratio ratio-16x9 bg-dark">
+                        <video class="video"
+                            src="..\videos\videoPizza.mp4"></video>
+                    </div>
+                    <div class="controls">
+                        <button class="btn btn-lg btn-video-playpause" data-bs-toggle="tooltip" title="Play Video"
+                            type="button"><i class="bi bi-play-fill text-dark"><img src="..\img\logos\tocar.png"/></i><i
+                                class="bi bi-pause-fill d-none text-dark"><img src="..\img\logos\pausa.png"/></i></button>
+                        <div class="p-0 w-100">
+                            <div class="progress">
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+                        <button class="btn btn-lg text-dark btn-video-pip" title="Play picture in picture"><img src="..\img\logos\minimizar.png"/><i
+                                class="bi bi-pip"></i></button><button class="btn btn-lg btn-video-fullscreen p-1"><i
+                                class="bi bi-arrows-fullscreen"><img src="..\img\logos\pantalla-completa.png"/></i></button>
+                        <div class="dropup">
+                            <button class="btn btn-lg" data-bs-toggle="dropdown" title="Volume"><i
+                                    class="bi bi-volume-mute-fill"><img src="..\img\logos\audio.png"/></i></button>
+                            <div class="dropdown-menu dropdown-menu-end dropup-volume">
+                                <input class="form-range form-range-volume" type="range">
+                            </div>
+                        </div>
+                        <div class="dropup">
+                            <button class="btn btn-lg" data-bs-toggle="dropdown" title="More..."><img src="..\img\logos\about.png"/><i
+                                    class="bi bi-three-dots-vertical"></i></button>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item" href="#"><i class="bi bi-info-circle-fill"></i> About</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <!-- Video Player END -->
             </article>
-            <script src="..\js\videoScript.js"></script>
+            <script src="..\js\videoplayer.js"></script>
+            <script src="..\js\videoFunction.js"></script>
         </section>
 
 
@@ -65,7 +89,7 @@
                 <div class="row">
                     <div class="col-lg-6 d-none d-lg-flex justify-content-center">
                         <!-- Image of the chef -->
-                        <img class="img-fluid" src="..\img\stockImages\aboutUs_StockImages\aboutUsCocineros.png"
+                        <img class="img-fluid" src="..\img\stockImages\aboutUs_StockImages\cocineroFoto.png"
                             style="width: 100%;" frameborder="0">
                     </div>
                     <div class="col-lg-6 p-5">
