@@ -54,7 +54,7 @@
                         </p>
                     </div>
                     <div class="mt-auto">
-                        <a href="view\games.php" class="btn btn-danger rounded-2">¡Jugar ahora!</a>
+                        <a href="games/Arkanoid/arkanoid.php" class="btn btn-danger rounded-2">¡Jugar ahora!</a>
                     </div>
                 </div>
             </div>
