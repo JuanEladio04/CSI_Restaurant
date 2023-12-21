@@ -1,9 +1,9 @@
-class BootstrapVideoplayer{
+class BootstrapVideoplayer {
 
-    constructor(selector,settingsCustom) {
+    constructor(selector, settingsCustom) {
 
         let settingsDefault = {
-            selectors:{
+            selectors: {
                 video: '.video',
                 playPauseButton: '.btn-video-playpause',
                 playIcon: '.bi-play-fill',
@@ -16,7 +16,7 @@ class BootstrapVideoplayer{
             }
         }
 
-        const deepMerge = function(){
+        const deepMerge = function () {
             // create a new object
             let target = {};
             // deep merge the object into the target object
@@ -52,61 +52,61 @@ class BootstrapVideoplayer{
         let fullscreenbutton = player.querySelector(settings.selectors.fullscreenButton)
         let volumeinput = player.querySelector(settings.selectors.volumeRange)
 
-        try{
-            video.addEventListener('loadedmetadata', function(e) {
+        try {
+            video.addEventListener('loadedmetadata', function (e) {
 
-                video.volume = (volumeinput.value/100)
+                video.volume = (volumeinput.value / 100)
 
-                volumeinput.addEventListener('change',function(e){
-                    video.volume = (e.target.value/100)
+                volumeinput.addEventListener('change', function (e) {
+                    video.volume = (e.target.value / 100)
                 })
 
-                fullscreenbutton.addEventListener('click',function(){
+                fullscreenbutton.addEventListener('click', function () {
                     parent.openFullscreen(video)
                 })
 
-                playbutton.addEventListener('click',function(){
-                    parent.playpause(video,this,progressbar)
+                playbutton.addEventListener('click', function () {
+                    parent.playpause(video, this, progressbar)
                 })
 
-                video.addEventListener('click',function(){
-                    parent.playpause(video,playbutton,progressbar)
+                video.addEventListener('click', function () {
+                    parent.playpause(video, playbutton, progressbar)
                 })
 
-                pipbutton.addEventListener('click',function(){
-                    parent.pip(video,this)
+                pipbutton.addEventListener('click', function () {
+                    parent.pip(video, this)
                 })
 
-                progress.addEventListener('click',function(e){
+                progress.addEventListener('click', function (e) {
                     let width = this.clientWidth
                     let bounds = this.getBoundingClientRect();
                     let x = e.clientX - bounds.left;
                     let y = e.clientY - bounds.top;
                     let percent = Math.floor(x / (width / 100))
                     progressbar.style.width = percent + '%'
-                    video.currentTime = percent * (video.duration/100)
+                    video.currentTime = percent * (video.duration / 100)
                 })
 
             })
         }
-        catch(error){
+        catch (error) {
             console.log('Bootstrap Video Player: Video object can not be found. Please check your plugin settings.')
             console.log(error)
         }
 
     }
 
-    pip(video,button){
+    pip(video, button) {
         console.log('implement PIP here!')
     }
 
-    updateProgressBar(video,button,progressbar){
-        var percentPlayed = Math.floor(video.currentTime / (video.duration/100))
-        if(percentPlayed < 100){
+    updateProgressBar(video, button, progressbar) {
+        var percentPlayed = Math.floor(video.currentTime / (video.duration / 100))
+        if (percentPlayed < 100) {
             progressbar.style.width = percentPlayed + '%'
-            requestAnimationFrame(()=>{this.updateProgressBar(video,button,progressbar)});
+            requestAnimationFrame(() => { this.updateProgressBar(video, button, progressbar) });
         }
-        else if(percentPlayed === 100){
+        else if (percentPlayed === 100) {
             progressbar.style.width = '100%'
             video.pause()
             video.currentTime = 0
@@ -115,19 +115,19 @@ class BootstrapVideoplayer{
             button.querySelector('.bi-pause-fill').classList.add('d-none')
         }
     }
-    playpause(video,button,progressbar){
-        if(video.playing === true){
+    playpause(video, button, progressbar) {
+        if (video.playing === true) {
             video.pause()
             button.querySelector('.bi-play-fill').classList.remove('d-none')
             button.querySelector('.bi-pause-fill').classList.add('d-none')
             video.playing = false
         }
-        else{
+        else {
             video.play()
             button.querySelector('.bi-play-fill').classList.add('d-none')
             button.querySelector('.bi-pause-fill').classList.remove('d-none')
             video.playing = true
-            requestAnimationFrame(()=>{this.updateProgressBar(video,button,progressbar)});
+            requestAnimationFrame(() => { this.updateProgressBar(video, button, progressbar) });
         }
     }
 
