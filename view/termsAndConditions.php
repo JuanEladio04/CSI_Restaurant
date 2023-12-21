@@ -738,8 +738,10 @@
                 <td>Imágenes generadas por IA</td>
                 <td>
                     <ul>
-                        <li>Dibuja un mando con comida italiana alrededor, en el dibujo tienen que predominar los colores neutros.</li>
-                        <li>Hazme la portada de un juego que se base en hacer pizzas y en la que aparezca Fernando Alonso.</li>
+                        <li>Dibuja un mando con comida italiana alrededor, en el dibujo tienen que predominar los
+                            colores neutros.</li>
+                        <li>Hazme la portada de un juego que se base en hacer pizzas y en la que aparezca Fernando
+                            Alonso.</li>
                     </ul>
                 </td>
                 <td>gamesPage.png, PizzCraft.png</td>
@@ -757,10 +759,19 @@
                 <td>reservesBackground.png</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>PizzaCraft</td>
+                <td>Imágenes generadas por IA</td>
+                <td>
+                    <ul>
+                        <li>Hazme una loncha de pepperoni sin ningún fondo y vista desde arriba.</li>
+                        <li>Hazme un champiñón para pizza visto desde arriba sin ningún fondo.</li>
+                        <li>Hazme un trozo de bacon para pizza visto desde arriba sin ningún fondo.</li>
+                        <li>Hazme una loncha de tomate sin ningún fondo y vista desde arriba.</li>
+                        <li>Hazme una pizza vista desde arriba sin ningún topping y sin ningún fondo.</li>
+                        <li>Créame una imagen para un background de una página con ingredientes para una pizza en el que los colores que predominen sean el blanco y el negro.</li>
+                    </ul>
+                </td>
+                <td>Todos los assets del juego pizzacrafter.</td>
             </tr>
             <tr>
                 <td>Toda la página</td>
