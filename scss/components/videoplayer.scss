@@ -1,7 +1,7 @@
-$default-bg: #eee;
+$default-bg: $danger;
 $default-color: #2b2b2b;
-$default-bg-progress: #333;
-$default-bg-progress-bar: #666;
+$default-bg-progress: $secondary;
+$default-bg-progress-bar: $success;
 
 $default-bg-dark: #2b2b2b;
 $default-color-dark: #eee;
@@ -9,103 +9,107 @@ $default-bg-progress-dark: #ccc;
 $default-bg-progress-bar-dark: #999;
 
 .videoplayer {
-    position: relative;
+  position: relative;
+  display: flex;
+
+  video {
+    max-width: auto;
+    max-height: auto;
+  }
+
+  .controls {
+    position: absolute;
+    bottom: 0;
     display: flex;
-  
-    video {
-      max-width: auto;
-      max-height: auto;
-    }
-  
-    .controls {
-      position: absolute;
-      bottom: 0;
-      display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: $default-bg;
+    padding: 0%;
+
+    .progress {
+      background-color: $default-bg-progress;
       width: 100%;
-      align-items: center;
-      background-color: $default-bg;
-  
+
+      .progress-bar {
+        transition: none !important;
+        background-color: $default-bg-progress-bar;
+        width: 100%;
+      }
+    }
+
+    &.controls-light {
+      .bi {
+        color: $default-color;
+      }
+    }
+
+    &.controls-dark {
+      background-color: $default-bg-dark;
+
+      .bi {
+        color: $default-color-dark;
+      }
+
       .progress {
-        background-color: $default-bg-progress;
-  
+        background-color: $default-bg-progress-dark;
+
         .progress-bar {
-          transition: none !important;
-          background-color: $default-bg-progress-bar;
+          background-color: $default-bg-progress-bar-dark;
         }
-      }
-  
-      &.controls-light {
-        .bi {
-          color: $default-color;
-        }
-      }
-  
-      &.controls-dark {
-        background-color: $default-bg-dark;
-  
-        .bi {
-          color: $default-color-dark;
-        }
-  
-        .progress {
-          background-color: $default-bg-progress-dark;
-  
-          .progress-bar {
-            background-color: $default-bg-progress-bar-dark;
-          }
-        }
-      }
-  
-      &.auto-hide {
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-        transition-delay: 0.5s;
-      }
-  
-      button > *,
-      .btn > * {
-        pointer-events: none !important;
-        color: black;
       }
     }
-  
-    .overlay {
-      position: absolute;
-      z-index: 300;
-      top: 0;
-      left: 0;
-  
-      .title {
-        font-size: inherit;
-        color: white;
-        padding: 0.5rem;
-        font-weight: bold;
-      }
+
+    &.auto-hide {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      transition-delay: 0.5s;
     }
-  
-    .dropup-volume {
-      position: absolute !important;
-      bottom: calc(100% + 5px) !important;
-      padding: 0.75rem 1rem;
-      transform: none !important;
-      min-width: inherit;
-  
-      .form-range {
-        -webkit-appearance: slider-vertical;
-        width: 1rem !important;
-        height: 200px !important;
-      }
-    }
-  
-    &:hover {
-      .controls.auto-hide {
-        opacity: 1;
-      }
+
+    button>*,
+    .btn>* {
+      pointer-events: none !important;
+      color: black;
+      padding: 1%;
     }
   }
 
-  img{
+  .overlay {
+    position: absolute;
+    z-index: 300;
+    top: 0;
+    left: 0;
+
+    .title {
+      font-size: inherit;
+      color: white;
+      padding: 0.5rem;
+      font-weight: bold;
+    }
+  }
+
+  .dropup-volume {
+    position: absolute !important;
+    bottom: calc(100% + 5px) !important;
+    padding: 0.75rem 1rem;
+    transform: none !important;
+    min-width: inherit;
+
+    .form-range {
+      -webkit-appearance: slider-vertical;
+      width: 1rem !important;
+      height: 200px !important;
+    }
+  }
+
+  &:hover {
+    .controls.auto-hide {
+      opacity: 1;
+    }
+  }
+
+  img {
     width: 20px;
     height: 20px;
   }
-  
+
+}
