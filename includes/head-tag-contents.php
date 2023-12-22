@@ -20,4 +20,4 @@
 
 <link href="/css/styles.css" rel="stylesheet" />
 	
-<script src="/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
