@@ -7,7 +7,7 @@
             <!-- Centered column for the restaurant logo and social media icons. -->
             <div class="col-sm-4 order-sm-2 d-flex flex-column align-items-center text-center">
                 <!-- Link to the home page with the restaurant logo. -->
-                <a href="../index.php"><img src="../img/logos/BigLogo.png" width="250vh"></a>
+                <a href="/index.php"><img src="/img/logos/BigLogo.png" width="250vh"></a>
                 <!-- Social media icons in a horizontal row. -->
                 <div class="d-flex mb-4 flex-row ">
                     <a href="https://www.instagram.com/ristaurantelunadellarosa/" class="mx-4"><i class="fa-brands fa-instagram text-primary fa-2xl"></i></a>
@@ -34,15 +34,15 @@
             <div class="mx-auto col-sm-4 order-sm-3 my-sm-auto">
                 <p class="lead">
                     <!-- Link to the Terms and Conditions page. -->
-                    <a href="../view/termsAndConditions.php">Términos y condiciones</a>
+                    <a href="/view/termsAndConditions.php">Términos y condiciones</a>
                 </p>
                 <p class="lead">
                     <!-- Placeholder link to Legal Notice. -->
-                    <a  href="../view/termsAndConditions.php#legalWarn">Aviso legal</a>
+                    <a  href="/view/termsAndConditions.php#legalWarn">Aviso legal</a>
                 </p>
                 <p class="lead">
                     <!-- Placeholder link to Privacy Policy. -->
-                    <a  href="../view/termsAndConditions.php#privPol">Política de privacidad</a>
+                    <a  href="/view/termsAndConditions.php#privPol">Política de privacidad</a>
                 </p>
             </div>
         </div>
