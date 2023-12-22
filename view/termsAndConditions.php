@@ -747,6 +747,14 @@
                 <td>gamesPage.png, PizzCraft.png</td>
             </tr>
             <tr>
+                <td>Minijuegos</td>
+                <td>Imágenes creadas por el grupo</td>
+                <td>
+                    Juan Eladio
+                </td>
+                <td>Pizzanoid.png</td>
+            </tr>
+            <tr>
                 <td>Login, Register y ForgottenPassword</td>
                 <td>Imágenes generadas por IA</td>
                 <td>Dibuja un fondo en el que haya comida italiana y predominen colores neutros</td>
@@ -779,7 +787,7 @@
                 <td>
                     <ul>
                         <li>Hazme una imagen al estilo caricaturesco de una persona en un puesto de reservas</li>
-                        <li>Hazla con estilo más caricaturesco</li>    
+                        <li>Hazla con estilo más caricaturesco</li>
                     </ul>
                 </td>
                 <td>Mesa_4_personas.png</td>
@@ -789,14 +797,40 @@
                 <td>ReservaCraft</td>
                 <td>
                     Imagenes sacadas de internet
-                </td>  
+                </td>
                 <td>
                     Mesa de 4 personas
-                </td>  
+                </td>
                 <td>
                     https://www.pinterest.es/pin/487514728386627786/
-                </td>        
-            </tr>        
+                </td>
+            </tr>
+            <tr>
+            <tr>
+                <td>Pizzanoid</td>
+                <td>
+                    Imagenes creadas por el grupo
+                </td>
+                <td>
+                    Juan Eladio
+                </td>
+                <td>
+                    live.png, low_hp_brick.png, up_hp_brick.png, padle.png, pizzBall.png
+                </td>
+            </tr>
+            <tr>
+            <tr>
+                <td>Pizzanoid</td>
+                <td>
+                    Imagenes creadas con IA
+                </td>
+                <td>
+                    Fondo del espacio que no sea llamativo que se limite a un fondo negro con estrellas y una tenue nebulosa
+                </td>
+                <td>
+                    background.png
+                </td>
+            </tr>
             <tr>
                 <td>Toda la página</td>
                 <td>Imágenes con licencia Creative Commons</td>
