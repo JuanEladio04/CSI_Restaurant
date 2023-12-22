@@ -17,7 +17,7 @@
         <!-- el siguiente elemento no se ve por d-none, por qué ponerlo-->
         <h2 class="d-none">Formulario de reservas</h2>
         <div class="row justify-content-around text-center">
-            <h3 class="p-5">
+            <h3 class="p-5 text-light">
                 ¿Desea reservar mesa? Hágalo ahora mismo desde aqui.
             </h3>
             <!--Formulary-->

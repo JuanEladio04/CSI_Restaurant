@@ -5,12 +5,6 @@
 <html>
 
 <head>
-    <!--CF: Todos estos metas están incluidos en head-tag-contents!!!--->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pagina opiniones del restaurante">
-    <meta name="author" content="CSI">
-
     <?php include("../includes/head-tag-contents.php"); ?>
 </head>
 
@@ -20,13 +14,12 @@
 
     <!--CF: Error grave, la página carece de una estructura row/col-->
     <section class="container-fluid crearOpiniones">
-        <!--CF: Esto no es un article!!! tan solo un título-->
-        <article>
-            <div class="titulo">
-                <!--CF: ¿Dónde está el h1--->
-                <h2>Deja tu opinión</h2>
-            </div>
-        </article>
+        <div class="row">
+        <div class="titulo">
+            <h2>Deja tu opinión</h2>
+        </div>
+
+
         <article class="contenedor">
             <div class="texto column p-5 tituloh2">
 
@@ -81,13 +74,12 @@
                 </div>
             </div>
         </article>
+        </div>
     </section>
     <section class="opinionUsuario ">
-        <article>
-            <div class="contenedor-titulo titulo">
-                <h2>Opiniones de Nuestros Clientes</h2>
-            </div>
-        </article>
+        <div class="contenedor-titulo titulo">
+            <h2>Opiniones de Nuestros Clientes</h2>
+        </div>
         <div class="opinionesclientes p-5">
             <div class="frame-interior">
                 <article>
