@@ -9,7 +9,9 @@
   <main class="container-fluid p-0 m-0">
     <section class="row m-0 p-0">
       <!--Presentation-->
+      <!--CF: No tiene sentido poner un container-fluid dentro de otro container-fluid-->
       <header class="container-fluid presentacion col-12 text-center my-5">
+ 
         <h1 class="d-none">
           Ristorante luna della rossa
         </h1>
@@ -25,6 +27,7 @@
                 class="fa-brands fa-facebook fa-2xl"></i></i></a>
           </div>
 
+          <!--CF: ¿Dos break points? Tenéis tres layouts en la guía de estilos?--> 
           <nav class="container-fluid col-12 d-lg-none d-sm-block">
             <div class="row lobster">
               <a href="view/card.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Carta</a>

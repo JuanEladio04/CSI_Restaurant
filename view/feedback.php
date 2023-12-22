@@ -12,12 +12,14 @@
     <?php include("../includes/navigation.php"); ?>
     <?php include("../includes/design-top.php"); ?>
 
-
+    <!--CF: Error grave, la página carece de una estructura row/col-->
     <section class="container-fluid crearOpiniones">
         <div class="row">
         <div class="titulo">
             <h2>Deja tu opinión</h2>
         </div>
+
+
         <article class="contenedor">
             <div class="texto column p-5 tituloh2">
 
