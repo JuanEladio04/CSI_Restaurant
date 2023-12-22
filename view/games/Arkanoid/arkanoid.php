@@ -28,15 +28,9 @@
                     <span class="material-symbols-outlined">
                         arrow_right_alt
                     </span>
-                    <span class="material-symbols-outlined">
-                        arrow_upward_alt
-                    </span>
-                    <span class="material-symbols-outlined">
-                        arrow_downward_alt
-                    </span>
                 </p>
                 <p>
-                    Sacar la pelota:
+                    Lanzar la pelota:
                 </p>
                 <p>
                     <span class="material-symbols-outlined">
@@ -45,17 +39,9 @@
                 </p>
             </div>
             <div id="arkanoidContainer" class="d-inline-block p-none col-12 col-lg-5"></div>
-            <div class="col-12 col-lg-5 text-light my-auto">
+            <div class="col-12 col-lg-5 text-light my-auto" p-5>
                 <p>
-                    Bienvenido a Pizzanoid, donde la emoción del clásico Arkanoid se fusiona con la deliciosa
-                    esencia de la cocina italiana. En este juego, tu misión es más sabrosa que nunca: rebotar
-                    una deliciosa porción de pizza contra cajas de pizza dispuestas en patrones desafiantes.
-                </p>
-
-                <p>
-                    Cada caja de pizza que golpees desencadenará una explosión de sabor, revelando increíbles
-                    power-ups y sorpresas culinarias. ¡Prepárate para enfrentarte a niveles repletos de desafíos,
-                    donde la velocidad y la estrategia son clave para convertirte en el maestro pizzero!
+                    "Pizzanoid" es un emocionante juego de estilo arcade inspirado en el clásico juego de romper ladrillos, pero con un toque único y delicioso. El objetivo principal del juego es destruir todos los ladrillos en la pantalla utilizando una pelota especial de pizza, mientras te defiendes con una nave espacial que funciona como paleta.
                 </p>
             </div>
         </div>

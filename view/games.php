@@ -30,27 +30,7 @@
                     <h5 class="card-title">Pizzanoid</h5>
                     <div class="card-text">
                         <p>
-                        Bienvenido a Pizzanoid, donde la emoción del clásico Arkanoid se fusiona con la deliciosa 
-                        esencia de la cocina italiana. En este juego, tu misión es más sabrosa que nunca: rebotar 
-                        una deliciosa porción de pizza contra cajas de pizza dispuestas en patrones desafiantes.
-                        </p>
-
-                        <p>
-                        Cada caja de pizza que golpees desencadenará una explosión de sabor, revelando increíbles 
-                        power-ups y sorpresas culinarias. ¡Prepárate para enfrentarte a niveles repletos de desafíos, 
-                        donde la velocidad y la estrategia son clave para convertirte en el maestro pizzero!
-                        </p>
-
-                        <p>
-                        Esquiva obstáculos culinarios, como salsas y queso derretido, mientras mantienes la bola de pizza 
-                        en movimiento. Convierte la pantalla en un festín de sabores y desbloquea nuevos niveles que te 
-                        llevarán a explorar el vasto y delicioso mundo de Pizzanoid.
-                        </p>
-
-                        <p>
-                        Con gráficos vibrantes y efectos sonoros irresistibles, este juego te sumerge en una experiencia 
-                        única que celebra la fusión entre la diversión del juego clásico y la delicia de la pizza italiana. 
-                        ¡Prepárate para una aventura de sabor y diversión en "Pizzanoid"! 
+                        "Pizzanoid" es un emocionante juego de estilo arcade inspirado en el clásico juego de romper ladrillos, pero con un toque único y delicioso. El objetivo principal del juego es destruir todos los ladrillos en la pantalla utilizando una pelota especial de pizza, mientras te defiendes con una nave espacial que funciona como paleta.
                         </p>
                     </div>
                     <div class="mt-auto">
