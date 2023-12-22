@@ -1,16 +1,19 @@
+<?php include("../../../includes/a_config.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizza Invader</title>
+    <?php include("../../../includes/head-tag-contents.php"); ?>
+
     <link rel="stylesheet" href="app.css">
     <script src="https://unpkg.com/konva@9/konva.min.js"></script>
 </head>
-<body>
+
+<body id="background-<?php echo $CURRENT_PAGE; ?>">
     <div id="lobby-container"></div>
     <div id="game-container"></div>
     <div id="game-over"></div>
     <script src="game.js"></script>
 </body>
+
 </html>

@@ -86,8 +86,8 @@
                         mientras te conviertes en el defensor de la cocina italiana!</p>
                     </div>
                     <div class="mt-auto">
-                        <a href=".\games\PizzaInvader\pizzaInvader.html" class="btn btn-danger rounded-2">¡Jugar ahora!</a>
-                    </div>
+                        <a href=".\games\PizzaInvader\pizzaInvader.php" class="btn btn-danger rounded-2">¡Jugar ahora!</a>
+                    </div> 
                 </div>
             </div>
 
@@ -126,7 +126,7 @@
             </div>
 
             <div class="card col-lg-2 col-10 my-5">
-                <img class="card-img-top pt-2" src="../img/games/spaceInvaders.png" alt="Card image cap">
+                <img class="card-img-top pt-2" src="../img/games/reservacrafter.png" alt="Card image cap">
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">Reserva Crafter</h5>
                     <div class="card-text">
@@ -155,7 +155,7 @@
                         </p>
                     </div>
                     <div class="mt-auto">
-                        <a href="view\games.php" class="btn btn-danger rounded-2">¡Jugar ahora!</a>
+                        <a href="..\view\games\ReservaCrafter\reservacrafter.html" class="btn btn-danger rounded-2">¡Jugar ahora!</a>
                     </div>
                 </div>
             </div>

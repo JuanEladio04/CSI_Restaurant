@@ -19,6 +19,10 @@ imageObj.onload = function () {
 };
 imageObj.src = 'assets/img/background.png';
 
+var container = this.stage.container();
+container.tabIndex = 1;
+container.focus();
+
 
 var lives = 3; //Contador e inicilización del sistema de vidas
 var liveHearts = [];
@@ -314,6 +318,7 @@ document.addEventListener('keydown', function (e) {
             ball.isMoving = true;
         }
     }
+    e.preventDefault();
 });
 
 document.addEventListener('keyup', function (e) {

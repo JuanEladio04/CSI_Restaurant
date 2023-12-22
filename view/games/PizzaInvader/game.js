@@ -27,7 +27,7 @@ lobby.draw();
 var botonExit = new Image();
 botonExit.src = 'assets/botonExit.png';
 
-var botonSalirlobby = new Konva.Image({
+var botonEx = new Konva.Image({
     x: (lobby.width() - 400) / 2,
     y: lobby.height() - 120,
     width: 500,
@@ -37,16 +37,12 @@ var botonSalirlobby = new Konva.Image({
 });
 
 // Agregar el botón a la capa
-button.add(botonSalirlobby);
+button.add(botonEx);
 lobby.draw();
 
-botonSalirlobby.on('click', function(){
-    salirLobby();
+botonEx.on('click', function () {
+    salir();
 });
-
-function salirLobby() {
-    window.location.href = "../../games.php";
-}
 
 // Manejar el evento de clic en el botón
 botonIniciar.on('click', function () {
@@ -67,6 +63,12 @@ playerImage.src = 'assets/player.png';
 var botonReplay = new Image();
 botonReplay.src = 'assets/botonReplay.png';
 
+var pelo = new Image();
+pelo.src = 'assets/superSaiyan.png';
+
+var playerImageSuperSaiyan = new Image();
+playerImageSuperSaiyan.src = 'assets/BocaSuperSaiyan.png';
+
 
 
 
@@ -75,6 +77,7 @@ botonReplay.src = 'assets/botonReplay.png';
 
 
 var score = 0; // Puntuacion del player
+var sumar = 20; // Puntuacion que se le va a sumar al player tras comer pizza
 
 function iniciarJuego() {
     document.getElementById("lobby-container").style.display = "none";
@@ -94,6 +97,9 @@ function iniciarJuego() {
 
 
     // **************************** PUNTUACION ********************************* //
+    var num = 70
+    var isSuperSaiyan = "None"
+
     var cuadroTexto = new Konva.Layer();
 
     var marcador = new Konva.Group({
@@ -105,16 +111,16 @@ function iniciarJuego() {
     // Crear el rectángulo
     var fondo = new Konva.Rect({
         width: 140,
-        height: 90,
+        height: 120,
         fill: 'rgba(255, 165, 0, 0.5)',
         cornerRadius: 10 // Añadir esquinas redondeadas
     });
 
-    var vidas = 1; // Número inicial de vidas del player
+    var vidas = 3; // Número inicial de vidas del player
 
     // Crear el texto
     var texto = new Konva.Text({
-        text: `Puntuacion: ${score} \n \n Vidas: ${vidas}`,
+        text: `Super Saiyan: \n ${isSuperSaiyan} \n \nPuntuacion: ${score} \n \n Vidas: ${vidas}`,
         fontSize: 18,
         fontFamily: 'Arial',
         fill: 'white',
@@ -185,7 +191,7 @@ function iniciarJuego() {
     gameLayer.add(player);
 
     // Variables de configuración
-    const velocidadMaxima = 400; // Puedes ajustar según tus necesidades
+    var velocidadMaxima = 400; // Puedes ajustar según tus necesidades
     const desaceleracion = 0.2;
     const framerate = 165; // Frames por segundo
     var velocidad = 500000; // Esta es la velocidad en la que aparecen los aliens por pantalla
@@ -282,6 +288,44 @@ function iniciarJuego() {
 
 
 
+    // *************************** SUPER SAIYAN ****************************** //
+    var layerpowerUp = new Konva.Layer();
+    stage.add(layerpowerUp); // Agrega la capa al escenario
+
+    function powerUp() {
+        var supeS = new Konva.Image({
+            image: pelo,
+            width: 50,
+            height: 50,
+            x: 0,
+            y: Math.random() * (stage.height() - 50)
+        });
+
+        layerpowerUp.add(supeS);
+
+        // Animación de movimiento de izquierda a derecha
+        var animation = new Konva.Animation(function (frame) {
+            var speed = 400; // Ajusta la velocidad según sea necesario
+            var newX = (supeS.x() + speed * frame.timeDiff / 1000) % stage.width();
+            supeS.x(newX);
+
+            // Verificar si la imagen ha salido del límite derecho del div
+            if (newX < 0) {
+                // Eliminar la imagen
+                supeS.destroy();
+                // Detener la animación para evitar errores
+                animation.stop();
+
+            }
+        }, layerpowerUp);
+
+        animation.start();
+    }
+
+    // *************************** SUPER SAIYAN ****************************** //
+
+
+
     // **************************** EVENTOS DE MOVIMIENTOS ******************** //
     // Función para manejar el evento de tecla presionada
     window.addEventListener('keydown', function (e) {
@@ -349,11 +393,8 @@ function iniciarJuego() {
         // Obtener las coordenadas
         const iz = 20;
         const ar = 20;
-        const de = stage.width() - 70;
-        const ab = stage.height() - 70;
-
-
-
+        const de = stage.width() - num;
+        const ab = stage.height() - num;
 
         // MOVIMIENTO IZQUIERDA
         if (izquierda && iz < player.x()) {
@@ -440,8 +481,9 @@ function iniciarJuego() {
         aliens.forEach(function (alien) {
             if (detectCollisionPlayer(alien)) {
                 vidas--;
-                texto.text(`Puntuacion: ${score} \n \n Vidas: ${vidas}`);
-                alien.destroy();
+                text: `Super Saiyan: \n ${isSuperSaiyan} \n \nPuntuacion: ${score} \n \n Vidas: ${vidas}`,
+
+                    alien.destroy();
                 alien.remove();
 
                 if (vidas == 0) {
@@ -452,16 +494,47 @@ function iniciarJuego() {
             }
         });
 
+        // COLISIONES PLAYER Y POWER UP
+        var powers = layerpowerUp.children; // Obtén la lista de hijos de los Aliens
+        powers.forEach(function (power) {
+            if (detectCollisionPlayer(power)) {
+                power.destroy();
+                power.remove();
 
+                cambiarVelocidadPlayer();
+            }
+        });
+
+        // COLISIONES ALIEN Y POWER UP
+        aliens.forEach(function (alien) {
+            powers.forEach(function (power) {
+                if (detectarColisionPizzaAlien(alien, power)) {
+                    power.remove();
+                    isSuperSaiyan = "Effects Negative";
+                    texto.text(`Super Saiyan: \n ${isSuperSaiyan} \n \nPuntuacion: ${score} \n \n Vidas: ${vidas}`);
+
+                    //Cambiar velocidad
+                    velocidadMaxima = 100;
+
+                    // Volver a la velocidad
+                    setTimeout(function () {
+                        // Restaurar la velocidad original
+                        velocidadMaxima = 400;
+
+                        isSuperSaiyan = "None";
+                        texto.text(`Super Saiyan: \n ${isSuperSaiyan} \n \nPuntuacion: ${score} \n \n Vidas: ${vidas}`);
+                    }, 10000);
+                }
+            });
+        });
 
         // COLISIONES PLAYER Y PIZZAS
         var Pizzas = layerPizza.children; // Obtén la lista de hijos de las Pizzas
         Pizzas.forEach(function (pizza) {
             if (detectCollisionPlayer(pizza)) {
                 pizza.remove();
-                var sumar = 20;
                 score += sumar;
-                texto.text(`Puntuacion: ${score} \n \n Vidas: ${vidas}`);
+                texto.text(`Super Saiyan: \n ${isSuperSaiyan} \n \nPuntuacion: ${score} \n \n Vidas: ${vidas}`);
                 if (score >= 100) {
                     velocidad = 400000;
                     cambiarVelocidad(velocidad);
@@ -495,7 +568,7 @@ function iniciarJuego() {
                 if (detectarColisionPizzaAlien(alien, pizza)) {
                     pizza.remove();
                     score -= 10;
-                    texto.text(`Puntuacion: ${score} \n \n Vidas: ${vidas}`);
+                    texto.text(`Super Saiyan: \n ${isSuperSaiyan} \n \nPuntuacion: ${score} \n \n Vidas: ${vidas}`);
                 }
             });
         });
@@ -506,7 +579,54 @@ function iniciarJuego() {
         stage.draw();
     }
 
+    // Funcion para el powerUp
+    function cambiarVelocidadPlayer() {
+        // Guardar las propiedades actuales del jugador
+        var playerX = player.x();
+        var playerY = player.y();
+        var playerWidth = player.width();
+        var playerHeight = player.height();
 
+        player.width(50);
+        player.height(50);
+
+        // Cambiar la imagen del jugador
+        player.image(playerImageSuperSaiyan);
+
+        velocidadMaxima = 800; //Cambiar velocidad
+        sumar = 50 // Añadimos tambien que gane mas puntos por comer pizza
+
+        var segundos = 10;
+
+        // Intervalo para actualizar el contador cada segundo
+        var intervalo = setInterval(function () {
+            segundos--;
+            isSuperSaiyan = segundos;
+            texto.text(`Super Saiyan: \n ${isSuperSaiyan} \n \nPuntuacion: ${score} \n \n Vidas: ${vidas}`);
+
+            // Verificar si el contador ha llegado a 0
+            if (segundos === 0) {
+                clearInterval(intervalo);
+                isSuperSaiyan = "none";
+                texto.text(`Super Saiyan: \n ${isSuperSaiyan} \n \nPuntuacion: ${score} \n \n Vidas: ${vidas}`);
+            }
+        }, 1000);
+        // Detener el intervalo
+
+
+        // Volver al tamaño original y a la imagen original después de 5 segundos
+        setTimeout(function () {
+
+            // Restaurar la imagen original del jugador
+            player.image(playerImage);
+
+            // Restaurar la velocidad y la puntuacion
+            velocidadMaxima = 400;
+            sumar = 20;
+            isSuperSaiyan = none;
+            texto.text(`Super Saiyan: \n ${isSuperSaiyan} \n \nPuntuacion: ${score} \n \n Vidas: ${vidas}`);
+        }, 10000);
+    }
 
     // Función de interpolación lineal (lerp)
     function lerp(valorInicial, valorFinal, alpha) {
@@ -531,6 +651,7 @@ function iniciarJuego() {
     // **************************** BUCLES  DEL JUEGO ************************** //
     // Entidades 
     setInterval(pizzas, 500000 / framerate);
+    setInterval(powerUp, 3000000 / framerate);
 
     var intervaloJuego;
     iniciarJuego();
