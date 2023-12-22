@@ -111,7 +111,7 @@
                     <h5 class="card-title">Reserva Crafter</h5>
                     <div class="card-text">
                         <p>
-                        Bienvenido a Rincón Reserva, la experiencia de reserva de mesas diseñada exclusivamente para el 
+                        Bienvenido a Reserva Crafter, la experiencia de reserva de mesas diseñada exclusivamente para el 
                         encantador Ristorante Luna Della Rosa. En este juego, te sumergirás en la atmósfera mágica de nuestra 
                         auténtica cocina italiana.
                         </p>
