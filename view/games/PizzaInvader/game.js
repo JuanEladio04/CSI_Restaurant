@@ -49,6 +49,63 @@ botonIniciar.on('click', function () {
     iniciarJuego();
 });
 
+// AQUI VAMOS A AÑADIR DIFICULTAD 
+// El juego va a tener 3 niveles 
+// Facil = 5 vidas
+// Medio = 3 vidas
+// Dificil = 1 vida
+// Imposible = 1 vida y la velocidad del alien se reduce a 1 por segundo
+var layerDif = new Konva.Layer();
+lobby.add(layerDif);
+
+const dificultad = new Konva.Group({
+    x: 50,
+    y: lobby.height() - 85,
+});
+layerDif.add(dificultad);
+
+// Agrega un rectángulo como fondo para el selector de dificultad
+const fondoMenu = new Konva.Rect({
+    width: 100,
+    height: 40,
+    fill: '#D1BC08',
+    cornerRadius: 5,
+});
+dificultad.add(fondoMenu);
+
+// Agrega un texto indicando la dificultad
+var textoDificultad = new Konva.Text({
+    text: 'Normal',
+    fontSize: 20,
+    fill: 'white',
+    width: 100,
+    align: 'center',
+    y:  fondoMenu.height() / 2 - 7
+});
+dificultad.add(textoDificultad);
+
+// Ejemplo: cambia la dificultad al hacer clic en el rectángulo
+dificultad.on('click', function() {
+    if(textoDificultad.text() == "Fácil"){
+        textoDificultad.text("Normal");
+        fondoMenu.fill('#D1BC08');
+        lobby.draw();
+    }else if(textoDificultad.text() == "Normal"){
+        textoDificultad.text("Difícil");
+        fondoMenu.fill('#CA5A02');
+        lobby.draw();
+    }else if(textoDificultad.text() == "Difícil"){
+        textoDificultad.text("Imposible"); 
+        fondoMenu.fill("#D10808");
+        lobby.draw();
+    }else if(textoDificultad.text() == "Imposible"){
+        textoDificultad.text("Fácil");
+        fondoMenu.fill("#0BEF0F");
+        lobby.draw();
+    }
+  });
+
+
 // Añadimos las imagenes
 var alienImage = new Image();
 alienImage.src = 'assets/alien.png';
@@ -68,6 +125,9 @@ pelo.src = 'assets/superSaiyan.png';
 
 var playerImageSuperSaiyan = new Image();
 playerImageSuperSaiyan.src = 'assets/BocaSuperSaiyan.png';
+
+var alienSuperSaiyan = new Image();
+alienSuperSaiyan.src = 'assets/alienSuperSaiyan.png';
 
 
 
@@ -481,9 +541,9 @@ function iniciarJuego() {
         aliens.forEach(function (alien) {
             if (detectCollisionPlayer(alien)) {
                 vidas--;
-                text: `Super Saiyan: \n ${isSuperSaiyan} \n \nPuntuacion: ${score} \n \n Vidas: ${vidas}`,
+                texto.text(`Super Saiyan: \n ${isSuperSaiyan} \n \nPuntuacion: ${score} \n \n Vidas: ${vidas}`);
 
-                    alien.destroy();
+                alien.destroy();
                 alien.remove();
 
                 if (vidas == 0) {
@@ -510,6 +570,7 @@ function iniciarJuego() {
             powers.forEach(function (power) {
                 if (detectarColisionPizzaAlien(alien, power)) {
                     power.remove();
+                    alien.image(alienSuperSaiyan);
                     isSuperSaiyan = "Effects Negative";
                     texto.text(`Super Saiyan: \n ${isSuperSaiyan} \n \nPuntuacion: ${score} \n \n Vidas: ${vidas}`);
 
@@ -520,7 +581,7 @@ function iniciarJuego() {
                     setTimeout(function () {
                         // Restaurar la velocidad original
                         velocidadMaxima = 400;
-
+                        alien.image(alienSuperSaiyan);
                         isSuperSaiyan = "None";
                         texto.text(`Super Saiyan: \n ${isSuperSaiyan} \n \nPuntuacion: ${score} \n \n Vidas: ${vidas}`);
                     }, 10000);
@@ -536,27 +597,27 @@ function iniciarJuego() {
                 score += sumar;
                 texto.text(`Super Saiyan: \n ${isSuperSaiyan} \n \nPuntuacion: ${score} \n \n Vidas: ${vidas}`);
                 if (score >= 100) {
-                    velocidad = 400000;
+                    velocidad = 200000;
                     cambiarVelocidad(velocidad);
                 }
                 if (score >= 1000) {
                     // Calcular la posición vertical del texto para centrarlo
                     var textVertical = (fondo.height() - texto.height()) / 2;
                     texto.y(textVertical);
-                    velocidad = 300000;
+                    velocidad = 100000;
                     cambiarVelocidad(velocidad);
 
                 }
                 if (score >= 5000) {
-                    velocidad = 200000;
+                    velocidad = 70000;
                     cambiarVelocidad(velocidad);
                 }
                 if (score >= 10000) {
-                    velocidad = 100000;
+                    velocidad = 50000;
                     cambiarVelocidad(velocidad);
                 }
                 if (score >= 15000) {
-                    velocidad = 50000;
+                    velocidad = 20000;
                     cambiarVelocidad(velocidad);
                 }
             }
@@ -623,7 +684,7 @@ function iniciarJuego() {
             // Restaurar la velocidad y la puntuacion
             velocidadMaxima = 400;
             sumar = 20;
-            isSuperSaiyan = none;
+            isSuperSaiyan = "none";
             texto.text(`Super Saiyan: \n ${isSuperSaiyan} \n \nPuntuacion: ${score} \n \n Vidas: ${vidas}`);
         }, 10000);
     }

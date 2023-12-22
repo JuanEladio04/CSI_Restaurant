@@ -871,6 +871,28 @@
                     Pizza_Pepperoni.png, Pizza_PulledPork.png, ArrozConLeche.png, Brownie.png, Cannoli.png, Flan.png.
                     Helado.png, PannaCotta.png, PlatoDeFruta.png, TartaDeQueso.png, Tiramisu.png</td>
             </tr>
+            <tr>
+                <td>Pizza Invader</td>
+                <td>Imagenes generadas por IA</td>
+                <td>
+                    <li>Generame un asset de un alien para un juego en 2d</li>
+                    <li>Generame un fondo para un juego que va sobre pizzas y alien</li>
+                    <li>Generame un fondo de una concina de un restaurante italiano con un alien</li>
+                    <li>Generame un fondo para un juego que va sobre pizzas y alien y que aparezca el texto game over</li>
+                    <li>Generame un asset de un trozo de pizza para un juego en 2d</li>
+                    <li>Generame una boca animada para un juego en 2d</li>
+                    <li>Generame un asset de una peluca para un juego en 2d</li>
+                </td>
+                <td>alien.png, fondo.png, fondojuego.png, game-over.png, pizza.png, pizza2.png, player.png, superSaiyan.png</td>
+            </tr>
+            <tr>
+                <td>Pizza Invader</td>
+                <td>Imagenes creadas por el grupo</td>
+                <td>
+                    José María
+                </td>
+                <td>alienSuperSaiyan.png, BocaSuperSaiyan.png, botonExit.png, botonReplay.png, botonStart.png, lobby.png</td>
+            </tr>
         </table>
     </article>
     <?php include("../includes/footer.php"); ?>
