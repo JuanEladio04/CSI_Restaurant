@@ -126,7 +126,7 @@
             </div>
 
             <div class="card col-lg-2 col-10 my-5">
-                <img class="card-img-top pt-2" src="../img/games/spaceInvaders.png" alt="Card image cap">
+                <img class="card-img-top pt-2" src="../img/games/reservacrafter.png" alt="Card image cap">
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">Reserva Crafter</h5>
                     <div class="card-text">

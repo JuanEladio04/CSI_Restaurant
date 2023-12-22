@@ -774,6 +774,30 @@
                 <td>Todos los assets del juego pizzacrafter.</td>
             </tr>
             <tr>
+                <td>ReservaCraft</td>
+                <td>Imagenes generadas por IA</td>
+                <td>
+                    <ul>
+                        <li>Hazme una imagen al estilo caricaturesco de una persona en un puesto de reservas</li>
+                        <li>Hazla con estilo más caricaturesco</li>    
+                    </ul>
+                </td>
+                <td>Mesa_4_personas.png</td>
+
+            </tr>
+            <tr>
+                <td>ReservaCraft</td>
+                <td>
+                    Imagenes sacadas de internet
+                </td>  
+                <td>
+                    Mesa de 4 personas
+                </td>  
+                <td>
+                    https://www.pinterest.es/pin/487514728386627786/
+                </td>        
+            </tr>        
+            <tr>
                 <td>Toda la página</td>
                 <td>Imágenes con licencia Creative Commons</td>
                 <td>
