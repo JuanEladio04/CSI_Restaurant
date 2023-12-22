@@ -87,7 +87,7 @@
                     </div>
                     <div class="mt-auto">
                         <a href=".\games\PizzaInvader\pizzaInvader.php" class="btn btn-danger rounded-2">¡Jugar ahora!</a>
-                    </div>
+                    </div> 
                 </div>
             </div>
 

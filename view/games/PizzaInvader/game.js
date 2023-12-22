@@ -77,6 +77,7 @@ playerImageSuperSaiyan.src = 'assets/BocaSuperSaiyan.png';
 
 
 var score = 0; // Puntuacion del player
+var sumar = 20; // Puntuacion que se le va a sumar al player tras comer pizza
 
 function iniciarJuego() {
     document.getElementById("lobby-container").style.display = "none";
@@ -500,7 +501,7 @@ function iniciarJuego() {
                 power.destroy();
                 power.remove();
 
-                cambiarTamañoVelocidad();
+                cambiarVelocidadPlayer();
             }
         });
 
@@ -527,7 +528,6 @@ function iniciarJuego() {
         Pizzas.forEach(function (pizza) {
             if (detectCollisionPlayer(pizza)) {
                 pizza.remove();
-                var sumar = 20;
                 score += sumar;
                 texto.text(`Puntuacion: ${score} \n \n Vidas: ${vidas}`);
                 if (score >= 100) {
@@ -575,35 +575,31 @@ function iniciarJuego() {
     }
 
     // Funcion para el powerUp
-    function cambiarTamañoVelocidad() {
+    function cambiarVelocidadPlayer() {
         // Guardar las propiedades actuales del jugador
         var playerX = player.x();
         var playerY = player.y();
         var playerWidth = player.width();
         var playerHeight = player.height();
 
-        // Cambiar el tamaño del jugador
-        player.width(100);
-        player.height(100);
-        num = 120
+        player.width(50);
+        player.height(50);
 
         // Cambiar la imagen del jugador
         player.image(playerImageSuperSaiyan);
 
-        //Cambiar velocidad
-        velocidadMaxima = 800;
+        velocidadMaxima = 800;         //Cambiar velocidad
+        sumar = 50 // Añadimos tambien que gane mas puntos por comer pizza
 
         // Volver al tamaño original y a la imagen original después de 5 segundos
         setTimeout(function () {
-            // Restaurar el tamaño original del jugador
-            player.width(playerWidth);
-            player.height(playerHeight);
 
             // Restaurar la imagen original del jugador
             player.image(playerImage);
 
-            // Restaurar la velocidad original
+            // Restaurar la velocidad y la puntuacion
             velocidadMaxima = 400;
+            sumar = 20;
         }, 10000);
     }
 
