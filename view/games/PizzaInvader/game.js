@@ -49,61 +49,6 @@ botonIniciar.on('click', function () {
     iniciarJuego();
 });
 
-// AQUI VAMOS A AÑADIR DIFICULTAD 
-// El juego va a tener 3 niveles 
-// Facil = 5 vidas
-// Medio = 3 vidas
-// Dificil = 1 vida
-// Imposible = 1 vida y la velocidad del alien se reduce a 1 por segundo
-var layerDif = new Konva.Layer();
-lobby.add(layerDif);
-
-const dificultad = new Konva.Group({
-    x: 50,
-    y: lobby.height() - 85,
-});
-layerDif.add(dificultad);
-
-// Agrega un rectángulo como fondo para el selector de dificultad
-const fondoMenu = new Konva.Rect({
-    width: 100,
-    height: 40,
-    fill: '#D1BC08',
-    cornerRadius: 5,
-});
-dificultad.add(fondoMenu);
-
-// Agrega un texto indicando la dificultad
-var textoDificultad = new Konva.Text({
-    text: 'Normal',
-    fontSize: 20,
-    fill: 'white',
-    width: 100,
-    align: 'center',
-    y:  fondoMenu.height() / 2 - 7
-});
-dificultad.add(textoDificultad);
-
-// Ejemplo: cambia la dificultad al hacer clic en el rectángulo
-dificultad.on('click', function() {
-    if(textoDificultad.text() == "Fácil"){
-        textoDificultad.text("Normal");
-        fondoMenu.fill('#D1BC08');
-        lobby.draw();
-    }else if(textoDificultad.text() == "Normal"){
-        textoDificultad.text("Difícil");
-        fondoMenu.fill('#CA5A02');
-        lobby.draw();
-    }else if(textoDificultad.text() == "Difícil"){
-        textoDificultad.text("Imposible"); 
-        fondoMenu.fill("#D10808");
-        lobby.draw();
-    }else if(textoDificultad.text() == "Imposible"){
-        textoDificultad.text("Fácil");
-        fondoMenu.fill("#0BEF0F");
-        lobby.draw();
-    }
-  });
 
 
 // Añadimos las imagenes
