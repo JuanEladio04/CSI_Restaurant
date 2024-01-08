@@ -43,7 +43,7 @@
                                             pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required>
                                     </div>
                                     <div class="col-sm-6 margenInferior">
-                                        <label for="LastN" class="form-label">Apellido</label>
+                                        <label for="LastN" class="form-label">Apellidos</label>
                                         <input type="text" class="roundedInput form-control" name="LastN"
                                             pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required>
                                     </div>
@@ -57,11 +57,12 @@
                                 </div>
                                 <!-- Password inputs with margin -->
                                 <div class="col margenInferior">
-                                    <label for="Password1" class="form-label"> Contraseña (debe contener
-                                        minúsculas,mayúsculas, un carácter no
-                                        alfanumérico y contener 8 caracteres)</label>
-                                    <input type="password" class="roundedInput form-control" name="Password1"
-                                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$" required>
+                                    <label for="Password1" class="form-label m-0"> Contraseña: 
+                                        <ul class="listaError" id="errores">
+                                        </ul>
+                                    </label>
+                                    <input type="password" class="roundedInput form-control" name="Password1" id="clave"
+                                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$" required oninput="verificarClave()">
                                 </div>
                                 <div class="col margenInferior">
                                     <label for="Passwordw" class="form-label">Confirmar contraseña</label>
@@ -120,8 +121,10 @@
         </div>
     </main>
 
+    <script src="../js/verificarContrasena.js"></script>
     <!-- Include the footer -->
     <?php include("../includes/footer.php"); ?>
+    
 
 </body>
 

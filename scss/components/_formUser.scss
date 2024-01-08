@@ -26,7 +26,7 @@
     .btn {
         font-family: $font-family-sans-serif !important;
         height: 5vh;
-        
+
 
         @include media-breakpoint-up(sm) {
             padding: 0% 7vh;
@@ -43,3 +43,13 @@
         margin-top: 1.5vh;
     }
 }
+
+    // Contraseña
+
+    .listaError {
+        display: none;
+        margin: 0;
+    }
+
+    // Verificar
+
