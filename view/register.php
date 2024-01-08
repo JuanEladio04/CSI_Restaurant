@@ -22,7 +22,7 @@
 
             <!--CF2: Esto no sería un article, es un form-->
             <article class="col d-flex justify-content-center align-items-center">
-                
+
                 <!--CF2: ¿Container dentro de otro container?-->
                 <div class="container formUser">
                     <div class="card bg-danger text-light roundedBorder">
@@ -32,23 +32,15 @@
                         </div>
                         <!-- Card body containing the registration form -->
                         <div class="card-body">
-                            ¿Para qué sirve este div sin nada?
-                            <div class="">
-                                <!-- Registration form -->
-                                <form action="/action_page.php">
-                                    <!-- Name and Last Name inputs in a row -->
-                                    <div class="row">
-                                        <!--CF2: ¿Por qué usas sm-6 si tus compañeros usan md y lg-->
-                                        <div class="col-sm-6 margenInferior">
-                                            <label for="FirstN" class="form-label">Nombre</label>
-                                            <input type="text" class="roundedInput form-control" name="FirstN"
-                                                pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required>
-                                        </div>
-                                        <div class="col-sm-6 margenInferior">
-                                            <label for="LastN" class="form-label">Apellido</label>
-                                            <input type="text" class="roundedInput form-control" name="LastN"
-                                                pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required>
-                                        </div>
+                            <!-- Registration form -->
+                            <form action="/action_page.php">
+                                <!-- Name and Last Name inputs in a row -->
+                                <div class="row">
+                                    <!--CF2: ¿Por qué usas sm-6 si tus compañeros usan md y lg-->
+                                    <div class="col-sm-6 margenInferior">
+                                        <label for="FirstN" class="form-label">Nombre</label>
+                                        <input type="text" class="roundedInput form-control" name="FirstN"
+                                            pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required>
                                     </div>
                                     <div class="col-sm-6 margenInferior">
                                         <label for="LastN" class="form-label">Apellido</label>
@@ -56,6 +48,7 @@
                                             pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required>
                                     </div>
                                 </div>
+
                                 <!-- Email input with margin -->
                                 <div class="margenInferior">
                                     <label for="Email" class="form-label">Email</label>
@@ -64,20 +57,50 @@
                                 </div>
                                 <!-- Password inputs with margin -->
                                 <div class="col margenInferior">
-                                    <label for="Password1" class="form-label">Contraseña</label>
-                                    <input type="password" class="roundedInput form-control" name="Password1" required>
+                                    <label for="Password1" class="form-label"> Contraseña (debe contener
+                                        minúsculas,mayúsculas, un carácter no
+                                        alfanumérico y contener 8 caracteres)</label>
+                                    <input type="password" class="roundedInput form-control" name="Password1"
+                                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$" required>
                                 </div>
                                 <div class="col margenInferior">
                                     <label for="Passwordw" class="form-label">Confirmar contraseña</label>
                                     <input type="password" class="roundedInput form-control" name="Password2" required>
                                 </div>
+                                <div class="col margenInferior">
+                                    <label for="date" class="form-label">Fecha de nacimiento</label>
+                                    <input type="date" class="roundedInput form-control" name="date" required>
+                                </div>
+                                <div class="row">
+                                    <!--CF2: ¿Por qué usas sm-6 si tus compañeros usan md y lg-->
+                                    <div class="col-sm-6 margenInferior">
+                                        <label for="country" class="form-label">País</label>
+                                        <input type="text" class="roundedInput form-control" name="country"
+                                            pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required>
+                                    </div>
+                                    <div class="col-sm-6 margenInferior">
+                                        <label for="postalCode" class="form-label">Código postal</label>
+                                        <input type="text" class="roundedInput form-control" name="postalCode"
+                                            pattern="^[0-9]+$" required>
+                                    </div>
+                                </div>
+                                <div class="col margenInferior">
+                                    <label for="telephone" class="form-label">Teléfono</label>
+                                    <input type="text" class="roundedInput form-control" name="telephone"
+                                        pattern="^[0-9]+$" required>
+                                </div>
                                 <!-- Checkboxes for age and terms acceptance -->
-                                <input type="checkbox" name="mayor" value="mayorEdad" class="rounded-checkbox" required>
-                                <label for="mayor">Soy mayor de 18</label>
-                                <br>
-                                <input type="checkbox" name="acepto" value="Aceptar términos" class="rounded-checkbox"
-                                    required> <label for="acepto">Acepto los
-                                    términos</label>
+                                <div class="d-block">
+                                    <input type="checkbox" name="mayor" value="mayorEdad" class="rounded-checkbox"
+                                        required>
+                                    <label for="mayor">Soy mayor de 18</label>
+                                </div>
+                                <div class="d-block">
+                                    <input type="checkbox" name="acepto" value="Aceptar términos"
+                                        class="rounded-checkbox" required>
+                                    <label for="acepto">Acepto los términos</label>
+                                </div>
+
 
                                 <!-- Create account button -->
                                 <div class="d-grid margenSuperior">
@@ -93,7 +116,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+        </div>
         </div>
     </main>
 

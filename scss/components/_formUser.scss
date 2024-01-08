@@ -10,7 +10,13 @@
 
     label {
         font-size: 19px;
+        white-space: pre-line;
     }
+
+    .checkboxText {
+        display: block;
+    }
+
 
     a {
         font-family: $headings-font-family;
