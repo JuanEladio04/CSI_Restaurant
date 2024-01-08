@@ -49,16 +49,16 @@
 
                             <div class="username">Nombre de Usuario</div>
 
-                            <div class="stars">
-                                <i class="fa-regular fa-2x fa-star text-danger"></i>
+                            <div id="crearCalificacion" class="stars">
+                                <i class="fa-regular fa-2x fa-star text-danger estrella" id="1"></i>
 
-                                <i class="fa-regular fa-2x fa-star text-danger"></i>
+                                <i class="fa-regular fa-2x fa-star text-danger estrella" id="2"></i>
 
-                                <i class="fa-regular fa-2x fa-star text-danger"></i>
+                                <i class="fa-regular fa-2x fa-star text-danger estrella" id="3"></i>
 
-                                <i class="fa-regular fa-2x fa-star text-danger"></i>
+                                <i class="fa-regular fa-2x fa-star text-danger estrella" id="4"></i>
 
-                                <i class="fa-regular fa-2x fa-star text-danger"></i>
+                                <i class="fa-regular fa-2x fa-star text-danger estrella" id="5"></i>
                             </div>
                         </div>
                         <div class="crearComentario">
@@ -172,13 +172,13 @@
                             <div class="stars">
                                 <i class="fa-solid fa-2x fa-star mx-auto text-danger"></i>
 
-                                <i class="fa-regular fa-2x fa-star text-danger"></i>
+                                <i class="fa-regular fa-2x fa-star mx-auto text-danger"></i>
 
-                                <i class="fa-regular fa-2x fa-star text-danger"></i>
+                                <i class="fa-regular fa-2x fa-star mx-auto text-danger"></i>
 
-                                <i class="fa-regular fa-2x fa-star text-danger"></i>
+                                <i class="fa-regular fa-2x fa-star mx-auto text-danger"></i>
 
-                                <i class="fa-regular fa-2x fa-star text-danger"></i>
+                                <i class="fa-regular fa-2x fa-star mx-auto text-danger"></i>
                             </div>
                         </div>
                         <div class="comentario">
@@ -202,6 +202,7 @@
         </div>
     </section>
 
+    <script src="../js/estrellas.js"></script>
     <?php include("../includes/footer.php"); ?>
 
 </body>
