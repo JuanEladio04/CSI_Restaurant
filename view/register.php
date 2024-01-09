@@ -6,6 +6,11 @@
 
 <head>
     <?php include("../includes/head-tag-contents.php"); ?>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css"
+        crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 </head>
 
 <body class="bg-dark" id="background-<?php echo $CURRENT_PAGE; ?>">
@@ -57,12 +62,13 @@
                                 </div>
                                 <!-- Password inputs with margin -->
                                 <div class="col margenInferior">
-                                    <label for="Password1" class="form-label m-0"> Contraseña: 
+                                    <label for="Password1" class="form-label m-0"> Contraseña:
                                         <ul class="listaError" id="errores">
                                         </ul>
                                     </label>
                                     <input type="password" class="roundedInput form-control" name="Password1" id="clave"
-                                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$" required oninput="verificarClave()">
+                                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$" required
+                                        oninput="verificarClave()">
                                 </div>
                                 <div class="col margenInferior">
                                     <label for="Passwordw" class="form-label">Confirmar contraseña</label>
@@ -76,8 +82,8 @@
                                     <!--CF2: ¿Por qué usas sm-6 si tus compañeros usan md y lg-->
                                     <div class="col-sm-6 margenInferior">
                                         <label for="country" class="form-label">País</label>
-                                        <input type="text" class="roundedInput form-control" name="country"
-                                            pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required>
+                                        <select type="text" class="roundedInput form-control country" id="country" name="country"
+                                            pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required></select>
                                     </div>
                                     <div class="col-sm-6 margenInferior">
                                         <label for="postalCode" class="form-label">Código postal</label>
@@ -85,9 +91,9 @@
                                             pattern="^[0-9]+$" required>
                                     </div>
                                 </div>
-                                <div class="col margenInferior">
-                                    <label for="telephone" class="form-label">Teléfono</label>
-                                    <input type="text" class="roundedInput form-control" name="telephone"
+                                <div class="col-12 margenInferior phoneCountries">
+                                    <label for="phone" class="form-label">Teléfono</label>
+                                    <input type="text" class="roundedInput form-control d-block" name="phone" id="phone"
                                         pattern="^[0-9]+$" required>
                                 </div>
                                 <!-- Checkboxes for age and terms acceptance -->
@@ -121,11 +127,14 @@
         </div>
     </main>
 
-    <script src="../js/verificarContrasena.js"></script>
+
     <!-- Include the footer -->
     <?php include("../includes/footer.php"); ?>
-    
+
 
 </body>
+
+<script src="../js/countries.js"></script>
+<script src="../js/verificarContrasena.js"></script>
 
 </html>

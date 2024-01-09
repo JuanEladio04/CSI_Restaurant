@@ -4,7 +4,6 @@ function verificarClave(){
     let mayusculas;
     let caracterNoAlfanumerico;
     let minimo;
-    console.clear();    
     if( /[a-z]/.test(clave.value)){
         minusculas = true;
         console.log(minusculas);
