@@ -37,4 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     //Append Value To Phone Field
     $("#phone").prop('value', '+1 ');
+    document.querySelector(".iti--allow-dropdown").classList.add("col-12");
+    document.querySelector(".iti--allow-dropdown").classList.add("mb-3");
 });

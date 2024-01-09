@@ -12,6 +12,12 @@
         font-size: 19px;
         white-space: pre-line;
     }
+    .oculto {
+        display: none;
+    }
+    .visible{
+        display:block !important;
+    }
 
     .checkboxText {
         display: block;
