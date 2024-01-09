@@ -77,7 +77,7 @@
                                 <p class="oculto" id="passIncorrecta">Las contraseñas no coinciden</p>
                                 <div class="col margenInferior">
                                     <label for="date" class="form-label">Fecha de nacimiento</label>
-                                    <input type="date" class="roundedInput form-control" name="date" min="1900-01-01" max="<?php print date("Y-m-d");?>" required>
+                                    <input type="date" class="roundedInput form-control" id="fecha" name="date" min="1900-01-01" max="<?php print date("Y-m-d");?>" required>
                                 </div>
                                 <div class="row">
                                     <!--CF2: ¿Por qué usas sm-6 si tus compañeros usan md y lg-->
@@ -97,11 +97,7 @@
                                     <input type="text" class="roundedInput form-control d-block" name="phone" id="phone" required>
                                 </div>
                                 <!-- Checkboxes for age and terms acceptance -->
-                                <div class="d-block">
-                                    <input type="checkbox" name="mayor" value="mayorEdad" class="rounded-checkbox"
-                                        required>
-                                    <label for="mayor">Soy mayor de 18</label>
-                                </div>
+                              
                                 <div class="d-block">
                                     <input type="checkbox" name="acepto" value="Aceptar términos"
                                         class="rounded-checkbox" required>
@@ -112,7 +108,7 @@
                                 <!-- Create account button -->
                                 <div class="d-grid margenSuperior">
                                     <input type="submit" value="Crear cuenta" name="crear" id="crear"
-                                        class="btn btn-primary btn-block roundedInput textoNoWrap">
+                                        class="btn btn-primary btn-block roundedInput textoNoWrap" disabled>
                                 </div>
                             </form>
                         </div>

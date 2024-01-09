@@ -1,4 +1,6 @@
 let contrasenaIncorrecta = null;
+let contrasenaCorrecta = 0;
+let fechaCorrecta = 0;
 
 function verificarClave() {
     let clave = document.getElementById("clave");
@@ -6,6 +8,7 @@ function verificarClave() {
     let mayusculas;
     let caracterNoAlfanumerico;
     let minimo;
+
 
     if (/[a-z]/.test(clave.value)) {
         minusculas = true;
@@ -139,12 +142,20 @@ document.addEventListener("input", function (e) {
             $boton = document.getElementById("crear");
             document.getElementById("claveRep").style.border = "2px solid red";
 
-            $boton.disabled = true;
+            contrasenaCorrecta = 0;
         } else if (e.target.value == document.getElementById("clave").value) {
+            contrasenaCorrecta = 1;
             document.getElementById("passIncorrecta").classList = "oculto";
             document.getElementById("claveRep").style.border = "2px solid green";
             $boton = document.getElementById("crear");
+        }
+        if (fechaCorrecta == 1 && contrasenaCorrecta == 1) {
+            console.log("hola");
+            $boton = document.getElementById("crear");
             $boton.disabled = false;
+        } else {
+            $boton = document.getElementById("crear");
+            $boton.disabled = true; 
         }
     }
 
@@ -156,14 +167,45 @@ document.addEventListener("input", function (e) {
             e.target.value = e.target.value.slice(0, -1);
         }
     }
-})
-document.addEventListener("click", function (e) {
-    if (e.target.id == "crear") {
-        if (document.getElementById("passIncorrecta").classList == "visible") {
-            e.preventDefault();
-
+    if (e.target.id == "fecha") {
+        let fecha = new Date(document.getElementById("fecha").value);
+        let fechaActual = Date.now();
+        console.log(fecha);
+        if (fechaActual - fecha.getTime() > 567648000000) {
+            fechaCorrecta = 1;
+        } else {
+            fechaCorrecta = 0;
         }
     }
+    if (fechaCorrecta == 1 && contrasenaCorrecta == 1) {
+        $boton = document.getElementById("crear");
+        $boton.disabled = false;
+    } else {
+        $boton = document.getElementById("crear");
+        $boton.disabled = true;
+    }
+
+})
+document.addEventListener("click", function (e) {
+    if (e.target.id == "fecha") {
+        let fecha = new Date(document.getElementById("fecha").value);
+        let fechaActual = Date.now();
+        console.log(fecha);
+        if (fechaActual - fecha.getTime() > 567648000000) {
+            fechaCorrecta = 1;
+        } else {
+            fechaCorrecta = 0;
+        }
+    }
+    if (fechaCorrecta == 1 && contrasenaCorrecta == 1) {
+        $boton = document.getElementById("crear");
+        $boton.disabled = false;
+    } else {
+        $boton = document.getElementById("crear");
+        $boton.disabled = true;
+    }
+
+
 })
 
 
