@@ -11,7 +11,7 @@
       <!--Presentation-->
       <!--CF: No tiene sentido poner un container-fluid dentro de otro container-fluid-->
       <header class="container-fluid presentacion col-12 text-center my-5">
- 
+
         <h1 class="d-none">
           Ristorante luna della rossa
         </h1>
@@ -27,7 +27,7 @@
                 class="fa-brands fa-facebook fa-2xl"></i></i></a>
           </div>
 
-          <!--CF: ¿Dos break points? Tenéis tres layouts en la guía de estilos?--> 
+          <!--CF: ¿Dos break points? Tenéis tres layouts en la guía de estilos?-->
           <nav class="container-fluid col-12 d-lg-none d-sm-block">
             <div class="row lobster">
               <a href="view/card.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Carta</a>
@@ -45,12 +45,13 @@
           Manú carousel
         </h2>
         <div id="carousel" class="mb-5">
-        <div class="prevLeftSecond card bg-danger roundedBorder text-center text-dark">
+          <div class="prevLeftSecond card bg-danger roundedBorder text-center text-dark">
             <img src="img\stockImages\index\gamesImage.png" class="card-img-top roundedBorder mt-auto" alt="reseravs">
             <div class="card-body container-fluid bg-success roundedBorder">
               <h3 class="card-title lobster container-fluid ">Minijuegos</h3>
               <p class="card-text roboto text-justify">¿Necesitas entretenerte?</p>
-              <p class="card-text roboto text-justify">No te pierdas nuestra colección de minijuegos, ideales para pasar el tiempo mientras esperas o saboreas tu comida.</p>
+              <p class="card-text roboto text-justify">No te pierdas nuestra colección de minijuegos, ideales para pasar
+                el tiempo mientras esperas o saboreas tu comida.</p>
               <a href="view\games.php" class="btn btn-danger rounded-2">¡Jugar ahora!</a>
             </div>
           </div>
@@ -171,13 +172,13 @@
                       <i class="fa-regular fa-star text-danger"></i>
                     </div>
                   </div>
-                    <div class="row scrola justificar">
-                      <p class="col-12 userCommentText">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis molestiae voluptas qui fugiat
-                        omnis placeat, cumque rerum amet, quo tenetur dolores esse aliquam reiciendis consequatur.
-                        Saepe, consequuntur? Reprehenderit, molestias nobis.
-                      </p>
-                    </div>
+                  <div class="row scrola justificar">
+                    <p class="col-12 userCommentText">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis molestiae voluptas qui fugiat
+                      omnis placeat, cumque rerum amet, quo tenetur dolores esse aliquam reiciendis consequatur.
+                      Saepe, consequuntur? Reprehenderit, molestias nobis.
+                    </p>
+                  </div>
                 </div>
               </article>
 

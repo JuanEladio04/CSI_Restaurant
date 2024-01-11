@@ -1,4 +1,20 @@
-<!--Algunas partes del código han sido escritas mediante IA.-->
+<?php
+require "../vendor/autoload.php"; // Incluye la biblioteca
+use Abraham\TwitterOAuth\TwitterOAuth;
+
+session_start();
+if (isset($_POST["xIdentify"])) {
+    define('CONSUMER_KEY', "lEpsRim68CZIFbFTWdJhxO5eV");
+    define('CONSUMER_SECRET', "z1EDNXshWUS780EmUX0aLkxBxomMhdBAHv3xuc5AAmHOYSJNZ8");
+    define('OAUTH_CALLBACK', 'http://localhost:10000/view/register.php');
+    $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET);
+    $request_token = $connection->oauth('oauth/request_token', array('oauth_callback' => OAUTH_CALLBACK));
+    $_SESSION['oauth_token'] = $request_token['oauth_token'];
+    $_SESSION['oauth_token_secret'] = $request_token['oauth_token_secret'];
+    $url = $connection->url('oauth/authorize', array('oauth_token' => $request_token['oauth_token']));
+    header('location:' . $url);
+}
+?>
 <?php include("../includes/a_config.php"); ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -39,7 +55,7 @@
                         </div>
                         <div class="card-body">
                             <!-- Form -->
-                            <form action="/action_page.php" method="post">
+                            <form action="/action_page.php" method="POST">
                                 <!-- Email input -->
                                 <div class="margenInferior">
                                     <label for="Email" class="form-label">Correo electrónico</label>
@@ -62,16 +78,21 @@
                                     registrado</a>
                                 <div id="fb-root"></div>
 
-                                <div class="fb-login-button" data-width="400" data-size="" data-button-type=""
-                                    data-layout="" data-auto-logout-link="false" data-use-continue-as="false"
-                                    onlogin="checkLoginState()"></div>
-                                    <button class="btn-primary" onclick="authenticateWithTwitter()">Identificarse con X</button>
+
+
                             </div>
+
                             <div class="text-center">
                                 <input type="submit" class="btn btn-primary roundedInput" value="Identificarse">
                             </div>
                             </form>
 
+                            <div class="fb-login-button" data-width="400" data-size="" data-button-type=""
+                                data-layout="" data-auto-logout-link="false" data-use-continue-as="false"
+                                onlogin="checkLoginState()"></div>
+                            <form action="" method="POST">
+                                <input type="submit" class="btn btn-dark" value="Identificarse con X" name="xIdentify">
+                            </form>
                         </div>
                     </div>
                 </div>
