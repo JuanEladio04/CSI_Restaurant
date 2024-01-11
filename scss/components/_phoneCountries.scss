@@ -1,14 +1,14 @@
 .phoneCountries {
   .iti__selected-flag {
-    top: 6px;
-    height: 33px !important;
+    top: 0px;
+    height: 100% !important;
     border-radius: 4px;
     transition: .3s;
   }
 
   input#phone {
     padding-left: 47px !important;
-    top: 6px;
+    top: 0px;
   }
 
   .intl-tel-input .flag-dropdown .selected-flag {
@@ -43,7 +43,13 @@
     z-index: 999 !important;
     box-shadow: 0 0 16px 0 rgb(0 0 0 / 8%) !important;
     border: 1px solid #ececec !important;
-    width: 270px !important;
+    width: 500px !important;
     color: black;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .iti__country-list {
+    width: 150px !important;
   }
 }
