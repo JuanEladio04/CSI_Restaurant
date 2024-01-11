@@ -1,5 +1,6 @@
 {
     "require": {
-        "abraham/twitteroauth": "^6.2"
+        "abraham/twitteroauth": "^6.2",
+        "google/auth": "^1.34"
     }
 }
