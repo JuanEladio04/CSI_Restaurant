@@ -155,7 +155,7 @@ document.addEventListener("input", function (e) {
             $boton.disabled = false;
         } else {
             $boton = document.getElementById("crear");
-            $boton.disabled = true; 
+            $boton.disabled = true;
         }
     }
 
@@ -204,9 +204,20 @@ document.addEventListener("click", function (e) {
         $boton = document.getElementById("crear");
         $boton.disabled = true;
     }
+    if (e.target.id == "captcha") {
+        SECRET_KEY = "f510d229-08df-411d-9220-552f29bc7c64"
+        VERIFY_URL = "https://api.hcaptcha.com/siteverify"
+        let token = request.POST_DATA['h-captcha-response']
 
+        let data = {
+            'secret': SECRET_KEY,
+            'response': token
+        }
+        let response = http.post(url = VERIFY_URL, data = data)
+        let response_json = JSON.parse(response.content)
+        console.log(response_json);
+        let success = response_json['success']
+    }
 
-})
-
-
+});
 

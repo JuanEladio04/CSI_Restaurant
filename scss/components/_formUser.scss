@@ -12,11 +12,13 @@
         font-size: 19px;
         white-space: pre-line;
     }
+
     .oculto {
         display: none;
     }
-    .visible{
-        display:block !important;
+
+    .visible {
+        display: block !important;
     }
 
     .checkboxText {
@@ -48,14 +50,23 @@
     .margenSuperior {
         margin-top: 1.5vh;
     }
-}
+
 
     // Contraseña
-
     .listaError {
         display: none;
-        margin: 0;
+        margin: 0, 0, 1%, 0%;
     }
 
-    // Verificar
+    .catpcha {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
+    .h-captcha {
+        text-align: center;
+        width: 100% !important;
+    }
+
+}

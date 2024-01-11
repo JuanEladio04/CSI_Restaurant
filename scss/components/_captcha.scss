@@ -1,0 +1,151 @@
+$fallo: #FC5A5A;
+$acierto: #2AC176;
+
+.captcha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .fondoCaptcha {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        background-color: #292929 !important;
+        border-radius: 10px;
+
+        .checkboxCaptcha {
+            width: 15%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin-right: 20px;
+
+            .checkbox {
+                transform: scale(3);
+            }
+        }
+
+        .textoCaptcha {
+            width: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .text {
+                margin: 0;
+                font-size: 0.7em;
+            }
+        }
+
+        .imgCaptcha {
+            width: 15%;
+            margin-right: 5%;
+
+            .img{
+                width: 25px;
+            }
+        }
+
+        
+    }
+
+    @include media-breakpoint-up(sm) {
+        .fondoCaptcha {
+            width: 55%;
+        }
+
+        .imgCaptcha {
+            margin-right: 10%;
+
+            .img{
+                width: 50px !important;
+            }
+        }
+
+        .textoCaptcha{
+            .text {
+                font-size: 1.4em !important;
+            }
+        }
+    }
+
+    .content-input {
+        margin-left: 15px;
+        width: 100%;
+    }
+
+    .content-input input,
+    .content-select select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+
+    .content-input input {
+        visibility: hidden;
+        position: absolute;
+        right: 0;
+    }
+
+    .content-input {
+        position: relative;
+        /* Damos un padding de 60px para posicionar 
+            el elemento <i> en este espacio*/
+        display: block;
+    }
+
+    /* Estas reglas se aplicarán a todos las elementos i 
+    después de cualquier input*/
+    .content-input input+i {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        background: #f0f0f0;
+        border: 2px solid rgba(0, 0, 0, 0.2);
+        position: absolute;
+        left: 0;
+        top: 30%;
+    }
+
+    /* Estas reglas se aplicarán a todos los i despues 
+    de un input de tipo checkbox*/
+    .content-input input[type=checkbox]+i {
+        width: 52px;
+        height: 30px;
+        border-radius: 15px;
+        background-color: $fallo;
+    }
+
+    /*
+Creamos el círculo que aparece encima de los checkbox
+con la etqieta before. Importante aunque no haya contenido
+debemos poner definir este valor.
+*/
+    .content-input input[type=checkbox]+i:before {
+        content: '';
+        /* No hay contenido */
+        width: 26px;
+        height: 26px;
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 1;
+        left: 0px;
+        top: 0px;
+        -webkit-box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .content-input input[type=checkbox]:checked+i:before {
+        left: 22px;
+        -webkit-box-shadow: -3px 0 3px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 3px 0 -3px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .content-input input[type=checkbox]:checked+i {
+        background: $acierto;
+    }
+}

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css"
         crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 </head>
 
 <body class="bg-dark" id="background-<?php echo $CURRENT_PAGE; ?>">
@@ -62,46 +63,67 @@
                                 </div>
                                 <!-- Password inputs with margin -->
                                 <div class="col margenInferior">
-                                    <label for="Password1" class="form-label m-0"> Contraseña:
-                                        <ul class="listaError" id="errores">
-                                        </ul>
-                                    </label>
+                                    <label for="Password1" class="form-label"> Contraseña:</label>
+                                    <ul class="listaError" id="errores"></ul>
                                     <input type="password" class="roundedInput form-control" name="Password1" id="clave"
                                         pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$" required
                                         oninput="verificarClave()">
                                 </div>
                                 <div class="col margenInferior">
                                     <label for="Passwordw" class="form-label">Confirmar contraseña</label>
-                                    <input type="password" class="roundedInput form-control" id="claveRep" name="Password2" required>
+                                    <input type="password" class="roundedInput form-control" id="claveRep"
+                                        name="Password2" required>
                                 </div>
                                 <p class="oculto" id="passIncorrecta">Las contraseñas no coinciden</p>
-                                <div class="col margenInferior">
-                                    <label for="date" class="form-label">Fecha de nacimiento</label>
-                                    <input type="date" class="roundedInput form-control" id="fecha" name="date" min="1900-01-01" max="<?php print date("Y-m-d");?>" required>
+                                <div class="row">
+                                    <div class="col-sm-6 margenInferior">
+                                        <label for="date" class="form-label">Fecha de nacimiento</label>
+                                        <input type="date" class="roundedInput form-control" id="fecha" name="date"
+                                            min="1900-01-01" max="<?php print date("Y-m-d"); ?>" required>
+                                    </div>
+                                    <div class="col-sm-6 margenInferior phoneCountries">
+                                        <label for="phone" class="form-label">Teléfono</label>
+                                        <input type="tel" class="roundedInput form-control d-block" name="phone"
+                                            id="phone" required>
+                                    </div>
                                 </div>
                                 <div class="row">
                                     <!--CF2: ¿Por qué usas sm-6 si tus compañeros usan md y lg-->
                                     <div class="col-sm-6 margenInferior">
                                         <label for="country" class="form-label">País</label>
-                                        <select type="text" class="roundedInput form-control country" id="country" name="country"
-                                            pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required></select>
+                                        <select type="text" class="roundedInput form-control country" id="country"
+                                            name="country" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required></select>
                                     </div>
                                     <div class="col-sm-6 margenInferior">
                                         <label for="postalCode" class="form-label">Código postal</label>
-                                        <input id="codPostal" type="text" class="roundedInput form-control" name="postalCode"
-                                            pattern="^[0-9]+$" required>
+                                        <input id="codPostal" type="text" class="roundedInput form-control"
+                                            name="postalCode" pattern="^[0-9]+$" required>
                                     </div>
                                 </div>
-                                <div class="col-12 margenInferior phoneCountries">
-                                    <label for="phone" class="form-label">Teléfono</label>
-                                    <input type="text" class="roundedInput form-control d-block" name="phone" id="phone" required>
-                                </div>
+
                                 <!-- Checkboxes for age and terms acceptance -->
-                              
-                                <div class="d-block">
+
+                                <div class="d-block mb-3 mt-3">
                                     <input type="checkbox" name="acepto" value="Aceptar términos"
                                         class="rounded-checkbox" required>
                                     <label for="acepto">Acepto los términos</label>
+                                </div>
+
+                                <!-- Captcha -->
+                                <div class="captcha mb-3">
+                                    <div class="fondoCaptcha">
+                                        <div class="checkboxCaptcha">
+                                            <label class="content-input">
+                                                <input type="checkbox" name="captcha" class="checkbox">
+                                                <i></i>
+                                            </label>
+                                        </div>
+                                        <div class="textoCaptcha">
+                                            <p class="text">No eres un robot</p>
+                                        </div>
+                                        <div class="imgCaptcha"><img src="../img/logos/SmallLogo.png" class="img"
+                                                ></div>
+                                    </div>
                                 </div>
 
 
