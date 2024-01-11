@@ -66,7 +66,7 @@
                         mientras te conviertes en el defensor de la cocina italiana!</p>
                     </div>
                     <div class="mt-auto">
-                        <a href=".\games\PizzaInvader\pizzaInvader.php" class="btn btn-danger rounded-2">¡Jugar ahora!</a>
+                        <a href="games\PizzaInvader\pizzaInvader.php" class="btn btn-danger rounded-2">¡Jugar ahora!</a>
                     </div> 
                 </div>
             </div>
@@ -100,7 +100,7 @@
                         </p>
                     </div>
                     <div class="mt-auto">
-                        <a href="../view/games/pizzacrafter/pizzacrafter.php" class="btn btn-danger rounded-2">¡Jugar ahora!</a>
+                        <a href="games/pizzacrafter/pizzacrafter.php" class="btn btn-danger rounded-2">¡Jugar ahora!</a>
                     </div>
                 </div>
             </div>
@@ -135,7 +135,7 @@
                         </p>
                     </div>
                     <div class="mt-auto">
-                        <a href="..\view\games\ReservaCrafter\reservacrafter.html" class="btn btn-danger rounded-2">¡Jugar ahora!</a>
+                        <a href="games/ReservaCrafter/reservacrafter.html" class="btn btn-danger rounded-2">¡Jugar ahora!</a>
                     </div>
                 </div>
             </div>
