@@ -8,7 +8,7 @@ session_start();
 if (isset($_GET['oauth_verifier'])) {
     define('CONSUMER_KEY', "lEpsRim68CZIFbFTWdJhxO5eV");
     define('CONSUMER_SECRET', "z1EDNXshWUS780EmUX0aLkxBxomMhdBAHv3xuc5AAmHOYSJNZ8");
-    define('OAUTH_CALLBACK', 'http://127.0.0.1:8080/realms/master/broker/twitter/endpoint');
+    define('OAUTH_CALLBACK', 'http://localhost:10000/view/register.php');
     define('ACCESS_TOKEN', 'OfVTTFrZJWEO0dH38ckLcXvRsy6L1de13di2fwU');
     define('ACCES_TOKEN_SECRET', 'OfVTTFrZJWEO0dH38ckLcXvRsy6L1de13di2fwU');
     $request_token = [];

@@ -6,7 +6,7 @@ session_start();
 if (isset($_POST["xIdentify"])) {
     define('CONSUMER_KEY', "lEpsRim68CZIFbFTWdJhxO5eV");
     define('CONSUMER_SECRET', "z1EDNXshWUS780EmUX0aLkxBxomMhdBAHv3xuc5AAmHOYSJNZ8");
-    define('OAUTH_CALLBACK', 'http://127.0.0.1:8080/realms/master/broker/twitter/endpoint');
+    define('OAUTH_CALLBACK', 'http://localhost:10000/view/register.php');
     $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET);
     $request_token = $connection->oauth('oauth/request_token', array('oauth_callback' => OAUTH_CALLBACK));
     $_SESSION['oauth_token'] = $request_token['oauth_token'];
