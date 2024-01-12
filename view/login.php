@@ -1,6 +1,7 @@
 <?php
 require "../vendor/autoload.php"; // Incluye la biblioteca
 require "../controller/ConnectionManager.php"; // Incluye"
+require "../controller/usuarioController.php"; // Incluye
 use Abraham\TwitterOAuth\TwitterOAuth;
 
 session_start();
@@ -17,13 +18,12 @@ if (isset($_POST["xIdentify"])) {
 }
 if (isset($_POST['identificarse'])) {
     $connex = ConnectionManager::getConnectionInstance();
-    $resultado = $connex->query('SELECT * FROM usuarios WHERE email = "' . $_POST['Email'] . '"');
-    if ($resultado->rowCount() == 0) {
+    $resultado = usuarioController::findByEmail($_POST['Email']);
+    if ($resultado == null) {
         $error = "El correo electrónico o la contraseña es incorrecta";
-    } else {
-        $usuario = $resultado->fetchObject();
-        if ($usuario->contrasena == $_POST["password"]) {
-            $_SESSION['usuario'] = $usuario;
+    } else { 
+        if ($resultado->contrasena == $_POST["password"]) {
+            $_SESSION['usuario'] = $resultado;
             header('location: ../index.php');
         } else {
             $error = "El correo electrónico o la contraseña es incorrecta";
