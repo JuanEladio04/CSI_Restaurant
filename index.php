@@ -88,6 +88,9 @@ require_once('controller/sessionController.php');
             </div>
           </div>
 
+          <?php
+          if (!isset($_SESSION["usuario"])) {
+          ?>
           <div class="nextRightSecond card bg-danger roundedBorder text-center text-dark">
             <img src="img\stockImages\index\loginImg.png" class="card-img-top roundedBorder" alt="reseravs">
             <div class="card-body container-fluid bg-success roundedBorder">
@@ -96,6 +99,20 @@ require_once('controller/sessionController.php');
               <a href="view/login.php" class="btn btn-danger rounded-2">Iniciar sesión</a>
             </div>
           </div>
+          <?php 
+          } else {
+          ?>
+          <div class="nextRightSecond card bg-danger roundedBorder text-center text-dark">
+            <img src="img\stockImages\index\loginImg.png" class="card-img-top roundedBorder" alt="reseravs">
+            <div class="card-body container-fluid bg-success roundedBorder">
+              <h3 class="card-title lobster ">Cuenta de usuario</h3>
+              <p class="card-text roboto">Modifica tu cuenta e incluye una foto</p>
+              <a href="view/userGestion.php" class="btn btn-danger rounded-2">Mi cuenta</a>
+            </div>
+          </div>
+          <?php 
+          }
+          ?>
 
         </div>
 
