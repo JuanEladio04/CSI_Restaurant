@@ -1,7 +1,6 @@
 <?php
 require "../vendor/autoload.php"; // Incluye la biblioteca
-require "../controller/ConnectionManager.php"; // Incluye"
-require "../controller/usuarioController.php"; // Incluye
+require_once "controller/sessionController.php";
 use Abraham\TwitterOAuth\TwitterOAuth;
 
 session_start();
