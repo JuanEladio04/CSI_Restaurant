@@ -11,4 +11,11 @@ spl_autoload_register(function ($class_name) {
 });
 
 session_start();
+
+
+function sessionRedirect(){
+    if(!isset($_SESSION['usuario'])){
+        header('Location: /view/register.php');
+    }
+}
 ?>
