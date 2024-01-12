@@ -1,5 +1,6 @@
 <?php
 require "../vendor/autoload.php"; // Incluye la biblioteca
+require_once "../controller/sessionController.php";
 use Abraham\TwitterOAuth\TwitterOAuth;
 
 session_start();
@@ -13,6 +14,21 @@ if (isset($_POST["xIdentify"])) {
     $_SESSION['oauth_token_secret'] = $request_token['oauth_token_secret'];
     $url = $connection->url('oauth/authorize', array('oauth_token' => $request_token['oauth_token']));
     header('location:' . $url);
+}
+if (isset($_POST['identificarse'])) {
+    $connex = ConnectionManager::getConnectionInstance();
+    $resultado = usuarioController::findByEmail($_POST['Email']);
+    if ($resultado == null) {
+        $error = "El correo electrónico o la contraseña es incorrecta";
+    } else { 
+        if ($resultado->contrasena == $_POST["password"]) {
+            $_SESSION['usuario'] = $resultado;
+            header('location: ../index.php');
+        } else {
+            $error = "El correo electrónico o la contraseña es incorrecta";
+
+        }
+    }
 }
 ?>
 <?php include("../includes/a_config.php"); ?>
@@ -55,7 +71,7 @@ if (isset($_POST["xIdentify"])) {
                         </div>
                         <div class="card-body">
                             <!-- Form -->
-                            <form action="/action_page.php" method="POST">
+                            <form action="" method="POST">
                                 <!-- Email input -->
                                 <div class="margenInferior">
                                     <label for="Email" class="form-label">Correo electrónico</label>
@@ -65,7 +81,7 @@ if (isset($_POST["xIdentify"])) {
                                 <!-- Password input -->
                                 <div class="col margenInferior">
                                     <label for="Password1" class="form-label">Contraseña</label>
-                                    <input type="password" class="roundedInput form-control" required>
+                                    <input type="password" name="password" class="roundedInput form-control" required>
                                 </div>
                         </div>
 
@@ -83,7 +99,13 @@ if (isset($_POST["xIdentify"])) {
                             </div>
 
                             <div class="text-center">
-                                <input type="submit" class="btn btn-primary roundedInput" value="Identificarse">
+                                <?php
+                                if (isset($error)) {
+                                    print $error;
+                                }
+                                ?>
+                                <input type="submit" class="btn btn-primary roundedInput" name="identificarse"
+                                    value="Identificarse">
                             </div>
                             </form>
 
@@ -93,6 +115,7 @@ if (isset($_POST["xIdentify"])) {
                             <form action="" method="POST">
                                 <input type="submit" class="btn btn-dark" value="Identificarse con X" name="xIdentify">
                             </form>
+
                         </div>
                     </div>
                 </div>

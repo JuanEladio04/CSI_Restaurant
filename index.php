@@ -1,3 +1,6 @@
+<?php
+require_once('controller/sessionController.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -85,6 +88,9 @@
             </div>
           </div>
 
+          <?php
+          if (!isset($_SESSION["usuario"])) {
+          ?>
           <div class="nextRightSecond card bg-danger roundedBorder text-center text-dark">
             <img src="img\stockImages\index\loginImg.png" class="card-img-top roundedBorder" alt="reseravs">
             <div class="card-body container-fluid bg-success roundedBorder">
@@ -93,6 +99,20 @@
               <a href="view/login.php" class="btn btn-danger rounded-2">Iniciar sesión</a>
             </div>
           </div>
+          <?php 
+          } else {
+          ?>
+          <div class="nextRightSecond card bg-danger roundedBorder text-center text-dark">
+            <img src="img\stockImages\index\loginImg.png" class="card-img-top roundedBorder" alt="reseravs">
+            <div class="card-body container-fluid bg-success roundedBorder">
+              <h3 class="card-title lobster ">Cuenta de usuario</h3>
+              <p class="card-text roboto">Modifica tu cuenta e incluye una foto</p>
+              <a href="view/userGestion.php" class="btn btn-danger rounded-2">Mi cuenta</a>
+            </div>
+          </div>
+          <?php 
+          }
+          ?>
 
         </div>
 
@@ -158,80 +178,41 @@
             data-bs-ride="carousel">
             <div class="carousel-inner row">
               <!--Carousel items-->
-              <article class="carousel-item active align-items-center justify-content-around">
+              <?php 
+                  $comentaries = comentarioController::getIndexComentaries();
+
+                  for($i = 0; $i < count($comentaries); $i++) {
+              ?>
+              <article class="carousel-item <?php if($i == 0) echo 'active'; ?> align-items-center justify-content-around">
                 <div class="container-fluid w-75">
                   <div class="row align-items-center text-center mb-3">
                     <img class="col-lg-1 col-sm-12 w-sm-75" alt="Imagen de usuario"
-                      src="img\stockImages\defaultUserImage.png" />
-                    <div class="col-lg-1 col-sm-12">Username</div>
+                      src="<?php echo $comentaries[$i]->imagen_usuario; ?>" />
+                    <div class="col-lg-2 col-sm-12"><?php echo $comentaries[$i]->nombre_usuario . " " . $comentaries[$i]->apellidos_usuario; ?></div>
                     <div class="container-fluid col-lg-8 col-sm-12 text-center text-lg-start">
-                      <i class="fa-solid fa-star mx-auto text-danger"></i>
-                      <i class="fa-solid fa-star mx-auto text-danger"></i>
-                      <i class="fa-solid fa-star mx-auto text-danger"></i>
-                      <i class="fa-regular fa-star text-danger"></i>
-                      <i class="fa-regular fa-star text-danger"></i>
+                      <?php
+                        for($j = 0; $j < 5; $j++){
+                          if($j < $comentaries[$i]->valoracion){
+                            echo '<i class="fa-solid fa-star mx-auto text-danger"></i>';
+                          }
+                          else{
+                            echo '<i class="fa-regular fa-star text-danger"></i>';
+                          }
+                        }
+                      ?>
                     </div>
                   </div>
                   <div class="row scrola justificar">
                     <p class="col-12 userCommentText">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis molestiae voluptas qui fugiat
-                      omnis placeat, cumque rerum amet, quo tenetur dolores esse aliquam reiciendis consequatur.
-                      Saepe, consequuntur? Reprehenderit, molestias nobis.
+                      <?php echo $comentaries[$i]->comentario; ?>
                     </p>
                   </div>
                 </div>
               </article>
 
-              <article class="carousel-item align-items-center justify-content-around">
-                <div class="container-fluid w-75">
-                  <div class="row align-items-center text-center mb-3">
-                    <img class="col-lg-1 col-sm-12 w-sm-75" alt="Imagen de usuario"
-                      src="img\stockImages\defaultUserImage.png" />
-                    <div class="col-lg-1 col-sm-12">Username</div>
-                    <div class="container-fluid col-lg-9 col-sm-12 text-center text-lg-start">
-                      <i class="fa-solid fa-star mx-auto text-danger"></i>
-                      <i class="fa-solid fa-star mx-auto text-danger"></i>
-                      <i class="fa-regular fa-star text-danger"></i>
-                      <i class="fa-regular fa-star text-danger"></i>
-                      <i class="fa-regular fa-star text-danger"></i>
-                    </div>
-                    <div>
-                      <div class="row justificar scrola">
-                        <p class="col-12 userCommentText">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ad consequuntur possimus?
-                        </p>
-                      </div>
-                    </div>
-              </article>
-
-              <article class="carousel-item align-items-center justify-content-around">
-                <div class="container-fluid w-75">
-                  <div class="row align-items-center text-center mb-3">
-                    <img class="col-lg-1 col-sm-12 w-sm-75" alt="Imagen de usuario"
-                      src="img\stockImages\defaultUserImage.png" />
-                    <div class="col-lg-1 col-sm-12">Username</div>
-                    <div class="container-fluid col-lg-9 col-sm-12 text-center text-lg-start">
-                      <i class="fa-solid fa-star mx-auto text-danger"></i>
-                      <i class="fa-solid fa-star mx-auto text-danger"></i>
-                      <i class="fa-solid fa-star mx-auto text-danger"></i>
-                      <i class="fa-regular fa-star text-danger"></i>
-                      <i class="fa-regular fa-star text-danger"></i>
-                    </div>
-                  </div>
-                  <div class="row justificar scrola">
-                    <p class="col-12 userCommentText">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit dolor repellat dolores nostrum
-                      vitae eius. Reiciendis aliquid ea odio ipsum quia voluptatibus rerum quos, consequatur est
-                      accusamus ab libero, repellat accusantium quae qui magni at quas pariatur nisi veritatis vitae,
-                      quisquam aliquam labore perspiciatis? Obcaecati beatae quaerat, nobis nesciunt vitae adipisci
-                      maiores optio repudiandae. At corrupti neque dolorum repellendus accusamus ipsa modi, quod ea
-                      est enim sunt inventore dolorem sequi ipsam architecto, laboriosam fuga voluptates, blanditiis
-                      earum. Veritatis numquam quidem nobis illo odio excepturi adipisci, pariatur inventore repellat
-                      totam culpa vero tempore itaque accusantium fugit minus nihil tempora! Amet, unde!
-                    </p>
-                  </div>
-                </div>
-              </article>
+              <?php 
+                  }
+              ?>
 
             </div>
             <div>
