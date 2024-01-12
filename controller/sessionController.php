@@ -1,7 +1,7 @@
 <?php
 spl_autoload_register(function ($class_name) {
-    $model_path = '../model/' . $class_name . '.php';
-    $controller_path = '../controller/' . $class_name . '.php';
+    $model_path = $_SERVER['DOCUMENT_ROOT'] . '/model/' . $class_name . '.php';
+    $controller_path = $_SERVER['DOCUMENT_ROOT'] . '/controller/' . $class_name . '.php';
 
     if (file_exists($model_path)) {
         require_once $model_path;
@@ -11,4 +11,10 @@ spl_autoload_register(function ($class_name) {
 });
 
 session_start();
+
+function sessionRedirect(){
+    if(!isset($_SESSION['usuario'])){
+        header('Location: /view/register.php');
+    }
+}
 ?>

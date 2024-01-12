@@ -1,6 +1,7 @@
 <?php
 require "../vendor/autoload.php"; // Incluye la biblioteca
-require "../controller/sessionController.php";
+
+require_once "../controller/sessionController.php";
 use Abraham\TwitterOAuth\TwitterOAuth;
 if (isset($_SESSION["usuario"])) {
     header('location: userGestion.php');
