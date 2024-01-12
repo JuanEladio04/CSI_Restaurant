@@ -1,9 +1,10 @@
 <?php
 require "../vendor/autoload.php"; // Incluye la biblioteca
-require_once "controller/sessionController.php";
+require "../controller/sessionController.php";
 use Abraham\TwitterOAuth\TwitterOAuth;
-
-session_start();
+if (isset($_SESSION["usuario"])) {
+    header('location: userGestion.php');
+}
 if (isset($_POST["xIdentify"])) {
     define('CONSUMER_KEY', "lEpsRim68CZIFbFTWdJhxO5eV");
     define('CONSUMER_SECRET', "z1EDNXshWUS780EmUX0aLkxBxomMhdBAHv3xuc5AAmHOYSJNZ8");

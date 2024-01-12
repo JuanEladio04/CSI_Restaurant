@@ -1,5 +1,43 @@
-<!--Algunas partes del código han sido escritas mediante IA.-->
-<?php include("../includes/a_config.php"); ?>
+<?php
+require "../controller/sessionController.php";
+
+if (!isset($_SESSION["usuario"])) {
+    header('location: ../index.php');
+}
+include("../includes/a_config.php");
+if (isset($_POST["cambiarNombre"])) {
+    $resultadoConsulta = usuarioController::cambiarNombre($_SESSION["usuario"]->id, $_POST["userName"], $_POST["userSubname"]);
+    $_SESSION["usuario"]->nombre = $_POST["userName"];
+    $_SESSION["usuario"]->apellidos = $_POST["userSubname"];
+    if ($resultadoConsulta != null) {
+        print "Ha habido un fallo en la consulta, para más información, informa al administrador y dale el siguiente error" . $resultadoConsulta;
+    }
+
+}
+if (isset($_POST["cambiarCorreo"])) {
+    $resultadoConsulta = usuarioController::cambiarEmail($_SESSION["usuario"]->id, $_POST["userEmail"]);
+    $_SESSION["usuario"]->email = $_POST["userEmail"];
+    if ($resultadoConsulta != null) {
+        print "Ha habido un fallo en la consulta, para más información, informa al administrador y dale el siguiente error" . $resultadoConsulta;
+    }
+}
+if (isset($_POST["cambiarPass"])) {
+    if ($_POST["conAct"] == $_SESSION["usuario"]->contrasena) {
+        $resultadoConsulta = usuarioController::cambiarPass($_SESSION["usuario"]->id, $_POST["Password1"]);
+        $_SESSION["usuario"]->contrasena = $_POST["Password1"];
+        if ($resultadoConsulta != null) {
+            print "Ha habido un fallo en la consulta, para más información, informa al administrador y dale el siguiente error" . $resultadoConsulta;
+        }
+    } else {
+        $error = "La contaseña actual no coincide";
+    }
+
+
+}
+if (isset($_POST["cambiarNombre"])) {
+    
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -27,13 +65,14 @@
 
                                 <div class="">
                                     <!-- Form -->
-                                    <form action="/action_page.php">
+                                    <form action="" method="POST">
                                         <div class="d-flex justify-content-center">
                                             <img class="" width="200vh" alt="Imagen de usuario"
                                                 src="../img/stockImages/defaultUserImage.png" />
                                         </div>
                                         <div class="container d-flex justify-content-center margenSuperior">
-                                            <button class="btn text-light bg-danger roundedInput textoNoWrap" type="submit">
+                                            <button class="btn text-light bg-danger roundedInput textoNoWrap"
+                                                type="submit">
                                                 Cambiar foto de perfil
                                             </button>
                                         </div>
@@ -51,15 +90,23 @@
 
                                 <div class="">
                                     <!-- Form -->
-                                    <form action="/action_page.php">
+                                    <form action="" method="POST">
                                         <div class="">
-                                            <input type="text" class="roundedInput form-control" id="userName"
-                                                name="userName">
+                                            <input type="text" class="roundedInput form-control mb-2" id="userName"
+                                                name="userName" value="<?php
+                                                print $_SESSION["usuario"]->nombre;
+                                                ?>">
+                                        </div>
+                                        <div class="">
+                                            <input type="text" class="roundedInput form-control" id="userSubname"
+                                                name="userSubname" value="<?php
+                                                print $_SESSION["usuario"]->apellidos;
+                                                ?>">
                                         </div>
                                         <div class="container d-flex justify-content-center margenSuperior">
-                                            <button class="btn text-light bg-danger roundedInput textoNoWrap" type="submit">
-                                                Cambiar nombre de usuario
-                                            </button>
+                                            <input class="btn text-light bg-danger roundedInput textoNoWrap"
+                                                type="submit" name="cambiarNombre" value="Cambiar nombre de usuario">
+
                                         </div>
                                     </form>
                                 </div>
@@ -75,15 +122,17 @@
 
                                 <div class="">
                                     <!-- Form -->
-                                    <form action="/action_page.php">
+                                    <form action="" method="POST">
                                         <div class="">
                                             <input type="text" class="roundedInput form-control" id="userEmail"
-                                                name="userEmail">
+                                                name="userEmail" value="<?php
+                                                print $_SESSION['usuario']->email;
+                                                ?>" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                                                required>
                                         </div>
                                         <div class="container d-flex justify-content-center margenSuperior">
-                                            <button class="btn text-light bg-danger roundedInput textoNoWrap" type="submit">
-                                                Cambiar correo electrónico
-                                            </button>
+                                            <input class="btn text-light bg-danger roundedInput textoNoWrap"
+                                                type="submit" name="cambiarCorreo" value="Cambiar correo electrónico">
                                         </div>
                                     </form>
                                 </div>
@@ -99,28 +148,35 @@
 
                                 <div class="margenInferior">
                                     <!-- Form -->
-                                    <form action="/action_page.php">
+                                    <form action="" method="POST">
                                         <div class="margenInferior">
                                             <p class="lobster">Contraseña actual:</p>
                                             <input type="password" class="roundedInput form-control" id="conAct"
-                                                name="conAct">
+                                                name="conAct" required>
                                         </div>
                                         <div class="margenInferior">
-                                            <p class="lobster">Contraseña nueva:</p>
-                                            <input type="password" class="roundedInput form-control" id="conNue"
-                                                name="conNue">
+                                            <label for="Password1" class="form-label"> Contraseña nueva:</label>
+                                            <ul class="listaError" id="errores"></ul>
+                                            <input type="password" class="roundedInput form-control" name="Password1"
+                                                id="clave" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$"
+                                                required oninput="verificarClave()">
                                         </div>
                                         <div class="margenInferior">
-                                            <p class="lobster">Repetir contraseña:</p>
-                                            <input type="password" class="roundedInput form-control" id="conNueRep"
-                                                name="conNueRep">
+                                            <label for="Passwordw" class="form-label">Repetir contraseña</label>
+                                            <input type="password" class="roundedInput form-control" id="claveRep"
+                                                name="Password2" required>
                                         </div>
                                         <div class="container d-flex justify-content-center margenSuperior">
-                                            <button class="btn text-light bg-danger roundedInput" type="submit">
-                                                Cambiar contraseña
-                                            </button>
+                                            <input class="btn text-light bg-danger roundedInput" type="submit"
+                                                id="cambiarPass" value="Cambiar contraseña" name="cambiarPass" disabled>
+
                                         </div>
                                     </form>
+                                    <?php
+                                    if (isset($error)) {
+                                        print $error;
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
@@ -131,9 +187,14 @@
             </div>
         </section>
     </div>
+    
 
     <?php include("../includes/footer.php"); ?>
 
 </body>
+
+
+<script src="../js/cambiarPass.js"></script>
+
 
 </html>

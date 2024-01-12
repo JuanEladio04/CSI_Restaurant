@@ -3,9 +3,9 @@
 class ConnectionManager extends PDO {
 
     private static $conn;
-    private $dsn = "mysql:host=localhost:10001;dbname=csi;charset=utf8mb4";
-    private $username = "root";
-    private $password = "1234";
+    private $dsn = "mysql:host=localhost:3306;dbname=csi;charset=utf8mb4";
+    private $username = "dwes";
+    private $password = "abc123.";
 
     public function __construct() {
         parent::__construct($this->dsn, $this->username, $this->password);

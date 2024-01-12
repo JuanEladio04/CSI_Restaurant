@@ -1,7 +1,6 @@
 <?php
 class Usuario
 {
-
     protected $id;
     protected $nombre;
     protected $apellidos;
