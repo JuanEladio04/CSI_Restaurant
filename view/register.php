@@ -153,6 +153,7 @@ include("../includes/a_config.php");
                                         </div>
                                         <div class="imgCaptcha"><img src="../img/logos/SmallLogo.png" class="img"></div>
                                     </div>
+                                    <div class="overlay" id="overlay"></div>
                                     <div id="contenedorCaptcha" class="oculto row">
                                         <div class="col-12 tituloCaptcha">
                                             <img src="../img/logos/SmallLogo.png" width="100px">
@@ -164,7 +165,7 @@ include("../includes/a_config.php");
                                         </div>
                                         <div class="col-12 form-captcha">
                                             <input type="text" name="resolverCaptcha" id="resolverCaptcha" class="tamaño">
-                                            <button id="cerrarCaptcha" class="tamaño" onclick="cerrar()">CALCULAR</button>
+                                            <button id="cerrarCaptcha" class="tamaño" onclick="cerrar(), verificarCaptcha()">CALCULAR</button>
                                         </div>
                                     </div>
                                 </div>

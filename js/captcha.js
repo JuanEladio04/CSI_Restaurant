@@ -16,17 +16,25 @@ function captcha() {
 
 
     if (!icon.classList.contains('checkbox-checked') && displayValor == "none") {
-        const contenedorCaptcha = document.getElementById('contenedorCaptcha');
+        let contenedorCaptcha = document.getElementById('contenedorCaptcha');
         contenedorCaptcha.style.display = 'block';
+
+        let overlay = document.getElementById('overlay');
+        overlay.style.display = 'block';
+
         regenerarCaptcha();
+        document.getElementById("resolverCaptcha").value = "";
     }
 }
 
 function cerrar() {
     event.preventDefault();
 
-    const contenedorCaptcha = document.getElementById('contenedorCaptcha');
+    let contenedorCaptcha = document.getElementById('contenedorCaptcha');
     contenedorCaptcha.style.display = 'none';
+    let overlay = document.getElementById('overlay');
+    overlay.style.display = 'none';
+
     var checkbox = document.querySelector('.content-input input[type="checkbox"]');
     var icon = document.querySelector('.content-input input[type="checkbox"]+i');
     var text = document.getElementById('resolverCaptcha');
