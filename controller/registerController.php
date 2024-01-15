@@ -7,7 +7,7 @@ class registerController{
             $conex = ConnectionManager::getConnectionInstance();
             $conCifrada = password_hash($con, PASSWORD_BCRYPT);
             $rs = $conex->query("insert into usuarios (nombre, apellidos, email, contrasena, fecha_nacimiento, codigo_postal, pais, numero_telefono, imagen) values
-            ('$nom','$apel','$email','$conCifrada','$fech',$codPost,'$pais','$telef','')");
+            ('$nom','$apel','$email','$conCifrada','$fech',$codPost,'$pais','$telef','null')");
             
             if($rs){
                 return true;
@@ -19,6 +19,7 @@ class registerController{
         }
     }
 }
+
 
 
 ?>
