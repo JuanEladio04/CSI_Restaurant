@@ -1,4 +1,5 @@
-<?php include("../includes/a_config.php"); ?>
+<?php 
+include("../includes/a_config.php"); ?>
 <?php
 require_once "../controller/sessionController.php";
 sessionRedirect();
@@ -27,7 +28,7 @@ if(isset($_POST['enviarReserva'])){
         $reserva = reservaController::insertReserva($id, $nombre, $apell, $telef, $comen, $fecha, $hora, $espec);
         
         if($reserva != null){
-            header("Location: login.php");
+            header("Location: ../index.php?reservado='true'");
         }
     } else {
         echo "Algún dato no se ha pasado correctamente"; 
@@ -59,17 +60,19 @@ if(isset($_POST['enviarReserva'])){
                 <div class="row p-3 text-center mx-auto justify-content-around col-10">
                     <div class="row col-lg-6 col-sm-12 rFormContent">
                         <label class="col-12" for="">Nombre:</label>
-                        <input class="col-12" type="text" name="ittName" required pattern="^[A-Za-z]+$">
+                        <input class="col-12 text-start" type="text" name="ittName" required pattern="^[A-Za-z]+$" value="<?php if(isset($_SESSION['usuario'])){echo $_SESSION['usuario']->nombre;} ?>">
+                  
                     </div>
 
                     <div class="row col-lg-6 col-sm-12 rFormContent">
                         <label class="col-12" for="">Apellidos:</label>
-                        <input class="col-12" type="text" name="ittSecondName"  required pattern="^[A-Za-z]+$">
+                        <input class="col-12" type="text" name="ittSecondName"  required pattern="^[A-Za-z]+$" value="<?php if(isset($_SESSION['usuario'])){echo $_SESSION['usuario']->apellidos;} ?>">
                     </div>
 
                     <div class="row col-lg-6 col-sm-12 rFormContent">
                         <label class="col-12" for="">Número de teléfono:</label>
-                        <input class="col-12" type="tel" name="ittelPhoneNumber"  required pattern="^\\+?[0-9]{1,4}?[-.\\s]?\\(?[0-9]{1,3}?\\)?[-.\\s]?[0-9]{1,4}[-.\\s]?[0-9]{1,9}$">
+                        <input class="col-12" type="tel" name="ittelPhoneNumber"  required pattern="^\\+?[0-9]{1,4}?[-.\\s]?\\(?[0-9]{1,3}?\\)?[-.\\s]?[0-9]{1,4}[-.\\s]?[0-9]{1,9}$"  value="<?php if(isset($_SESSION['usuario'])){echo $_SESSION['usuario']->numero_telefono;} ?>">
+                    
                     </div>
 
                     <div class="row col-lg-6 col-sm-12 rFormContent">
@@ -81,17 +84,17 @@ if(isset($_POST['enviarReserva'])){
 
                     <div class="row col-lg-6 col-sm-12 rFormContent">
                         <label class="col-12" for="">Fecha:</label>
-                        <input class="col-12" type="date" name="itdDate">
+                        <input class="col-12" type="date" name="itdDate" required>
                     </div>
 
                     <div class="row col-lg-6 col-sm-12 rFormContent">
                         <label class="col-12" for="">Hora:</label>
-                        <input class="col-12" type="time" name="ittimeHour">
+                        <input class="col-12" type="time" name="ittimeHour" required>
                     </div>
 
                     <div class="row col-12 rFormContent">
                         <label for="">Especificaciones:</label>
-                        <textarea class="form-control z-depth-1" id="textarea" rows="4" name="taSpecifications"></textarea>
+                        <textarea class="form-control z-depth-1" id="textarea" rows="4" name="taSpecifications" required></textarea>
                     </div>
                 </div>
                 <button type="submit" value="" name="enviarReserva" class="btn btn-danger p-3">
