@@ -1,5 +1,26 @@
 <?php
 require_once('controller/sessionController.php');
+require_once('vendor/autoload.php');
+
+include("includes/a_config.php");
+
+
+if (isset($_GET['code'])) {
+
+  $token = $google_client->fetchAccessTokenWithAuthCode($_GET['code']);
+  $google_client->setAccessToken($token['access_token']);
+  $google_oauth = new Google_Service_Oauth2($google_client);
+  $google_account_info = $google_oauth->userinfo->get();
+  $email = $google_account_info->email;
+  $name = $google_account_info->name;
+  $usuario = usuarioController::findByEmail($google_account_info->email);
+  if ($usuario == null) {
+    $_SESSION['emailGoogle'] = $google_account_info->email;
+    header('location: /view/register.php');
+  } else {
+    $_SESSION['usuario'] = $usuario;
+  }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -90,27 +111,27 @@ require_once('controller/sessionController.php');
 
           <?php
           if (!isset($_SESSION["usuario"])) {
-          ?>
-          <div class="nextRightSecond card bg-danger roundedBorder text-center text-dark">
-            <img src="img\stockImages\index\loginImg.png" class="card-img-top roundedBorder" alt="reseravs">
-            <div class="card-body container-fluid bg-success roundedBorder">
-              <h3 class="card-title lobster ">Cuentas de usuario</h3>
-              <p class="card-text roboto">Inicia sesión para aprovechar todas nuestras ventajas</p>
-              <a href="view/login.php" class="btn btn-danger rounded-2">Iniciar sesión</a>
+            ?>
+            <div class="nextRightSecond card bg-danger roundedBorder text-center text-dark">
+              <img src="img\stockImages\index\loginImg.png" class="card-img-top roundedBorder" alt="reseravs">
+              <div class="card-body container-fluid bg-success roundedBorder">
+                <h3 class="card-title lobster ">Cuentas de usuario</h3>
+                <p class="card-text roboto">Inicia sesión para aprovechar todas nuestras ventajas</p>
+                <a href="view/login.php" class="btn btn-danger rounded-2">Iniciar sesión</a>
+              </div>
             </div>
-          </div>
-          <?php 
+          <?php
           } else {
-          ?>
-          <div class="nextRightSecond card bg-danger roundedBorder text-center text-dark">
-            <img src="img\stockImages\index\loginImg.png" class="card-img-top roundedBorder" alt="reseravs">
-            <div class="card-body container-fluid bg-success roundedBorder">
-              <h3 class="card-title lobster ">Cuenta de usuario</h3>
-              <p class="card-text roboto">Modifica tu cuenta e incluye una foto</p>
-              <a href="view/userGestion.php" class="btn btn-danger rounded-2">Mi cuenta</a>
+            ?>
+            <div class="nextRightSecond card bg-danger roundedBorder text-center text-dark">
+              <img src="img\stockImages\index\loginImg.png" class="card-img-top roundedBorder" alt="reseravs">
+              <div class="card-body container-fluid bg-success roundedBorder">
+                <h3 class="card-title lobster ">Cuenta de usuario</h3>
+                <p class="card-text roboto">Modifica tu cuenta e incluye una foto</p>
+                <a href="view/userGestion.php" class="btn btn-danger rounded-2">Mi cuenta</a>
+              </div>
             </div>
-          </div>
-          <?php 
+          <?php
           }
           ?>
 
@@ -178,40 +199,43 @@ require_once('controller/sessionController.php');
             data-bs-ride="carousel">
             <div class="carousel-inner row">
               <!--Carousel items-->
-              <?php 
-                  $comentaries = comentarioController::getIndexComentaries();
+              <?php
+              $comentaries = comentarioController::getIndexComentaries();
 
-                  for($i = 0; $i < count($comentaries); $i++) {
-              ?>
-              <article class="carousel-item <?php if($i == 0) echo 'active'; ?> align-items-center justify-content-around">
-                <div class="container-fluid w-75">
-                  <div class="row align-items-center text-center mb-3">
-                    <img class="col-lg-1 col-sm-12 w-sm-75" alt="Imagen de usuario"
-                      src="<?php echo $comentaries[$i]->imagen_usuario; ?>" />
-                    <div class="col-lg-2 col-sm-12"><?php echo $comentaries[$i]->nombre_usuario . " " . $comentaries[$i]->apellidos_usuario; ?></div>
-                    <div class="container-fluid col-lg-8 col-sm-12 text-center text-lg-start">
-                      <?php
-                        for($j = 0; $j < 5; $j++){
-                          if($j < $comentaries[$i]->valoracion){
+              for ($i = 0; $i < count($comentaries); $i++) {
+                ?>
+                <article
+                  class="carousel-item <?php if ($i == 0)
+                    echo 'active'; ?> align-items-center justify-content-around">
+                  <div class="container-fluid w-75">
+                    <div class="row align-items-center text-center mb-3">
+                      <img class="col-lg-1 col-sm-12 w-sm-75" alt="Imagen de usuario"
+                        src="<?php echo $comentaries[$i]->imagen_usuario; ?>" />
+                      <div class="col-lg-2 col-sm-12">
+                        <?php echo $comentaries[$i]->nombre_usuario . " " . $comentaries[$i]->apellidos_usuario; ?>
+                      </div>
+                      <div class="container-fluid col-lg-8 col-sm-12 text-center text-lg-start">
+                        <?php
+                        for ($j = 0; $j < 5; $j++) {
+                          if ($j < $comentaries[$i]->valoracion) {
                             echo '<i class="fa-solid fa-star mx-auto text-danger"></i>';
-                          }
-                          else{
+                          } else {
                             echo '<i class="fa-regular fa-star text-danger"></i>';
                           }
                         }
-                      ?>
+                        ?>
+                      </div>
+                    </div>
+                    <div class="row scrola justificar">
+                      <p class="col-12 userCommentText">
+                        <?php echo $comentaries[$i]->comentario; ?>
+                      </p>
                     </div>
                   </div>
-                  <div class="row scrola justificar">
-                    <p class="col-12 userCommentText">
-                      <?php echo $comentaries[$i]->comentario; ?>
-                    </p>
-                  </div>
-                </div>
-              </article>
+                </article>
 
-              <?php 
-                  }
+              <?php
+              }
               ?>
 
             </div>

@@ -1,8 +1,11 @@
 <?php
-require "../vendor/autoload.php"; // Incluye la biblioteca
+require_once('../vendor/autoload.php');
+
+include("../includes/a_config.php");
 
 require_once "../controller/sessionController.php";
 use Abraham\TwitterOAuth\TwitterOAuth;
+
 if (isset($_SESSION["usuario"])) {
     header('location: userGestion.php');
 }
@@ -22,7 +25,7 @@ if (isset($_POST['identificarse'])) {
     $resultado = usuarioController::findByEmail($_POST['Email']);
     if ($resultado == null) {
         $error = "El correo electrónico o la contraseña es incorrecta";
-    } else { 
+    } else {
         if ($resultado->contrasena == $_POST["password"]) {
             $_SESSION['usuario'] = $resultado;
             header('location: ../index.php');
@@ -32,8 +35,12 @@ if (isset($_POST['identificarse'])) {
         }
     }
 }
+if (isset($_POST["gIdentify"])) {
+  header('location:'.$google_client->createAuthUrl());
+}
+
+
 ?>
-<?php include("../includes/a_config.php"); ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -116,7 +123,12 @@ if (isset($_POST['identificarse'])) {
                                 onlogin="checkLoginState()"></div>
                             <form action="" method="POST">
                                 <input type="submit" class="btn btn-dark" value="Identificarse con X" name="xIdentify">
+                                <button type="submit" name="gIdentify"><img
+                                        src="../img/stockImages/google/sign-in-with-google.png" width="200px"
+                                        alt=""></button>
+
                             </form>
+
 
                         </div>
                     </div>

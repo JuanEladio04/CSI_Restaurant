@@ -1,6 +1,7 @@
 <?php
 require "../vendor/autoload.php"; // Incluye la biblioteca
 require_once "../controller/sessionController.php";
+include("../includes/a_config.php"); 
 
 use Abraham\TwitterOAuth\TwitterOAuth;
 
@@ -29,7 +30,8 @@ if (isset($_GET['oauth_verifier'])) {
     }
 }
 
-include("../includes/a_config.php"); 
+
+
 ?>
 
 <!DOCTYPE html>
@@ -113,7 +115,11 @@ if(isset($_POST['crear'])){
                                 <div class="margenInferior">
                                     <label for="Email" class="form-label">Email</label>
                                     <input type="email" class="roundedInput form-control" id="email" name="Email"
-                                        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+                                        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"  value="<?php
+                                        if (isset($_SESSION['emailGoogle'])) {
+                                            print $_SESSION['emailGoogle'];
+                                        } 
+                                        ?>"required>
                                 </div>
                                 <!-- Password inputs with margin -->
                                 <div class="col margenInferior">

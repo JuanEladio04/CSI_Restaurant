@@ -44,7 +44,7 @@ class usuarioController
         }
     }
 
-    static function cambiarEmail($id,$email)
+    static function cambiarEmail($id, $email)
     {
         try {
             $connex = ConnectionManager::getConnectionInstance();
@@ -58,7 +58,7 @@ class usuarioController
         }
     }
 
-    static function cambiarPass($id,$pass)
+    static function cambiarPass($id, $pass)
     {
         try {
             $connex = ConnectionManager::getConnectionInstance();
@@ -72,8 +72,8 @@ class usuarioController
         }
     }
 
-    
-    static function cambiarFoto($id,$foto)
+
+    static function cambiarFoto($id, $foto)
     {
         try {
             $connex = ConnectionManager::getConnectionInstance();
@@ -86,6 +86,8 @@ class usuarioController
             return $exc->getMessage();
         }
     }
+
+
 
 }
 ?>
