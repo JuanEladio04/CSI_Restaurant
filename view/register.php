@@ -1,5 +1,4 @@
 <?php
-require "../vendor/autoload.php"; 
 require_once "../controller/sessionController.php";
 include("../includes/a_config.php"); 
 use Abraham\TwitterOAuth\TwitterOAuth;

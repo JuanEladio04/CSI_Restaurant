@@ -67,6 +67,7 @@ switch ($_SERVER["SCRIPT_NAME"]) {
 
 }
 
+require_once($_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php');
 
 //Make object of Google API Client for call Google API
 $google_client = new Google_Client();

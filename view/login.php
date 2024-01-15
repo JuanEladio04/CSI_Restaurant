@@ -1,5 +1,4 @@
 <?php
-require_once('../vendor/autoload.php');
 
 include("../includes/a_config.php");
 
