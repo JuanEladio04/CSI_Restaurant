@@ -64,4 +64,24 @@ switch ($_SERVER["SCRIPT_NAME"]) {
 	default:
 		$CURRENT_PAGE = "Index";
 		$PAGE_TITLE = "Welcome to my homepage!";
+
 }
+
+
+//Make object of Google API Client for call Google API
+$google_client = new Google_Client();
+
+//Set the OAuth 2.0 Client ID
+$google_client->setClientId('7035720435-6m87hnnct781g4s6lg4qq0malhelhmud.apps.googleusercontent.com');
+
+//Set the OAuth 2.0 Client Secret key
+$google_client->setClientSecret('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');
+
+//Set the OAuth 2.0 Redirect URI
+$google_client->setRedirectUri('http://localhost:10000');
+
+
+$google_client->addScope('email');
+
+$google_client->addScope('profile');
+
