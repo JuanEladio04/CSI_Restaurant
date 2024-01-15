@@ -1,5 +1,5 @@
 <?php
-require "../vendor/autoload.php"; // Incluye la biblioteca
+require "../vendor/autoload.php"; 
 require_once "../controller/sessionController.php";
 include("../includes/a_config.php"); 
 
