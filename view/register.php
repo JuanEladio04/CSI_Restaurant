@@ -35,7 +35,7 @@ if(isset($_POST['crear'])){
     $telef = $_POST['phone'];
     $pais = $_POST['country'];
     $codPostal = $_POST['postalCode'];
-    $i = registerController::insertUser($nombre, $apellidos, $email, $contraseña, $fechaNac, $telef, $pais, $codPostal);
+    $i = usuarioController::insertUser($nombre, $apellidos, $email, $contraseña, $fechaNac, $telef, $pais, $codPostal);
     if($i =! null){
         if($i == true){
             header("Location: ../index.php?registrado='true'");
