@@ -1,6 +1,7 @@
 let contrasenaIncorrecta = null;
 let contrasenaCorrecta = 0;
 let fechaCorrecta = 0;
+let captchaCorrecto = 0;
 
 function verificarClave() {
     let clave = document.getElementById("clave");
@@ -135,8 +136,6 @@ document.addEventListener("input", function (e) {
         }
     }
     if (e.target.id == "claveRep") {
-        console.log(e.target.value);
-        console.log(document.getElementById("clave").value);
         if (e.target.value != document.getElementById("clave").value) {
             document.getElementById("passIncorrecta").classList = "visible";
             $boton = document.getElementById("crear");
@@ -150,7 +149,6 @@ document.addEventListener("input", function (e) {
             $boton = document.getElementById("crear");
         }
         if (fechaCorrecta == 1 && contrasenaCorrecta == 1) {
-            console.log("hola");
             $boton = document.getElementById("crear");
             $boton.disabled = false;
         } else {
@@ -170,14 +168,13 @@ document.addEventListener("input", function (e) {
     if (e.target.id == "fecha") {
         let fecha = new Date(document.getElementById("fecha").value);
         let fechaActual = Date.now();
-        console.log(fecha);
         if (fechaActual - fecha.getTime() > 567648000000) {
             fechaCorrecta = 1;
         } else {
             fechaCorrecta = 0;
         }
     }
-    if (fechaCorrecta == 1 && contrasenaCorrecta == 1) {
+    if (fechaCorrecta == 1 && contrasenaCorrecta == 1 && captchaCorrecto == 1) {
         $boton = document.getElementById("crear");
         $boton.disabled = false;
     } else {
@@ -185,39 +182,46 @@ document.addEventListener("input", function (e) {
         $boton.disabled = true;
     }
 
-})
+    if(e.target.id == "resolverCaptcha") {
+        if (resolverCaptcha.value.length > 6) {
+            e.target.value = e.target.value.slice(0, -1);
+        }
+    }
+
+});
 document.addEventListener("click", function (e) {
     if (e.target.id == "fecha") {
         let fecha = new Date(document.getElementById("fecha").value);
         let fechaActual = Date.now();
-        console.log(fecha);
         if (fechaActual - fecha.getTime() > 567648000000) {
             fechaCorrecta = 1;
         } else {
             fechaCorrecta = 0;
         }
     }
-    if (fechaCorrecta == 1 && contrasenaCorrecta == 1) {
+    if (fechaCorrecta == 1 && contrasenaCorrecta == 1 && captchaCorrecto == 1) {
         $boton = document.getElementById("crear");
         $boton.disabled = false;
     } else {
         $boton = document.getElementById("crear");
         $boton.disabled = true;
     }
-    if (e.target.id == "captcha") {
-        SECRET_KEY = "f510d229-08df-411d-9220-552f29bc7c64"
-        VERIFY_URL = "https://api.hcaptcha.com/siteverify"
-        let token = request.POST_DATA['h-captcha-response']
-
-        let data = {
-            'secret': SECRET_KEY,
-            'response': token
-        }
-        let response = http.post(url = VERIFY_URL, data = data)
-        let response_json = JSON.parse(response.content)
-        console.log(response_json);
-        let success = response_json['success']
-    }
 
 });
 
+function verificarCaptcha() {
+    var icon = document.querySelector('.content-input input[type="checkbox"]+i');
+        if (icon.classList.contains('checkbox-checked')) {
+            captchaCorrecto = 1;
+        } else {
+            captchaCorrecto = 0;
+        }
+
+        if (fechaCorrecta == 1 && contrasenaCorrecta == 1 && captchaCorrecto == 1) {
+            $boton = document.getElementById("crear");
+            $boton.disabled = false;
+        } else {
+            $boton = document.getElementById("crear");
+            $boton.disabled = true;
+        }
+}

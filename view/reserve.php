@@ -1,6 +1,39 @@
 <?php include("../includes/a_config.php"); ?>
+<?php
+require_once "../controller/sessionController.php";
+sessionRedirect();
+?>
 <!DOCTYPE html>
 <html lang="es">
+
+
+<?php
+if(isset($_POST['enviarReserva'])){
+    if(!empty($_POST['ittName']) && !empty($_POST['ittSecondName']) && !empty($_POST['ittelPhoneNumber']) && !empty($_POST['sDinners']) && !empty($_POST['itdDate']) && !empty($_POST['ittimeHour']) && 
+    !empty($_POST['taSpecifications'])){
+        if(isset($_POST['itcbNotAlone'])){
+            $comen = $_POST['sDinners'];
+        } else {
+            $comen = 1;
+        }
+        $id = $_SESSION['usuario']->id;
+        $nombre = $_POST['ittName'];
+        $apell = $_POST['ittSecondName'];
+        $telef = $_POST['ittelPhoneNumber']; 
+        $fecha = $_POST['itdDate'];
+        $hora = $_POST['ittimeHour'];
+        $espec = $_POST['taSpecifications'];
+
+        $reserva = reservaController::insertReserva($id, $nombre, $apell, $telef, $comen, $fecha, $hora, $espec);
+        
+        if($reserva != null){
+            header("Location: login.php");
+        }
+    } else {
+        echo "Algún dato no se ha pasado correctamente"; 
+    }
+} else {
+    ?>
 
 <head>
     <?php include("../includes/head-tag-contents.php"); ?>
@@ -61,7 +94,7 @@
                         <textarea class="form-control z-depth-1" id="textarea" rows="4" name="taSpecifications"></textarea>
                     </div>
                 </div>
-                <button type="submit" value="" class="btn btn-danger p-3">
+                <button type="submit" value="" name="enviarReserva" class="btn btn-danger p-3">
                     Confirmar reserva
                 </button>
             </form>
@@ -69,8 +102,14 @@
     </section>
 
     <?php include("../includes/footer.php"); ?>
+
     <script src="../js/reserveFormulary.js"></script>
 
 </body>
+    <?php
+}
+?>
+
+
 
 </html>

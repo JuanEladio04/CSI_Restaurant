@@ -29,24 +29,25 @@ if (isset($_GET['oauth_verifier'])) {
         print $connectionUs->getLastHttpCode();
     }
 }
+
+include("../includes/a_config.php"); 
 ?>
-<?php include("../includes/a_config.php"); ?>
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <?php include("../includes/head-tag-contents.php"); ?>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css"
         crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 </head>
 
 <body class="bg-dark" id="background-<?php echo $CURRENT_PAGE; ?>">
 
-    <!-- Link to the home page with the restaurant logo -->
     <header class="col-12 text-center">
         <a href="../index.php"><img src="../img/logos/BigLogo.png" width="300px"></a>
     </header>
@@ -124,7 +125,7 @@ if (isset($_GET['oauth_verifier'])) {
                                         <select type="text" class="roundedInput form-control country" id="country"
                                             name="country" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required></select>
                                     </div>
-                                    <div class="col-sm-6 margenInferior">
+                                    <div class="col-sm-6 margenInferior mb-3">
                                         <label for="postalCode" class="form-label">Código postal</label>
                                         <input id="codPostal" type="text" class="roundedInput form-control"
                                             name="postalCode" pattern="^[0-9]+$" required>
@@ -132,7 +133,7 @@ if (isset($_GET['oauth_verifier'])) {
                                 </div>
                                 <!-- Checkboxes for age and terms acceptance -->
 
-                                <div class="d-block">
+                                <div class="d-block mb-3">
                                     <input type="checkbox" name="acepto" value="Aceptar términos"
                                         class="rounded-checkbox" required>
                                     <label for="acepto">Acepto los términos</label>
@@ -143,15 +144,29 @@ if (isset($_GET['oauth_verifier'])) {
                                     <div class="fondoCaptcha">
                                         <div class="checkboxCaptcha">
                                             <label class="content-input">
-                                                <input type="checkbox" name="captcha" class="checkbox">
-                                                <i></i>
+                                                <input type="checkbox" name="captcha" class="checkbox" id="checkbox">
+                                                <i onclick="captcha()" id="icono"></i>
                                             </label>
                                         </div>
                                         <div class="textoCaptcha">
                                             <p class="text">No eres un robot</p>
                                         </div>
-                                        <div class="imgCaptcha"><img src="../img/logos/SmallLogo.png" class="img"
-                                                ></div>
+                                        <div class="imgCaptcha"><img src="../img/logos/SmallLogo.png" class="img"></div>
+                                    </div>
+                                    <div class="overlay" id="overlay"></div>
+                                    <div id="contenedorCaptcha" class="oculto row">
+                                        <div class="col-12 tituloCaptcha">
+                                            <img src="../img/logos/SmallLogo.png" width="100px">
+                                            <h2>Completa el CAPTCHA</h2>
+                                        </div>
+                                        <div class="col-12">
+                                            <canvas id="captchaCanvas" width="200px" height="50px" class="col-12"></canvas>
+                                            <i class="fas fa-redo refresh-captcha col-12 "></i>
+                                        </div>
+                                        <div class="col-12 form-captcha">
+                                            <input type="text" name="resolverCaptcha" id="resolverCaptcha" class="tamaño">
+                                            <button id="cerrarCaptcha" class="tamaño" onclick="cerrar(), verificarCaptcha()">CALCULAR</button>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -183,5 +198,12 @@ if (isset($_GET['oauth_verifier'])) {
 
 <script src="../js/countries.js"></script>
 <script src="../js/verificar.js"></script>
+<script src="../js/captcha.js"></script>
 
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+?>
 </html>
+
+
