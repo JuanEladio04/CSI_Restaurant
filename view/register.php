@@ -29,16 +29,6 @@ if (isset($_GET['oauth_verifier'])) {
         print $connectionUs->getLastHttpCode();
     }
 }
-
-
-
-?>
-
-<!DOCTYPE html>
-<html lang="es">
-
-<?php
-
 if(isset($_POST['crear'])){
     $nombre = $_POST['FirstN'];
     $apellidos = $_POST['LastN'];
@@ -48,9 +38,7 @@ if(isset($_POST['crear'])){
     $telef = $_POST['phone'];
     $pais = $_POST['country'];
     $codPostal = $_POST['postalCode'];
-
     $i = registerController::insertUser($nombre, $apellidos, $email, $contraseña, $fechaNac, $telef, $pais, $codPostal);
-
     if($i =! null){
         if($i == true){
             header("Location: ../index.php?registrado='true'");
@@ -60,6 +48,8 @@ if(isset($_POST['crear'])){
     }
 } else {
     ?>
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
     <?php include("../includes/head-tag-contents.php"); ?>
