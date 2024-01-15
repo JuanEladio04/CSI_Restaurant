@@ -34,8 +34,20 @@ if (isset($_POST["cambiarPass"])) {
 
 
 }
-if (isset($_POST["cambiarNombre"])) {
-    
+if (isset($_POST["cambiarFoto"])) {
+    if ($_FILES["fichero"]["type"] == "image/png") {
+        $fich = time() . "-" . $_SESSION["usuario"]->id . "-fotoPerfil.png";
+        $ruta = "../img/userImages/$fich";
+        move_uploaded_file($_FILES["fichero"]["tmp_name"], $ruta);
+        $resultadoConsulta = usuarioController::cambiarFoto($_SESSION["usuario"]->id, $ruta);
+        
+        $_SESSION["usuario"]->imagen = $ruta;
+        if ($resultadoConsulta != null) {
+            print "Ha habido un fallo en la consulta, para más información, informa al administrador y dale el siguiente error" . $resultadoConsulta;
+        }
+    } else {
+        $errorFichero = "La imagen se tiene que subir en PNG";
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -65,17 +77,28 @@ if (isset($_POST["cambiarNombre"])) {
 
                                 <div class="">
                                     <!-- Form -->
-                                    <form action="" method="POST">
+                                    <form action="" method="POST" enctype="multipart/form-data">
                                         <div class="d-flex justify-content-center">
-                                            <img class="" width="200vh" alt="Imagen de usuario"
-                                                src="../img/stockImages/defaultUserImage.png" />
+                                            <input type="file" name="fichero" id="foto">
                                         </div>
-                                        <div class="container d-flex justify-content-center margenSuperior">
-                                            <button class="btn text-light bg-danger roundedInput textoNoWrap"
-                                                type="submit">
-                                                Cambiar foto de perfil
-                                            </button>
+                                        <div class="row d-flex justify-content-center margenSuperior">
+                                            <div class="d-flex justify-content-center mb-3">
+                                                <img src="<?php
+                                                print $_SESSION["usuario"]->imagen;
+                                                ?>" width="" class="d-flex justify-content-center col-6"></img>
+                                            </div>
+                                            <div class="d-flex justify-content-center">
+                                                <input class="btn text-light bg-danger roundedInput textoNoWrap"
+                                                    type="submit" value="Cambiar foto de perfil" name="cambiarFoto">
+                                            </div>
+
+                                            <?php
+                                            if (isset($errorFichero)) {
+                                                print $errorFichero;
+                                            }
+                                            ?>
                                         </div>
+
                                     </form>
                                 </div>
                             </div>
@@ -187,7 +210,7 @@ if (isset($_POST["cambiarNombre"])) {
             </div>
         </section>
     </div>
-    
+
 
     <?php include("../includes/footer.php"); ?>
 

@@ -72,5 +72,20 @@ class usuarioController
         }
     }
 
+    
+    static function cambiarFoto($id,$foto)
+    {
+        try {
+            $connex = ConnectionManager::getConnectionInstance();
+            $sentencia = $connex->prepare("UPDATE usuarios set imagen = ? where id = ?");
+            $sentencia->bindParam(1, $foto, PDO::PARAM_STR);
+            $sentencia->bindParam(2, $id, PDO::PARAM_INT);
+            $sentencia->execute();
+            return null;
+        } catch (PDOException $exc) {
+            return $exc->getMessage();
+        }
+    }
+
 }
 ?>
