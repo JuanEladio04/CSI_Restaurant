@@ -251,4 +251,12 @@ if(isset($_GET['reservado'])){
     <?php
   }    
 } 
+
+if(isset($_GET['registrado'])){
+  if($_GET['registrado'] == true){
+    ?>
+    <script>alert("El usuario ha sido registrado correctamente");</script>
+    <?php
+  }
+}
 ?>

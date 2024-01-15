@@ -1,9 +1,8 @@
 <?php
 require "../vendor/autoload.php"; // Incluye la biblioteca
+require_once "../controller/sessionController.php";
+
 use Abraham\TwitterOAuth\TwitterOAuth;
-
-session_start();
-
 
 if (isset($_GET['oauth_verifier'])) {
     define('CONSUMER_KEY', "lEpsRim68CZIFbFTWdJhxO5eV");
@@ -35,6 +34,30 @@ include("../includes/a_config.php");
 
 <!DOCTYPE html>
 <html lang="es">
+
+<?php
+
+if(isset($_POST['crear'])){
+    $nombre = $_POST['FirstN'];
+    $apellidos = $_POST['LastN'];
+    $email = $_POST['Email'];
+    $contraseña = $_POST['Password1'];
+    $fechaNac = $_POST['date'];
+    $telef = $_POST['phone'];
+    $pais = $_POST['country'];
+    $codPostal = $_POST['postalCode'];
+
+    $i = registerController::insertUser($nombre, $apellidos, $email, $contraseña, $fechaNac, $telef, $pais, $codPostal);
+
+    if($i =! null){
+        if($i == true){
+            header("Location: ../index.php?registrado='true'");
+        }
+    } else {
+        echo "No se ha podido encontrar el usuario";
+    }
+} else {
+    ?>
 
 <head>
     <?php include("../includes/head-tag-contents.php"); ?>
@@ -70,7 +93,7 @@ include("../includes/a_config.php");
                         <!-- Card body containing the registration form -->
                         <div class="card-body">
                             <!-- Registration form -->
-                            <form action="/action_page.php">
+                            <form action="" method="POST">
                                 <!-- Name and Last Name inputs in a row -->
                                 <div class="row">
                                     <!--CF2: ¿Por qué usas sm-6 si tus compañeros usan md y lg-->
@@ -196,6 +219,11 @@ include("../includes/a_config.php");
 
 </body>
 
+    <?php
+}
+
+?>
+
 <script src="../js/countries.js"></script>
 <script src="../js/verificar.js"></script>
 <script src="../js/captcha.js"></script>
@@ -205,5 +233,3 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ?>
 </html>
-
-
