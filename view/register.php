@@ -73,7 +73,7 @@ if (isset($_POST['crear'])) {
                 <article class="col d-flex justify-content-center align-items-center">
 
                     <!--CF2: ¿Container dentro de otro container?-->
-                    <div class="container formUser">
+                    <div class="container formUser  w-50">
                         <div class="card bg-danger text-light roundedBorder">
                             <!-- Card header with a centered title -->
                             <div class="card-header">
