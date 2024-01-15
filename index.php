@@ -259,7 +259,17 @@ if (isset($_GET['code'])) {
     <?php include("includes/footer.php"); ?>
 
   </main>
-
+  
 </body>
 
 </html>
+
+<?php
+if(isset($_GET['reservado'])){
+  if($_GET['reservado'] == true){
+    ?>
+    <script>alert("La reserva ha sido registrada con éxito");</script>
+    <?php
+  }    
+} 
+?>
