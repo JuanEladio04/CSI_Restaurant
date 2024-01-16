@@ -44,7 +44,7 @@ class usuarioController
         }
     }
 
-    static function cambiarEmail($id,$email)
+    static function cambiarEmail($id, $email)
     {
         try {
             $connex = ConnectionManager::getConnectionInstance();
@@ -58,7 +58,7 @@ class usuarioController
         }
     }
 
-    static function cambiarPass($id,$pass)
+    static function cambiarPass($id, $pass)
     {
         try {
             $connex = ConnectionManager::getConnectionInstance();
@@ -72,8 +72,8 @@ class usuarioController
         }
     }
 
-    
-    static function cambiarFoto($id,$foto)
+
+    static function cambiarFoto($id, $foto)
     {
         try {
             $connex = ConnectionManager::getConnectionInstance();
@@ -86,6 +86,25 @@ class usuarioController
             return $exc->getMessage();
         }
     }
+
+    static function insertUser($nom, $apel, $email, $con, $fech, $telef, $pais, $codPost){
+        try{
+            $conex = ConnectionManager::getConnectionInstance();
+            $conCifrada = password_hash($con, PASSWORD_BCRYPT);
+            $rs = $conex->query("insert into usuarios (nombre, apellidos, email, contrasena, fecha_nacimiento, codigo_postal, pais, numero_telefono) values
+            ('$nom','$apel','$email','$conCifrada','$fech',$codPost,'$pais','$telef')");
+            
+            if($rs){
+                return true;
+            } else {
+                return false;
+            }
+        }catch(PDOException $e){
+            die($e->getMessage());
+        }
+    }
+
+
 
 }
 ?>

@@ -58,7 +58,7 @@ require_once("../controller/sessionController.php");
             </div>
         </nav>
 
-        <!--Card content------------------------------------------------>
+        <!--Card content----------------------------------------------->
 
         <article class="container-fluid bg-success">
             <div class="row p-5 justify-content-around">

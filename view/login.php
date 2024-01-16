@@ -1,20 +1,23 @@
 <?php
-require "../vendor/autoload.php"; // Incluye la biblioteca
+
+include("../includes/a_config.php");
 
 require_once "../controller/sessionController.php";
+
 use Abraham\TwitterOAuth\TwitterOAuth;
+
 if (isset($_SESSION["usuario"])) {
     header('location: userGestion.php');
 }
 if (isset($_POST["xIdentify"])) {
-    define('CONSUMER_KEY', "lEpsRim68CZIFbFTWdJhxO5eV");
-    define('CONSUMER_SECRET', "z1EDNXshWUS780EmUX0aLkxBxomMhdBAHv3xuc5AAmHOYSJNZ8");
-    define('OAUTH_CALLBACK', 'http://localhost:10000/view/register.php');
-    $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET);
-    $request_token = $connection->oauth('oauth/request_token', array('oauth_callback' => OAUTH_CALLBACK));
+    
+    # Especificar el 'scope' al solicitar el token de solicitud
+    $request_token = $connection->oauth('oauth/request_token', ['oauth_callback' => OAUTH_CALLBACK]);
+    
     $_SESSION['oauth_token'] = $request_token['oauth_token'];
     $_SESSION['oauth_token_secret'] = $request_token['oauth_token_secret'];
-    $url = $connection->url('oauth/authorize', array('oauth_token' => $request_token['oauth_token']));
+    
+    $url = $connection->url('oauth/authorize', ['oauth_token' => $request_token['oauth_token']]);
     header('location:' . $url);
 }
 if (isset($_POST['identificarse'])) {
@@ -22,26 +25,27 @@ if (isset($_POST['identificarse'])) {
     $resultado = usuarioController::findByEmail($_POST['Email']);
     if ($resultado == null) {
         $error = "El correo electrónico o la contraseña es incorrecta";
-    } else { 
+    } else {
         if ($resultado->contrasena == $_POST["password"]) {
             $_SESSION['usuario'] = $resultado;
             header('location: ../index.php');
         } else {
             $error = "El correo electrónico o la contraseña es incorrecta";
-
         }
     }
 }
+if (isset($_POST["gIdentify"])) {
+    header('location:' . $google_client->createAuthUrl());
+}
+
+
 ?>
-<?php include("../includes/a_config.php"); ?>
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <?php include("../includes/head-tag-contents.php"); ?>
-    <script async defer crossorigin="anonymous"
-        src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v18.0&appId=351483897629787"
-        nonce="zVvRb6qN"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v18.0&appId=351483897629787" nonce="zVvRb6qN"></script>
 </head>
 
 <body class="bg-dark" id="background-<?php echo $CURRENT_PAGE; ?>">
@@ -72,55 +76,63 @@ if (isset($_POST['identificarse'])) {
                             <h1 class="text-center">Identificarse</h1>
                         </div>
                         <div class="card-body">
-                            <!-- Form -->
-                            <form action="" method="POST">
-                                <!-- Email input -->
-                                <div class="margenInferior">
-                                    <label for="Email" class="form-label">Correo electrónico</label>
-                                    <input type="Email" class="roundedInput form-control" id="pwd" name="Email"
-                                        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
-                                </div>
-                                <!-- Password input -->
-                                <div class="col margenInferior">
-                                    <label for="Password1" class="form-label">Contraseña</label>
-                                    <input type="password" name="password" class="roundedInput form-control" required>
-                                </div>
+                            <!--Inicios de sesión externos----------------------------------------------------------------------->
+                            <form action="" method="POST" class="container-fluid">
+                                <div class="fb-login-button col-3" data-width="400" data-size="" data-button-type="" data-layout="" data-auto-logout-link="false" data-use-continue-as="false" onlogin="checkLoginState()"></div>
+
+                                <div class="row justify-content-around">
+                                    <!--Facebook-->
+                                    <button class="col-2 border-secondary bg-primary fb-login-button" data-width="400" data-size="" data-button-type="" data-layout="" data-auto-logout-link="false" data-use-continue-as="false" onclick="checkLoginState()">
+                                        <img class="img-fluid" src="/img/stockImages/login_register/facebookLogo.png" alt="">
+                                    </button>
+                                    <!--X-->
+                                    <button name="xIdentify" class="col-2 border-secondary bg-primary"><img class="img-fluid" src="/img/stockImages/login_register/xLogo.png" alt=""></button>
+
+                                    <!--Google-->
+                                    <button class="col-2 border-secondary bg-primary" type="submit" name="gIdentify"><img class="img-fluid" src="/img/stockImages/login_register/googleLogo.png" alt=""></button>
+                            </form>
                         </div>
 
-                        <!-- Footer with links and login button -->
-                        <div class="card-footer text-center">
-                            <a href="forgottenPassword.php" class="nav-link text-light col-sm-12 text-center">Contraseña
-                                olvidada</a>
-                            <div class="text-center ">
-                                <a href="register.php" class="nav-link text-light textoNoWrap">No estoy
-                                    registrado</a>
-                                <div id="fb-root"></div>
-
-
-
+                        <!-- Form ---------------------------------------------------------------------------------------------->
+                        <form action="" method="POST">
+                            <!-- Email input -->
+                            <div class="margenInferior">
+                                <label for="Email" class="form-label">Correo electrónico</label>
+                                <input type="Email" class="roundedInput form-control" id="pwd" name="Email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
                             </div>
-
-                            <div class="text-center">
-                                <?php
-                                if (isset($error)) {
-                                    print $error;
-                                }
-                                ?>
-                                <input type="submit" class="btn btn-primary roundedInput" name="identificarse"
-                                    value="Identificarse">
+                            <!-- Password input -->
+                            <div class="col margenInferior">
+                                <label for="Password1" class="form-label">Contraseña</label>
+                                <input type="password" name="password" class="roundedInput form-control" required>
                             </div>
-                            </form>
+                    </div>
 
-                            <div class="fb-login-button" data-width="400" data-size="" data-button-type=""
-                                data-layout="" data-auto-logout-link="false" data-use-continue-as="false"
-                                onlogin="checkLoginState()"></div>
-                            <form action="" method="POST">
-                                <input type="submit" class="btn btn-dark" value="Identificarse con X" name="xIdentify">
-                            </form>
+                    <!-- Footer with links and login button ---------------------------------------------------------------------------------------->
+                    <div class="card-footer text-center">
+                        <a href="forgottenPassword.php" class="nav-link text-light col-sm-12 text-center">Contraseña
+                            olvidada</a>
+                        <div class="text-center ">
+                            <a href="register.php" class="nav-link text-light textoNoWrap">No estoy
+                                registrado</a>
+                            <div id="fb-root"></div>
+
+
 
                         </div>
+
+                        <div class="text-center">
+                            <?php
+                            if (isset($error)) {
+                                print $error;
+                            }
+                            ?>
+                            <input type="submit" class="btn btn-primary roundedInput" name="identificarse" value="Identificarse">
+                        </div>
+                        </form>
+
                     </div>
                 </div>
+        </div>
         </div>
 
         </div>
@@ -132,6 +144,5 @@ if (isset($_POST['identificarse'])) {
 </body>
 
 <script src="../js/facebook.js"></script>
-<script src="../js/twitter.js"></script>
 
 </html>

@@ -1,64 +1,53 @@
 <?php
-require "../vendor/autoload.php"; // Incluye la biblioteca
+
+require_once "../controller/sessionController.php";
+include("../includes/a_config.php"); 
 use Abraham\TwitterOAuth\TwitterOAuth;
 
-session_start();
 
-
-if (isset($_GET['oauth_verifier'])) {
-    define('CONSUMER_KEY', "lEpsRim68CZIFbFTWdJhxO5eV");
-    define('CONSUMER_SECRET', "z1EDNXshWUS780EmUX0aLkxBxomMhdBAHv3xuc5AAmHOYSJNZ8");
-    define('OAUTH_CALLBACK', 'http://localhost:10000/view/register.php');
-    define('ACCESS_TOKEN', 'OfVTTFrZJWEO0dH38ckLcXvRsy6L1de13di2fwU');
-    define('ACCES_TOKEN_SECRET', 'OfVTTFrZJWEO0dH38ckLcXvRsy6L1de13di2fwU');
-    $request_token = [];
-    $request_token['oauth_token'] = $_SESSION['oauth_token'];
-    $request_token['oauth_token_secret'] = $_SESSION['oauth_token_secret'];
-
-    if (isset($_REQUEST['oauth_token']) && $request_token['oauth_token'] !== $_REQUEST['oauth_token']) {
-        die;
-    }
-    $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $request_token['oauth_token'], $request_token['oauth_token_secret']);
-    $access_token = $connection->oauth('oauth/access_token', ['oauth_verifier' => $_REQUEST['oauth_verifier']]);
-    $connectionUs = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token['oauth_token'], $access_token['oauth_token_secret']);
-    $connectionUs->setApiVersion('1.1'); // Agrega esta línea
-    $user = $connectionUs->get('account/verify_credentials', ['tweet_mode' => 'extended', 'include_entities' => 'true']);
-    if ($connectionUs->getLastHttpCode() == 200) {
-        echo '<script>console.log(' . json_encode($user) . ')</script>';
+if (isset($_POST['crear'])) {
+    $nombre = $_POST['FirstN'];
+    $apellidos = $_POST['LastN'];
+    $email = $_POST['Email'];
+    $contraseña = $_POST['Password1'];
+    $fechaNac = $_POST['date'];
+    $telef = $_POST['phone'];
+    $pais = $_POST['country'];
+    $codPostal = $_POST['postalCode'];
+    $i = usuarioController::insertUser($nombre, $apellidos, $email, $contraseña, $fechaNac, $telef, $pais, $codPostal);
+    if($i =! null){
+        if($i == true){
+            header("Location: ../index.php?registrado='true'");
+        }
     } else {
-        print $connectionUs->getLastHttpCode();
+        echo "No se ha podido encontrar el usuario";
     }
-}
-
-include("../includes/a_config.php"); 
+} else {
 ?>
+    <!DOCTYPE html>
+    <html lang="es">
 
-<!DOCTYPE html>
-<html lang="es">
+    <head>
+        <?php include("../includes/head-tag-contents.php"); ?>
 
-<head>
-    <?php include("../includes/head-tag-contents.php"); ?>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    </head>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css"
-        crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-</head>
+    <body class="bg-dark" id="background-<?php echo $CURRENT_PAGE; ?>">
 
-<body class="bg-dark" id="background-<?php echo $CURRENT_PAGE; ?>">
+        <header class="col-12 text-center">
+            <a href="../index.php"><img src="../img/logos/BigLogo.png" width="300px"></a>
+        </header>
 
-    <header class="col-12 text-center">
-        <a href="../index.php"><img src="../img/logos/BigLogo.png" width="300px"></a>
-    </header>
+        <!-- Main section containing the registration form -->
+        <main class="container-fluid">
+            <div class="row">
+                <!-- Form wrapped in a card with styling -->
 
-    <!-- Main section containing the registration form -->
-    <main class="container-fluid">
-        <div class="row">
-            <!-- Form wrapped in a card with styling -->
-
-            <!--CF2: Esto no sería un article, es un form-->
-            <article class="col d-flex justify-content-center align-items-center">
+                <!--CF2: Esto no sería un article, es un form-->
+                <article class="col d-flex justify-content-center align-items-center">
 
                 <!--CF2: ¿Container dentro de otro container?-->
                 <div class="container formUser">
@@ -70,7 +59,7 @@ include("../includes/a_config.php");
                         <!-- Card body containing the registration form -->
                         <div class="card-body">
                             <!-- Registration form -->
-                            <form action="/action_page.php">
+                            <form action="" method="POST">
                                 <!-- Name and Last Name inputs in a row -->
                                 <div class="row">
                                     <!--CF2: ¿Por qué usas sm-6 si tus compañeros usan md y lg-->
@@ -90,7 +79,14 @@ include("../includes/a_config.php");
                                 <div class="margenInferior">
                                     <label for="Email" class="form-label">Email</label>
                                     <input type="email" class="roundedInput form-control" id="email" name="Email"
-                                        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+                                        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"  value="<?php
+                                        if (isset($_SESSION['emailGoogle'])) {
+                                            print $_SESSION['emailGoogle'];
+                                        } 
+                                        if (isset($_SESSION['emailTwitter'])) {
+                                            print $_SESSION['emailTwitter'];
+                                        } 
+                                        ?>"required>
                                 </div>
                                 <!-- Password inputs with margin -->
                                 <div class="col margenInferior">
@@ -133,68 +129,71 @@ include("../includes/a_config.php");
                                 </div>
                                 <!-- Checkboxes for age and terms acceptance -->
 
-                                <div class="d-block mb-3">
-                                    <input type="checkbox" name="acepto" value="Aceptar términos"
-                                        class="rounded-checkbox" required>
-                                    <label for="acepto">Acepto los términos</label>
-                                </div>
-
-                                <!-- Captcha -->
-                                <div class="captcha mb-3">
-                                    <div class="fondoCaptcha">
-                                        <div class="checkboxCaptcha">
-                                            <label class="content-input">
-                                                <input type="checkbox" name="captcha" class="checkbox" id="checkbox">
-                                                <i onclick="captcha()" id="icono"></i>
-                                            </label>
-                                        </div>
-                                        <div class="textoCaptcha">
-                                            <p class="text">No eres un robot</p>
-                                        </div>
-                                        <div class="imgCaptcha"><img src="../img/logos/SmallLogo.png" class="img"></div>
+                                    <div class="d-block mb-3">
+                                        <input type="checkbox" name="acepto" value="Aceptar términos" class="rounded-checkbox" required>
+                                        <label for="acepto">Acepto los términos</label>
                                     </div>
-                                    <div class="overlay" id="overlay"></div>
-                                    <div id="contenedorCaptcha" class="oculto row">
-                                        <div class="col-12 tituloCaptcha">
-                                            <img src="../img/logos/SmallLogo.png" width="100px">
-                                            <h2>Completa el CAPTCHA</h2>
+
+                                    <!-- Captcha -->
+                                    <div class="captcha mb-3">
+                                        <div class="fondoCaptcha">
+                                            <div class="checkboxCaptcha">
+                                                <label class="content-input">
+                                                    <input type="checkbox" name="captcha" class="checkbox" id="checkbox">
+                                                    <i onclick="captcha()" id="icono"></i>
+                                                </label>
+                                            </div>
+                                            <div class="textoCaptcha">
+                                                <p class="text">No eres un robot</p>
+                                            </div>
+                                            <div class="imgCaptcha"><img src="../img/logos/SmallLogo.png" class="img"></div>
                                         </div>
-                                        <div class="col-12">
-                                            <canvas id="captchaCanvas" width="200px" height="50px" class="col-12"></canvas>
-                                            <i class="fas fa-redo refresh-captcha col-12 "></i>
-                                        </div>
-                                        <div class="col-12 form-captcha">
-                                            <input type="text" name="resolverCaptcha" id="resolverCaptcha" class="tamaño">
-                                            <button id="cerrarCaptcha" class="tamaño" onclick="cerrar(), verificarCaptcha()">CALCULAR</button>
+                                        <div class="overlay" id="overlay"></div>
+                                        <div id="contenedorCaptcha" class="oculto row">
+                                            <div class="col-12 tituloCaptcha">
+                                                <img src="../img/logos/SmallLogo.png" width="100px">
+                                                <h2>Completa el CAPTCHA</h2>
+                                            </div>
+                                            <div class="col-12">
+                                                <canvas id="captchaCanvas" width="200px" height="50px" class="col-12"></canvas>
+                                                <i class="fas fa-redo refresh-captcha col-12 "></i>
+                                            </div>
+                                            <div class="col-12 form-captcha">
+                                                <input type="text" name="resolverCaptcha" id="resolverCaptcha" class="tamaño">
+                                                <button id="cerrarCaptcha" class="tamaño" onclick="cerrar(), verificarCaptcha()">CALCULAR</button>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
 
-                                <!-- Create account button -->
-                                <div class="d-grid margenSuperior">
-                                    <input type="submit" value="Crear cuenta" name="crear" id="crear"
-                                        class="btn btn-primary btn-block roundedInput textoNoWrap" disabled>
-                                </div>
-                            </form>
-                        </div>
+                                    <!-- Create account button -->
+                                    <div class="d-grid margenSuperior">
+                                        <input type="submit" value="Crear cuenta" name="crear" id="crear" class="btn btn-primary btn-block roundedInput textoNoWrap" disabled>
+                                    </div>
+                                </form>
+                            </div>
 
-                        <!-- Card footer with a link to the login page -->
-                        <div class="card-footer text-center">
-                            <a href="login.php" class="nav-link text-light">Ya estoy registrado</a>
+                            <!-- Card footer with a link to the login page -->
+                            <div class="card-footer text-center">
+                                <a href="login.php" class="nav-link text-light">Ya estoy registrado</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-        </div>
-        </div>
-    </main>
+            </div>
+            </div>
+        </main>
 
 
-    <!-- Include the footer -->
-    <?php include("../includes/footer.php"); ?>
+        <!-- Include the footer -->
+        <?php include("../includes/footer.php"); ?>
 
 
-</body>
+    </body>
+
+<?php
+}
+
+?>
 
 <script src="../js/countries.js"></script>
 <script src="../js/verificar.js"></script>
@@ -204,6 +203,5 @@ include("../includes/a_config.php");
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ?>
-</html>
 
-
+    </html>
