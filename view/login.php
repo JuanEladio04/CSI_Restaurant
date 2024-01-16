@@ -143,6 +143,5 @@ if (isset($_POST["gIdentify"])) {
 </body>
 
 <script src="../js/facebook.js"></script>
-<script src="../js/twitter.js"></script>
 
 </html>
