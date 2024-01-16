@@ -12,9 +12,12 @@ spl_autoload_register(function ($class_name) {
 
 session_start();
 
+/**
+ * Checks if the user is authenticated, if not, it redirects to the login page
+ */
 function sessionRedirect(){
     if(!isset($_SESSION['usuario'])){
-        header('Location: /view/register.php');
+        header('Location: /view/login.php');
     }
 }
 ?>
