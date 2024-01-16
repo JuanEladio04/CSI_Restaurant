@@ -1,7 +1,9 @@
 <?php
-require_once('controller/sessionController.php');
 include("includes/a_config.php");
 
+use Abraham\TwitterOAuth\TwitterOAuth;
+
+require_once('controller/sessionController.php');
 
 if (isset($_GET['code'])) {
 
@@ -17,6 +19,36 @@ if (isset($_GET['code'])) {
     header('location: /view/register.php');
   } else {
     $_SESSION['usuario'] = $usuario;
+    header('location: index.php');
+
+  }
+}
+
+if (isset($_GET['oauth_verifier'])) {
+  $request_token = [];
+  $request_token['oauth_token'] = $_SESSION['oauth_token'];
+  $request_token['oauth_token_secret'] = $_SESSION['oauth_token_secret'];
+  if (isset($_REQUEST['oauth_token']) && $request_token['oauth_token'] !== $_REQUEST['oauth_token']) {
+    die;
+  }
+  $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $request_token['oauth_token'], $request_token['oauth_token_secret']);
+  $access_token = $connection->oauth('oauth/access_token', ['oauth_verifier' => $_REQUEST['oauth_verifier'], 'include_email' => true]);
+  $connectionUs = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token['oauth_token'], $access_token['oauth_token_secret']);
+  $connectionUs->setApiVersion('1.1'); // Agrega esta línea
+  $user = $connectionUs->get('account/verify_credentials', ['include_email' => true]);
+  if ($connectionUs->getLastHttpCode() == 200) {
+    $email =  $user->email;
+    $usuario = usuarioController::findByEmail($email);
+    if ($usuario == null) {
+      $_SESSION['emailTwitter'] = $email;
+      header('location: /view/register.php');
+    } else {
+      $_SESSION['usuario'] = $usuario;
+      header('location: index.php');
+
+    }
+  } else {
+    print $connectionUs->getLastHttpCode();
   }
 }
 ?>
@@ -41,12 +73,9 @@ if (isset($_GET['code'])) {
           <img class="col-12 headerLogo" alt="" src="img\logos\BigLogo.png" />
 
           <div class="socialmedia col-12">
-            <a href="https://www.instagram.com/ristaurantelunadellarosa/" class="mx-4 text-danger" target="_blank"><i
-                class="fa-brands fa-instagram fa-2xl"></i></a>
-            <a href="https://twitter.com/RistauranteDLR" class="mx-4 text-danger" target="_blank"><i
-                class="fa-brands fa-x-twitter fa-2xl"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61553606555788" class="mx-4 text-danger" target="_blank"><i
-                class="fa-brands fa-facebook fa-2xl"></i></i></a>
+            <a href="https://www.instagram.com/ristaurantelunadellarosa/" class="mx-4 text-danger" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+            <a href="https://twitter.com/RistauranteDLR" class="mx-4 text-danger" target="_blank"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61553606555788" class="mx-4 text-danger" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></i></a>
           </div>
 
           <!--CF: ¿Dos break points? Tenéis tres layouts en la guía de estilos?-->
@@ -55,7 +84,14 @@ if (isset($_GET['code'])) {
               <a href="view/card.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Carta</a>
               <a href="view/offers.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Ofertas</a>
               <a href="view/reserve.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Reservas</a>
-              <a href="view/login.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Iniciar Sesión</a>
+              <?php 
+              if (!isset($_SESSION["usuario"])) {
+                print '<a href="view/login.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Iniciar Sesión</a>';
+              } else {
+                print '<a href="view/userGestion.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Mi cuenta</a>';
+
+              } 
+              ?>
             </div>
           </nav>
         </div>
@@ -109,7 +145,7 @@ if (isset($_GET['code'])) {
 
           <?php
           if (!isset($_SESSION["usuario"])) {
-            ?>
+          ?>
             <div class="nextRightSecond card bg-danger roundedBorder text-center text-dark">
               <img src="img\stockImages\index\loginImg.png" class="card-img-top roundedBorder" alt="reseravs">
               <div class="card-body container-fluid bg-success roundedBorder">
@@ -120,7 +156,7 @@ if (isset($_GET['code'])) {
             </div>
           <?php
           } else {
-            ?>
+          ?>
             <div class="nextRightSecond card bg-danger roundedBorder text-center text-dark">
               <img src="img\stockImages\index\loginImg.png" class="card-img-top roundedBorder" alt="reseravs">
               <div class="card-body container-fluid bg-success roundedBorder">
@@ -164,8 +200,7 @@ if (isset($_GET['code'])) {
             ofertas. No dejes pasar esta oportunidad de disfrutar de una experiencia única y deliciosa.
           </p>
           <div class="align-items-right col-12">
-            <button type="button" class="btn btn-danger col-lg-3 col-sm-12 rounded-2 ms-auto"
-              onclick="location.href='view/aboutUs.php'">Muéstrame</button>
+            <button type="button" class="btn btn-danger col-lg-3 col-sm-12 rounded-2 ms-auto" onclick="location.href='view/aboutUs.php'">Muéstrame</button>
           </div>
         </article>
       </section>
@@ -187,28 +222,24 @@ if (isset($_GET['code'])) {
               </p>
             </div>
             <div class="align-items-right col-12">
-              <button type="button" class="btn btn-danger col-lg-4 col-sm-12"
-                onclick="location.href='view/feedback.php'">Quiero opinar</button>
+              <button type="button" class="btn btn-danger col-lg-4 col-sm-12" onclick="location.href='view/feedback.php'">Quiero opinar</button>
             </div>
           </article>
 
           <!--Comentaries carousel-->
-          <section id="carouselExampleAutoplaying" class="carousel container-fluid slide col-lg-9 col-sm-12"
-            data-bs-ride="carousel">
+          <section id="carouselExampleAutoplaying" class="carousel container-fluid slide col-lg-9 col-sm-12" data-bs-ride="carousel">
             <div class="carousel-inner row">
               <!--Carousel items-->
               <?php
               $comentaries = comentarioController::getIndexComentaries();
 
               for ($i = 0; $i < count($comentaries); $i++) {
-                ?>
-                <article
-                  class="carousel-item <?php if ($i == 0)
-                    echo 'active'; ?> align-items-center justify-content-around">
+              ?>
+                <article class="carousel-item <?php if ($i == 0)
+                                                echo 'active'; ?> align-items-center justify-content-around">
                   <div class="container-fluid w-75">
                     <div class="row align-items-center text-center mb-3">
-                      <img class="col-lg-1 col-sm-12 w-sm-75" alt="Imagen de usuario"
-                        src="<?php echo $comentaries[$i]->imagen_usuario; ?>" />
+                      <img class="col-lg-1 col-sm-12 w-sm-75" alt="Imagen de usuario" src="<?php echo $comentaries[$i]->imagen_usuario; ?>" />
                       <div class="col-lg-2 col-sm-12">
                         <?php echo $comentaries[$i]->nombre_usuario . " " . $comentaries[$i]->apellidos_usuario; ?>
                       </div>
@@ -238,13 +269,11 @@ if (isset($_GET['code'])) {
 
             </div>
             <div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-                data-bs-slide="prev">
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-                data-bs-slide="next">
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
               </button>
@@ -260,25 +289,29 @@ if (isset($_GET['code'])) {
     <?php include("includes/footer.php"); ?>
 
   </main>
-  
+
 </body>
 
 </html>
 
 <?php
-if(isset($_GET['reservado'])){
-  if($_GET['reservado'] == true){
-    ?>
-    <script>alert("La reserva ha sido registrada con éxito");</script>
-    <?php
-  }    
-} 
+if (isset($_GET['reservado'])) {
+  if ($_GET['reservado'] == true) {
+?>
+    <script>
+      alert("La reserva ha sido registrada con éxito");
+    </script>
+  <?php
+  }
+}
 
-if(isset($_GET['registrado'])){
-  if($_GET['registrado'] == true){
-    ?>
-    <script>alert("El usuario ha sido registrado correctamente");</script>
-    <?php
+if (isset($_GET['registrado'])) {
+  if ($_GET['registrado'] == true) {
+  ?>
+    <script>
+      alert("El usuario ha sido registrado correctamente");
+    </script>
+<?php
   }
 }
 ?>

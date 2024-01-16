@@ -4,30 +4,7 @@ require_once "../controller/sessionController.php";
 include("../includes/a_config.php"); 
 use Abraham\TwitterOAuth\TwitterOAuth;
 
-if (isset($_GET['oauth_verifier'])) {
-    define('CONSUMER_KEY', "lEpsRim68CZIFbFTWdJhxO5eV");
-    define('CONSUMER_SECRET', "z1EDNXshWUS780EmUX0aLkxBxomMhdBAHv3xuc5AAmHOYSJNZ8");
-    define('OAUTH_CALLBACK', 'http://localhost:10000/view/register.php');
-    define('ACCESS_TOKEN', 'OfVTTFrZJWEO0dH38ckLcXvRsy6L1de13di2fwU');
-    define('ACCES_TOKEN_SECRET', 'OfVTTFrZJWEO0dH38ckLcXvRsy6L1de13di2fwU');
-    $request_token = [];
-    $request_token['oauth_token'] = $_SESSION['oauth_token'];
-    $request_token['oauth_token_secret'] = $_SESSION['oauth_token_secret'];
 
-    if (isset($_REQUEST['oauth_token']) && $request_token['oauth_token'] !== $_REQUEST['oauth_token']) {
-        die;
-    }
-    $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $request_token['oauth_token'], $request_token['oauth_token_secret']);
-    $access_token = $connection->oauth('oauth/access_token', ['oauth_verifier' => $_REQUEST['oauth_verifier']]);
-    $connectionUs = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token['oauth_token'], $access_token['oauth_token_secret']);
-    $connectionUs->setApiVersion('1.1');
-    $user = $connectionUs->get('account/verify_credentials', ['tweet_mode' => 'extended', 'include_entities' => 'true']);
-    if ($connectionUs->getLastHttpCode() == 200) {
-        echo '<script>console.log(' . json_encode($user) . ')</script>';
-    } else {
-        print $connectionUs->getLastHttpCode();
-    }
-}
 if (isset($_POST['crear'])) {
     $nombre = $_POST['FirstN'];
     $apellidos = $_POST['LastN'];
@@ -105,6 +82,9 @@ if (isset($_POST['crear'])) {
                                         pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"  value="<?php
                                         if (isset($_SESSION['emailGoogle'])) {
                                             print $_SESSION['emailGoogle'];
+                                        } 
+                                        if (isset($_SESSION['emailTwitter'])) {
+                                            print $_SESSION['emailTwitter'];
                                         } 
                                         ?>"required>
                                 </div>

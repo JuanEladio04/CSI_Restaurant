@@ -85,4 +85,14 @@ $google_client->setRedirectUri('http://localhost:10000');
 $google_client->addScope('email');
 
 $google_client->addScope('profile');
+use Abraham\TwitterOAuth\TwitterOAuth;
+
+define('CONSUMER_KEY', "lEpsRim68CZIFbFTWdJhxO5eV");
+define('CONSUMER_SECRET', "z1EDNXshWUS780EmUX0aLkxBxomMhdBAHv3xuc5AAmHOYSJNZ8");
+define('OAUTH_CALLBACK', 'http://localhost:10000/index.php');
+define('ACCESS_TOKEN', 'OfVTTFrZJWEO0dH38ckLcXvRsy6L1de13di2fwU');
+define('ACCES_TOKEN_SECRET', 'OfVTTFrZJWEO0dH38ckLcXvRsy6L1de13di2fwU');
+$connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET);
+
+
 

@@ -10,14 +10,14 @@ if (isset($_SESSION["usuario"])) {
     header('location: userGestion.php');
 }
 if (isset($_POST["xIdentify"])) {
-    define('CONSUMER_KEY', "lEpsRim68CZIFbFTWdJhxO5eV");
-    define('CONSUMER_SECRET', "z1EDNXshWUS780EmUX0aLkxBxomMhdBAHv3xuc5AAmHOYSJNZ8");
-    define('OAUTH_CALLBACK', 'http://localhost:10000/view/register.php');
-    $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET);
-    $request_token = $connection->oauth('oauth/request_token', array('oauth_callback' => OAUTH_CALLBACK));
+    
+    # Especificar el 'scope' al solicitar el token de solicitud
+    $request_token = $connection->oauth('oauth/request_token', ['oauth_callback' => OAUTH_CALLBACK]);
+    
     $_SESSION['oauth_token'] = $request_token['oauth_token'];
     $_SESSION['oauth_token_secret'] = $request_token['oauth_token_secret'];
-    $url = $connection->url('oauth/authorize', array('oauth_token' => $request_token['oauth_token']));
+    
+    $url = $connection->url('oauth/authorize', ['oauth_token' => $request_token['oauth_token']]);
     header('location:' . $url);
 }
 if (isset($_POST['identificarse'])) {
@@ -86,7 +86,7 @@ if (isset($_POST["gIdentify"])) {
                                         <img class="img-fluid" src="/img/stockImages/login_register/facebookLogo.png" alt="">
                                     </button>
                                     <!--X-->
-                                    <button class="col-2 border-secondary bg-primary"><img class="img-fluid" src="/img/stockImages/login_register/xLogo.png" alt=""></button>
+                                    <button name="xIdentify" class="col-2 border-secondary bg-primary"><img class="img-fluid" src="/img/stockImages/login_register/xLogo.png" alt=""></button>
 
                                     <!--Google-->
                                     <button class="col-2 border-secondary bg-primary" type="submit" name="gIdentify"><img class="img-fluid" src="/img/stockImages/login_register/googleLogo.png" alt=""></button>
