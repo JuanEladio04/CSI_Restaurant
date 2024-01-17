@@ -15,8 +15,7 @@ class platoController
             }
             return $platos;
         } catch (Exception $exc) {
-            echo $exc->getTraceAsString();
-            return array();
+            die('No es posible cargar los platos de la carta');
         }
     }
 }
