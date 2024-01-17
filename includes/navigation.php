@@ -49,7 +49,7 @@ require_once "../controller/sessionController.php";
                 </li>
 
                 <li
-                    class="nav-item  w-100  text-center desplegable <?php if ($CURRENT_PAGE == "login") { ?>active<?php } ?>">
+                    class="nav-item  w-100  text-center desplegable <?php if ($CURRENT_PAGE == "userGestion") { ?>active<?php } ?>">
                     <?php
                     if (isset($_SESSION["usuario"])) {
                         $usuario = $_SESSION['usuario'];
@@ -59,10 +59,10 @@ require_once "../controller/sessionController.php";
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="mostrar()">
                                 <?php echo $usuario->nombre; ?>
                             </a>
-                            
+
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" href="../view/userGestion.php">Gestión de Usuario</a>
-                                <a class="dropdown-item" href="../">Salir</a>
+                                <a class="dropdown-item nav-link" href="../view/userGestion.php">Usuario</a>
+                                <a class="dropdown-item nav-link" onclick="mostrarSalir()" href="">Salir</a>
                             </div>
                         </div>
                         <?php
@@ -77,3 +77,14 @@ require_once "../controller/sessionController.php";
         </div>
     </div>
 </nav>
+
+<div class="salir">
+    <div class="col-12 tituloSalir row">
+        <img src="../img/logos/SmallLogo.png">
+        <h2>¿Desea Salir?</h2>
+    </div>
+    <div class="col-12 botonSalir">
+        <button type="button" class="btn btn-outline-danger"><a href="../view/cerrarSesion.php">Salir</a></button>
+        <button type="button" class="btn btn-outline-danger" onclick="mostrarSalir()">Volver</button>
+    </div>
+</div>

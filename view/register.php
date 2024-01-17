@@ -160,8 +160,7 @@ if (isset($_POST['crear'])) {
                                             </div>
                                             <div class="col-12 form-captcha">
                                                 <input type="text" name="resolverCaptcha" id="resolverCaptcha" class="tamaño">
-                                                <button id="cerrarCaptcha" class="tamaño" onclick="cerrar(), verificarCaptcha()">CALCULAR</button>
-                                            </div>
+c                                            </div>
                                         </div>
                                     </div>
 

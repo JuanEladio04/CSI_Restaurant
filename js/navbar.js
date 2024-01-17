@@ -10,3 +10,15 @@ function mostrar(){
     }
 
 }
+
+function mostrarSalir(){
+    event.preventDefault();
+
+    let cuadro = document.querySelector('.salir');
+    if(cuadro.style.display === 'none'){
+        cuadro.style.display = 'block';
+    }else{
+        cuadro.style.display = 'none';
+        
+    }
+}
