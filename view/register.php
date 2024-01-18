@@ -66,7 +66,15 @@ if (isset($_POST['crear'])) {
                                     <div class="col-sm-6 margenInferior">
                                         <label for="FirstN" class="form-label">Nombre</label>
                                         <input type="text" class="roundedInput form-control" name="FirstN"
-                                            pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required>
+                                            pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" value="<?php
+                                            if (isset($_SESSION['nombre'])) {
+                                                print $_SESSION['nombre'];
+                                                $_SESSION['nombre'] = "";
+                                            }
+                                            if (isset($_GET['nombre'])) {
+                                                print $_GET['nombre'];
+                                            }
+                                            ?>"required>
                                     </div>
                                     <div class="col-sm-6 margenInferior">
                                         <label for="LastN" class="form-label">Apellidos</label>
@@ -82,10 +90,15 @@ if (isset($_POST['crear'])) {
                                         pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"  value="<?php
                                         if (isset($_SESSION['emailGoogle'])) {
                                             print $_SESSION['emailGoogle'];
+                                            $_SESSION['emailGoogle'] = "";
                                         } 
                                         if (isset($_SESSION['emailTwitter'])) {
                                             print $_SESSION['emailTwitter'];
+                                            $_SESSION['emailTwitter'] = "";
                                         } 
+                                        if (isset($_GET['emailFacebook'])) {
+                                            print $_GET['emailFacebook'];
+                                        }
                                         ?>"required>
                                 </div>
                                 <!-- Password inputs with margin -->
