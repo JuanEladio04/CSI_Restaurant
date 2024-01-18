@@ -1,3 +1,6 @@
+<?php
+require_once('../controller/sessionController.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
