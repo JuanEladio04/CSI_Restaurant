@@ -85,7 +85,7 @@ if (isset($_POST["cambiarFoto"])) {
                                             <div class="d-flex justify-content-center mb-3">
                                                 <img src="<?php
                                                 print $_SESSION["usuario"]->imagen;
-                                                ?>" width="" class="d-flex justify-content-center col-6"></img>
+                                                ?>" width="" class="rounded-circle d-flex justify-content-center col-6"></img>
                                             </div>
                                             <div class="d-flex justify-content-center">
                                                 <input class="btn text-light bg-danger roundedInput textoNoWrap"

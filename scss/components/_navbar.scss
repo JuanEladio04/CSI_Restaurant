@@ -71,6 +71,17 @@
         }
     }
 
+    .dropdown{
+        height: 100%;
+
+        .dropdown-toggle{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+    }
+
     .menuDesplegable {
         list-style: none;
         display: none;
@@ -89,6 +100,7 @@
         background-color: $dark;
         width: 100%;
         padding: 0;
+        border: 0 !important;
 
         .dropdown-item {
             color: $white;
@@ -97,10 +109,14 @@
             font-size: 1.4em;
         }
 
-        .dropdown-item:hover {
-            background-color: $danger;
-        }
+
     }
+
+    .nav-link:hover{
+        background-color: $danger;
+        font-style: oblique;
+    }
+
 }
 
 .salir {
@@ -113,7 +129,7 @@
     background-color: $dark;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 2;
-    width: 30%;
+    width: 60%;
     height: 32%;
     border-radius: 10px;
 
@@ -126,9 +142,10 @@
         justify-content: center;
 
         img {
-            width: 100px !important;
+            width: 0px;
         }
     }
+
 
     .botonSalir {
         height: 50%;
@@ -138,20 +155,34 @@
         gap: 50px;
 
         button {
-            width: 30%;
-            height: 25%;
+            width: 50%;
+            height: 40%;
             border-radius: 5px;
             color: $white;
             box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
             padding: 0;
         }
 
-        a{
+        a {
             text-decoration: none;
             color: inherit;
         }
     }
+
+    .nav-link:hover{
+        background-color: $danger;
+        font-style: oblique;
+    }
+
+    .colorFondo{
+        background-color: $dark;
+    }
+
+    .colorFondoClick{
+        background-color: $danger;
+    }
 }
+
 
 
 @include media-breakpoint-up(sm) {
@@ -195,14 +226,6 @@
             }
         }
 
-
-
-        .todo {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
     }
 
     #mainNav.navbar-shrink {
@@ -211,6 +234,25 @@
 
         .navbar-brand {
             font-size: 1.5em;
+        }
+    }
+
+    .todo {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .salir {
+        width: 30% !important;
+
+        img {
+            width: 100px !important;
+        }
+
+        button {
+            width: 30% !important;
+            height: 25% !important;
         }
     }
 }

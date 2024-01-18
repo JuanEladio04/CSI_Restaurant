@@ -92,6 +92,7 @@ require_once("../controller/sessionController.php");
             </div>
         </article>
     </section>
+    
 
     <script src="../js/cardItem.js"></script>
 
