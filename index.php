@@ -15,6 +15,7 @@ if (isset($_GET['code'])) {
   $name = $google_account_info->name;
   $usuario = usuarioController::findByEmail($google_account_info->email);
   if ($usuario == null) {
+    $_SESSION['nombre'] = $name;
     $_SESSION['emailGoogle'] = $google_account_info->email;
     header('location: /view/register.php');
   } else {
