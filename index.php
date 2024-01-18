@@ -12,15 +12,17 @@ if (isset($_GET['code'])) {
   $google_oauth = new Google_Service_Oauth2($google_client);
   $google_account_info = $google_oauth->userinfo->get();
   $email = $google_account_info->email;
-  $name = $google_account_info->name;
+  $name = $google_account_info->given_name;
+  $apellidos = $google_account_info->family_name;
   $usuario = usuarioController::findByEmail($google_account_info->email);
   if ($usuario == null) {
+    $_SESSION['nombre'] = $name;
+    $_SESSION['apellido'] = $apellidos;
     $_SESSION['emailGoogle'] = $google_account_info->email;
     header('location: /view/register.php');
   } else {
     $_SESSION['usuario'] = $usuario;
-    header('location: index.php');
-
+    header('location: index.php#menu');
   }
 }
 
@@ -45,7 +47,6 @@ if (isset($_GET['oauth_verifier'])) {
     } else {
       $_SESSION['usuario'] = $usuario;
       header('location: index.php');
-
     }
   } else {
     print $connectionUs->getLastHttpCode();
@@ -84,13 +85,12 @@ if (isset($_GET['oauth_verifier'])) {
               <a href="view/card.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Carta</a>
               <a href="view/offers.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Ofertas</a>
               <a href="view/reserve.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Reservas</a>
-              <?php 
+              <?php
               if (!isset($_SESSION["usuario"])) {
                 print '<a href="view/login.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Iniciar Sesión</a>';
               } else {
                 print '<a href="view/userGestion.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Mi cuenta</a>';
-
-              } 
+              }
               ?>
             </div>
           </nav>
@@ -98,7 +98,7 @@ if (isset($_GET['oauth_verifier'])) {
       </header>
 
       <!--Menu carousel-->
-      <section class="bg-dark p-5 my-5 container-fluid d-lg-block d-none">
+      <section id="menu" class="bg-dark p-5 my-5 container-fluid d-lg-block d-none">
         <h2 class="d-none">
           Manú carousel
         </h2>
@@ -158,7 +158,7 @@ if (isset($_GET['oauth_verifier'])) {
           } else {
           ?>
             <div class="nextRightSecond card bg-danger roundedBorder text-center text-dark">
-              <img src="img\stockImages\index\loginImg.png" class="card-img-top roundedBorder" alt="reseravs">
+              <img src="<?php echo $_SESSION['usuario']->imagen ?>" class="card-img-top roundedBorder" alt="reseravs">
               <div class="card-body container-fluid bg-success roundedBorder">
                 <h3 class="card-title lobster ">Cuenta de usuario</h3>
                 <p class="card-text roboto">Modifica tu cuenta e incluye una foto</p>

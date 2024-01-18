@@ -28,7 +28,7 @@ if (isset($_POST['identificarse'])) {
     } else {
         if ($resultado->contrasena == $_POST["password"]) {
             $_SESSION['usuario'] = $resultado;
-            header('location: ../index.php');
+            header('location: ../index.php#menu');
         } else {
             $error = "El correo electrónico o la contraseña es incorrecta";
         }
