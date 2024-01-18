@@ -19,7 +19,7 @@ if (isset($_GET['code'])) {
     header('location: /view/register.php');
   } else {
     $_SESSION['usuario'] = $usuario;
-    header('location: index.php');
+    header('location: index.php#menu');
 
   }
 }
@@ -98,7 +98,7 @@ if (isset($_GET['oauth_verifier'])) {
       </header>
 
       <!--Menu carousel-->
-      <section class="bg-dark p-5 my-5 container-fluid d-lg-block d-none">
+      <section id="menu" class="bg-dark p-5 my-5 container-fluid d-lg-block d-none">
         <h2 class="d-none">
           Manú carousel
         </h2>
@@ -158,7 +158,7 @@ if (isset($_GET['oauth_verifier'])) {
           } else {
           ?>
             <div class="nextRightSecond card bg-danger roundedBorder text-center text-dark">
-              <img src="img\stockImages\index\loginImg.png" class="card-img-top roundedBorder" alt="reseravs">
+              <img src="<?php echo $_SESSION['usuario']->imagen ?>" class="card-img-top roundedBorder" alt="reseravs">
               <div class="card-body container-fluid bg-success roundedBorder">
                 <h3 class="card-title lobster ">Cuenta de usuario</h3>
                 <p class="card-text roboto">Modifica tu cuenta e incluye una foto</p>
