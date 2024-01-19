@@ -50,22 +50,21 @@
                     if (isset($_SESSION["usuario"])) {
                         $usuario = $_SESSION['usuario'];
                         ?>
-                        <div class="dropdown ">
+                        <div class="dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="mostrar()">
-                                <img src="../<?php echo $usuario->imagen; ?>" width="70px" alt="Foto Perfil"
+                                <img src="../<?php echo $usuario->imagen; ?>" width="100px" alt="Foto Perfil"
                                     class="rounded-circle">
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item nav-link" href="../view/userGestion.php">
+                                <a class="dropdown-item nav-link w-auto nombre" href="../view/userGestion.php">
                                     <?php echo $usuario->nombre; ?>
                                 </a>
                                 <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal">
-                                    Launch demo modal
-                                </button>
-
+                                <a class="dropdown-item nav-link w-auto" href="../view/userGestion.php" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#salir">
+                                    Salir
+                                </a>
                             </div>
                         </div>
                         <?php
@@ -81,30 +80,23 @@
     </div>
 </nav>
 
-<!-- <div class="salir">
-    <div class="col-12 tituloSalir row">
-        <img src="../img/logos/SmallLogo.png">
-        <h2>¿Desea Salir?</h2>
-    </div>
-    <div class="col-12 botonSalir">
-        <button type="button" class="btn btn-outline-danger"><a href="../view/cerrarSesion.php">Salir</a></button>
-        <button type="button" class="btn btn-outline-danger" onclick="mostrarSalir()">Volver</button>
-    </div>
-</div> -->
-
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="salir" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header d-flex align-item-center justify-content-center">
-            <img src="../<?php echo $usuario->imagen; ?>" width="150px" alt="Foto Perfil" class="rounded-circle">
+                <h5 class="modal-title" id="exampleModalLabel">¿Deseas
+                    cerrar Sesión
+                    <?php echo $usuario->nombre; ?>?
+                </h5>
             </div>
-            <div class="modal-body">
-                <h5 class="modal-title d-flex align-item-center justify-content-center" id="exampleModalLabel">¿Deseas salir <?php echo $usuario->nombre; ?>?</h5>
+            <div class="modal-body d-flex align-item-center justify-content-center">
+                <img src="../<?php echo $usuario->imagen; ?>" width="150px" alt="Foto Perfil" class="rounded-circle">
             </div>
-            <div class="modal-footer">
-            <a href="../view/cerrarSesion.php" class="w-100"><button type="button" class="btn btn-outline-danger w-100">Salir</button></a>
-            <button type="button" class="btn btn-outline-danger w-100"data-bs-dismiss="modal">Volver</button>
+            <div class="modal-footer d-flex">
+                <a href="../view/cerrarSesion.php" class="boton"><button type="button"
+                        class="btn btn-outline-danger w-100">Cerrar Sesión</button></a>
+                <button type="button" class="btn btn-outline-danger boton" data-bs-dismiss="modal">Volver</button>
             </div>
         </div>
     </div>
