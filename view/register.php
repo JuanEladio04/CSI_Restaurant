@@ -74,9 +74,8 @@ if (isset($_POST['crear'])) {
                                         </div>
                                         <div class="col-sm-6 margenInferior">
                                             <label for="LastN" class="form-label">Apellidos</label>
-                                            <input type="text" class="roundedInput form-control" name="LastN"
-                                                pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required>
-                                            <input type="text" class="roundedInput form-control" name="FirstN" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" value="<?php
+                                            
+                                            <input type="text" class="roundedInput form-control" name="LastN" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" value="<?php
                                                                                                                                                             if (isset($_SESSION['nombre'])) {
                                                                                                                                                                 print $_SESSION['nombre'];
                                                                                                                                                                 $_SESSION['nombre'] = "";
@@ -86,29 +85,11 @@ if (isset($_POST['crear'])) {
                                                                                                                                                             }
                                                                                                                                                             ?>" required>
                                         </div>
-                                        <div class="col-sm-6 margenInferior">
-                                            <label for="LastN" class="form-label">Apellidos</label>
-                                            <input type="text" class="roundedInput form-control" name="LastN" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" value="<?php
-                                                                                                                                                            if (isset($_SESSION['nombre'])) {
-                                                                                                                                                                print $_SESSION['apellido'];
-                                                                                                                                                                $_SESSION['apellido'] = "";
-                                                                                                                                                            }
-                                                                                                                                                            ?>" required>
-                                        </div>
                                     </div>
 
                                     <!-- Email input with margin -->
                                     <div class="margenInferior">
                                         <label for="Email" class="form-label">Email</label>
-                                        <input type="email" class="roundedInput form-control" id="email" name="Email"
-                                            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" value="<?php
-                                            if (isset($_SESSION['emailGoogle'])) {
-                                                print $_SESSION['emailGoogle'];
-                                            }
-                                            if (isset($_SESSION['emailTwitter'])) {
-                                                print $_SESSION['emailTwitter'];
-                                            }
-                                            ?>" required>
                                         <input type="email" class="roundedInput form-control" id="email" name="Email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" value="<?php
                                                                                                                                                                                         if (isset($_SESSION['emailGoogle'])) {
                                                                                                                                                                                             print $_SESSION['emailGoogle'];
@@ -134,13 +115,9 @@ if (isset($_POST['crear'])) {
                                     <div class="col margenInferior">
                                         <label for="Passwordw" class="form-label">Confirmar contraseña</label>
                                         <input type="password" class="roundedInput form-control" id="claveRep"
-                                            name="Password2" required>
-                                        <input type="password" class="roundedInput form-control" name="Password1" id="clave" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$" required oninput="verificarClave()">
+                                            name="Password2" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$" required oninput="verificarClave()" required>
                                     </div>
-                                    <div class="col margenInferior">
-                                        <label for="Passwordw" class="form-label">Confirmar contraseña</label>
-                                        <input type="password" class="roundedInput form-control" id="claveRep" name="Password2" required>
-                                    </div>
+                                    
                                     <p class="oculto" id="passIncorrecta">Las contraseñas no coinciden</p>
                                     <div class="row">
                                         <div class="col-sm-6 margenInferior">
@@ -152,7 +129,6 @@ if (isset($_POST['crear'])) {
                                             <label for="phone" class="form-label">Teléfono</label>
                                             <input type="tel" class="roundedInput form-control d-block" name="phone"
                                                 id="phone" required>
-                                            <input type="date" class="roundedInput form-control" id="fecha" name="date" min="1900-01-01" max="<?php print date("Y-m-d"); ?>" required>
                                         </div>
                                         <div class="col-sm-6 margenInferior phoneCountries">
                                             <label for="phone" class="form-label">Teléfono</label>
@@ -170,11 +146,6 @@ if (isset($_POST['crear'])) {
                                             <label for="postalCode" class="form-label">Código postal</label>
                                             <input id="codPostal" type="text" class="roundedInput form-control"
                                                 name="postalCode" pattern="^[0-9]+$" required>
-                                            <select type="text" class="roundedInput form-control country" id="country" name="country" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required></select>
-                                        </div>
-                                        <div class="col-sm-6 margenInferior mb-3">
-                                            <label for="postalCode" class="form-label">Código postal</label>
-                                            <input id="codPostal" type="text" class="roundedInput form-control" name="postalCode" pattern="^[0-9]+$" required>
                                         </div>
                                     </div>
                                     <!-- Checkboxes for age and terms acceptance -->
