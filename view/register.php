@@ -18,26 +18,29 @@ if (isset($_POST['crear'])) {
     $telef = $_POST['phone'];
     $pais = $_POST['country'];
     $codPostal = $_POST['postalCode'];
-    $i = usuarioController::insertUser($nombre, $apellidos, $email, $contraseña, $fechaNac, $telef, $pais, $codPostal);
-    if ($i = !null) {
-        if ($i == true) {
-            header("Location: ../index.php?registrado='true'");
-        }
+    $usuario = usuarioController::findByEmail($email);
+    if ($usuario != null) {
+        $error = "Ya existe un usuario registrado con este correo electrónico";
     } else {
-        echo "No se ha podido encontrar el usuario";
+        $i = usuarioController::insertUser($nombre, $apellidos, $email, $contraseña, $fechaNac, $telef, $pais, $codPostal);
+        if ($i = !null) {
+            if ($i == true) {
+                header("Location: ../index.php?registrado='true'");
+            }
+        } else {
+            echo "No se ha podido encontrar el usuario";
+        }
     }
 } else {
-    ?>
+?>
     <!DOCTYPE html>
     <html lang="es">
 
     <head>
         <?php include("../includes/head-tag-contents.php"); ?>
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css"
-            crossorigin="anonymous" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css" crossorigin="anonymous" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     </head>
 
@@ -71,8 +74,7 @@ if (isset($_POST['crear'])) {
                                         <!--CF2: ¿Por qué usas sm-6 si tus compañeros usan md y lg-->
                                         <div class="col-sm-6 margenInferior">
                                             <label for="FirstN" class="form-label">Nombre</label>
-                                            <input type="text" class="roundedInput form-control" name="FirstN"
-                                                pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required>
+                                            <input type="text" class="roundedInput form-control" name="FirstN" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required>
                                         </div>
                                         <div class="col-sm-6 margenInferior">
                                             <label for="LastN" class="form-label">Apellidos</label>
@@ -112,9 +114,7 @@ if (isset($_POST['crear'])) {
                                     <div class="col margenInferior">
                                         <label for="Password1" class="form-label"> Contraseña:</label>
                                         <ul class="listaError" id="errores"></ul>
-                                        <input type="password" class="roundedInput form-control" name="Password1" id="clave"
-                                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$" required
-                                            oninput="verificarClave()">
+                                        <input type="password" class="roundedInput form-control" name="Password1" id="clave" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$" required oninput="verificarClave()">
                                     </div>
                                     <div class="col margenInferior">
                                         <label for="Passwordw" class="form-label">Confirmar contraseña</label>
@@ -127,32 +127,27 @@ if (isset($_POST['crear'])) {
                                     <div class="row">
                                         <div class="col-sm-6 margenInferior">
                                             <label for="date" class="form-label">Fecha de nacimiento</label>
-                                            <input type="date" class="roundedInput form-control" id="fecha" name="date"
-                                                min="1900-01-01" max="<?php print date("Y-m-d"); ?>" required>
+                                            <input type="date" class="roundedInput form-control" id="fecha" name="date" min="1900-01-01" max="<?php print date("Y-m-d"); ?>" required>
                                         </div>
                                         <div class="col-sm-6 margenInferior phoneCountries">
                                             <label for="phone" class="form-label">Teléfono</label>
-                                            <input type="tel" class="roundedInput form-control d-block" name="phone"
-                                                id="phone" required>
+                                            <input type="tel" class="roundedInput form-control d-block" name="phone" id="phone" required>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-6 margenInferior">
                                             <label for="country" class="form-label">País</label>
-                                            <select type="text" class="roundedInput form-control country" id="country"
-                                                name="country" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required></select>
+                                            <select type="text" class="roundedInput form-control country" id="country" name="country" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required></select>
                                         </div>
                                         <div class="col-sm-6 margenInferior mb-3">
                                             <label for="postalCode" class="form-label">Código postal</label>
-                                            <input id="codPostal" type="text" class="roundedInput form-control"
-                                                name="postalCode" pattern="^[0-9]+$" required>
+                                            <input id="codPostal" type="text" class="roundedInput form-control" name="postalCode" pattern="^[0-9]+$" required>
                                         </div>
                                     </div>
                                     <!-- Checkboxes for age and terms acceptance -->
 
                                     <div class="d-block mb-3">
-                                        <input type="checkbox" name="acepto" value="Aceptar términos"
-                                            class="rounded-checkbox" required>
+                                        <input type="checkbox" name="acepto" value="Aceptar términos" class="rounded-checkbox" required>
                                         <label for="acepto">Acepto los términos</label>
                                     </div>
 
@@ -200,18 +195,27 @@ if (isset($_POST['crear'])) {
 
                                     <!-- Create account button -->
                                     <div class="d-grid margenSuperior">
-                                        <input type="submit" value="Crear cuenta" name="crear" id="crear"
-                                            class="btn btn-primary btn-block roundedInput textoNoWrap" disabled>
+                                        <p class="text-center">
+                                            <?php
+                                            if (isset($error)) {
+                                                print "<span class='material-symbols-outlined'> warning </span>  " .
+                                                    $error .
+                                                    "  <span class='material-symbols-outlined'> warning </span>";
+                                            }
+                                            ?>
+                                        </p>
                                     </div>
-                                </form>
+                                    <input type="submit" value="Crear cuenta" name="crear" id="crear" class="btn btn-primary btn-block roundedInput textoNoWrap" disabled>
                             </div>
+                            </form>
+                        </div>
 
-                            <!-- Card footer with a link to the login page -->
-                            <div class="card-footer text-center">
-                                <a href="login.php" class="nav-link text-light">Ya estoy registrado</a>
-                            </div>
+                        <!-- Card footer with a link to the login page -->
+                        <div class="card-footer text-center">
+                            <a href="login.php" class="nav-link text-light">Ya estoy registrado</a>
                         </div>
                     </div>
+            </div>
             </div>
             </div>
         </main>
@@ -223,7 +227,7 @@ if (isset($_POST['crear'])) {
 
     </body>
 
-    <?php
+<?php
 }
 
 
@@ -238,4 +242,4 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ?>
 
-</html>
+    </html>

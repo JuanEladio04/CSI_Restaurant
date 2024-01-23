@@ -10,13 +10,13 @@ if (isset($_SESSION["usuario"])) {
     header('location: userGestion.php');
 }
 if (isset($_POST["xIdentify"])) {
-    
+
     # Especificar el 'scope' al solicitar el token de solicitud
     $request_token = $connection->oauth('oauth/request_token', ['oauth_callback' => OAUTH_CALLBACK]);
-    
+
     $_SESSION['oauth_token'] = $request_token['oauth_token'];
     $_SESSION['oauth_token_secret'] = $request_token['oauth_token_secret'];
-    
+
     $url = $connection->url('oauth/authorize', ['oauth_token' => $request_token['oauth_token']]);
     header('location:' . $url);
 }
@@ -103,7 +103,16 @@ if (isset($_POST["gIdentify"])) {
                             <!-- Password input -->
                             <div class="col margenInferior">
                                 <label for="Password1" class="form-label">Contraseña</label>
-                                <input type="password" name="password" class="roundedInput form-control" required>
+                                <input type="password" name="password" class="roundedInput form-control margenInferior" required>
+                                <p class="text-center">
+                                    <?php
+                                    if (isset($error)) {
+                                        print "<span class='material-symbols-outlined'> warning </span>  " .
+                                            $error .
+                                            "  <span class='material-symbols-outlined'> warning </span>";
+                                    }
+                                    ?>
+                                </p>
                             </div>
                     </div>
 
@@ -121,11 +130,6 @@ if (isset($_POST["gIdentify"])) {
                         </div>
 
                         <div class="text-center">
-                            <?php
-                            if (isset($error)) {
-                                print $error;
-                            }
-                            ?>
                             <input type="submit" class="btn btn-primary roundedInput" name="identificarse" value="Identificarse">
                         </div>
                         </form>
