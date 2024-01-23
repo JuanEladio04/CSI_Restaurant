@@ -208,20 +208,3 @@ document.addEventListener("click", function (e) {
     }
 
 });
-
-function verificarCaptcha() {
-    var icon = document.querySelector('.content-input input[type="checkbox"]+i');
-        if (icon.classList.contains('checkbox-checked')) {
-            captchaCorrecto = 1;
-        } else {
-            captchaCorrecto = 0;
-        }
-
-        if (fechaCorrecta == 1 && contrasenaCorrecta == 1 && captchaCorrecto == 1) {
-            $boton = document.getElementById("crear");
-            $boton.disabled = false;
-        } else {
-            $boton = document.getElementById("crear");
-            $boton.disabled = true;
-        }
-}

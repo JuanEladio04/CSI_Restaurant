@@ -5,7 +5,9 @@ include("../includes/a_config.php");
 
 
 use Abraham\TwitterOAuth\TwitterOAuth;
-
+if (isset($_POST["resolver"])) {
+    header('location: ../index.php');
+}
 
 if (isset($_POST['crear'])) {
     $nombre = $_POST['FirstN'];
@@ -74,35 +76,37 @@ if (isset($_POST['crear'])) {
                                         </div>
                                         <div class="col-sm-6 margenInferior">
                                             <label for="LastN" class="form-label">Apellidos</label>
-                                            
-                                            <input type="text" class="roundedInput form-control" name="LastN" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" value="<?php
-                                                                                                                                                            if (isset($_SESSION['nombre'])) {
-                                                                                                                                                                print $_SESSION['nombre'];
-                                                                                                                                                                $_SESSION['nombre'] = "";
-                                                                                                                                                            }
-                                                                                                                                                            if (isset($_GET['nombre'])) {
-                                                                                                                                                                print $_GET['nombre'];
-                                                                                                                                                            }
-                                                                                                                                                            ?>" required>
+
+                                            <input type="text" class="roundedInput form-control" name="LastN"
+                                                pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" value="<?php
+                                                if (isset($_SESSION['nombre'])) {
+                                                    print $_SESSION['nombre'];
+                                                    $_SESSION['nombre'] = "";
+                                                }
+                                                if (isset($_GET['nombre'])) {
+                                                    print $_GET['nombre'];
+                                                }
+                                                ?>" required>
                                         </div>
                                     </div>
 
                                     <!-- Email input with margin -->
                                     <div class="margenInferior">
                                         <label for="Email" class="form-label">Email</label>
-                                        <input type="email" class="roundedInput form-control" id="email" name="Email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" value="<?php
-                                                                                                                                                                                        if (isset($_SESSION['emailGoogle'])) {
-                                                                                                                                                                                            print $_SESSION['emailGoogle'];
-                                                                                                                                                                                            $_SESSION['emailGoogle'] = "";
-                                                                                                                                                                                        }
-                                                                                                                                                                                        if (isset($_SESSION['emailTwitter'])) {
-                                                                                                                                                                                            print $_SESSION['emailTwitter'];
-                                                                                                                                                                                            $_SESSION['emailTwitter'] = "";
-                                                                                                                                                                                        }
-                                                                                                                                                                                        if (isset($_GET['emailFacebook'])) {
-                                                                                                                                                                                            print $_GET['emailFacebook'];
-                                                                                                                                                                                        }
-                                                                                                                                                                                        ?>" required>
+                                        <input type="email" class="roundedInput form-control" id="email" name="Email"
+                                            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" value="<?php
+                                            if (isset($_SESSION['emailGoogle'])) {
+                                                print $_SESSION['emailGoogle'];
+                                                $_SESSION['emailGoogle'] = "";
+                                            }
+                                            if (isset($_SESSION['emailTwitter'])) {
+                                                print $_SESSION['emailTwitter'];
+                                                $_SESSION['emailTwitter'] = "";
+                                            }
+                                            if (isset($_GET['emailFacebook'])) {
+                                                print $_GET['emailFacebook'];
+                                            }
+                                            ?>" required>
                                     </div>
                                     <!-- Password inputs with margin -->
                                     <div class="col margenInferior">
@@ -115,9 +119,10 @@ if (isset($_POST['crear'])) {
                                     <div class="col margenInferior">
                                         <label for="Passwordw" class="form-label">Confirmar contraseña</label>
                                         <input type="password" class="roundedInput form-control" id="claveRep"
-                                            name="Password2" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$" required oninput="verificarClave()" required>
+                                            name="Password2" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$"
+                                            required oninput="verificarClave()" required>
                                     </div>
-                                    
+
                                     <p class="oculto" id="passIncorrecta">Las contraseñas no coinciden</p>
                                     <div class="row">
                                         <div class="col-sm-6 margenInferior">
@@ -130,13 +135,8 @@ if (isset($_POST['crear'])) {
                                             <input type="tel" class="roundedInput form-control d-block" name="phone"
                                                 id="phone" required>
                                         </div>
-                                        <div class="col-sm-6 margenInferior phoneCountries">
-                                            <label for="phone" class="form-label">Teléfono</label>
-                                            <input type="tel" class="roundedInput form-control d-block" name="phone" id="phone" required>
-                                        </div>
                                     </div>
                                     <div class="row">
-                                        <!--CF2: ¿Por qué usas sm-6 si tus compañeros usan md y lg-->
                                         <div class="col-sm-6 margenInferior">
                                             <label for="country" class="form-label">País</label>
                                             <select type="text" class="roundedInput form-control country" id="country"
@@ -162,7 +162,7 @@ if (isset($_POST['crear'])) {
                                             <div class="checkboxCaptcha">
                                                 <label class="content-input">
                                                     <input type="checkbox" name="captcha" class="checkbox" id="checkbox">
-                                                    <i onclick="captcha()" id="icono"></i>
+                                                    <i onclick="captcha()" id="icono" <?php if(isset($_POST['resolverCaptcha'])){if($_SESSION['captcha_text'] == $_POST['resolverCaptcha']){echo "class='checkbox-checked'";};}; ?>></i>
                                                 </label>
                                             </div>
                                             <div class="textoCaptcha">
@@ -177,13 +177,22 @@ if (isset($_POST['crear'])) {
                                                 <h2>Completa el CAPTCHA</h2>
                                             </div>
                                             <div class="col-12">
-                                                <canvas id="captchaCanvas" width="200px" height="50px"
-                                                    class="col-12"></canvas>
-                                                <i class="fas fa-redo refresh-captcha col-12 "></i>
+                                                <!-- Esto es un captcha realizado con js -->
+                                                <!-- <canvas id="captchaCanvas" width="200px" height="50px"
+                                                    class="col-12"></canvas> -->
+
+                                                <!-- Aqui esta el capcha con php -->
+                                                <img src="../includes/captcha.php" width="200px" height="50px"
+                                                    class="captcha-image">
+                                                <i class="fas fa-redo refresh-captcha col-12"></i>
                                             </div>
                                             <div class="col-12 form-captcha">
-                                                <input type="text" name="resolverCaptcha" id="resolverCaptcha"
-                                                    class="tamaño">
+                                                    <input type="text" name="resolverCaptcha" id="resolverCaptcha"
+                                                        class="tamaño">
+
+                                                    <button id="resolver" name="resolver" class="btn btn-outline-danger btn-lg btn-block"
+                                                         onclick="cerrar()">Calcular</button>
+                                           
                                             </div>
                                         </div>
                                     </div>
@@ -216,6 +225,7 @@ if (isset($_POST['crear'])) {
 
     <?php
 }
+
 
 ?>
 
