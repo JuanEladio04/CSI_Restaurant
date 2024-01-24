@@ -8,6 +8,7 @@ require_once('../controller/sessionController.php');
 <html>
 
 <head>
+    <?php include("../includes/cookies.php")?>
     <?php include("../includes/head-tag-contents.php"); ?>
     <!-- Including head tag contents -->
 </head>
