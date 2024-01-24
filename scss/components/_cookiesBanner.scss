@@ -1,0 +1,34 @@
+.cookies{
+    z-index: 1000;
+    background-color: $danger;
+    color:white;
+    flex-direction: column;
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 10.5%;
+    
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+    backdrop-filter: blur(5px); /* Desenfoque para un efecto suave */
+    z-index: 999; /* Un z-index menor que el del contenedor de cookies para que esté detrás */
+}
+
+.fs-4{
+    margin-bottom: auto;
+    text-align: center;
+}
+
+button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+}

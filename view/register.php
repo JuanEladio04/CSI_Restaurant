@@ -157,7 +157,7 @@ if (isset($_POST['crear'])) {
                                     <!-- Checkboxes for age and terms acceptance -->
 
                                     <div class="d-block mb-3">
-                                        <input type="checkbox" name="acepto" value="Aceptar términos"
+                                        <input type="checkbox" name="acepto" id="terminos" value="Aceptar términos"
                                             class="rounded-checkbox" required>
                                         <label for="acepto">Acepto los términos</label>
                                     </div>
