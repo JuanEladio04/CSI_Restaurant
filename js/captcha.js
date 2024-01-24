@@ -24,7 +24,7 @@ function captcha() {
         overlay.style.display = 'block';
 
         // regenerarCaptcha();
-        // document.getElementById("resolverCaptcha").value = "";
+        document.getElementById("resolverCaptcha").value = "";
     }
 }
 
