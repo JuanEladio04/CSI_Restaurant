@@ -76,7 +76,7 @@ $(document).ready(function () {
                         captchaCorrecto = 0;
                     }
 
-                    if (fechaCorrecta == 1 && contrasenaCorrecta == 1 && captchaCorrecto == 1) {
+                    if (fechaCorrecta == 1 && contrasenaCorrecta == 1 && captchaCorrecto == 1 && terminosAceptados == 1) {
                         $boton = document.getElementById("crear");
                         $boton.disabled = false;
                     } else {

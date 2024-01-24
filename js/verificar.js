@@ -2,7 +2,7 @@ let contrasenaIncorrecta = null;
 let contrasenaCorrecta = 0;
 let fechaCorrecta = 0;
 let captchaCorrecto = 0;
-
+let terminosAceptados = 0;
 function verificarClave() {
     let clave = document.getElementById("clave");
     let minusculas;
@@ -174,7 +174,7 @@ document.addEventListener("input", function (e) {
             fechaCorrecta = 0;
         }
     }
-    if (fechaCorrecta == 1 && contrasenaCorrecta == 1 && captchaCorrecto == 1) {
+    if (fechaCorrecta == 1 && contrasenaCorrecta == 1 && captchaCorrecto == 1 && terminosAceptados == 1) {
         $boton = document.getElementById("crear");
         $boton.disabled = false;
     } else {
@@ -199,12 +199,16 @@ document.addEventListener("click", function (e) {
             fechaCorrecta = 0;
         }
     }
-    if (fechaCorrecta == 1 && contrasenaCorrecta == 1 && captchaCorrecto == 1) {
+    if (fechaCorrecta == 1 && contrasenaCorrecta == 1 && captchaCorrecto == 1 && terminosAceptados == 1) {
         $boton = document.getElementById("crear");
         $boton.disabled = false;
     } else {
         $boton = document.getElementById("crear");
         $boton.disabled = true;
     }
-
+    if (e.target.id == "terminos" && e.target.checked == true) {
+        terminosAceptados = 1;
+    } else {
+        terminosAceptados = 0;
+    }
 });
