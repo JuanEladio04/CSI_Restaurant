@@ -1,6 +1,7 @@
 <?php
 include("includes/a_config.php");
 
+
 use Abraham\TwitterOAuth\TwitterOAuth;
 
 require_once('controller/sessionController.php');
@@ -162,7 +163,13 @@ if (isset($_GET['oauth_verifier'])) {
               <div class="card-body container-fluid bg-success roundedBorder">
                 <h3 class="card-title lobster ">Cuenta de usuario</h3>
                 <p class="card-text roboto">Modifica tu cuenta e incluye una foto</p>
-                <a href="view/userGestion.php" class="btn btn-danger rounded-2">Mi cuenta</a>
+                <a href="view/userGestion.php" class="btn btn-danger rounded-2">
+                  Mi cuenta
+                </a>
+                <a class="btn btn-danger rounded-2" type="button" href="#" data-bs-toggle="modal" data-bs-target="#salir">
+                  Cerrar sesión
+                </a>
+
               </div>
             </div>
           <?php
@@ -283,10 +290,10 @@ if (isset($_GET['oauth_verifier'])) {
       </section>
 
       <script src="js/comentary.js"></script>
-
-
     </section>
+
     <?php include("includes/footer.php"); ?>
+    <?php include("includes/sessionCloseModal.php"); ?>
 
   </main>
 
