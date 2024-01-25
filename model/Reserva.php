@@ -8,17 +8,15 @@ class Reserva{
     private $numero_telefono;
     private $comensales;
     private $fecha;
-    private $hora;
     private $especificaciones;
 
-    public function __construct($usuId, $nom, $apel, $telef, $comensal, $fecha, $hora, $espec){
+    public function __construct($usuId, $nom, $apel, $telef, $comensal, $fecha, $espec){
         $this->uid = $usuId;
         $this->nombre = $nom;
         $this->apellidos = $apel;
         $this->numero_telefono = $telef;
         $this->comensales = $comensal;
         $this->fecha = $fecha;
-        $this->hora = $hora;
         $this->especificaciones = $espec;
     }
 
