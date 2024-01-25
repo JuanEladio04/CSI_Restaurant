@@ -184,6 +184,16 @@ debemos poner definir este valor.
         z-index: 1;  
     }
 
+    .captcha-image{
+        width: 90%;
+        height: 50px;
+    }
+
+    .refresh-captcha{
+        margin: 5% 0%;
+        font-size: 20px;
+    }
+
     @include media-breakpoint-up(sm) {
         .fondoCaptcha {
             width: 55%;
@@ -210,6 +220,15 @@ debemos poner definir este valor.
         .oculto{
             top: 25% !important;
             height: 50% !important;
+        }
+
+        .captcha-image{
+            width: 300px;
+            height: 70px;
+        }
+
+        .refresh-captcha{
+            font-size: 40px;
         }
     }
 }

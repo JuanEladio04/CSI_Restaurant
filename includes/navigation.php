@@ -7,9 +7,7 @@
             <a class="navbar-brand" href="/index.php"><img src="/img/logos/SmallLogo.png" alt="Logo"></a>
         </div>
 
-        <button class="navbar-toggler text-uppercase font-weight-bold text-white rounded" type="button"
-            data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
-            aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler text-uppercase font-weight-bold text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 
             <span class="navbar-toggler-icon "></span>
 
@@ -44,34 +42,30 @@
                     <a class="nav-link " href="/view/games.php">Minijuegos</a>
                 </li>
 
-                <li class="nav-item  w-100  text-center desplegable <?php if ($CURRENT_PAGE == "userGestion") { ?>active<?php } ?>"
-                    id="desplegable">
+                <li class="nav-item  w-100  text-center desplegable <?php if ($CURRENT_PAGE == "userGestion") { ?>active<?php } ?>" id="desplegable">
                     <?php
                     if (isset($_SESSION["usuario"])) {
                         $usuario = $_SESSION['usuario'];
-                        ?>
+                    ?>
                         <div class="dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="mostrar()">
-                                <img src="../<?php echo $usuario->imagen; ?>" width="100px" alt="Foto Perfil"
-                                    class="rounded-circle">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="mostrar()">
+                                <img src="../<?php echo $usuario->imagen; ?>" width="100px" alt="Foto Perfil" class="rounded-circle">
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                 <a class="dropdown-item nav-link w-auto nombre" href="../view/userGestion.php">
                                     <?php echo $usuario->nombre; ?>
                                 </a>
                                 <!-- Button trigger modal -->
-                                <a class="dropdown-item nav-link w-auto" href="../view/userGestion.php" type="button" data-bs-toggle="modal"
-                                    data-bs-target="#salir">
+                                <a class="dropdown-item nav-link w-auto" href="../view/userGestion.php" type="button" data-bs-toggle="modal" data-bs-target="#salir">
                                     Salir
                                 </a>
                             </div>
                         </div>
-                        <?php
+                    <?php
                     } else {
-                        ?>
+                    ?>
                         <a class="nav-link " href="/view/login.php">Identificarse</a>
-                        <?php
+                    <?php
                     }
                     ?>
                 </li>
@@ -80,24 +74,6 @@
     </div>
 </nav>
 
-<!-- Modal -->
-<div class="modal fade" id="salir" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header d-flex align-item-center justify-content-center">
-                <h5 class="modal-title" id="exampleModalLabel">¿Deseas
-                    cerrar Sesión
-                    <?php echo $usuario->nombre; ?>?
-                </h5>
-            </div>
-            <div class="modal-body d-flex align-item-center justify-content-center">
-                <img src="../<?php echo $usuario->imagen; ?>" width="150px" alt="Foto Perfil" class="rounded-circle">
-            </div>
-            <div class="modal-footer d-flex">
-                <a href="../view/cerrarSesion.php" class="boton"><button type="button"
-                        class="btn btn-outline-danger w-100">Cerrar Sesión</button></a>
-                <button type="button" class="btn btn-outline-danger boton" data-bs-dismiss="modal">Volver</button>
-            </div>
-        </div>
-    </div>
-</div>
+<?php
+include ('../includes/sessionCloseModal.php');
+?>
