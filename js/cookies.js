@@ -5,7 +5,7 @@
         overlay.style.display = "none";
         cookieAlert.style.display = "none";  
     
-        setCookie("cookiesAceptadas", true, 365);
+        setCookie("cookiesAceptadas", true);
         setCookie("noticiasSemanales", true, 30);
         cookieAlert.style.display = "none";  
          
