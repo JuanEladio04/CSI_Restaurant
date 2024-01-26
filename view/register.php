@@ -157,7 +157,7 @@ if (isset($_POST['crear'])) {
                                     <!-- Checkboxes for age and terms acceptance -->
 
                                     <div class="d-block mb-3">
-                                        <input type="checkbox" name="acepto" value="Aceptar términos"
+                                        <input type="checkbox" name="acepto" id="terminos" value="Aceptar términos"
                                             class="rounded-checkbox" required>
                                         <label for="acepto">Acepto los términos</label>
                                     </div>
@@ -194,8 +194,7 @@ if (isset($_POST['crear'])) {
                                                     class="col-12"></canvas> -->
 
                                                 <!-- Aqui esta el capcha con php -->
-                                                <img src="../includes/captcha.php" width="200px" height="50px"
-                                                    class="captcha-image">
+                                                <img src="../includes/captcha.php" class="captcha-image">
                                                 <i class="fas fa-redo refresh-captcha col-12"></i>
                                             </div>
                                             <div class="col-12 form-captcha">

@@ -18,9 +18,9 @@ $image = imagecreatetruecolor(200, 50);
 imageantialias($image, true);
 
 $colors = [];
-$red = rand(100, 150);
-$green = rand(100, 150);
-$blue = rand(100, 150);
+$red = rand(100, 255);    
+$green = rand(150, 255); 
+$blue = rand(100, 255);    
 
 for ($i = 0; $i < 5; $i++) {
     $colors[] = imagecolorallocate($image, $red - 20 * $i, $green - 20 * $i, $blue - 20 * $i);
@@ -38,7 +38,7 @@ $black = imagecolorallocate($image, 0, 0, 0);
 $white = imagecolorallocate($image, 255, 255, 255);
 $textcolors = [$black, $white];
 
-$fonts = [dirname(__FILE__) . '/fonts/Acme-Regular.ttf', dirname(__FILE__) . '/fonts/Ubuntu-Regular.ttf'];
+$fonts = [dirname(__FILE__) . '/fonts/Acme-Regular.ttf', dirname(__FILE__) . '/fonts/Ubuntu-Regular.ttf', dirname(__FILE__) . '/fonts/COMICATE.TTF', dirname(__FILE__) . '/fonts/grasping.ttf', dirname(__FILE__) . '/fonts/horrendo.ttf', dirname(__FILE__) . '/fonts/OLDFAX.TTF', dirname(__FILE__) . '/fonts/sewer.ttf'];
 
 $string_length = 6;
 $captcha_string = generate_string($permitted_chars, $string_length);
@@ -50,9 +50,9 @@ for ($i = 0; $i < $string_length; $i++) {
     $initial = 15;
 
     // Distorsiones más agresivas al texto
-    $angle = rand(-20, 20);
-    $x = $initial + $i * $letter_space + rand(-5, 5); // Variación en la posición
-    $y = rand(25, 45) + rand(-5, 5); // Variación en la posición
+    $angle = rand(-30, 30);
+    $x = $initial + $i * $letter_space + rand(-10, 10); // Variación en la posición
+    $y = rand(20, 40) + rand(-10, 10); // Variación en la posición
 
     // Cambiar la posición y el tamaño del texto
     $font_size = rand(20, 30);

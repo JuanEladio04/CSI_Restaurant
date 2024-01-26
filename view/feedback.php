@@ -137,6 +137,7 @@ require_once('../controller/sessionController.php');
                                 <button type="button" class="btn btn-primary btn-sm" aria-label="Close" onclick="JavaScript: alert(quill.root.innerHTML);">
                                     Obtener texto HTML mostrado en el editor
                                 </button>
+                                <p id="caracteres">500</p>
                             </div>
 
                         </div>
@@ -269,6 +270,7 @@ require_once('../controller/sessionController.php');
     </section>
 
     <script src="../js/estrellas.js"></script>
+    <script src="../js/opinion.js"></script>
     <?php include("../includes/footer.php"); ?>
 
 </body>
