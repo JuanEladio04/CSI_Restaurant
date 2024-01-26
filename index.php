@@ -91,6 +91,7 @@ if (isset($_GET['oauth_verifier'])) {
                 print '<a href="view/login.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Iniciar Sesión</a>';
               } else {
                 print '<a href="view/userGestion.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Mi cuenta</a>';
+                print '<a href="/view/cerrarSesion.php" class="boton"><button type="button" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Cerrar Sesión</button></a>';
               }
               ?>
             </div>
@@ -100,9 +101,6 @@ if (isset($_GET['oauth_verifier'])) {
 
       <!--Menu carousel-->
       <section id="menu" class="bg-dark p-5 my-5 container-fluid d-lg-block d-none">
-        <h2 class="d-none">
-          Manú carousel
-        </h2>
         <div id="carousel" class="mb-5">
           <div class="prevLeftSecond card bg-danger roundedBorder text-center text-dark">
             <img src="img\stockImages\index\gamesImage.png" class="card-img-top roundedBorder mt-auto" alt="reseravs">
@@ -166,9 +164,8 @@ if (isset($_GET['oauth_verifier'])) {
                 <a href="view/userGestion.php" class="btn btn-danger rounded-2">
                   Mi cuenta
                 </a>
-                <a class="btn btn-danger rounded-2" type="button" href="#" data-bs-toggle="modal" data-bs-target="#salir">
-                  Cerrar sesión
-                </a>
+
+                <a href="/view/cerrarSesion.php" class="boton"><button type="button" class="btn btn-danger rounded-2">Cerrar Sesión</button></a>
 
               </div>
             </div>
@@ -189,8 +186,6 @@ if (isset($_GET['oauth_verifier'])) {
           </div>
         </div>
       </section>
-      <script src='js/personalCarouselJQuery.js'></script>
-      <script src="js/personalCarousel.js"></script>
 
       <!--About us-->
       <section id="aboutUs-<?php echo $CURRENT_PAGE; ?>" class="p-5 my-5 container-fluid">
@@ -289,15 +284,16 @@ if (isset($_GET['oauth_verifier'])) {
         </div>
       </section>
 
-      <script src="js/comentary.js"></script>
     </section>
-
-    <?php include("includes/footer.php"); ?>
-    <?php include("includes/sessionCloseModal.php"); ?>
-
   </main>
+  <?php include("includes/sessionCloseModal.php"); ?>
+  <?php include("includes/footer.php"); ?>
 
+  <script src='js/personalCarouselJQuery.js'></script>
+  <script src="js/personalCarousel.js"></script>
+  <script src="js/comentary.js"></script>
 </body>
+
 
 </html>
 
