@@ -6,6 +6,7 @@
         cookieAlert.style.display = "none";  
     
         setCookie("cookiesAceptadas", true, 365);
+        setCookie("noticiasSemanales", true, 30);
         cookieAlert.style.display = "none";  
          
         function setCookie(cname, cvalue, exdays) {
