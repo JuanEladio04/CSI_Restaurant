@@ -40,6 +40,7 @@ if (isset($_POST['enviarReserva'])) {
         <?php include("../includes/navigation.php"); ?>
 
         <?php include("../includes/design-top.php"); ?>
+        
         <!--Reserves formulary-->
         <section class="container-fluid bg-danger rForm">
             <!--Presentation-->
@@ -107,7 +108,7 @@ if (isset($_POST['enviarReserva'])) {
         </section>
 
         <?php include("../includes/footer.php"); ?>
-
+        <?php include("../includes/cookies.php"); ?>                                                                                                                                                                                         
         <script src="../js/reserveFormulary.js"></script>
 
     </body>

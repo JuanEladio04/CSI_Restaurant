@@ -14,6 +14,7 @@ require_once('../controller/sessionController.php');
 
     <?php include("../includes/navigation.php"); ?>
     <?php include("../includes/design-top.php"); ?>
+    
 
     <section class="ofertasDia">
         <div class="tituloOffers">
@@ -140,6 +141,7 @@ require_once('../controller/sessionController.php');
 
 
     <?php include("../includes/footer.php"); ?>
+    <?php include("../includes/cookies.php"); ?>
 </body>
 
 </html>
