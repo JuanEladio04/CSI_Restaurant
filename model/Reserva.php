@@ -2,6 +2,7 @@
 
 class Reserva{
 
+    private $id;
     private $uid;
     private $nombre;
     private $apellidos;
@@ -10,7 +11,8 @@ class Reserva{
     private $fecha;
     private $especificaciones;
 
-    public function __construct($usuId, $nom, $apel, $telef, $comensal, $fecha, $espec){
+    public function __construct($id, $usuId, $nom, $apel, $telef, $comensal, $fecha, $espec){
+        $this->id = $id;
         $this->uid = $usuId;
         $this->nombre = $nom;
         $this->apellidos = $apel;

@@ -10,7 +10,7 @@ class comentarioController
 
             $comentarios = array();
             while ($fila = $stmt->fetchObject()) {
-                $comentario = new comentario($fila->id, $fila->rid, $fila->comentario, $fila->fecha, $fila->hora, $fila->valoracion);
+                $comentario = new comentario($fila->id, $fila->rid, $fila->comentario, $fila->fecha, $fila->valoracion);
                 $comentarios[] = $comentario;
             }
             return $comentarios;
@@ -69,6 +69,15 @@ class comentarioController
         try{
             $conn = ConnectionManager::getConnectionInstance();
             $conn->exec("dELETE FROM comentarios WHERE id = $id");
+        }catch (Exception $exc) {
+            echo $exc->getTraceAsString();
+        }
+    }
+
+    public static function newComentario(comentario $comentario){
+        try{
+            $conn = ConnectionManager::getConnectionInstance();
+            $conn->exec("iNSERT INTO comentarios (rid,comentario,fecha,valoracion) VALUES ($comentario->rid,'$comentario->comentario',$comentario->fecha, $comentario->valoracion)");
         }catch (Exception $exc) {
             echo $exc->getTraceAsString();
         }

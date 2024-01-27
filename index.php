@@ -159,7 +159,7 @@ if (isset($_GET['oauth_verifier'])) {
             <div class="nextRightSecond card bg-danger roundedBorder text-center text-dark">
               <img src="<?php echo $_SESSION['usuario']->imagen ?>" class="card-img-top roundedBorder" alt="reseravs">
               <div class="card-body container-fluid bg-success roundedBorder">
-                <h3 class="card-title lobster ">Cuenta de usuario</h3>
+                <h3 class="card-title lobster animated  "><?php echo $_SESSION['usuario']->nombre." ".$_SESSION['usuario']->apellidos ?></h3>
                 <p class="card-text roboto">Modifica tu cuenta e incluye una foto</p>
                 <a href="view/userGestion.php" class="btn btn-danger rounded-2">
                   Mi cuenta

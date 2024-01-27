@@ -52,7 +52,7 @@
                                 <img src="../<?php echo $usuario->imagen; ?>" width="100px" alt="Foto Perfil" class="rounded-circle">
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item nav-link w-auto nombre" href="../view/userGestion.php">
+                                <a class="dropdown-item nav-link w-auto nombre animated" href="../view/userGestion.php">
                                     <?php echo $usuario->nombre; ?>
                                 </a>
                                 <!-- Button trigger modal -->

@@ -31,7 +31,7 @@ class reservaController
             $reservas = [];
             if ($rs) {
                 while ($r = $rs->fetchObject()) {
-                    $reserva = new Reserva($r->uid, $r->nombre, $r->apellidos, $r->numero_telefono, $r->comensales, $r->fecha, $r->especificaciones);
+                    $reserva = new Reserva($r->id, $r->uid, $r->nombre, $r->apellidos, $r->numero_telefono, $r->comensales, $r->fecha, $r->especificaciones);
                     $reservas[] = $reserva;
                 }
             }

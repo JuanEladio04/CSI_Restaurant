@@ -18,7 +18,11 @@
             margin-top: 7%; 
         }
     }
+}
 
+.boton_Contador{
+    width: 100%; 
+    text-align: center;
 }
 
 @include media-breakpoint-up(sm){
