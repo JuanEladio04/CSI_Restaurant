@@ -16,7 +16,6 @@ require_once('../controller/sessionController.php');
     <?php include("../includes/navigation.php"); ?>
     <!-- Including navigation bar -->
     <?php include("../includes/design-top.php"); ?>
-    <?php include("../includes/cookies.php"); ?>
     <!-- Including superior design file -->
     <!--CF2: ¿Por qué usas aquí container-fluid y termsAndConditios.php usas container?-->
     <div class="container-fluid">
@@ -110,6 +109,7 @@ require_once('../controller/sessionController.php');
 
     </div>
     <?php include("../includes/footer.php"); ?>
+    <?php include("../includes/cookies.php"); ?>
     <!-- Including footer -->
 </body>
 

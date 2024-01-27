@@ -11,8 +11,7 @@ require_once('../controller/sessionController.php');
     <?php include("../includes/head-tag-contents.php"); ?>
 </head>
 
-<body class="bg-dark" id="background-<?php echo $CURRENT_PAGE; ?>">
-
+<body class="bg-dark" id="background-<?php echo $CURRENT_PAGE; ?>">   
     <!-- Header with a link to the homepage and a restaurant logo -->
     <header class="text-center">
         <a href="../index.php"><img src="../img/logos/BigLogo.png" width="300px"></a>

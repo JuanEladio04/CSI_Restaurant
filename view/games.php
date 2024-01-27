@@ -15,6 +15,7 @@ require_once('../controller/sessionController.php');
 <body id="background-<?php echo $CURRENT_PAGE; ?>">
     <?php include("../includes/navigation.php"); ?>
     <?php include("../includes/design-top.php"); ?>
+    
 
     <section class="container-fluid bg-primary text-center my-5">
         <article class="bg-danger row">
@@ -150,6 +151,7 @@ require_once('../controller/sessionController.php');
     <script src="../js/cardGame.js"></script>
 
     <?php include("../includes/footer.php"); ?>
+    <?php include("../includes/cookies.php"); ?>
 </body>
 
 </html>

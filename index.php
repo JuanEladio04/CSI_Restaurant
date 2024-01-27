@@ -53,15 +53,19 @@ if (isset($_GET['oauth_verifier'])) {
     print $connectionUs->getLastHttpCode();
   }
 }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <?php include("includes\head-tag-contents.php"); ?>
+  
 </head>
 
 <body id="background-<?php echo $CURRENT_PAGE; ?>">
+<?php include("../CSI_Restaurant/includes/cookies.php"); ?>
   <main class="container-fluid p-0 m-0">
     <section class="row m-0 p-0">
       <!--Presentation-->
@@ -286,10 +290,11 @@ if (isset($_GET['oauth_verifier'])) {
 
     </section>
   </main>
+  
   <?php include("includes/sessionCloseModal.php"); ?>
   <?php include("includes/footer.php"); ?>
 
-  <script src='js/personalCarouselJQuery.js'></script>
+  <script src='js/personalCarouselJQuery.js'></>
   <script src="js/personalCarousel.js"></script>
   <script src="js/comentary.js"></script>
 </body>

@@ -18,7 +18,7 @@ require_once('../controller/sessionController.php');
     <!-- Including navigation bar -->
     <?php include("../includes/design-top.php"); ?>
     <!-- Including superior design file -->
-    <?php include("../includes/cookies.php")?>
+    
 
     <div class="container-fluid">
 

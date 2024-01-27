@@ -12,6 +12,7 @@ require_once("../controller/sessionController.php");
 <body id="background-<?php echo $CURRENT_PAGE; ?>">
     <?php include("../includes/navigation.php"); ?>
     <?php include("../includes/design-top.php"); ?>
+    
 
     <!--Carta-->
     <section class=" cardMenu">
@@ -98,6 +99,7 @@ require_once("../controller/sessionController.php");
 
 
     <?php include("../includes/footer.php"); ?>
+    <?php include("../includes/cookies.php"); ?>
 </body>
 
 </html>
