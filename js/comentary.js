@@ -6,9 +6,9 @@ function updateText() {
 
     ps.forEach((p, index) => {
         var maxLength;
-        if (window.innerWidth <= 576) { 
+        if (window.innerWidth <= 576) {
             maxLength = 200;
-        } else { 
+        } else {
             maxLength = 400;
         }
 
