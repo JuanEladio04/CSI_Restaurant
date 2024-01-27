@@ -56,7 +56,7 @@
                                     <?php echo $usuario->nombre; ?>
                                 </a>
                                 <!-- Button trigger modal -->
-                                <a class="dropdown-item nav-link w-auto" href="" type="button" data-bs-toggle="modal" data-bs-target="#salir">
+                                <a class="dropdown-item nav-link w-auto" href="#" type="button" data-bs-toggle="modal" data-bs-target="#salir">
                                     Salir
                                 </a>
                             </div>

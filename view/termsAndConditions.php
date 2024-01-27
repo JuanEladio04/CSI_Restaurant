@@ -8,7 +8,7 @@ require_once('../controller/sessionController.php');
 <html>
 
 <head>
-    <?php include("../includes/cookies.php")?>
+    
     <?php include("../includes/head-tag-contents.php"); ?>
     <!-- Including head tag contents -->
 </head>
@@ -18,6 +18,7 @@ require_once('../controller/sessionController.php');
     <!-- Including navigation bar -->
     <?php include("../includes/design-top.php"); ?>
     <!-- Including superior design file -->
+    <?php include("../includes/cookies.php")?>
 
     <div class="container-fluid">
 

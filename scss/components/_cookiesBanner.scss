@@ -1,13 +1,18 @@
 .cookies{
+    opacity: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1000;
     background-color: $danger;
-    color:white;
-    flex-direction: column;
-    position: fixed;
-    z-index: 1000;
-    top: 50%;
-    left: 10.5%;
-    
+    color: white;
+    flex-direction: column;   
+    transition: opacity 0.3s ease-in-out;
+}
+
+.shown{
+    opacity: 1;
 }
 
 .overlay {
@@ -16,9 +21,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
-    backdrop-filter: blur(5px); /* Desenfoque para un efecto suave */
-    z-index: 999; /* Un z-index menor que el del contenedor de cookies para que esté detrás */
+    background: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(5px); 
+    z-index: 999; 
 }
 
 .fs-4{

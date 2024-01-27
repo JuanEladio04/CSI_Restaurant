@@ -16,6 +16,7 @@ require_once('../controller/sessionController.php');
     <?php include("../includes/navigation.php"); ?>
     <!-- Including navigation bar -->
     <?php include("../includes/design-top.php"); ?>
+    <?php include("../includes/cookies.php"); ?>
     <!-- Including superior design file -->
     <!--CF2: ¿Por qué usas aquí container-fluid y termsAndConditios.php usas container?-->
     <div class="container-fluid">
