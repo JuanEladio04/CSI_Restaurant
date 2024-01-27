@@ -24,3 +24,13 @@ d.addEventListener("keydown", function (e) {
 
 })
 
+var primeraSeleccion = true;
+
+function ocultarSeleccion() {
+    if (primeraSeleccion) {
+        // Elimina la opción "Seleccione una reserva" después de la primera selección
+        var select = document.getElementById("reservas");
+        select.remove(0);
+        primeraSeleccion = false;  // Marca que ya se ha realizado la primera selección
+    }
+}

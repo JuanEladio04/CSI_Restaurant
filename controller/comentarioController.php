@@ -42,4 +42,35 @@ class comentarioController
             return array();
         }
     }
+
+    public static function  getAllComentarios(){
+        try{
+            $conn = ConnectionManager::getConnectionInstance();
+            $stmt = $conn->query('
+            SELECT usuarios.imagen AS imagen_usuario, usuarios.nombre AS nombre_usuario, usuarios.apellidos AS apellidos_usuario, usuarios.id as id_usuario, comentarios.*
+            FROM comentarios
+            JOIN reservas ON comentarios.rid = reservas.id
+            JOIN usuarios ON reservas.uid = usuarios.id
+            ');
+            
+            $comentarios = [];
+            if($stmt){
+                while($c = $stmt->fetchObject()){
+                    $comentarios[] = $c;
+                }
+            }
+            return $comentarios;
+        }catch (Exception $exc) {
+            echo $exc->getTraceAsString();
+        }
+    }
+
+    public static function deleteComentario($id){
+        try{
+            $conn = ConnectionManager::getConnectionInstance();
+            $conn->exec("dELETE FROM comentarios WHERE id = $id");
+        }catch (Exception $exc) {
+            echo $exc->getTraceAsString();
+        }
+    }
 }

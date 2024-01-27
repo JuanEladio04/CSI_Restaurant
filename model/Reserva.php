@@ -28,4 +28,3 @@ class Reserva{
         return $this->$name = $value;
     }
 }    
-?>
