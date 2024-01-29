@@ -2,9 +2,11 @@
 include("../includes/a_config.php");
 require_once('../controller/sessionController.php');
 
-$usuario = $_SESSION['usuario'];
-$reservasUsuario = reservaController::getReservasById($usuario->id);
-$comentarios = comentarioController::getAllComentarios();
+if (isset($_SESSION['usuario'])) {
+    $usuario = $_SESSION['usuario'];
+    $reservasUsuario = reservaController::getReservasById($usuario->id);
+    $comentarios = comentarioController::getAllComentarios();
+}
 
 if (isset($_POST['borrar'])) {
     $id = $_POST['id_comentario'];
@@ -153,15 +155,18 @@ if (isset($_POST['borrar'])) {
                                 <img class="vector-icon img-user rounded-circle" alt=""
                                     src="../<?php echo $c->imagen_usuario ?>" width="40px" height="50px" />
                             </div>
-                            <div class="username lobster d-flex align-items-center justify-content-center <?php if($c->id_usuario == $usuario->id){echo "gold-pass";} ?>">
-                                <?php 
-                                    if($c->id_usuario == $usuario->id){
-                                        echo "<span class='animated'>";
-                                        echo $c->nombre_usuario . " " . $c->apellidos_usuario;
-                                        echo "</span>";
-                                    } else{
-                                        echo $c->nombre_usuario . " " . $c->apellidos_usuario;
-                                    }
+                            <div
+                                class="username lobster d-flex align-items-center justify-content-center <?php if ($c->id_usuario == $usuario->id) {
+                                    echo "gold-pass";
+                                } ?>">
+                                <?php
+                                if ($c->id_usuario == $usuario->id) {
+                                    echo "<span class='animated'>";
+                                    echo $c->nombre_usuario . " " . $c->apellidos_usuario;
+                                    echo "</span>";
+                                } else {
+                                    echo $c->nombre_usuario . " " . $c->apellidos_usuario;
+                                }
                                 ?>
                             </div>
                             <div class="stars d-flex align-items-center justify-content-center">
