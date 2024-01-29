@@ -2,9 +2,12 @@
 include("../includes/a_config.php");
 require_once('../controller/sessionController.php');
 
-$usuario = $_SESSION['usuario'];
-$reservasUsuario = reservaController::getReservasById($usuario->id);
 $comentarios = comentarioController::getAllComentarios();
+
+if (isset($_SESSION['usuario'])) {
+    $usuario = $_SESSION['usuario'];
+    $reservasUsuario = reservaController::getReservasById($usuario->id);
+}
 
 if (isset($_POST['borrar'])) {
     $id = $_POST['id_comentario'];
@@ -26,120 +29,126 @@ if (isset($_POST['borrar'])) {
     <?php include("../includes/navigation.php"); ?>
     <?php include("../includes/design-top.php"); ?>
 
-    <section class="container-fluid crearOpiniones">
-        <div class="titulo">
-            <h2>Deja tu opinión</h2>
-        </div>
-        <article class="contenedor">
-            <div class="texto column p-5 tituloh2">
+    <?php
+    if (isset($_SESSION['usuario'])) {
+        ?>
+        <section class="container-fluid crearOpiniones">
+            <div class="titulo">
+                <h2>Deja tu opinión</h2>
+            </div>
+            <article class="contenedor">
+                <div class="texto column p-5 tituloh2">
 
-                <h3 class="col-6 opinion ">Tu opinión</h3>
+                    <h3 class="col-6 opinion ">Tu opinión</h3>
 
-                <div class="col-6 parrafo-container p">
+                    <div class="col-6 parrafo-container p">
 
-                    <p class="parrafo ">
-                        En nuestro restaurante tu voz importa.
-                    </p>
+                        <p class="parrafo ">
+                            En nuestro restaurante tu voz importa.
+                        </p>
 
-                    <p class="parrafo ">¿Quieres hablar?</p>
+                        <p class="parrafo ">¿Quieres hablar?</p>
 
-                    <p class="parrafo roboto">
-                        Deja tu opinión a continuación:
-                    </p>
-                </div>
+                        <p class="parrafo roboto">
+                            Deja tu opinión a continuación:
+                        </p>
+                    </div>
 
-                <div class="comentarybox">
-                    <div>
-                        <div class="arriba mt-4 mb-2">
-                            <div class="img">
-                                <img class="vector-icon img-user rounded-circle" alt=""
-                                    src="../<?php echo $usuario->imagen ?>" width="50px" height="50px" />
+                    <div class="comentarybox">
+                        <div>
+                            <div class="arriba mt-4 mb-2">
+                                <div class="img">
+                                    <img class="vector-icon img-user rounded-circle" alt=""
+                                        src="../<?php echo $usuario->imagen ?>" width="50px" height="50px" />
+                                </div>
+
+                                <div class="username d-flex align-items-center justify-content-center">
+                                    <?php echo $usuario->nombre . " " . $usuario->apellidos ?>
+                                </div>
+
+                                <div id="crearCalificacion"
+                                    class="stars d-flex align-items-center justify-content-center margen">
+                                    <i class="fa-regular fa-2x fa-star text-danger estrella" id="1"></i>
+
+                                    <i class="fa-regular fa-2x fa-star text-danger estrella" id="2"></i>
+
+                                    <i class="fa-regular fa-2x fa-star text-danger estrella" id="3"></i>
+
+                                    <i class="fa-regular fa-2x fa-star text-danger estrella" id="4"></i>
+
+                                    <i class="fa-regular fa-2x fa-star text-danger estrella" id="5"></i>
+                                </div>
+
+                                <select name="reservas" id="reservas" onchange="ocultarSeleccion(), habilitarBoton()">
+                                    <option value="" selected>Seleccione una reserva</option>
+                                    <?php
+                                    foreach ($reservasUsuario as $r) {
+                                        $fecha = date("d M Y - H:i:s", $r->fecha);
+                                        echo "<option value=" . $r->id . ">" . $fecha . "</option>";
+                                    }
+                                    ?>
+                                </select>
                             </div>
 
-                            <div class="username d-flex align-items-center justify-content-center">
-                                <?php echo $usuario->nombre . " " . $usuario->apellidos ?>
+                            <div id="standalone-container" class="crearComentario">
+                                <div id="toolbar-container">
+                                    <span class="ql-formats">
+                                        <select class="ql-font"></select>
+                                        <select class="ql-size"></select>
+                                    </span>
+                                    <span class="ql-formats">
+                                        <button class="ql-bold"></button>
+                                        <button class="ql-italic"></button>
+                                        <button class="ql-underline"></button>
+                                        <button class="ql-strike"></button>
+                                    </span>
+                                    <span class="ql-formats">
+                                        <select class="ql-color"></select>
+                                        <select class="ql-background"></select>
+                                    </span>
+                                    <span class="ql-formats">
+                                        <button class="ql-script" value="sub"></button>
+                                        <button class="ql-script" value="super"></button>
+                                    </span>
+                                    <span class="ql-formats">
+                                        <button class="ql-header" value="1"></button>
+                                        <button class="ql-header" value="2"></button>
+                                        <button class="ql-blockquote"></button>
+                                    </span>
+                                    <span class="ql-formats">
+                                        <button class="ql-list" value="ordered"></button>
+                                        <button class="ql-list" value="bullet"></button>
+                                        <button class="ql-indent" value="-1"></button>
+                                        <button class="ql-indent" value="+1"></button>
+                                    </span>
+                                    <span class="ql-formats">
+                                        <button class="ql-direction" value="rtl"></button>
+                                        <select class="ql-align"></select>
+                                    </span>
+                                    <span class="ql-formats">
+                                        <button class="ql-link"></button>
+                                        <button class="ql-formula"></button>
+                                    </span>
+                                    <span class="ql-formats">
+                                        <button class="ql-clean"></button>
+                                    </span>
+                                </div>
+                                <div id="editor-container"></div>
                             </div>
 
-                            <div id="crearCalificacion"
-                                class="stars d-flex align-items-center justify-content-center margen">
-                                <i class="fa-regular fa-2x fa-star text-danger estrella" id="1"></i>
-
-                                <i class="fa-regular fa-2x fa-star text-danger estrella" id="2"></i>
-
-                                <i class="fa-regular fa-2x fa-star text-danger estrella" id="3"></i>
-
-                                <i class="fa-regular fa-2x fa-star text-danger estrella" id="4"></i>
-
-                                <i class="fa-regular fa-2x fa-star text-danger estrella" id="5"></i>
+                            <div class="boton_Contador">
+                                <input type="submit" name="crear" id="crear" value="Crear Comentario"
+                                    class="btn btn-danger mt-2" onclick="crear()" disabled>
+                                <p id="caracteres">500</p>
                             </div>
-
-                            <select name="reservas" id="reservas" onchange="ocultarSeleccion(), habilitarBoton()">
-                                <option value="" selected>Seleccione una reserva</option>
-                                <?php
-                                foreach ($reservasUsuario as $r) {
-                                    $fecha = date("d M Y - H:i:s", $r->fecha);
-                                    echo "<option value=" . $r->id . ">" . $fecha . "</option>";
-                                }
-                                ?>
-                            </select>
-                        </div>
-
-                        <div id="standalone-container" class="crearComentario">
-                            <div id="toolbar-container">
-                                <span class="ql-formats">
-                                    <select class="ql-font"></select>
-                                    <select class="ql-size"></select>
-                                </span>
-                                <span class="ql-formats">
-                                    <button class="ql-bold"></button>
-                                    <button class="ql-italic"></button>
-                                    <button class="ql-underline"></button>
-                                    <button class="ql-strike"></button>
-                                </span>
-                                <span class="ql-formats">
-                                    <select class="ql-color"></select>
-                                    <select class="ql-background"></select>
-                                </span>
-                                <span class="ql-formats">
-                                    <button class="ql-script" value="sub"></button>
-                                    <button class="ql-script" value="super"></button>
-                                </span>
-                                <span class="ql-formats">
-                                    <button class="ql-header" value="1"></button>
-                                    <button class="ql-header" value="2"></button>
-                                    <button class="ql-blockquote"></button>
-                                </span>
-                                <span class="ql-formats">
-                                    <button class="ql-list" value="ordered"></button>
-                                    <button class="ql-list" value="bullet"></button>
-                                    <button class="ql-indent" value="-1"></button>
-                                    <button class="ql-indent" value="+1"></button>
-                                </span>
-                                <span class="ql-formats">
-                                    <button class="ql-direction" value="rtl"></button>
-                                    <select class="ql-align"></select>
-                                </span>
-                                <span class="ql-formats">
-                                    <button class="ql-link"></button>
-                                    <button class="ql-formula"></button>
-                                </span>
-                                <span class="ql-formats">
-                                    <button class="ql-clean"></button>
-                                </span>
-                            </div>
-                            <div id="editor-container"></div>
-                        </div>
-
-                        <div class="boton_Contador">
-                            <input type="submit" name="crear" id="crear" value="Crear Comentario"
-                                class="btn btn-danger mt-2" onclick="crear()" disabled>
-                            <p id="caracteres">500</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </article>
-    </section>
+            </article>
+        </section>
+        <?php
+    }
+    ?>
     <section class="opinionUsuario ">
         <div class="contenedor-titulo titulo">
             <h2>Opiniones de Nuestros Clientes</h2>
@@ -153,15 +162,17 @@ if (isset($_POST['borrar'])) {
                                 <img class="vector-icon img-user rounded-circle" alt=""
                                     src="../<?php echo $c->imagen_usuario ?>" width="40px" height="50px" />
                             </div>
-                            <div class="username lobster d-flex align-items-center justify-content-center <?php if($c->id_usuario == $usuario->id){echo "gold-pass";} ?>">
-                                <?php 
-                                    if($c->id_usuario == $usuario->id){
-                                        echo "<span class='animated'>";
-                                        echo $c->nombre_usuario . " " . $c->apellidos_usuario;
-                                        echo "</span>";
-                                    } else{
-                                        echo $c->nombre_usuario . " " . $c->apellidos_usuario;
-                                    }
+                            <div class="username lobster d-flex align-items-center justify-content-center <?php if ($c->id_usuario == $usuario->id) {
+                                echo "gold-pass";
+                            } ?>">
+                                <?php
+                                if ($c->id_usuario == $usuario->id) {
+                                    echo "<span class='animated'>";
+                                    echo $c->nombre_usuario . " " . $c->apellidos_usuario;
+                                    echo "</span>";
+                                } else {
+                                    echo $c->nombre_usuario . " " . $c->apellidos_usuario;
+                                }
                                 ?>
                             </div>
                             <div class="stars d-flex align-items-center justify-content-center">
