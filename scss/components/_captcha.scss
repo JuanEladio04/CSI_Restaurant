@@ -63,7 +63,7 @@ $fondo: #292929;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         z-index: 2;
         width: 70%;
-        height: 32%;
+        height: 35%;
         border-radius: 3px;
 
         .tituloCaptcha{
@@ -79,8 +79,8 @@ $fondo: #292929;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin-bottom: 5%; 
-            gap: 20px;
+            margin-bottom: 3%; 
+            gap: 15px;
         }
 
         .tamaño{
@@ -203,7 +203,7 @@ debemos poner definir este valor.
             margin-right: 10%;
 
             .img{
-                width: 50px !important;
+                width: 60px !important;
             }
         }
 
