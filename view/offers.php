@@ -1,4 +1,7 @@
-<?php include("../includes/a_config.php"); ?>
+<?php 
+include("../includes/a_config.php"); 
+require_once('../controller/sessionController.php');
+?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -11,6 +14,7 @@
 
     <?php include("../includes/navigation.php"); ?>
     <?php include("../includes/design-top.php"); ?>
+    
 
     <section class="ofertasDia">
         <div class="tituloOffers">
@@ -137,6 +141,7 @@
 
 
     <?php include("../includes/footer.php"); ?>
+    <?php include("../includes/cookies.php"); ?>
 </body>
 
 </html>

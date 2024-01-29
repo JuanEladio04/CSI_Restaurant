@@ -64,4 +64,35 @@ switch ($_SERVER["SCRIPT_NAME"]) {
 	default:
 		$CURRENT_PAGE = "Index";
 		$PAGE_TITLE = "Welcome to my homepage!";
+
 }
+
+require_once($_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php');
+
+//Make object of Google API Client for call Google API
+$google_client = new Google_Client();
+
+//Set the OAuth 2.0 Client ID
+$google_client->setClientId('7035720435-6m87hnnct781g4s6lg4qq0malhelhmud.apps.googleusercontent.com');
+
+//Set the OAuth 2.0 Client Secret key
+$google_client->setClientSecret('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');
+
+//Set the OAuth 2.0 Redirect URI
+$google_client->setRedirectUri('http://localhost:10000');
+
+
+$google_client->addScope('email');
+
+$google_client->addScope('profile');
+use Abraham\TwitterOAuth\TwitterOAuth;
+
+define('CONSUMER_KEY', "lEpsRim68CZIFbFTWdJhxO5eV");
+define('CONSUMER_SECRET', "z1EDNXshWUS780EmUX0aLkxBxomMhdBAHv3xuc5AAmHOYSJNZ8");
+define('OAUTH_CALLBACK', 'http://localhost:10000/index.php');
+define('ACCESS_TOKEN', 'OfVTTFrZJWEO0dH38ckLcXvRsy6L1de13di2fwU');
+define('ACCES_TOKEN_SECRET', 'OfVTTFrZJWEO0dH38ckLcXvRsy6L1de13di2fwU');
+$connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET);
+
+
+

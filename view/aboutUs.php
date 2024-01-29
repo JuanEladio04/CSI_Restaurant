@@ -1,4 +1,7 @@
-<?php include("../includes/a_config.php"); ?>
+<?php 
+include("../includes/a_config.php"); 
+require_once('../controller/sessionController.php');
+?>
 <!-- Including configuration file -->
 
 <!doctype html>
@@ -106,6 +109,7 @@
 
     </div>
     <?php include("../includes/footer.php"); ?>
+    <?php include("../includes/cookies.php"); ?>
     <!-- Including footer -->
 </body>
 

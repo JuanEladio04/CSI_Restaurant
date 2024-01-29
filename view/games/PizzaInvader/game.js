@@ -1,4 +1,7 @@
 // **************************** LOBBY ************************************** //
+var dificultadjuego = null; // Aqui guardaremos la dificultad de el juego
+var colorDificultad = null // Aqui guardamos el color del cuadro de texto
+
 var lobby = new Konva.Stage({
     container: 'lobby-container',
     width: window.innerWidth * 0.60,
@@ -49,6 +52,66 @@ botonIniciar.on('click', function () {
     iniciarJuego();
 });
 
+// AQUI VAMOS A AÑADIR DIFICULTAD  
+// El juego va a tener 3 niveles 
+// Facil = 5 vidas
+// Medio = 3 vidas
+// Dificil = 1 vida
+// Imposible = 1 vida y la velocidad del alien se reduce a 1 por segundo
+var layerDif = new Konva.Layer();
+lobby.add(layerDif);
+
+const dificultad = new Konva.Group({
+    x: 50,
+    y: lobby.height() - 85,
+});
+layerDif.add(dificultad);
+
+// Agrega un rectángulo como fondo para el selector de dificultad
+const fondoMenu = new Konva.Rect({
+    width: 100,
+    height: 40,
+    fill: '#D1BC08',
+    cornerRadius: 5,
+});
+dificultad.add(fondoMenu);
+
+// Agrega un texto indicando la dificultad
+var textoDificultad = new Konva.Text({
+    text: 'Normal',
+    fontSize: 20,
+    fill: 'white',
+    width: 100,
+    align: 'center',
+    y: fondoMenu.height() / 2 - 7
+});
+dificultad.add(textoDificultad);
+dificultadjuego = textoDificultad.text();
+colorDificultad = fondoMenu.fill();
+
+//La dificultad se modifica al hacer click en el grupo dificultad
+dificultad.on('click', function () {
+    if (textoDificultad.text() == "Fácil") {
+        textoDificultad.text("Normal");
+        fondoMenu.fill('#D1BC08');
+        lobby.draw();
+    } else if (textoDificultad.text() == "Normal") {
+        textoDificultad.text("Difícil");
+        fondoMenu.fill('#CA5A02');
+        lobby.draw();
+    } else if (textoDificultad.text() == "Difícil") {
+        textoDificultad.text("Imposible");
+        fondoMenu.fill("#D10808");
+        lobby.draw();
+    } else if (textoDificultad.text() == "Imposible") {
+        textoDificultad.text("Fácil");
+        fondoMenu.fill("#0BEF0F");
+        lobby.draw();
+    }
+
+    dificultadjuego = textoDificultad.text();
+    colorDificultad = fondoMenu.fill();
+});
 
 
 // Añadimos las imagenes
@@ -89,6 +152,7 @@ function iniciarJuego() {
     document.getElementById("game-container").style.display = "block";
     document.getElementById("game-over").style.display = "none";
 
+
     // **************************** CREAR ESCENARIO **************************** //
     var stage = new Konva.Stage({
         container: 'game-container',
@@ -102,8 +166,30 @@ function iniciarJuego() {
 
 
     // **************************** PUNTUACION ********************************* //
-    var num = 70
-    var isSuperSaiyan = "None"
+    //Generamos las vidas del player
+    var vidas = 0
+    var velocidad = 0; // Esta es la velocidad en la que aparecen los aliens por pantalla
+
+    if (dificultadjuego == "Fácil") {
+        vidas = 5;
+        velocidad = 500000;
+    };
+    if (dificultadjuego == "Normal") {
+        vidas = 3;
+        velocidad = 500000;
+    };
+    if (dificultadjuego == "Difícil") {
+        vidas = 1;
+        velocidad = 500000;
+    };
+    if (dificultadjuego == "Imposible") {
+        vidas = 1
+        velocidad = 1000;
+
+    }
+
+    //Generamos el cuadro de texto
+    var isSuperSaiyan = "None";
 
     var cuadroTexto = new Konva.Layer();
 
@@ -121,7 +207,7 @@ function iniciarJuego() {
         cornerRadius: 10 // Añadir esquinas redondeadas
     });
 
-    var vidas = 3; // Número inicial de vidas del player
+
 
     // Crear el texto
     var texto = new Konva.Text({
@@ -199,7 +285,6 @@ function iniciarJuego() {
     var velocidadMaxima = 400; // Puedes ajustar según tus necesidades
     const desaceleracion = 0.2;
     const framerate = 165; // Frames por segundo
-    var velocidad = 500000; // Esta es la velocidad en la que aparecen los aliens por pantalla
     var derecha = false;
     var izquierda = false;
     var arriba = false;
@@ -395,6 +480,8 @@ function iniciarJuego() {
 
     // FUNCION DE MOVIMIENTOS
     function movimientoPlayer() {
+        var num = 70;
+
         // Obtener las coordenadas
         const iz = 20;
         const ar = 20;
@@ -685,8 +772,6 @@ function iniciarJuego() {
 
 
 
-
-
 // **************************** GAME OVER ********************************** //
 function mostrarGameOver() {
     document.getElementById("game-container").style.display = "none";
@@ -762,7 +847,6 @@ function mostrarGameOver() {
     // Añadir el grupo a la capa
     layer.add(marcador);
 
-
     // Pintar
     game_Over.draw();
 
@@ -773,6 +857,71 @@ function mostrarGameOver() {
 
     botonSalir.on('click', function () {
         salir();
+    });
+
+    // AQUI VAMOS A AÑADIR DIFICULTAD  
+    // El juego va a tener 3 niveles 
+    // Facil = 5 vidas
+    // Medio = 3 vidas
+    // Dificil = 1 vida
+    // Imposible = 1 vida y la velocidad del alien se reduce a 1 por segundo
+    var layerDif = new Konva.Layer();
+    game_Over.add(layerDif);
+
+    const dificultad = new Konva.Group({
+        x: 50,
+        y: lobby.height() - 85,
+    });
+    layerDif.add(dificultad);
+
+    // Agrega un rectángulo como fondo para el selector de dificultad
+    const fondoMenu = new Konva.Rect({
+        width: 100,
+        height: 40,
+        fill: colorDificultad,
+        cornerRadius: 5,
+    });
+    dificultad.add(fondoMenu);
+
+    // Agrega un texto indicando la dificultad
+    var textoDificultad = new Konva.Text({
+        text: dificultadjuego,
+        fontSize: 20,
+        fill: 'white',
+        width: 100,
+        align: 'center',
+        y: fondoMenu.height() / 2 - 7
+    });
+    dificultad.add(textoDificultad);
+
+    //La dificultad se modifica al hacer click en el grupo dificultad
+    dificultad.on('click', function () {
+        if (textoDificultad.text() == "Fácil") {
+            textoDificultad.text("Normal");
+            dificultadjuego = "Normal";
+            fondoMenu.fill('#D1BC08');
+            colorDificultad = '#D1BC08';
+            lobby.draw();
+        } else if (textoDificultad.text() == "Normal") {
+            textoDificultad.text("Difícil");
+            dificultadjuego = "Difícil"; 
+            fondoMenu.fill('#CA5A02');
+            colorDificultad = '#CA5A02';
+
+            lobby.draw();
+        } else if (textoDificultad.text() == "Difícil") {
+            textoDificultad.text("Imposible");
+            dificultadjuego = "Imposible";
+            fondoMenu.fill("#D10808");
+            colorDificultad = '#D1BC08';
+            lobby.draw();
+        } else if (textoDificultad.text() == "Imposible") {
+            textoDificultad.text("Fácil");
+            dificultadjuego = "Fácil";
+            fondoMenu.fill("#0BEF0F");
+            colorDificultad = '#0BEF0F';
+            lobby.draw();
+        }
     });
 }
 

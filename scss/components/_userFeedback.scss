@@ -1,6 +1,8 @@
 .arriba {
-    display: inline;
-    justify-content: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 2%;
 
     .img{
@@ -27,11 +29,17 @@
         text-align: center;
 
     }
+
+    .margen{
+        margin-right: 1%;
+    }
 }
 
 @include media-breakpoint-up(sm){
     .arriba{
-        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: left;
 
         .img-user {
         width: 100%;

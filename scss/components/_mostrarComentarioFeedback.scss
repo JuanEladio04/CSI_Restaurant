@@ -6,10 +6,50 @@
     border-bottom: 2px solid $light;
 }
 
+#reservas{
+    border: 0;
+    border-radius: 10px;
+    width: 250px;
+    height: 40px;
+    font-size: 1.2em;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 5% 0%;
+}
+
 @include media-breakpoint-up(sm) {
 
     .comentario{
         margin-top: 0%;
         font-size: 1.3em;
     }
+
+    #reservas{
+        margin: 0% 0%;
+
+    }
 }
+
+.gold-pass{
+    display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  
+}
+
+
+
+.animated {
+    color: #FFD700; /* Establece el color del texto a dorado */
+    animation: goldAnimation 3s infinite; /* Aplica la animación */
+  }
+  
+  @keyframes goldAnimation {
+    0%, 100% {
+        color: #FFD700; /* Inicio y final: color dorado */
+    }
+    50% {
+        color: darkgoldenrod; /* Mitad de la animación: color dorado más oscuro */
+    }
+  }

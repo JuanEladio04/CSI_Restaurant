@@ -46,6 +46,11 @@ html {
     text-align: justify;
 }
 
+.rounded_image{
+    border-radius: 50%;
+    overflow: hidden
+}
+
 // PAGINA FEEDBACK *************************************************************************************
 
 .crearOpiniones {
@@ -87,7 +92,7 @@ html {
         margin-bottom: 5%;
     }
 }
-
+ 
 //BACKGROUNDS
 #background-index {
     background-image: url(../img/backgrounds/backGround.png);

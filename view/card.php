@@ -1,4 +1,7 @@
-<?php include("../includes/a_config.php"); ?>
+<?php
+include("../includes/a_config.php");
+require_once("../controller/sessionController.php");
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -9,6 +12,7 @@
 <body id="background-<?php echo $CURRENT_PAGE; ?>">
     <?php include("../includes/navigation.php"); ?>
     <?php include("../includes/design-top.php"); ?>
+    
 
     <!--Carta-->
     <section class=" cardMenu">
@@ -24,30 +28,30 @@
                     <ul class="navbar-nav w-100 lobster menu">
 
                         <li class="nav-item  w-100 h-100 text-center  ">
-                            <a class="nav-link text-light " href="">Entrantes</a>
+                            <a class="nav-link text-light " href="?tipo=Entrantes">Entrantes</a>
                         </li>
 
                         <li class="nav-item  w-100 h-100 text-center ">
-                            <a class="nav-link text-light" href="">Ensaladas</a>
+                            <a class="nav-link text-light" href="?tipo=Ensaladas">Ensaladas</a>
                         </li>
 
                         <li class="nav-item  w-100 h-100 text-center ">
-                            <a class="nav-link text-light" href="">Pizzas</a>
+                            <a class="nav-link text-light" href="?tipo=Pizzas">Pizzas</a>
                         </li>
 
                         <li class="nav-item  w-100 h-100 text-center ">
-                            <a class="nav-link text-light" href="">Pastas</a>
+                            <a class="nav-link text-light" href="?tipo=Pastas">Pastas</a>
                         </li>
 
                         <li class="nav-item  w-100 h-100 text-center ">
-                            <a class="nav-link text-light" href="">Carnes</a>
+                            <a class="nav-link text-light" href="?tipo=Carnes">Carnes</a>
                         </li>
 
                         <li class="nav-item  w-100 h-100 text-center  ">
-                            <a class="nav-link text-light " href="">Postres</a>
+                            <a class="nav-link text-light " href="?tipo=Postres">Postres</a>
                         </li>
                         <li class="nav-item  w-100 h-100 text-center  ">
-                            <a class="nav-link text-light " href="">Bebida</a>
+                            <a class="nav-link text-light " href="?tipo=Bebidas">Bebida</a>
                         </li>
 
                     </ul>
@@ -55,135 +59,47 @@
             </div>
         </nav>
 
-        <!--Card content------------------------------------------------>
+        <!--Card content----------------------------------------------->
 
         <article class="container-fluid bg-success">
             <div class="row p-5 justify-content-around">
 
-                <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
-                    <div class="row bg-secondary">
-                        <div class="col-lg-8 col-sm-12 p-2">
-                            <h3>Pizza 4 quesos</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
-                        </div>
-                        <div class="col-lg-3 col-sm-12 text-center p-0">
-                            <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
-                    <div class="row bg-secondary">
-                        <div class="col-lg-8 col-sm-12 p-2">
-                            <h3>Pizza 4 quesos</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
-                        </div>
-                        <div class="col-lg-3 col-sm-12 text-center p-0">
-                            <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
-                        </div>
-                    </div>
-                </div>
+                <?php
+                if(isset($_GET['tipo'])){
+                    $tipo = $_GET['tipo'];
+                }
+                else{
+                    $tipo = 'Entrantes';
+                }
+                $platos = platoController::getPlatoByTipo($tipo);
 
-                
-                <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
-                    <div class="row bg-secondary">
-                        <div class="col-lg-8 col-sm-12 p-2">
-                            <h3>Pizza 4 quesos</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
-                        </div>
-                        <div class="col-lg-3 col-sm-12 text-center p-0">
-                            <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
-                        </div>
-                    </div>
-                </div>
-
-                
-                <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
-                    <div class="row bg-secondary">
-                        <div class="col-lg-8 col-sm-12 p-2">
-                            <h3>Pizza 4 quesos</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
-                        </div>
-                        <div class="col-lg-3 col-sm-12 text-center p-0">
-                            <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
+                for ($i = 0; $i < count($platos); $i++) {
+                ?>
+                    <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
+                        <div class="row bg-secondary">
+                            <div class="col-lg-8 col-sm-12 p-2">
+                                <h3><?php echo $platos[$i]->nombre; ?></h3>
+                                <p><?php echo $platos[$i]->descripcion; ?></p>
+                            </div>
+                            <div class="col-lg-3 col-sm-12 text-center p-0">
+                                <img src="<?php echo "/" . $platos[$i]->imagen; ?>" alt="Imagen de: <?php echo $platos[$i]->nombre; ?>">
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                
-                <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
-                    <div class="row bg-secondary">
-                        <div class="col-lg-8 col-sm-12 p-2">
-                            <h3>Pizza 4 quesos</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
-                        </div>
-                        <div class="col-lg-3 col-sm-12 text-center p-0">
-                            <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
-                        </div>
-                    </div>
-                </div>
-
-                
-                <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
-                    <div class="row bg-secondary">
-                        <div class="col-lg-8 col-sm-12 p-2">
-                            <h3>Pizza 4 quesos</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
-                        </div>
-                        <div class="col-lg-3 col-sm-12 text-center p-0">
-                            <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
-                        </div>
-                    </div>
-                </div>
-
-                
-                <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
-                    <div class="row bg-secondary">
-                        <div class="col-lg-8 col-sm-12 p-2">
-                            <h3>Pizza 4 quesos</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
-                        </div>
-                        <div class="col-lg-3 col-sm-12 text-center p-0">
-                            <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
-                        </div>
-                    </div>
-                </div>
-
-                
-                <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
-                    <div class="row bg-secondary">
-                        <div class="col-lg-8 col-sm-12 p-2">
-                            <h3>Pizza 4 quesos</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
-                        </div>
-                        <div class="col-lg-3 col-sm-12 text-center p-0">
-                            <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
-                        </div>
-                    </div>
-                </div>
-
-                
-                <div class="container-fluid col-lg-3 col-sm-12 m-2 cardItem">
-                    <div class="row bg-secondary">
-                        <div class="col-lg-8 col-sm-12 p-2">
-                            <h3>Pizza 4 quesos</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eaque eius at labore. Veritatis quis ullam sint totam ab impedit ex sed quidem cum laudantium nobis, accusamus minima sapiente optio!</p>
-                        </div>
-                        <div class="col-lg-3 col-sm-12 text-center p-0">
-                            <img src="https://via.placeholder.com/150" alt="Pizza 4 quesos">
-                        </div>
-                    </div>
-                </div>
-
+                <?php
+                }
+                ?>
 
             </div>
         </article>
     </section>
+    
 
     <script src="../js/cardItem.js"></script>
 
 
     <?php include("../includes/footer.php"); ?>
+    <?php include("../includes/cookies.php"); ?>
 </body>
 
 </html>

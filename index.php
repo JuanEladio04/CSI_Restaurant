@@ -1,17 +1,77 @@
+<?php
+include("includes/a_config.php");
+
+
+use Abraham\TwitterOAuth\TwitterOAuth;
+
+require_once('controller/sessionController.php');
+
+if (isset($_GET['code'])) {
+
+  $token = $google_client->fetchAccessTokenWithAuthCode($_GET['code']);
+  $google_client->setAccessToken($token['access_token']);
+  $google_oauth = new Google_Service_Oauth2($google_client);
+  $google_account_info = $google_oauth->userinfo->get();
+  $email = $google_account_info->email;
+  $name = $google_account_info->given_name;
+  $apellidos = $google_account_info->family_name;
+  $usuario = usuarioController::findByEmail($google_account_info->email);
+  if ($usuario == null) {
+    $_SESSION['nombre'] = $name;
+    $_SESSION['apellido'] = $apellidos;
+    $_SESSION['emailGoogle'] = $google_account_info->email;
+    header('location: /view/register.php');
+  } else {
+    $_SESSION['usuario'] = $usuario;
+    header('location: index.php#menu');
+  }
+}
+
+if (isset($_GET['oauth_verifier'])) {
+  $request_token = [];
+  $request_token['oauth_token'] = $_SESSION['oauth_token'];
+  $request_token['oauth_token_secret'] = $_SESSION['oauth_token_secret'];
+  if (isset($_REQUEST['oauth_token']) && $request_token['oauth_token'] !== $_REQUEST['oauth_token']) {
+    die;
+  }
+  $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $request_token['oauth_token'], $request_token['oauth_token_secret']);
+  $access_token = $connection->oauth('oauth/access_token', ['oauth_verifier' => $_REQUEST['oauth_verifier'], 'include_email' => true]);
+  $connectionUs = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token['oauth_token'], $access_token['oauth_token_secret']);
+  $connectionUs->setApiVersion('1.1'); // Agrega esta línea
+  $user = $connectionUs->get('account/verify_credentials', ['include_email' => true]);
+  if ($connectionUs->getLastHttpCode() == 200) {
+    $email =  $user->email;
+    $usuario = usuarioController::findByEmail($email);
+    if ($usuario == null) {
+      $_SESSION['emailTwitter'] = $email;
+      header('location: /view/register.php');
+    } else {
+      $_SESSION['usuario'] = $usuario;
+      header('location: index.php');
+    }
+  } else {
+    print $connectionUs->getLastHttpCode();
+  }
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <?php include("includes\head-tag-contents.php"); ?>
+  
 </head>
 
 <body id="background-<?php echo $CURRENT_PAGE; ?>">
+<?php include("includes/cookies.php"); ?>
   <main class="container-fluid p-0 m-0">
     <section class="row m-0 p-0">
       <!--Presentation-->
       <!--CF: No tiene sentido poner un container-fluid dentro de otro container-fluid-->
       <header class="container-fluid presentacion col-12 text-center my-5">
- 
+
         <h1 class="d-none">
           Ristorante luna della rossa
         </h1>
@@ -19,38 +79,40 @@
           <img class="col-12 headerLogo" alt="" src="img\logos\BigLogo.png" />
 
           <div class="socialmedia col-12">
-            <a href="https://www.instagram.com/ristaurantelunadellarosa/" class="mx-4 text-danger" target="_blank"><i
-                class="fa-brands fa-instagram fa-2xl"></i></a>
-            <a href="https://twitter.com/RistauranteDLR" class="mx-4 text-danger" target="_blank"><i
-                class="fa-brands fa-x-twitter fa-2xl"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61553606555788" class="mx-4 text-danger" target="_blank"><i
-                class="fa-brands fa-facebook fa-2xl"></i></i></a>
+            <a href="https://www.instagram.com/ristaurantelunadellarosa/" class="mx-4 text-danger" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+            <a href="https://twitter.com/RistauranteDLR" class="mx-4 text-danger" target="_blank"><i class="fa-brands fa-x-twitter fa-2xl"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61553606555788" class="mx-4 text-danger" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></i></a>
           </div>
 
-          <!--CF: ¿Dos break points? Tenéis tres layouts en la guía de estilos?--> 
+          <!--CF: ¿Dos break points? Tenéis tres layouts en la guía de estilos?-->
           <nav class="container-fluid col-12 d-lg-none d-sm-block">
             <div class="row lobster">
               <a href="view/card.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Carta</a>
               <a href="view/offers.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Ofertas</a>
               <a href="view/reserve.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Reservas</a>
-              <a href="view/login.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Iniciar Sesión</a>
+              <?php
+              if (!isset($_SESSION["usuario"])) {
+                print '<a href="view/login.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Iniciar Sesión</a>';
+              } else {
+                print '<a href="view/userGestion.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Mi cuenta</a>';
+                print '<a href="/view/cerrarSesion.php" class="boton"><button type="button" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Cerrar Sesión</button></a>';
+              }
+              ?>
             </div>
           </nav>
         </div>
       </header>
 
       <!--Menu carousel-->
-      <section class="bg-dark p-5 my-5 container-fluid d-lg-block d-none">
-        <h2 class="d-none">
-          Manú carousel
-        </h2>
+      <section id="menu" class="bg-dark p-5 my-5 container-fluid d-lg-block d-none">
         <div id="carousel" class="mb-5">
-        <div class="prevLeftSecond card bg-danger roundedBorder text-center text-dark">
+          <div class="prevLeftSecond card bg-danger roundedBorder text-center text-dark">
             <img src="img\stockImages\index\gamesImage.png" class="card-img-top roundedBorder mt-auto" alt="reseravs">
             <div class="card-body container-fluid bg-success roundedBorder">
               <h3 class="card-title lobster container-fluid ">Minijuegos</h3>
               <p class="card-text roboto text-justify">¿Necesitas entretenerte?</p>
-              <p class="card-text roboto text-justify">No te pierdas nuestra colección de minijuegos, ideales para pasar el tiempo mientras esperas o saboreas tu comida.</p>
+              <p class="card-text roboto text-justify">No te pierdas nuestra colección de minijuegos, ideales para pasar
+                el tiempo mientras esperas o saboreas tu comida.</p>
               <a href="view\games.php" class="btn btn-danger rounded-2">¡Jugar ahora!</a>
             </div>
           </div>
@@ -84,14 +146,36 @@
             </div>
           </div>
 
-          <div class="nextRightSecond card bg-danger roundedBorder text-center text-dark">
-            <img src="img\stockImages\index\loginImg.png" class="card-img-top roundedBorder" alt="reseravs">
-            <div class="card-body container-fluid bg-success roundedBorder">
-              <h3 class="card-title lobster ">Cuentas de usuario</h3>
-              <p class="card-text roboto">Inicia sesión para aprovechar todas nuestras ventajas</p>
-              <a href="view/login.php" class="btn btn-danger rounded-2">Iniciar sesión</a>
+          <?php
+          if (!isset($_SESSION["usuario"])) {
+          ?>
+            <div class="nextRightSecond card bg-danger roundedBorder text-center text-dark">
+              <img src="img\stockImages\index\loginImg.png" class="card-img-top roundedBorder" alt="reseravs">
+              <div class="card-body container-fluid bg-success roundedBorder">
+                <h3 class="card-title lobster ">Cuentas de usuario</h3>
+                <p class="card-text roboto">Inicia sesión para aprovechar todas nuestras ventajas</p>
+                <a href="view/login.php" class="btn btn-danger rounded-2">Iniciar sesión</a>
+              </div>
             </div>
-          </div>
+          <?php
+          } else {
+          ?>
+            <div class="nextRightSecond card bg-danger roundedBorder text-center text-dark">
+              <img src="<?php echo $_SESSION['usuario']->imagen ?>" class="card-img-top roundedBorder" alt="reseravs">
+              <div class="card-body container-fluid bg-success roundedBorder">
+                <h3 class="card-title lobster animated  "><?php echo $_SESSION['usuario']->nombre." ".$_SESSION['usuario']->apellidos ?></h3>
+                <p class="card-text roboto">Modifica tu cuenta e incluye una foto</p>
+                <a href="view/userGestion.php" class="btn btn-danger rounded-2">
+                  Mi cuenta
+                </a>
+
+                <a href="/view/cerrarSesion.php" class="boton"><button type="button" class="btn btn-danger rounded-2">Cerrar Sesión</button></a>
+
+              </div>
+            </div>
+          <?php
+          }
+          ?>
 
         </div>
 
@@ -106,8 +190,6 @@
           </div>
         </div>
       </section>
-      <script src='js/personalCarouselJQuery.js'></script>
-      <script src="js/personalCarousel.js"></script>
 
       <!--About us-->
       <section id="aboutUs-<?php echo $CURRENT_PAGE; ?>" class="p-5 my-5 container-fluid">
@@ -124,8 +206,7 @@
             ofertas. No dejes pasar esta oportunidad de disfrutar de una experiencia única y deliciosa.
           </p>
           <div class="align-items-right col-12">
-            <button type="button" class="btn btn-danger col-lg-3 col-sm-12 rounded-2 ms-auto"
-              onclick="location.href='view/aboutUs.php'">Muéstrame</button>
+            <button type="button" class="btn btn-danger col-lg-3 col-sm-12 rounded-2 ms-auto" onclick="location.href='view/aboutUs.php'">Muéstrame</button>
           </div>
         </article>
       </section>
@@ -147,100 +228,58 @@
               </p>
             </div>
             <div class="align-items-right col-12">
-              <button type="button" class="btn btn-danger col-lg-4 col-sm-12"
-                onclick="location.href='view/feedback.php'">Quiero opinar</button>
+              <button type="button" class="btn btn-danger col-lg-4 col-sm-12" onclick="location.href='view/feedback.php'">Quiero opinar</button>
             </div>
           </article>
 
           <!--Comentaries carousel-->
-          <section id="carouselExampleAutoplaying" class="carousel container-fluid slide col-lg-9 col-sm-12"
-            data-bs-ride="carousel">
+          <section id="carouselExampleAutoplaying" class="carousel container-fluid slide col-lg-9 col-sm-12" data-bs-ride="carousel">
             <div class="carousel-inner row">
               <!--Carousel items-->
-              <article class="carousel-item active align-items-center justify-content-around">
-                <div class="container-fluid w-75">
-                  <div class="row align-items-center text-center mb-3">
-                    <img class="col-lg-1 col-sm-12 w-sm-75" alt="Imagen de usuario"
-                      src="img\stockImages\defaultUserImage.png" />
-                    <div class="col-lg-1 col-sm-12">Username</div>
-                    <div class="container-fluid col-lg-8 col-sm-12 text-center text-lg-start">
-                      <i class="fa-solid fa-star mx-auto text-danger"></i>
-                      <i class="fa-solid fa-star mx-auto text-danger"></i>
-                      <i class="fa-solid fa-star mx-auto text-danger"></i>
-                      <i class="fa-regular fa-star text-danger"></i>
-                      <i class="fa-regular fa-star text-danger"></i>
-                    </div>
-                  </div>
-                    <div class="row scrola justificar">
-                      <p class="col-12 userCommentText">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis molestiae voluptas qui fugiat
-                        omnis placeat, cumque rerum amet, quo tenetur dolores esse aliquam reiciendis consequatur.
-                        Saepe, consequuntur? Reprehenderit, molestias nobis.
-                      </p>
-                    </div>
-                </div>
-              </article>
+              <?php
+              $comentaries = comentarioController::getIndexComentaries();
 
-              <article class="carousel-item align-items-center justify-content-around">
-                <div class="container-fluid w-75">
-                  <div class="row align-items-center text-center mb-3">
-                    <img class="col-lg-1 col-sm-12 w-sm-75" alt="Imagen de usuario"
-                      src="img\stockImages\defaultUserImage.png" />
-                    <div class="col-lg-1 col-sm-12">Username</div>
-                    <div class="container-fluid col-lg-9 col-sm-12 text-center text-lg-start">
-                      <i class="fa-solid fa-star mx-auto text-danger"></i>
-                      <i class="fa-solid fa-star mx-auto text-danger"></i>
-                      <i class="fa-regular fa-star text-danger"></i>
-                      <i class="fa-regular fa-star text-danger"></i>
-                      <i class="fa-regular fa-star text-danger"></i>
-                    </div>
-                    <div>
-                      <div class="row justificar scrola">
-                        <p class="col-12 userCommentText">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ad consequuntur possimus?
-                        </p>
+              for ($i = 0; $i < count($comentaries); $i++) {
+              ?>
+                <article class="carousel-item <?php if ($i == 0)
+                                                echo 'active'; ?> align-items-center justify-content-around">
+                  <div class="container-fluid w-75">
+                    <div class="row align-items-center text-center mb-3">
+                      <img class="col-lg-1 col-sm-12 w-sm-75" alt="Imagen de usuario" src="<?php echo $comentaries[$i]->imagen_usuario; ?>" />
+                      <div class="col-lg-2 col-sm-12">
+                        <?php echo $comentaries[$i]->nombre_usuario . " " . $comentaries[$i]->apellidos_usuario; ?>
+                      </div>
+                      <div class="container-fluid col-lg-8 col-sm-12 text-center text-lg-start">
+                        <?php
+                        for ($j = 0; $j < 5; $j++) {
+                          if ($j < $comentaries[$i]->valoracion) {
+                            echo '<i class="fa-solid fa-star mx-auto text-danger"></i>';
+                          } else {
+                            echo '<i class="fa-regular fa-star text-danger"></i>';
+                          }
+                        }
+                        ?>
                       </div>
                     </div>
-              </article>
-
-              <article class="carousel-item align-items-center justify-content-around">
-                <div class="container-fluid w-75">
-                  <div class="row align-items-center text-center mb-3">
-                    <img class="col-lg-1 col-sm-12 w-sm-75" alt="Imagen de usuario"
-                      src="img\stockImages\defaultUserImage.png" />
-                    <div class="col-lg-1 col-sm-12">Username</div>
-                    <div class="container-fluid col-lg-9 col-sm-12 text-center text-lg-start">
-                      <i class="fa-solid fa-star mx-auto text-danger"></i>
-                      <i class="fa-solid fa-star mx-auto text-danger"></i>
-                      <i class="fa-solid fa-star mx-auto text-danger"></i>
-                      <i class="fa-regular fa-star text-danger"></i>
-                      <i class="fa-regular fa-star text-danger"></i>
+                    <div class="row scrola justificar">
+                      <p class="col-12 userCommentText">
+                        <?php echo $comentaries[$i]->comentario; ?>
+                      </p>
                     </div>
                   </div>
-                  <div class="row justificar scrola">
-                    <p class="col-12 userCommentText">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit dolor repellat dolores nostrum
-                      vitae eius. Reiciendis aliquid ea odio ipsum quia voluptatibus rerum quos, consequatur est
-                      accusamus ab libero, repellat accusantium quae qui magni at quas pariatur nisi veritatis vitae,
-                      quisquam aliquam labore perspiciatis? Obcaecati beatae quaerat, nobis nesciunt vitae adipisci
-                      maiores optio repudiandae. At corrupti neque dolorum repellendus accusamus ipsa modi, quod ea
-                      est enim sunt inventore dolorem sequi ipsam architecto, laboriosam fuga voluptates, blanditiis
-                      earum. Veritatis numquam quidem nobis illo odio excepturi adipisci, pariatur inventore repellat
-                      totam culpa vero tempore itaque accusantium fugit minus nihil tempora! Amet, unde!
-                    </p>
-                  </div>
-                </div>
-              </article>
+                </article>
+
+              <?php
+              }
+              ?>
 
             </div>
             <div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-                data-bs-slide="prev">
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-                data-bs-slide="next">
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
               </button>
@@ -249,14 +288,37 @@
         </div>
       </section>
 
-      <script src="js/comentary.js"></script>
-
-
     </section>
-    <?php include("includes/footer.php"); ?>
-
   </main>
+  
+  <?php include("includes/footer.php"); ?>
 
+  <script src='js/personalCarouselJQuery.js'></script>
+  <script src="js/personalCarousel.js"></script>
+  <script src="js/comentary.js"></script>
 </body>
 
+
 </html>
+
+<?php
+if (isset($_GET['reservado'])) {
+  if ($_GET['reservado'] == true) {
+?>
+    <script>
+      alert("La reserva ha sido registrada con éxito");
+    </script>
+  <?php
+  }
+}
+
+if (isset($_GET['registrado'])) {
+  if ($_GET['registrado'] == true) {
+  ?>
+    <script>
+      alert("El usuario ha sido registrado correctamente");
+    </script>
+<?php
+  }
+}
+?>

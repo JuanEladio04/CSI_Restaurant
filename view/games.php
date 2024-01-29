@@ -1,4 +1,7 @@
-<?php include("../includes/a_config.php"); ?>
+<?php 
+include("../includes/a_config.php"); 
+require_once('../controller/sessionController.php');
+?>
 <!-- Including configuration file -->
 
 <!doctype html>
@@ -12,6 +15,7 @@
 <body id="background-<?php echo $CURRENT_PAGE; ?>">
     <?php include("../includes/navigation.php"); ?>
     <?php include("../includes/design-top.php"); ?>
+    
 
     <section class="container-fluid bg-primary text-center my-5">
         <article class="bg-danger row">
@@ -66,7 +70,7 @@
                         mientras te conviertes en el defensor de la cocina italiana!</p>
                     </div>
                     <div class="mt-auto">
-                        <a href=".\games\PizzaInvader\pizzaInvader.php" class="btn btn-danger rounded-2">¡Jugar ahora!</a>
+                        <a href="games\PizzaInvader\pizzaInvader.php" class="btn btn-danger rounded-2">¡Jugar ahora!</a>
                     </div> 
                 </div>
             </div>
@@ -100,7 +104,7 @@
                         </p>
                     </div>
                     <div class="mt-auto">
-                        <a href="../view/games/pizzacrafter/pizzacrafter.php" class="btn btn-danger rounded-2">¡Jugar ahora!</a>
+                        <a href="games/pizzacrafter/pizzacrafter.php" class="btn btn-danger rounded-2">¡Jugar ahora!</a>
                     </div>
                 </div>
             </div>
@@ -135,7 +139,7 @@
                         </p>
                     </div>
                     <div class="mt-auto">
-                        <a href="..\view\games\ReservaCrafter\reservacrafter.html" class="btn btn-danger rounded-2">¡Jugar ahora!</a>
+                        <a href="games/ReservaCrafter/reservacrafter.html" class="btn btn-danger rounded-2">¡Jugar ahora!</a>
                     </div>
                 </div>
             </div>
@@ -147,6 +151,7 @@
     <script src="../js/cardGame.js"></script>
 
     <?php include("../includes/footer.php"); ?>
+    <?php include("../includes/cookies.php"); ?>
 </body>
 
 </html>

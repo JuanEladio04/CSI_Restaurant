@@ -10,7 +10,21 @@
 
     label {
         font-size: 19px;
+        white-space: pre-line;
     }
+
+    .oculto {
+        display: none;
+    }
+
+    .visible {
+        display: block !important;
+    }
+
+    .checkboxText {
+        display: block;
+    }
+
 
     a {
         font-family: $headings-font-family;
@@ -20,7 +34,7 @@
     .btn {
         font-family: $font-family-sans-serif !important;
         height: 5vh;
-        
+
 
         @include media-breakpoint-up(sm) {
             padding: 0% 7vh;
@@ -36,4 +50,22 @@
     .margenSuperior {
         margin-top: 1.5vh;
     }
+
+    // Contraseña
+    .listaError {
+        display: none;
+        margin: 0, 0, 1%, 0%;
+    }
+
+    .catpcha {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .h-captcha {
+        text-align: center;
+        width: 100% !important;
+    }
+
 }
