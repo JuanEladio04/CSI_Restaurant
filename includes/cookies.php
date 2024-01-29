@@ -46,7 +46,7 @@ if (isset($_COOKIE['noticiasSemanales'])) {
           });
 
           noticia.addEventListener("click", function () {
-            setCookie("noticiaAceptada", true);
+            setCookie("noticiaAceptada", true, 30);
           });
 
           function setCookie(cname, cvalue, exdays) {
@@ -61,37 +61,38 @@ if (isset($_COOKIE['noticiasSemanales'])) {
 
 }
 
-if(!isset($_COOKIE['cookiesAceptadas'])){
- 
+if (!isset($_COOKIE['cookiesAceptadas'])) {
+  if (!isset($_COOKIE['noticiasSemanales'])) {
     ?>
+
+            <div class="overlay" id="ol"></div>
+            <div class="container fs-4 cookies roundedBorder" role="alert" id="cookieAlert">
+                <p class="fs-4 mt-2">Esta página web utiliza las <a href="termsAndConditions.php">cookies</a> para recordar las acciones del usuario</p>
+                <button type="button" class="button" id="enviar" onclick="desaparecerBanner()">
+                    Acepto las cookies
+                </button>
+                <button type="button" class="buttonClose" id="enviar" onclick="regresarGoogle()">
+                    Denegar
+                </button>
+            </div>
+            <script>
+              document.addEventListener('DOMContentLoaded', function () {
+                var cookieAlert = document.getElementById('cookieAlert');
+
+                cookieAlert.classList.remove('hidden');
+                cookieAlert.classList.add('shown');
+
+                document.getElementById('enviar').addEventListener('click', function () {
+                  cookieAlert.classList.remove('shown');
+                  cookieAlert.classList.add('hidden');
+                });
+              });
+            </script>
+        <script src="../js/cookies.js"></script>
   
-        <div class="overlay" id="ol"></div>
-        <div class="container fs-4 cookies roundedBorder" role="alert" id="cookieAlert">
-            <p class="fs-4 mt-2">Esta página web utiliza las <a href="termsAndConditions.php">cookies</a> para recordar las acciones del usuario</p>
-            <button type="button" class="button" id="enviar" onclick="desaparecerBanner()">
-                Acepto las cookies
-            </button>
-            <button type="button" class="buttonClose" id="enviar" onclick="regresarGoogle()">
-                Denegar
-            </button>
-        </div>
-        <script>
-          document.addEventListener('DOMContentLoaded', function () {
-            var cookieAlert = document.getElementById('cookieAlert');
-  
-            cookieAlert.classList.remove('hidden');
-            cookieAlert.classList.add('shown');
-  
-            document.getElementById('enviar').addEventListener('click', function () {
-              cookieAlert.classList.remove('shown');
-              cookieAlert.classList.add('hidden');
-            });
-          });
-        </script>
-    <script src="../js/cookies.js"></script>
-  
-  <?php
+      <?php
   }
+}
   
 
 ?>
