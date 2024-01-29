@@ -78,7 +78,7 @@ if (isset($_POST['crear'])) {
                                         <div class="col-sm-6 margenInferior">
                                             <label for="FirstN" class="form-label">Nombre</label>
                                             <input type="text" class="roundedInput form-control" name="FirstN"
-                                                pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$"value="<?php
+                                                pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" value="<?php
                                                 if (isset($_SESSION['nombre'])) {
                                                     print $_SESSION['nombre'];
                                                     $_SESSION['nombre'] = "";
@@ -86,7 +86,7 @@ if (isset($_POST['crear'])) {
                                                 if (isset($_GET['nombre'])) {
                                                     print $_GET['nombre'];
                                                 }
-                                                ?> required>
+                                                ?>" required>
                                         </div>
                                         <div class="col-sm-6 margenInferior">
                                             <label for="LastN" class="form-label">Apellidos</label>

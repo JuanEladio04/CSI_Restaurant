@@ -65,7 +65,7 @@ if (isset($_POST['enviarReserva'])) {
 
                         <div class="row col-lg-6 col-sm-12 rFormContent">
                             <label class="col-12" for="">Apellidos:</label>
-                            <input class="col-12" type="text" name="ittSecondName" required pattern="^[A-Za-z]+$" value="<?php if (isset($_SESSION['usuario'])) {
+                            <input class="col-12" type="text" name="ittSecondName" required pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" value="<?php if (isset($_SESSION['usuario'])) {
                                                                                                                                 echo $_SESSION['usuario']->apellidos;
                                                                                                                             } ?>">
                         </div>
