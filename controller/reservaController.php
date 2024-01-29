@@ -23,7 +23,7 @@ class reservaController
     {
         try {
             $conex = ConnectionManager::getConnectionInstance();
-            $rs = $conex->query("select reservas.id, reservas.uid, reservas.nombre, reservas.apellidos, reservas.numero_telefono, reservas.fecha, reservas.especificaciones
+            $rs = $conex->query("select reservas.id, reservas.uid, reservas.nombre, reservas.apellidos, reservas.numero_telefono, reservas.comensales, reservas.fecha, reservas.especificaciones
                                  FROM reservas
                                  LEFT JOIN Comentarios ON reservas.id = Comentarios.rid
                                  WHERE Comentarios.id IS NULL
