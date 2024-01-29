@@ -38,7 +38,7 @@ $black = imagecolorallocate($image, 0, 0, 0);
 $white = imagecolorallocate($image, 255, 255, 255);
 $textcolors = [$black, $white];
 
-$fonts = [dirname(__FILE__) . '/fonts/Acme-Regular.ttf', dirname(__FILE__) . '/fonts/Ubuntu-Regular.ttf', dirname(__FILE__) . '/fonts/COMICATE.TTF', dirname(__FILE__) . '/fonts/grasping.ttf', dirname(__FILE__) . '/fonts/horrendo.ttf', dirname(__FILE__) . '/fonts/OLDFAX.TTF', dirname(__FILE__) . '/fonts/sewer.ttf'];
+$fonts = [dirname(__FILE__) . '/fonts/Acme-Regular.ttf', dirname(__FILE__) . '/fonts/Ubuntu-Regular.ttf', dirname(__FILE__) . '/fonts/COMICATE.TTF', dirname(__FILE__) . '/fonts/grasping.ttf', dirname(__FILE__) . '/fonts/horrendo.ttf'];
 
 $string_length = 6;
 $captcha_string = generate_string($permitted_chars, $string_length);
