@@ -639,6 +639,26 @@ require_once('../controller/sessionController.php');
             </article>
         </section>
 
+        <section id="divCookies" class="row mb-5 bg-primary roundedBorder marginOnlyTop">
+            <article class="articulo col p-5">
+                <!-- Section with the politics privacy -->
+                <h1 class="text-center">Uso de cookies</h1>
+                <p>Bienvenido/a a nuestro sitio web. Utilizamos cookies para mejorar su experiencia de navegación y brindarle un servicio personalizado. Las cookies son pequeños archivos de texto que se almacenan en su dispositivo cuando visita nuestro sitio. Estos archivos contienen información que nos ayuda a reconocer y recordar sus preferencias, así como a analizar el tráfico del sitio. Las cookies que utilizamos se dividen en varias categorías:</p>
+                <ul class="mt-5">
+                        <li class="mt-3">Cookies con funcionalidad: Estas cookies permiten que recordemos sus preferencias y elecciones, personalizando así su experiencia en nuestro sitio. Por ejemplo, pueden recordar su idioma preferido o la región en la que se encuentra.</li>
+
+                        <li class="mt-3">Cookies de Publicidad y Seguimiento: Trabajamos con socios de confianza para mostrarle anuncios relevantes basados en sus intereses. Estas cookies recopilan información sobre sus actividades de navegación para personalizar la publicidad que ve en nuestro sitio y en otros lugares en línea.</li>
+                </ul> 
+                <div class="mt-5">
+                    <p>
+                    Al utilizar nuestro sitio web, usted acepta el uso de cookies de acuerdo con esta declaración. Puede gestionar sus preferencias de cookies a través de la configuración de su navegador. Tenga en cuenta que, al desactivar ciertas cookies, algunas funciones del sitio pueden no estar disponibles.
+                    Le recomendamos revisar nuestra política de privacidad para obtener más información sobre cómo manejamos sus datos personales. Si tiene alguna pregunta o inquietud sobre nuestro uso de cookies, no dude en ponerse en contacto con nosotros a través de los canales proporcionados en la sección de contacto de nuestro sitio web.
+                    Gracias por confiar en nosotros.
+                    </p>
+                </div>
+            </article>
+        </section>
+
 
         <section class="row mb-5 bg-danger roundedBorder marginOnlyTop">
             <!-- Section with the purpose of various activities -->

@@ -18,7 +18,7 @@ if (isset($_COOKIE['noticiasSemanales'])) {
                     href="../view/card.php?tipo=Bebidas">Bidón de plasma</a></p>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="botonNoticias">Close</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="botonNoticias">Cerrar</button>
               </div>
             </div>
           </div>
@@ -67,7 +67,7 @@ if (!isset($_COOKIE['cookiesAceptadas'])) {
 
             <div class="overlay" id="ol"></div>
             <div class="container fs-4 cookies roundedBorder" role="alert" id="cookieAlert">
-                <p class="fs-4 mt-2">Esta página web utiliza las <a href="termsAndConditions.php">cookies</a> para recordar las acciones del usuario</p>
+                <p class="fs-4 mt-2">Esta página web utiliza las <a href="view/termsAndConditions.php#divCookies">cookies</a> para recordar las acciones del usuario</p>
                 <button type="button" class="button" id="enviar" onclick="desaparecerBanner()">
                     Acepto las cookies
                 </button>
