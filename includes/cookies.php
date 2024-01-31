@@ -67,13 +67,15 @@ if (!isset($_COOKIE['cookiesAceptadas'])) {
 
             <div class="overlay" id="ol"></div>
             <div class="container fs-4 cookies roundedBorder" role="alert" id="cookieAlert">
-                <p class="fs-4 mt-2">Esta página web utiliza las <a href="view/termsAndConditions.php#divCookies">cookies</a> para recordar las acciones del usuario</p>
-                <button type="button" class="button" id="enviar" onclick="desaparecerBanner()">
+                <p class="fs-4 mt-2 text-center">Esta página web utiliza las <a href="view/termsAndConditions.php#divCookies">cookies</a> para recordar las acciones del usuario</p>
+                <div class="buttonCookies">
+                <button type="button" class="roundedBorder" id="enviar" onclick="desaparecerBanner()">
                     Acepto las cookies
                 </button>
-                <button type="button" class="buttonClose" id="enviar" onclick="regresarGoogle()">
+                <button type="button" class="roundedBorder" onclick="regresarGoogle()">
                     Denegar
                 </button>
+                </div>                
             </div>
             <script>
               document.addEventListener('DOMContentLoaded', function () {
