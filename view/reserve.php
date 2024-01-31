@@ -4,11 +4,10 @@ require_once "../controller/sessionController.php";
 sessionRedirect();
 if (isset($_POST['enviarReserva'])) {
     if (
-        !empty($_POST['ittName']) && !empty($_POST['ittSecondName']) && !empty($_POST['ittelPhoneNumber']) && !empty($_POST['sDinners']) && !empty($_POST['itdDate']) && !empty($_POST['ittimeHour']) &&
-        !empty($_POST['taSpecifications'])
+        !empty($_POST['ittName']) && !empty($_POST['ittSecondName']) && !empty($_POST['ittelPhoneNumber']) && !empty($_POST['sDinners']) && !empty($_POST['itdDate']) && !empty($_POST['ittimeHour'])
     ) {
         if (isset($_POST['itcbNotAlone'])) {
-            $comen = $_POST['sDinners'];
+            $comen = $_POST['sDinners'] + 1;
         } else {
             $comen = 1;
         }
@@ -57,7 +56,7 @@ if (isset($_POST['enviarReserva'])) {
                     <div class="row p-3 text-center mx-auto justify-content-around col-10">
                         <div class="row col-lg-6 col-sm-12 rFormContent">
                             <label class="col-12" for="">Nombre:</label>
-                            <input class="col-12 text-start" type="text" name="ittName" required pattern="^[A-Za-z]+$" value="<?php if (isset($_SESSION['usuario'])) {
+                            <input class="col-12 text-start" type="text" name="ittName" required pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" value="<?php if (isset($_SESSION['usuario'])) {
                                                                                                                                     echo $_SESSION['usuario']->nombre;
                                                                                                                                 } ?>">
 
@@ -97,7 +96,7 @@ if (isset($_POST['enviarReserva'])) {
 
                         <div class="row col-12 rFormContent">
                             <label for="">Especificaciones:</label>
-                            <textarea class="form-control z-depth-1" id="textarea" rows="4" name="taSpecifications" required></textarea>
+                            <textarea class="form-control z-depth-1" id="textarea" rows="4" name="taSpecifications"></textarea>
                         </div>
                     </div>
                     <button type="submit" value="" name="enviarReserva" class="btn btn-danger p-3">
