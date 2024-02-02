@@ -1,0 +1,17 @@
+.eLogin-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px; 
+    border: 2px solid $primary; 
+    padding: 10px; 
+    margin: 5px; 
+    background-color: $primary; 
+    color: #ffffff; 
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.eLogin-button:hover {
+    background-color: #ffd8a4; 
+}
