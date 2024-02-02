@@ -162,11 +162,11 @@ if (isset($_POST['borrar'])) {
                                 <img class="vector-icon img-user rounded-circle" alt=""
                                     src="../<?php echo $c->imagen_usuario ?>" width="40px" height="50px" />
                             </div>
-                            <div class="username lobster d-flex align-items-center justify-content-center <?php if ($c->id_usuario == $usuario->id) {
+                            <div class="username lobster d-flex align-items-center justify-content-center <?php if (isset($usuario) && $c->id_usuario == $usuario->id) {
                                 echo "gold-pass";
                             } ?>">
                                 <?php
-                                if ($c->id_usuario == $usuario->id) {
+                                if (isset($usuario) && $c->id_usuario == $usuario->id) {
                                     echo "<span class='animated'>";
                                     echo $c->nombre_usuario . " " . $c->apellidos_usuario;
                                     echo "</span>";
@@ -191,11 +191,13 @@ if (isset($_POST['borrar'])) {
                             <?php echo $c->comentario; ?>
                             <div class="d-flex align-items-end justify-content-end">
                                 <?php
-                                if ($c->id_usuario == $usuario->id || $usuario->admin == 1) {
-                                    echo "<form action='' method='post'>";
-                                    echo "<input type='hidden' name='id_comentario' value='$c->id'>";
-                                    echo "<input type='submit'name='borrar' class='btn btn-danger btn-sm' value='Borrar Comentario'>";
-                                    echo "</form>";
+                                if (isset($usuario)) {
+                                    if ($c->id_usuario == $usuario->id || $usuario->admin == 1) {
+                                        echo "<form action='' method='post'>";
+                                        echo "<input type='hidden' name='id_comentario' value='$c->id'>";
+                                        echo "<input type='submit'name='borrar' class='btn btn-danger btn-sm' value='Borrar Comentario'>";
+                                        echo "</form>";
+                                    }
                                 }
                                 ?>
                             </div>
