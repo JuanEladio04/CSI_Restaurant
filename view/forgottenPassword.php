@@ -1,7 +1,6 @@
-<!-- Some parts of the code have been written using AI. -->
 <?php 
-include("../includes/a_config.php"); 
 require_once('../controller/sessionController.php');
+include("../includes/a_config.php"); 
 ?>
 <!DOCTYPE html>
 <html lang="es">
