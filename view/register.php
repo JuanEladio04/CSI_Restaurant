@@ -35,6 +35,9 @@ if (isset($_POST['crear'])) {
         if ($i = !null) {
             if ($i == true) {
                 header("Location: ../index.php?registrado='true'");
+                $usuario = usuarioController::findByEmail($email);
+                $_SESSION['usuario'] = $usuario;
+                header('location: ../index.php#menu');
             }
         } else {
             echo "No se ha podido encontrar el usuario";
