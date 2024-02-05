@@ -32,12 +32,11 @@ if (isset($_POST['crear'])) {
         $error = "Ya existe un usuario registrado con este correo electrónico";
     } else {
         $i = usuarioController::insertUser($nombre, $apellidos, $email, $contraseña, $fechaNac, $telef, $pais, $codPostal);
-        if ($i = !null) {
+        if ($i != null) {
             if ($i == true) {
-                header("Location: ../index.php?registrado='true'");
                 $usuario = usuarioController::findByEmail($email);
                 $_SESSION['usuario'] = $usuario;
-                header('location: ../index.php#menu');
+                header("Location: ../index.php?registrado='true'");
             }
         } else {
             echo "No se ha podido encontrar el usuario";
