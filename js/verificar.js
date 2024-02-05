@@ -138,7 +138,7 @@ document.addEventListener("input", function (e) {
     if (e.target.id == "claveRep") {
         if (e.target.value != document.getElementById("clave").value) {
             document.getElementById("passIncorrecta").classList = "visible";
-            $boton = document.getElementById("crear");
+            var boton = document.getElementById("crear");
             document.getElementById("claveRep").style.border = "2px solid red";
 
             contrasenaCorrecta = 0;
@@ -146,8 +146,16 @@ document.addEventListener("input", function (e) {
             contrasenaCorrecta = 1;
             document.getElementById("passIncorrecta").classList = "oculto";
             document.getElementById("claveRep").style.border = "2px solid green";
-            $boton = document.getElementById("crear");
+            var boton = document.getElementById("crear");
         }
+        if (fechaCorrecta == 1 && contrasenaCorrecta == 1) {
+            boton = document.getElementById("crear");
+            boton.disabled = false;
+        } else {
+            boton = document.getElementById("crear");
+            boton.disabled = true;
+        }
+        
     }
 
     if (e.target.id == "phone") {
@@ -168,11 +176,11 @@ document.addEventListener("input", function (e) {
         }
     }
     if (fechaCorrecta == 1 && contrasenaCorrecta == 1 && captchaCorrecto == 1 && terminosAceptados == 1) {
-        $boton = document.getElementById("crear");
-        $boton.disabled = false;
+        boton = document.getElementById("crear");
+        boton.disabled = false;
     } else {
-        $boton = document.getElementById("crear");
-        $boton.disabled = true;
+        boton = document.getElementById("crear");
+        boton.disabled = true;
     }
 
     if(e.target.id == "resolverCaptcha") {
@@ -183,7 +191,6 @@ document.addEventListener("input", function (e) {
 
 });
 document.addEventListener("click", function (e) {
-    console.log(terminosAceptados);
     if (e.target.id == "fecha") {
         let fecha = new Date(document.getElementById("fecha").value);
         let fechaActual = Date.now();
@@ -194,17 +201,18 @@ document.addEventListener("click", function (e) {
         }
     }
 
+    if (fechaCorrecta == 1 && contrasenaCorrecta == 1 && captchaCorrecto == 1 && terminosAceptados == 1) {
+        boton = document.getElementById("crear");
+        boton.disabled = false;
+    } else {
+        boton = document.getElementById("crear");
+        boton.disabled = true;
+    }
+
+    
     if (e.target.id == "terminos" && e.target.checked == true) {
         terminosAceptados = 1;
     } else {
         terminosAceptados = 0;
-    }
-
-    if (fechaCorrecta == 1 && contrasenaCorrecta == 1 && captchaCorrecto == 1 && terminosAceptados == 1) {
-        $boton = document.getElementById("crear");
-        $boton.disabled = false;
-    } else {
-        $boton = document.getElementById("crear");
-        $boton.disabled = true;
     }
 });
