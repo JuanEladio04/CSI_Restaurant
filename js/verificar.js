@@ -148,13 +148,6 @@ document.addEventListener("input", function (e) {
             document.getElementById("claveRep").style.border = "2px solid green";
             $boton = document.getElementById("crear");
         }
-        if (fechaCorrecta == 1 && contrasenaCorrecta == 1) {
-            $boton = document.getElementById("crear");
-            $boton.disabled = false;
-        } else {
-            $boton = document.getElementById("crear");
-            $boton.disabled = true;
-        }
     }
 
     if (e.target.id == "phone") {
@@ -190,6 +183,7 @@ document.addEventListener("input", function (e) {
 
 });
 document.addEventListener("click", function (e) {
+    console.log(terminosAceptados);
     if (e.target.id == "fecha") {
         let fecha = new Date(document.getElementById("fecha").value);
         let fechaActual = Date.now();
@@ -199,16 +193,18 @@ document.addEventListener("click", function (e) {
             fechaCorrecta = 0;
         }
     }
+
+    if (e.target.id == "terminos" && e.target.checked == true) {
+        terminosAceptados = 1;
+    } else {
+        terminosAceptados = 0;
+    }
+
     if (fechaCorrecta == 1 && contrasenaCorrecta == 1 && captchaCorrecto == 1 && terminosAceptados == 1) {
         $boton = document.getElementById("crear");
         $boton.disabled = false;
     } else {
         $boton = document.getElementById("crear");
         $boton.disabled = true;
-    }
-    if (e.target.id == "terminos" && e.target.checked == true) {
-        terminosAceptados = 1;
-    } else {
-        terminosAceptados = 0;
     }
 });

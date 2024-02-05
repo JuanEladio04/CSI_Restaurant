@@ -65,6 +65,7 @@ $(document).ready(function () {
                 variable: inputCaptcha
             }, // Nombre de la función PHP que deseas llamar
             success: function (response) {
+                console.log(response);
                 if (response == "true") {
                     var icon = document.querySelector('.content-input input[type="checkbox"]+i');
                     icon.classList.add('checkbox-checked');
@@ -75,8 +76,13 @@ $(document).ready(function () {
                     } else {
                         captchaCorrecto = 0;
                     }
-
+                    if (document.getElementById("terminos").checked == true) {
+                        terminosAceptados = 1;
+                    } else {
+                        terminosAceptados = 0;
+                    }
                     if (fechaCorrecta == 1 && contrasenaCorrecta == 1 && captchaCorrecto == 1 && terminosAceptados == 1) {
+                        console.log("hola");
                         $boton = document.getElementById("crear");
                         $boton.disabled = false;
                     } else {
