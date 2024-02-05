@@ -228,7 +228,7 @@ if (isset($_GET['oauth_verifier'])) {
               </p>
             </div>
             <div class="align-items-right col-12">
-              <button type="button" class="btn btn-danger col-lg-4 col-sm-12" onclick="location.href='view/feedback.php'">Quiero opinar</button>
+              <button type="button" class="btn btn-danger col-lg-4 col-sm-12" onclick="location.href='view/feedback.php'">Ver opiniones</button>
             </div>
           </article>
 
@@ -310,7 +310,7 @@ if (isset($_GET['reservado'])) {
     </script>
   <?php
   }
-}
+} 
 
 if (isset($_GET['registrado'])) {
   if ($_GET['registrado'] == true) {
