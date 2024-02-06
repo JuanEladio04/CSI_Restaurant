@@ -29,7 +29,8 @@ if (isset($_POST['crear'])) {
     $codPostal = $_POST['postalCode'];
     $usuario = usuarioController::findByEmail($email);
     if ($usuario != null) {
-        $error = "Ya existe un usuario registrado con este correo electrónico";
+        $_SESSION["error"] = "Ya existe un usuario con ese correo";
+        header('location: register.php');
     } else {
         $i = usuarioController::insertUser($nombre, $apellidos, $email, $contraseña, $fechaNac, $telef, $pais, $codPostal);
         if ($i != null) {
@@ -230,10 +231,12 @@ if (isset($_POST['crear'])) {
                                         <div>
                                             <p class="text-center">
                                                 <?php
-                                                if (isset($error)) {
-                                                    print "<span class='material-symbols-outlined'> warning>  " .
-                                                        $error .
+                                                if (isset($_SESSION["error"])) {
+                                                    print "<span class='material-symbols-outlined' warning>  " .
+                                                        $_SESSION["error"] .
                                                         "  </span>";
+                                                        
+                                                    unset($_SESSION["error"]);
                                                 }
                                                 ?>
                                             </p>
