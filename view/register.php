@@ -88,8 +88,7 @@ if (isset($_POST['crear'])) {
                                         <div class="col-sm-6 margenInferior">
                                             <label for="FirstN" class="form-label">Nombre</label>
                                             <input type="text" class="roundedInput form-control" name="FirstN"
-                                                pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$"
-                                                value="<?php
+                                                pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" value="<?php
                                                 if (isset($_SESSION['nombre'])) {
                                                     print $_SESSION['nombre'];
                                                     $_SESSION['nombre'] = "";
@@ -97,22 +96,19 @@ if (isset($_POST['crear'])) {
                                                 if (isset($_GET['nombre'])) {
                                                     print $_GET['nombre'];
                                                 }
-                                                ?>"
-                                                required>
+                                                ?>" required>
                                         </div>
                                         <div class="col-sm-6 margenInferior">
                                             <label for="LastN" class="form-label">Apellidos</label>
 
                                             <input type="text" class="roundedInput form-control" name="LastN"
-                                                pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$"
-                                                value="<?php
+                                                pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" value="<?php
                                                 if (isset($_SESSION['apellido'])) {
                                                     print $_SESSION['apellido'];
                                                     $_SESSION['apellido'] = "";
                                                 }
 
-                                                ?>"
-                                                required>
+                                                ?>" required>
                                         </div>
                                     </div>
 
@@ -120,8 +116,7 @@ if (isset($_POST['crear'])) {
                                     <div class="margenInferior">
                                         <label for="Email" class="form-label">Email</label>
                                         <input type="email" class="roundedInput form-control" id="email" name="Email"
-                                            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-                                            value="<?php
+                                            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" value="<?php
                                             if (isset($_SESSION['emailGoogle'])) {
                                                 print $_SESSION['emailGoogle'];
                                                 $_SESSION['emailGoogle'] = "";
@@ -133,8 +128,7 @@ if (isset($_POST['crear'])) {
                                             if (isset($_GET['emailFacebook'])) {
                                                 print $_GET['emailFacebook'];
                                             }
-                                            ?>"
-                                            required>
+                                            ?>" required>
                                     </div>
                                     <!-- Password inputs with margin -->
                                     <div class="col margenInferior">
@@ -237,9 +231,9 @@ if (isset($_POST['crear'])) {
                                             <p class="text-center">
                                                 <?php
                                                 if (isset($error)) {
-                                                    print "<span class='material-symbols-outlined'> warning </span>  " .
+                                                    print "<span class='material-symbols-outlined'> warning>  " .
                                                         $error .
-                                                        "  <span class='material-symbols-outlined'> warning </span>";
+                                                        "  </span>";
                                                 }
                                                 ?>
                                             </p>
@@ -253,7 +247,7 @@ if (isset($_POST['crear'])) {
                             <div class="card-footer text-center">
                                 <a href="login.php" class="nav-link text-light">Ya estoy registrado</a>
                             </div>
-                            
+
                         </div>
                     </div>
             </div>
@@ -278,10 +272,5 @@ if (isset($_POST['crear'])) {
 <script src="../js/countries.js"></script>
 <script src="../js/verificar.js"></script>
 <script src="../js/captcha.js"></script>
-
-<?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-?>
 
 </html>
