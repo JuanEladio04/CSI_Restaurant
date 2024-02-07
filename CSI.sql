@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-02-2024 a las 12:44:23
+-- Tiempo de generación: 07-02-2024 a las 12:55:39
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -31,7 +31,7 @@ CREATE TABLE `comentarios` (
   `id` int(11) NOT NULL,
   `rid` int(11) NOT NULL,
   `comentario` varchar(5000) NOT NULL,
-  `fecha` time NOT NULL,
+  `fecha` bigint(20) NOT NULL,
   `valoracion` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -40,9 +40,9 @@ CREATE TABLE `comentarios` (
 --
 
 INSERT INTO `comentarios` (`id`, `rid`, `comentario`, `fecha`, `valoracion`) VALUES
-(3, 14, '<p>Una maravilla:</p><ul><li>Buena comida</li><li>Buen servicio</li><li>Muy majos todos 👌</li></ul>', '00:00:00', 5),
-(4, 15, '<p>Muy bonita la terraza</p>', '00:00:00', 4),
-(5, 16, '<p>Mu mala la comida</p>', '00:00:00', 0);
+(3, 14, '<p>Una maravilla:</p><ul><li>Buena comida</li><li>Buen servicio</li><li>Muy majos todos 👌</li></ul>', 0, 5),
+(4, 15, '<p>Muy bonita la terraza</p>', 0, 4),
+(5, 16, '<p>Mu mala la comida</p>', 0, 0);
 
 -- --------------------------------------------------------
 
