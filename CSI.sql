@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1:3307
--- Tiempo de generación: 07-02-2024 a las 12:24:47
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 07-02-2024 a las 12:44:23
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,7 +40,9 @@ CREATE TABLE `comentarios` (
 --
 
 INSERT INTO `comentarios` (`id`, `rid`, `comentario`, `fecha`, `valoracion`) VALUES
-(2, 11, '<p>Eres retradmonger</p>', '00:00:00', 4);
+(3, 14, '<p>Una maravilla:</p><ul><li>Buena comida</li><li>Buen servicio</li><li>Muy majos todos 👌</li></ul>', '00:00:00', 5),
+(4, 15, '<p>Muy bonita la terraza</p>', '00:00:00', 4),
+(5, 16, '<p>Mu mala la comida</p>', '00:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -166,7 +168,10 @@ INSERT INTO `reservas` (`id`, `uid`, `nombre`, `apellidos`, `numero_telefono`, `
 (10, 5, 'Isaac', 'Delgado Román', 1, 10, 1706787120, 'sdas'),
 (11, 4, 'Isaac', 'Delgado', 971, 10, 1706958060, 'awef'),
 (12, 4, 'Isaac', 'Delgado', 971, 1, 1706842980, 'dadsa'),
-(13, 4, 'Isaac', 'Delgado', 971, 12, 1706936700, '');
+(13, 4, 'Isaac', 'Delgado', 971, 12, 1706936700, ''),
+(14, 1, 'admin', 'admin', 1111111111, 1, 1708256640, 'Cositas'),
+(15, 3, 'Juan Eladio', 'Pareja Martín', 645296397, 1, 1463309160, 'OMG'),
+(16, 3, 'Juan Eladio', 'Pareja Martín', 645296397, 1, 1710071160, '');
 
 -- --------------------------------------------------------
 
@@ -195,7 +200,7 @@ CREATE TABLE `usuarios` (
 INSERT INTO `usuarios` (`id`, `nombre`, `apellidos`, `email`, `contrasena`, `fecha_nacimiento`, `codigo_postal`, `pais`, `numero_telefono`, `imagen`, `admin`) VALUES
 (1, 'admin', 'admin', 'admin@admin.admin', 'admin', '2000-01-01', 111111, 'admin', '1111111111', '../img/userImages/1707293194-1-fotoPerfil.png', '1'),
 (2, 'jhon', 'doe', 'prueba@prueba.com', 'admin', '2012-12-12', 111111, 'admin', '1111111111', '/img/userImages/defaultUserImage.png', '0'),
-(3, 'Juan Eladio', 'Pareja Martín', 'juaneladiopm@gmail.com', '$2y$10$tAEZgAw0tBNXVFU5TKOnWuWtChSAGpH6v8/J.DDyZJWHXnasD91Ay', '2003-06-20', 4156, 'de', '645296397', '../img/userImages/1706095749-3-fotoPerfil.png', '0'),
+(3, 'Juan Eladio', 'Pareja Martín', 'juaneladiopm@gmail.com', '$2y$10$tAEZgAw0tBNXVFU5TKOnWuWtChSAGpH6v8/J.DDyZJWHXnasD91Ay', '2003-06-20', 4156, 'de', '645296397', '../img/userImages/1707305901-3-fotoPerfil.png', '0'),
 (4, 'Isaac', 'Delgado', 'isaacdelgado2004@hotmail.es', '$2y$10$FOTyU8skJMhBZqzC0bUhjO5JpZOcr1M2DcTI55K4zcyo.uHcksMPi', '1978-03-16', 42344, 'ae', '+971 22343243243', '/img/userImages/defaultUserImage.png', '0'),
 (5, 'Isaac', 'Delgado Román', 'idelrom01@iesmarquesdecomares.org', '$2y$10$sa3NwnlJip9BoqlSN6dPhe/DNfLJHG9KUnYrfXbulRjcWjMKfD95K', '1978-03-23', 44234, 'us', '+1 42243243243', '/img/userImages/defaultUserImage.png', '0'),
 (6, 'asdas', 'asdas', 'a@b.c', '$2y$10$i4CXtqfvoyIrgg3pQ5S/ieeOMoZgqo.M.AFs6UYv77CbTp6Ry7lz6', '2001-02-04', 23337, 'us', '12938129387317', '/img/userImages/defaultUserImage.png', '0');
@@ -246,7 +251,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `ofertas`
@@ -264,7 +269,7 @@ ALTER TABLE `platos`
 -- AUTO_INCREMENT de la tabla `reservas`
 --
 ALTER TABLE `reservas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
