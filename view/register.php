@@ -232,10 +232,11 @@ if (isset($_POST['crear'])) {
                                             <p class="text-center">
                                                 <?php
                                                 if (isset($_SESSION["error"])) {
-                                                    print "<span class='material-symbols-outlined' warning>  " .
+                                                    print "<span class='warning'> " .
+                                                        "<span class='material-symbols-outlined'>warning</span>" .
                                                         $_SESSION["error"] .
+                                                        "<span class='material-symbols-outlined'>warning</span>" .
                                                         "  </span>";
-                                                        
                                                     unset($_SESSION["error"]);
                                                 }
                                                 ?>
