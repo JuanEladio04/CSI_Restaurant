@@ -4,7 +4,7 @@
 
     <div class="container-fluid contenido">
         <div class=" todo1">
-            <a class="navbar-brand" href="/index.php"><img src="/img/logos/SmallLogo.png" alt="Logo"></a>
+            <a class="navbar-brand" href="/index.php"><img src="/img/logos/SmallLogo.png" alt="Logo del restaurante"></a>
         </div>
 
         <button class="navbar-toggler text-uppercase font-weight-bold text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">

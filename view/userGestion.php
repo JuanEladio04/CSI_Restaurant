@@ -79,19 +79,19 @@ if (isset($_POST["cambiarFoto"])) {
                                     <!-- Form -->
                                     <form action="" method="POST" enctype="multipart/form-data">
                                         <div class="d-flex justify-content-center">
+                                            <label for="foto">Foto de perfil</label>
                                             <input type="file" name="fichero" id="foto">
                                         </div>
                                         <div class="row d-flex justify-content-center margenSuperior">
                                             <div class="d-flex justify-content-center mb-3">
                                                 <img src="<?php
                                                 print $_SESSION["usuario"]->imagen;
-                                                ?>" width="" class="rounded-circle d-flex justify-content-center col-6"></img>
+                                                ?>" width="" class="rounded-circle d-flex justify-content-center col-6" alt="Foto de perfil"></img>
                                             </div>
                                             <div class="d-flex justify-content-center">
                                                 <input class="btn text-light bg-danger roundedInput textoNoWrap"
                                                     type="submit" value="Cambiar foto de perfil" name="cambiarFoto">
                                             </div>
-
                                             <?php
                                             if (isset($errorFichero)) {
                                                 print $errorFichero;
@@ -109,18 +109,20 @@ if (isset($_POST["cambiarFoto"])) {
                     <div class="container formUserGestion">
                         <div class="card bg-danger text-dark roundedBorderUserGestion bg-light">
                             <div class="card-body  my-auto">
-                                <h1 class="text-center lobster">Nombre de usuario</h1>
+                                <h1 class="text-center lobster">Nombre y apellidos</h1>
 
                                 <div class="">
                                     <!-- Form -->
                                     <form action="" method="POST">
                                         <div class="">
+                                            <label for="userName">Nombre y apellidos</label>
                                             <input type="text" class="roundedInput form-control mb-2" id="userName"
                                                 name="userName" value="<?php
                                                 print $_SESSION["usuario"]->nombre;
                                                 ?>">
                                         </div>
                                         <div class="">
+                                            <label for="userSubname">Apellidos</label>
                                             <input type="text" class="roundedInput form-control" id="userSubname"
                                                 name="userSubname" value="<?php
                                                 print $_SESSION["usuario"]->apellidos;
@@ -128,7 +130,7 @@ if (isset($_POST["cambiarFoto"])) {
                                         </div>
                                         <div class="container d-flex justify-content-center margenSuperior">
                                             <input class="btn text-light bg-danger roundedInput textoNoWrap"
-                                                type="submit" name="cambiarNombre" value="Cambiar nombre de usuario">
+                                                type="submit" name="cambiarNombre" value="Cambiar y apellidos">
 
                                         </div>
                                     </form>
@@ -147,6 +149,7 @@ if (isset($_POST["cambiarFoto"])) {
                                     <!-- Form -->
                                     <form action="" method="POST">
                                         <div class="">
+                                            <label for="userEmail">Correo electrónico</label>
                                             <input type="text" class="roundedInput form-control" id="userEmail"
                                                 name="userEmail" value="<?php
                                                 print $_SESSION['usuario']->email;
@@ -173,21 +176,21 @@ if (isset($_POST["cambiarFoto"])) {
                                     <!-- Form -->
                                     <form action="" method="POST">
                                         <div class="margenInferior">
-                                            <p class="lobster">Contraseña actual:</p>
+                                            <label for="conAct">Contraseña actual</label>
                                             <input type="password" class="roundedInput form-control" id="conAct"
                                                 name="conAct" required>
                                         </div>
                                         <div class="margenInferior">
-                                            <label for="Password1" class="form-label"> Contraseña nueva:</label>
+                                            <label for="clave">Nueva contraseña</label>
                                             <ul class="listaError" id="errores"></ul>
-                                            <input type="password" class="roundedInput form-control" name="Password1"
-                                                id="clave" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$"
-                                                required oninput="verificarClave()">
+                                            <input type="password" class="roundedInput form-control" name="Password1" id="clave" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$" required="" oninput="verificarClave()">
+
+
                                         </div>
                                         <div class="margenInferior">
-                                            <label for="Passwordw" class="form-label">Repetir contraseña</label>
-                                            <input type="password" class="roundedInput form-control" id="claveRep"
-                                                name="Password2" required>
+                                            <label for="claveRep">Confirmar contraseña</label>
+                                            <input type="password" class="roundedInput form-control" id="claveRep" name="Password2" required="">
+
                                         </div>
                                         <div class="container d-flex justify-content-center margenSuperior">
                                             <input class="btn text-light bg-danger roundedInput" type="submit"

@@ -19,6 +19,15 @@
         font-size: 18px !important;
     }
 
+    input[type="submit"]:hover {
+        background-color: $black !important;
+        /* Otros estilos de hover */
+    }
+    input[type="submit"]:focus {
+        background-color: $black !important;
+        /* Otros estilos de hover */
+    }
+
     .margenInferior {
         margin-bottom: 1vh;
     }
