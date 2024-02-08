@@ -25,12 +25,12 @@ if (isset($_POST['crear'])) {
     $contraseña = $_POST['Password1'];
     $fechaNac = $_POST['date'];
     $telef = $_POST['phone'];
+    echo $telef;
     $pais = $_POST['country'];
     $codPostal = $_POST['postalCode'];
     $usuario = usuarioController::findByEmail($email);
     if ($usuario != null) {
-        $_SESSION["error"] = "Ya existe un usuario con ese correo";
-        header('location: register.php');
+        $error = "Ya existe un usuario con ese correo";
     } else {
         $i = usuarioController::insertUser($nombre, $apellidos, $email, $contraseña, $fechaNac, $telef, $pais, $codPostal);
         if ($i != null) {
@@ -43,7 +43,7 @@ if (isset($_POST['crear'])) {
             echo "No se ha podido encontrar el usuario";
         }
     }
-} else {
+} 
     ?>
     <!DOCTYPE html>
     <html lang="es">
@@ -97,6 +97,9 @@ if (isset($_POST['crear'])) {
                                                 if (isset($_GET['nombre'])) {
                                                     print $_GET['nombre'];
                                                 }
+                                                if(isset($_POST['FirstN'])) {
+                                                    print $_POST['FirstN'];
+                                                }
                                                 ?>" required>
                                         </div>
                                         <div class="col-sm-6 margenInferior">
@@ -108,7 +111,9 @@ if (isset($_POST['crear'])) {
                                                     print $_SESSION['apellido'];
                                                     $_SESSION['apellido'] = "";
                                                 }
-
+                                                if(isset($_POST['LastN'])) {
+                                                    print $_POST['LastN'];
+                                                }
                                                 ?>" required>
                                         </div>
                                     </div>
@@ -151,7 +156,7 @@ if (isset($_POST['crear'])) {
                                         <div class="col-sm-6 margenInferior">
                                             <label for="date" class="form-label">Fecha de nacimiento</label>
                                             <input type="date" class="roundedInput form-control" id="fecha" name="date"
-                                                min="1900-01-01" max="<?php print date("Y-m-d"); ?>" required>
+                                                min="1900-01-01" max="<?php print date("Y-m-d"); ?>" value="<?php if(isset($_POST['date'])){print $_POST['date'];} ?>" required>
                                         </div>
                                         <div class="col-sm-6 margenInferior phoneCountries">
                                             <label for="phone" class="form-label">Teléfono</label>
@@ -168,7 +173,11 @@ if (isset($_POST['crear'])) {
                                         <div class="col-sm-6 margenInferior mb-3">
                                             <label for="postalCode" class="form-label">Código postal</label>
                                             <input id="codPostal" type="text" class="roundedInput form-control"
-                                                name="postalCode" pattern="^[0-9]+$" required>
+                                                name="postalCode" pattern="^[0-9]+$" required value="<?php
+                                                    if(isset($_POST['postalCode'])) {
+                                                        print $_POST['postalCode'];
+                                                    }
+                                                ?>">
                                         </div>
                                     </div>
                                     <!-- Checkboxes for age and terms acceptance -->
@@ -231,13 +240,13 @@ if (isset($_POST['crear'])) {
                                         <div>
                                             <p class="text-center">
                                                 <?php
-                                                if (isset($_SESSION["error"])) {
+                                                if (isset($error)) {
                                                     print "<span class='warning'> " .
                                                         "<span class='material-symbols-outlined'>warning</span>" .
-                                                        $_SESSION["error"] .
+                                                        $error .
                                                         "<span class='material-symbols-outlined'>warning</span>" .
                                                         "  </span>";
-                                                    unset($_SESSION["error"]);
+                                                    unset($error);
                                                 }
                                                 ?>
                                             </p>
@@ -268,7 +277,7 @@ if (isset($_POST['crear'])) {
     </body>
 
     <?php
-}
+
 
 
 ?>
