@@ -122,7 +122,7 @@ if (isset($_POST["cambiarFoto"])) {
                                                 ?>">
                                         </div>
                                         <div class="">
-                                            <label for="userSubname">Apellidos</label>
+                                            <label for="userSubname">Apellido</label>
                                             <input type="text" class="roundedInput form-control" id="userSubname"
                                                 name="userSubname" value="<?php
                                                 print $_SESSION["usuario"]->apellidos;
