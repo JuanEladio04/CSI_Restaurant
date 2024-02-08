@@ -25,7 +25,6 @@ if (isset($_POST['crear'])) {
     $contraseña = $_POST['Password1'];
     $fechaNac = $_POST['date'];
     $telef = $_POST['phone'];
-    echo $telef;
     $pais = $_POST['country'];
     $codPostal = $_POST['postalCode'];
     $usuario = usuarioController::findByEmail($email);
