@@ -27,8 +27,11 @@
                 <p class="lead">
                     <!-- Link to Google Maps with the restaurant address. -->
                     <a
-                        href="https://www.google.com/maps/place/C.+Juego+de+Pelota,+14900+Lucena,+C%C3%B3rdoba/data=!4m2!3m1!1s0xd6d7734a3a1046f:0x37967444a4027296?sa=X&ved=2ahUKEwi116fU1saCAxVT1AIHHSxoAiIQ8gF6BAg9EAA">Enlace
-                        a la dirección: C / Juego de Pelota</a>
+                        href="https://www.google.com/maps/place/C.+Juego+de+Pelota,+14900+Lucena,+C%C3%B3rdoba/data=!4m2!3m1!1s0xd6d7734a3a1046f:0x37967444a4027296?sa=X&ved=2ahUKEwi116fU1saCAxVT1AIHHSxoAiIQ8gF6BAg9EAA">
+                        <span class="material-symbols-outlined">
+                            link
+                        </span>
+                        Enlace a la dirección: C / Juego de Pelota</a>
                 </p>
                 <p class="lead">
                     <!-- Placeholder text for order information. -->
@@ -46,15 +49,21 @@
                 </h3>
                 <p class="lead">
                     <!-- Link to the Terms and Conditions page. -->
-                    <a href="/view/termsAndConditions.php">Ver términos y condiciones</a>
+                    <a href="/view/termsAndConditions.php">
+                        <span class="material-symbols-outlined">link</span>Ver términos y condiciones
+                    </a>
                 </p>
                 <p class="lead">
                     <!-- Placeholder link to Legal Notice. -->
-                    <a href="/view/termsAndConditions.php#legalWarn">Ver aviso legal</a>
+                    <a href="/view/termsAndConditions.php#legalWarn">
+                        <span class="material-symbols-outlined">link</span>Ver aviso legal
+                    </a>
                 </p>
                 <p class="lead">
                     <!-- Placeholder link to Privacy Policy. -->
-                    <a href="/view/termsAndConditions.php#privPol">Ver política de privacidad</a>
+                    <a href="/view/termsAndConditions.php#privPol">
+                        <span class="material-symbols-outlined">link</span>Ver política de privacidad
+                    </a>
                 </p>
             </div>
         </div>

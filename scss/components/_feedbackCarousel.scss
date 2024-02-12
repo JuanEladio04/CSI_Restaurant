@@ -1,0 +1,4 @@
+.carousel-control-prev:focus, .carousel-control-next:focus {
+    outline: none; /* Para quitar el borde predeterminado del enfoque */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); /* Agregar un resplandor al botón cuando está enfocado */
+}
