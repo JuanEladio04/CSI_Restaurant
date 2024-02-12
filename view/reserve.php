@@ -7,7 +7,13 @@ if (isset($_POST['enviarReserva'])) {
         !empty($_POST['ittName']) && !empty($_POST['ittSecondName']) && !empty($_POST['ittelPhoneNumber']) && !empty($_POST['sDinners']) && !empty($_POST['itdDate']) && !empty($_POST['ittimeHour'])
     ) {
         if (isset($_POST['itcbNotAlone'])) {
-            $comen = $_POST['sDinners'] + 1;
+            $texto = "¿Cuántos comensales vienen además de usted?";
+            $comen = $_POST['itcbNotAlone'];
+            if($_POST['sDinners'] == $texto){
+                $comen = 1;
+            } else {
+                $comen = $_POST['sDinners'] + 1;    
+            }                
         } else {
             $comen = 1;
         }

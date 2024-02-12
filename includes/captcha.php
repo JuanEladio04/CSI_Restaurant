@@ -51,8 +51,8 @@ for ($i = 0; $i < $string_length; $i++) {
 
     // Distorsiones más agresivas al texto
     $angle = rand(-30, 30);
-    $x = $initial + $i * $letter_space + rand(-10, 10); // Variación en la posición
-    $y = rand(20, 40) + rand(-10, 10); // Variación en la posición
+    $x = $initial + $i * $letter_space + rand(0, 10); // Variación en la posición
+    $y = rand(20, 40) + rand(0, 10); // Variación en la posición
 
     // Cambiar la posición y el tamaño del texto
     $font_size = rand(20, 30);

@@ -75,7 +75,11 @@ $(document).ready(function () {
                     } else {
                         captchaCorrecto = 0;
                     }
-
+                    if (document.getElementById("terminos").checked == true) {
+                        terminosAceptados = 1;
+                    } else {
+                        terminosAceptados = 0;
+                    }
                     if (fechaCorrecta == 1 && contrasenaCorrecta == 1 && captchaCorrecto == 1 && terminosAceptados == 1) {
                         $boton = document.getElementById("crear");
                         $boton.disabled = false;

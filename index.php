@@ -228,7 +228,7 @@ if (isset($_GET['oauth_verifier'])) {
               </p>
             </div>
             <div class="align-items-right col-12">
-              <button type="button" class="btn btn-danger col-lg-4 col-sm-12" onclick="location.href='view/feedback.php'">Quiero opinar</button>
+              <button type="button" class="btn btn-danger col-lg-4 col-sm-12" onclick="location.href='view/feedback.php'">Ver opiniones</button>
             </div>
           </article>
 
@@ -302,23 +302,59 @@ if (isset($_GET['oauth_verifier'])) {
 </html>
 
 <?php
-if (isset($_GET['reservado'])) {
-  if ($_GET['reservado'] == true) {
+if (isset($_GET['reservado']) && $_GET['reservado'] == true) {
 ?>
-    <script>
-      alert("La reserva ha sido registrada con éxito");
-    </script>
-  <?php
-  }
-}
+    <div class="modal fade" id="modalReserva" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content bg-success">
+                <div class="modal-header">
+                    <h2 class="modal-title">ALERTA</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="mt-4 fs-5 d-flex justify-content-center align-text-center">Reserva registrada con éxito</p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="botonNoticias">Cerrar</button>
+              </div>
+            </div>
+        </div>
+    </div>
 
-if (isset($_GET['registrado'])) {
-  if ($_GET['registrado'] == true) {
-  ?>
     <script>
-      alert("El usuario ha sido registrado correctamente");
+        $(document).ready(function () {
+            $('#modalReserva').modal('show');
+        });
+    </script>
+<?php
+}
+?>
+
+<?php
+if (isset($_GET['registrado']) && $_GET['registrado'] == true) {
+  ?>
+    <div class="modal fade" id="modalReserva" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content bg-success">
+                <div class="modal-header">
+                    <h2 class="modal-title">ALERTA</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="mt-4 fs-5 d-flex justify-content-center align-text-center">El usuario ha sido registrado con éxito</p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="botonNoticias">Cerrar</button>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#modalReserva').modal('show');
+        });
     </script>
 <?php
   }
-}
 ?>

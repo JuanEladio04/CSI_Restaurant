@@ -67,7 +67,7 @@ if (!isset($_COOKIE['cookiesAceptadas'])) {
 
             <div class="overlay" id="ol"></div>
             <div class="container fs-4 cookies roundedBorder" role="alert" id="cookieAlert">
-                <p class="fs-4 mt-2 text-center">Esta página web utiliza las <a href="view/termsAndConditions.php#divCookies">cookies</a> para recordar las acciones del usuario</p>
+                <p class="fs-4 mt-2 text-center">Esta página web utiliza las <a href="/view/termsAndConditions.php#divCookies">cookies</a> para recordar las acciones del usuario</p>
                 <div class="buttonCookies">
                 <button type="button" class="roundedBorder" id="enviar" onclick="desaparecerBanner()">
                     Acepto las cookies
