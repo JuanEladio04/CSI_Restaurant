@@ -9,11 +9,11 @@ if (isset($_POST['enviarReserva'])) {
         if (isset($_POST['itcbNotAlone'])) {
             $texto = "¿Cuántos comensales vienen además de usted?";
             $comen = $_POST['itcbNotAlone'];
-            if($_POST['sDinners'] == $texto){
+            if ($_POST['sDinners'] == $texto) {
                 $comen = 1;
             } else {
-                $comen = $_POST['sDinners'] + 1;    
-            }                
+                $comen = $_POST['sDinners'] + 1;
+            }
         } else {
             $comen = 1;
         }
@@ -23,7 +23,7 @@ if (isset($_POST['enviarReserva'])) {
         $telef = $_POST['ittelPhoneNumber'];
         $timestamp = strtotime($_POST['itdDate']);
         $timestamp2 = strtotime($_POST['ittimeHour']);
-        $fecha = $_POST['itdDate']. " " .$_POST['ittimeHour'];
+        $fecha = $_POST['itdDate'] . " " . $_POST['ittimeHour'];
         $milis = DateTime::createFromFormat('Y-m-d H:i', $fecha);
         $espec = $_POST['taSpecifications'];
 
@@ -36,7 +36,9 @@ if (isset($_POST['enviarReserva'])) {
         echo "Algún dato no se ha pasado correctamente";
     }
 } else {
-?>
+    ?>
+    <html lang="es">
+
     <head>
         <?php include("../includes/head-tag-contents.php"); ?>
     </head>
@@ -45,7 +47,7 @@ if (isset($_POST['enviarReserva'])) {
         <?php include("../includes/navigation.php"); ?>
 
         <?php include("../includes/design-top.php"); ?>
-        
+
         <!--Reserves formulary-->
         <section class="container-fluid bg-danger rForm">
             <!--Presentation-->
@@ -61,48 +63,55 @@ if (isset($_POST['enviarReserva'])) {
                 <form class="col-12 row bg-primary p-0 form row" action="" method="POST">
                     <div class="row p-3 text-center mx-auto justify-content-around col-10">
                         <div class="row col-lg-6 col-sm-12 rFormContent">
-                            <label class="col-12" for="">Nombre:</label>
-                            <input class="col-12 text-start" type="text" name="ittName" required pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" value="<?php if (isset($_SESSION['usuario'])) {
-                                                                                                                                    echo $_SESSION['usuario']->nombre;
-                                                                                                                                } ?>">
+                            <label class="col-12" for="nombre">Nombre:</label>
+                            <input class="col-12 text-start" type="text" name="ittName" id="nombre" required
+                                pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$"
+                                value="<?php if (isset($_SESSION['usuario'])) {
+                                    echo $_SESSION['usuario']->nombre;
+                                } ?>">
 
                         </div>
 
                         <div class="row col-lg-6 col-sm-12 rFormContent">
-                            <label class="col-12" for="">Apellidos:</label>
-                            <input class="col-12" type="text" name="ittSecondName" required pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" value="<?php if (isset($_SESSION['usuario'])) {
-                                                                                                                                echo $_SESSION['usuario']->apellidos;
-                                                                                                                            } ?>">
+                            <label class="col-12" for="apell">Apellidos:</label>
+                            <input class="col-12" type="text" name="ittSecondName" id="apell" required
+                                pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$"
+                                value="<?php if (isset($_SESSION['usuario'])) {
+                                    echo $_SESSION['usuario']->apellidos;
+                                } ?>">
                         </div>
 
                         <div class="row col-lg-6 col-sm-12 rFormContent">
-                            <label class="col-12" for="">Número de teléfono:</label>
-                            <input class="col-12" type="tel" name="ittelPhoneNumber" required pattern="^\\+?[0-9]{1,4}?[-.\\s]?\\(?[0-9]{1,3}?\\)?[-.\\s]?[0-9]{1,4}[-.\\s]?[0-9]{1,9}$" value="<?php if (isset($_SESSION['usuario'])) {
-                                                                                                                                                                                                    echo $_SESSION['usuario']->numero_telefono;
-                                                                                                                                                                                                } ?>">
+                            <label class="col-12" for="tel">Número de teléfono:</label>
+                            <input class="col-12" type="tel" name="ittelPhoneNumber" id="tel" required
+                                pattern="^\\+?[0-9]{1,4}?[-.\\s]?\\(?[0-9]{1,3}?\\)?[-.\\s]?[0-9]{1,4}[-.\\s]?[0-9]{1,9}$"
+                                value="<?php if (isset($_SESSION['usuario'])) {
+                                    echo $_SESSION['usuario']->numero_telefono;
+                                } ?>">
 
                         </div>
 
                         <div class="row col-lg-6 col-sm-12 rFormContent">
-                            <label class="col-4" for="">Comensales:</label>
-                            <label class="col-lg-6 col-sm-11" for="">¿Viene acompañado?</label>
+                            <label class="col-4" for="notAlone">Comensales:</label>
+                            <label class="col-lg-6 col-sm-11" for="sDinners">¿Viene acompañado?</label>
                             <input class="col-sm-1" type="checkbox" name="itcbNotAlone" id="notAlone">
                             <select name="sDinners" id="sDinners" class="col-12"></select>
                         </div>
 
                         <div class="row col-lg-6 col-sm-12 rFormContent">
-                            <label class="col-12" for="">Fecha:</label>
-                            <input class="col-12" type="date" name="itdDate" required>
+                            <label class="col-12" for="fecha">Fecha:</label>
+                            <input class="col-12" type="date" name="itdDate" id="fecha" required>
                         </div>
 
                         <div class="row col-lg-6 col-sm-12 rFormContent">
-                            <label class="col-12" for="">Hora:</label>
-                            <input class="col-12" type="time" name="ittimeHour" required>
+                            <label class="col-12" for="hora">Hora:</label>
+                            <input class="col-12" type="time" name="ittimeHour" id="hora" required>
                         </div>
 
                         <div class="row col-12 rFormContent">
-                            <label for="">Especificaciones:</label>
-                            <textarea class="form-control z-depth-1" id="textarea" rows="4" name="taSpecifications"></textarea>
+                            <label for="textarea">Especificaciones:</label>
+                            <textarea class="form-control z-depth-1" id="textarea" rows="4"
+                                name="taSpecifications"></textarea>
                         </div>
                     </div>
                     <button type="submit" value="" name="enviarReserva" class="btn btn-danger p-3">
@@ -113,11 +122,11 @@ if (isset($_POST['enviarReserva'])) {
         </section>
 
         <?php include("../includes/footer.php"); ?>
-        <?php include("../includes/cookies.php"); ?>                                                                                                                                                                                         
+        <?php include("../includes/cookies.php"); ?>
         <script src="../js/reserveFormulary.js"></script>
 
     </body>
-<?php
+    <?php
 }
 ?>
 

@@ -5,7 +5,7 @@ require_once('../controller/sessionController.php');
 <!-- Including configuration file -->
 
 <!doctype html>
-<html>
+<html lang="es">
 
 <head>
     <?php include("../includes/head-tag-contents.php"); ?>
@@ -31,7 +31,7 @@ require_once('../controller/sessionController.php');
             <div class="card col-lg-2 col-10 my-5">
                 <img class="card-img-top pt-2" src="../img/games/arkanoidImage.png" alt="Card image cap">
                 <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">Pizzanoid</h5>
+                    <h2 class="card-title">Pizzanoid</h2>
                     <div class="card-text">
                         <p>
                         "Pizzanoid" es un emocionante juego de estilo arcade inspirado en el clásico juego de romper ladrillos, pero con un toque único y delicioso. El objetivo principal del juego es destruir todos los ladrillos en la pantalla utilizando una pelota especial de pizza, mientras te defiendes con una nave espacial que funciona como paleta.
@@ -44,9 +44,9 @@ require_once('../controller/sessionController.php');
             </div>
 
             <div class="card col-lg-2 col-10 my-5">
-                <img class="card-img-top pt-2" src="../img/games/PizzaInvader.png" alt="Card image cap">
+                <img class="card-img-top pt-2" src="../img/games/PizzaInvader.png" alt="Pizza Invader">
                 <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">Pizza Invader</h5>
+                    <h2 class="card-title">Pizza Invader</h2>
                     <div class="card-text">
                         <p>Pizza Invader es una emocionante fusión entre el clásico Space Invaders y la
                         irresistible cocina italiana. En este juego, tu nave toma la forma de una apetitosa boca ávida
@@ -76,9 +76,9 @@ require_once('../controller/sessionController.php');
             </div>
 
             <div class="card col-lg-2 col-10 my-5">
-                <img class="card-img-top pt-2" src="../img/games/PizzaCraft.png" alt="Card image cap">
+                <img class="card-img-top pt-2" src="../img/games/PizzaCraft.png" alt="PizzaCraft">
                 <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">PizzzaCraft</h5>
+                    <h2 class="card-title">PizzzaCraft</h2>
                     <div class="card-text">
                         <p>Sumérgete en el delicioso mundo de PizzzaCraft, donde tu creatividad culinaria se une a la 
                             emoción de calcular el precio perfecto para tu obra maestra pizza. En este juego único, eres 
@@ -110,9 +110,9 @@ require_once('../controller/sessionController.php');
             </div>
 
             <div class="card col-lg-2 col-10 my-5">
-                <img class="card-img-top pt-2" src="../img/games/reservacrafter.png" alt="Card image cap">
+                <img class="card-img-top pt-2" src="../img/games/reservacrafter.png" alt="ReservaCrafter">
                 <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">Reserva Crafter</h5>
+                    <h2 class="card-title">Reserva Crafter</h2>
                     <div class="card-text">
                         <p>
                         Bienvenido a Reserva Crafter, la experiencia de reserva de mesas diseñada exclusivamente para el 
