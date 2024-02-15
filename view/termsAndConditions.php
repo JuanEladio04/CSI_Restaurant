@@ -5,7 +5,7 @@ require_once('../controller/sessionController.php');
 <!-- Including configuration file -->
 
 <!doctype html>
-<html>
+<html lang="es">
 
 <head>
     
@@ -22,22 +22,23 @@ require_once('../controller/sessionController.php');
 
     <div class="container-fluid">
 
-        <section class="row mb-5 bg-primary roundedBorder">
+        <section class="row mb-5 bg-primary roundedBorder" tabindex="0">
             <article class="articulo col p-5">
                 <!-- Section with welcome message -->
                 <p class="mt-2">Bienvenido al restaurante Lunna Di La Rosa. Antes de explorar nuestras deliciosas
                     ofertas en línea, te pedimos que revises detenidamente los siguientes términos y condiciones que
                     rigen el uso de este sitio. Al acceder y utilizar nuestro sitio web, aceptas cumplir con estos
                     términos y condiciones. Si no estás de acuerdo con alguna parte de estos términos, te recomendamos
-                    que no utilices nuestro sitio.</p>
+                    que no utilices nuestro sitio.
+                </p>
             </article>
         </section>
 
 
-        <section id="legalWarn" class="row mb-5 bg-primary roundedBorder marginOnlyTop">
+        <section id="legalWarn" class="row mb-5 bg-primary roundedBorder marginOnlyTop texto-con-tabulacion">
             <article class="articulo col p-5">
                 <!-- Section with the legal advice -->
-                <h1 class="text-center">Aviso Legal</h1>
+                <h1 class="text-center" tabindex="0">Aviso Legal</h1>
                 <div class="mt-5">
                     <h2>AVISO LEGAL Y CONDICIONES GENERALES DE USO</h2>
 
@@ -266,7 +267,7 @@ require_once('../controller/sessionController.php');
         </section>
 
 
-        <section id="privPol" class="row mb-5 bg-primary roundedBorder marginOnlyTop">
+        <section id="privPol" class="row mb-5 bg-primary roundedBorder marginOnlyTop texto-con-tabulacion" tabindex="0">
             <article class="articulo col p-5">
                 <!-- Section with the politics privacy -->
                 <h1 class="text-center">Política de Privacidad</h1>
@@ -639,10 +640,10 @@ require_once('../controller/sessionController.php');
             </article>
         </section>
 
-        <section id="divCookies" class="row mb-5 bg-primary roundedBorder marginOnlyTop">
+        <section id="divCookies" class="row mb-5 bg-primary roundedBorder marginOnlyTop texto-con-tabulacion">
             <article class="articulo col p-5">
                 <!-- Section with the politics privacy -->
-                <h1 class="text-center">Uso de cookies</h1>
+                <h1 class="text-center" tabindex="0">Uso de cookies</h1>
                 <p>Bienvenido/a a nuestro sitio web. Utilizamos cookies para mejorar su experiencia de navegación y brindarle un servicio personalizado. Las cookies son pequeños archivos de texto que se almacenan en su dispositivo cuando visita nuestro sitio. Estos archivos contienen información que nos ayuda a reconocer y recordar sus preferencias, así como a analizar el tráfico del sitio. Las cookies que utilizamos se dividen en varias categorías:</p>
                 <ul class="mt-5">
                         <li class="mt-3">Cookies con funcionalidad: Estas cookies permiten que recordemos sus preferencias y elecciones, personalizando así su experiencia en nuestro sitio. Por ejemplo, pueden recordar su idioma preferido o la región en la que se encuentra.</li>
@@ -663,7 +664,7 @@ require_once('../controller/sessionController.php');
         <section class="row mb-5 bg-danger roundedBorder marginOnlyTop">
             <!-- Section with the purpose of various activities -->
             <article class="articuloTC col">
-                <h1 class="text-center">Finalidad</h1>
+                <h1 class="text-center" tabindex="0">Finalidad</h1>
                 <article class="articuloTC marginAllSides">
                     <h2 class="mt-5">1. Compromiso con su Seguridad</h2>
                     <p>Todos sus datos están seguros en nuestro sitio web. En el restaurante Lunna Di La
@@ -698,7 +699,7 @@ require_once('../controller/sessionController.php');
     </div>
 
     <article class="bg-light">
-        <table class="table">
+        <table class="table" tabindex="0">
             <tr>
                 <th>Página</th>
                 <th>Licencia</th>
