@@ -10,7 +10,7 @@ require_once("../controller/sessionController.php");
 </head>
 
 <body id="background-<?php echo $CURRENT_PAGE; ?>">
-    <?php include("../incNoludes/navigation.php"); ?>
+    <?php include("../includes/navigation.php"); ?>
     <?php include("../includes/design-top.php"); ?>
     
 
