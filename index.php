@@ -76,135 +76,48 @@ if (isset($_GET['oauth_verifier'])) {
       <!--CF: No tiene sentido poner un container-fluid dentro de otro container-fluid-->
       <header class="container-fluid presentacion col-12 text-center">
 
+        <nav class="container-fluid col-12 d-none d-lg-block">
+
+          <div class="row lobster">
+            <a href="view/card.php" class="btn btn-danger rounded-2 my-4 col-10 col-lg-2 mx-auto">Carta</a>
+            <a href="view/offers.php" class="btn btn-danger rounded-2 my-4 col-10 col-lg-2 mx-auto">Ofertas</a>
+            <a href="view/reserve.php" class="btn btn-danger rounded-2 my-4 col-10 col-lg-2 mx-auto">Reservas</a>
+            <?php
+            if (!isset($_SESSION["usuario"])) {
+              print '<a href="view/login.php" class="btn btn-danger rounded-2 my-4 col-10 col-lg-2 mx-auto">Iniciar Sesión</a>';
+            } else {
+              print '<a href="view/userGestion.php" class="btn btn-danger rounded-2 my-4 col-11 col-lg-2 mx-auto">Mi cuenta</a>';
+              print '<a href="/view/cerrarSesion.php" class="boton col-12 col-lg-2"><button type="button" class="btn btn-danger rounded-2 my-4 col-12 mx-auto">Cerrar Sesión</button></a>';
+            }
+            ?>
+          </div>
+        </nav>
+
         <div class="row align-items-center justify-content-around">
           <img class="col-12 headerLogo" alt="" src="img/logos/BigLogo.png" />
           <h1 class='text-light bg-dark py-3'>
             Ristorante luna della rossa
           </h1>
 
-          <div class="socialmedia col-12 bg-dark py-5">
-            <a href="https://www.instagram.com/ristaurantelunadellarosa/" class="mx-4 text-light" target="_blank"><i
-                class="fa-brands fa-instagram fa-2xl text-success"></i>Instagram</a>
-            <a href="https://twitter.com/RistauranteDLR" class="mx-4 text-light" target="_blank"><i
-                class="fa-brands fa-x-twitter fa-2xl text-success"></i>Twitter</a>
-            <a href="https://www.facebook.com/profile.php?id=61553606555788" class="mx-4 text-light" target="_blank"><i
-                class="fa-brands fa-facebook fa-2xl text-success"></i>Facebook</a>
-          </div>
-
           <!--CF: ¿Dos break points? Tenéis tres layouts en la guía de estilos?-->
-          <nav class="container-fluid col-12 d-lg-none d-sm-block">
+          <nav class="container-fluid col-12 d-lg-none">
 
             <div class="row lobster">
-              <a href="view/card.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Carta</a>
-              <a href="view/offers.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Ofertas</a>
-              <a href="view/reserve.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Reservas</a>
+              <a href="view/card.php" class="btn btn-danger rounded-2 my-4 col-10 col-lg-2 mx-auto">Carta</a>
+              <a href="view/offers.php" class="btn btn-danger rounded-2 my-4 col-10 col-lg-2 mx-auto">Ofertas</a>
+              <a href="view/reserve.php" class="btn btn-danger rounded-2 my-4 col-10 col-lg-2 mx-auto">Reservas</a>
               <?php
               if (!isset($_SESSION["usuario"])) {
-                print '<a href="view/login.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Iniciar Sesión</a>';
+                print '<a href="view/login.php" class="btn btn-danger rounded-2 my-4 col-10 col-lg-2 mx-auto">Iniciar Sesión</a>';
               } else {
-                print '<a href="view/userGestion.php" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Mi cuenta</a>';
-                print '<a href="/view/cerrarSesion.php" class="boton"><button type="button" class="btn btn-secondary rounded-2 my-4 col-10 mx-auto">Cerrar Sesión</button></a>';
+                print '<a href="view/userGestion.php" class="btn btn-danger rounded-2 my-4 col-11 col-lg-2 mx-auto">Mi cuenta</a>';
+                print '<a href="/view/cerrarSesion.php" class="boton col-12 col-lg-2"><button type="button" class="btn btn-danger rounded-2 my-4 col-12 mx-auto">Cerrar Sesión</button></a>';
               }
               ?>
             </div>
           </nav>
         </div>
       </header>
-
-      <!--Menu carousel-->
-      <section id="menu" class="bg-dark p-5 my-5 container-fluid d-lg-block d-none">
-        <h2 class="text-center text-light">
-          Menú de navegación
-        </h2>
-        <div id="carousel" class="mb-5">
-          <div class="prevLeftSecond card bg-danger roundedBorder text-center text-dark">
-            <img src="img/stockImages/index/gamesImage.png" class="card-img-top roundedBorder mt-auto"
-              alt="Imagen de videojuegos y pizza">
-            <div class="card-body container-fluid bg-success roundedBorder">
-              <h3 class="card-title lobster container-fluid ">Minijuegos</h3>
-              <p class="card-text roboto text-justify">¿Necesitas entretenerte?</p>
-              <p class="card-text roboto text-justify">No te pierdas nuestra colección de minijuegos, ideales para pasar
-                el tiempo mientras esperas o saboreas tu comida.</p>
-              <a href="view/games.php" class="btn btn-danger rounded-2">¡Jugar ahora!</a>
-            </div>
-          </div>
-
-          <div class="prev card bg-danger roundedBorder text-center text-dark">
-            <img src="img/stockImages/index/ofertImg.png" class="card-img-top roundedBorder mt-auto"
-              alt="Imagen que representa una oferta">
-            <div class="card-body container-fluid bg-success roundedBorder">
-              <h3 class="card-title lobster container-fluid ">Ofertas</h3>
-              <p class="card-text roboto text-justify">¡Mira nuestras ofertas diarias y semanales! Hazle un favor a tu
-                bolsillo.</p>
-              <a href="view/offers.php" class="btn btn-danger rounded-2">Visitar ofertas</a>
-            </div>
-          </div>
-
-          <div class="selected card bg-danger roundedBorder text-center text-dark">
-            <img src="img/stockImages/index/cardImg.png" class="card-img-top roundedBorder" alt="Imagen de la carta">
-            <div class="card-body container-fluid bg-success roundedBorder">
-              <h3 class="card-title lobster ">Carta</h3>
-              <p class="card-text roboto text-justify">Comprueba toda una carta llena de platos variados para todo tipo
-                de personas y estómagos</p>
-              <a href="view/card.php" class="btn btn-danger rounded-2">Muéstrame</a>
-            </div>
-          </div>
-
-          <div class="next card bg-danger roundedBorder text-center text-dark">
-            <img src="img/stockImages/index/reserveImg.png" class="card-img-top roundedBorder"
-              alt="Imagen de una pareja reservando en el restaurante">
-            <div class="card-body container-fluid bg-success roundedBorder">
-              <h3 class="card-title lobster ">Reserva</h3>
-              <p class="card-text roboto text-justify">¿Quieres asegurarte de no quedarte sin sitio? ¡Reserva ahora!</p>
-              <a href="view/reserve.php" class="btn btn-danger rounded-2">Reserva ahora</a>
-            </div>
-          </div>
-
-          <?php
-          if (!isset($_SESSION["usuario"])) {
-            ?>
-            <div class="nextRightSecond card bg-danger roundedBorder text-center text-dark">
-              <img src="img/stockImages/index/loginImg.png" class="card-img-top roundedBorder"
-                alt="Imagen que describe una gestión de usuario">
-              <div class="card-body container-fluid bg-success roundedBorder">
-                <h3 class="card-title lobster ">Cuentas de usuario</h3>
-                <p class="card-text roboto">Inicia sesión para aprovechar todas nuestras ventajas</p>
-                <a href="view/login.php" class="btn btn-danger rounded-2">Iniciar sesión</a>
-              </div>
-            </div>
-            <?php
-          } else {
-            ?>
-            <div class="nextRightSecond card bg-danger roundedBorder text-center text-dark">
-              <img src="<?php echo $_SESSION['usuario']->imagen ?>" class="card-img-top roundedBorder"
-                alt="Imagen de perfil del usuario">
-              <div class="card-body container-fluid bg-success roundedBorder">
-                <h3 class="card-title lobster animated  ">
-                  <?php echo $_SESSION['usuario']->nombre . " " . $_SESSION['usuario']->apellidos ?>
-                </h3>
-                <p class="card-text roboto">Modifica tu cuenta e incluye una foto</p>
-                <a href="view/userGestion.php" class="btn btn-danger rounded-2">
-                  Mi cuenta
-                </a>
-                <a href="/view/cerrarSesion.php" class="boton"><button type="button"
-                    class="btn btn-danger rounded-2">Cerrar Sesión</button></a>
-              </div>
-            </div>
-            <?php
-          }
-          ?>
-        </div>
-        <div class="buttons container-fluid row mt-5">
-          <div class="row mt-5">
-            <button id="prev" type="button" class="btn btn-danger col-1 me-auto rounded-pill h2">
-              <i class="fa-solid fa-angle-left"> </i>Izquierda
-            </button>
-            <button id="next" type="button" class="btn btn-danger col-1 ms-auto rounded-pill">
-              Derecha <i class="fa-solid fa-angle-right"> </i>
-            </button>
-          </div>
-        </div>
-      </section>
 
       <!--About us-->
       <section id="aboutUs-<?php echo $CURRENT_PAGE; ?>" class="p-5 my-5 container-fluid bg-secondary">
