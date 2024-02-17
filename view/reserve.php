@@ -1,6 +1,8 @@
 <?php
 include("../includes/a_config.php");
 require_once "../controller/sessionController.php";
+date_default_timezone_set('Europe/Madrid');
+
 sessionRedirect();
 if (isset($_POST['enviarReserva'])) {
     if (
@@ -83,8 +85,9 @@ if (isset($_POST['enviarReserva'])) {
 
                         <div class="row col-lg-6 col-sm-12 rFormContent">
                             <label class="col-12" for="tel">Número de teléfono:</label>
-                            <input class="col-12" type="tel" name="ittelPhoneNumber" id="tel" required
-                                pattern="^\\+?[0-9]{1,4}?[-.\\s]?\\(?[0-9]{1,3}?\\)?[-.\\s]?[0-9]{1,4}[-.\\s]?[0-9]{1,9}$"
+                            <input class="col-12" type="tel" name="ittelPhoneNumber" id="tel" maxlength="14" required
+                                onkeyup="this.value = this.value.replace(/[^0-9-]/g, '');"
+                                placeholder="+34 000 000 000"
                                 value="<?php if (isset($_SESSION['usuario'])) {
                                     echo $_SESSION['usuario']->numero_telefono;
                                 } ?>">
@@ -92,20 +95,24 @@ if (isset($_POST['enviarReserva'])) {
                         </div>
 
                         <div class="row col-lg-6 col-sm-12 rFormContent">
-                            <label class="col-4" for="notAlone">Comensales:</label>
-                            <label class="col-lg-6 col-sm-11" for="sDinners">¿Viene acompañado?</label>
-                            <input class="col-sm-1" type="checkbox" name="itcbNotAlone" id="notAlone">
-                            <select name="sDinners" id="sDinners" class="col-12"></select>
+                            <label class="col-4" for="ssDinners">Comensales:</label>
+                            <select name="sDinners" id="ssDinners" class="col-12">
+                                <?php 
+                                for ($i = 1; $i <= 3333; $i++) {
+                                    echo '<option value="'. $i. '">'. $i. '</option>';
+                                }
+                                ?>
+                            </select>
                         </div>
 
                         <div class="row col-lg-6 col-sm-12 rFormContent">
                             <label class="col-12" for="fecha">Fecha:</label>
-                            <input class="col-12" type="date" name="itdDate" id="fecha" required>
+                            <input class="col-12" type="date" name="itdDate" min="<?php echo date('Y-m-d'); ?>" id="fecha" min required>
                         </div>
 
                         <div class="row col-lg-6 col-sm-12 rFormContent">
                             <label class="col-12" for="hora">Hora:</label>
-                            <input class="col-12" type="time" name="ittimeHour" id="hora" required>
+                            <input class="col-12" type="time" name="ittimeHour" min="<?php echo date('H:i'); ?>" id="hora" required>
                         </div>
 
                         <div class="row col-12 rFormContent">

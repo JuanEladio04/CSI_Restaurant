@@ -4,6 +4,8 @@ require_once('../controller/sessionController.php');
 
 $comentarios = comentarioController::getAllComentarios();
 
+
+
 if (isset($_SESSION['usuario'])) {
     $usuario = $_SESSION['usuario'];
     $reservasUsuario = reservaController::getReservasById($usuario->id);
@@ -67,15 +69,15 @@ if (isset($_POST['borrar'])) {
                                     </div>
                                 <div id="crearCalificacion"
                                     class="stars d-flex align-items-center justify-content-center margen">
-                                    <i class="fa-regular fa-2x fa-star text-danger estrella" id="1"></i>
+                                    <i class="fa-regular fa-2x fa-star text-danger estrella" id="1" tabindex="0"></i>
 
-                                    <i class="fa-regular fa-2x fa-star text-danger estrella" id="2"></i>
+                                    <i class="fa-regular fa-2x fa-star text-danger estrella" id="2" tabindex="0"></i>
 
-                                    <i class="fa-regular fa-2x fa-star text-danger estrella" id="3"></i>
+                                    <i class="fa-regular fa-2x fa-star text-danger estrella" id="3" tabindex="0"></i>
 
-                                    <i class="fa-regular fa-2x fa-star text-danger estrella" id="4"></i>
+                                    <i class="fa-regular fa-2x fa-star text-danger estrella" id="4" tabindex="0"></i>
 
-                                    <i class="fa-regular fa-2x fa-star text-danger estrella" id="5"></i>
+                                    <i class="fa-regular fa-2x fa-star text-danger estrella" id="5" tabindex="0"></i>
                                 </div>
 
                                 <label for="reservas"></label>
@@ -209,6 +211,33 @@ if (isset($_POST['borrar'])) {
             </div>
         </div>
     </section>
+
+    <!-- Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    
+      <!-- Encabezado del modal -->
+      <div class="modal-header">
+        <h4 class="modal-title">Mensaje</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      
+      <!-- Contenido del modal -->
+      <div class="modal-body">
+        <p>Comentario guardado correctamente</p>
+      </div>
+      
+      <!-- Pie del modal -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="cerrar()">Cerrar</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
 
     <script src="../js/estrellas.js"></script>
     <script src="../js/opinion.js"></script>

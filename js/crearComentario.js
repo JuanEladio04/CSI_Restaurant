@@ -19,7 +19,7 @@ function crear() {
         success: function(response) {
             // Acciones a realizar en caso de éxito
             console.log('Éxito:', response);
-            location.reload();
+            $('#myModal').modal('show');
           },
           error: function(xhr, status, error) {
             console.error('Error:', error);
@@ -29,4 +29,9 @@ function crear() {
 
 function habilitarBoton(){
     document.getElementById("crear").removeAttribute("disabled");
+}
+
+function cerrar(){
+    $('#myModal').modal('hide');
+    location.reload();
 }
