@@ -13,7 +13,7 @@ include("../includes/a_config.php");
 <body class="bg-dark" id="background-<?php echo $CURRENT_PAGE; ?>">   
     <!-- Header with a link to the homepage and a restaurant logo -->
     <header class="text-center">
-        <a href="../index.php"><img src="../img/logos/BigLogo.png" width="300px"></a>
+        <a href="../index.php"><img alt="logo pizzería luna della rossa" src="../img/logos/BigLogo.png" width="300px"></a>
     </header>
 
     <main class="container-fluid">
@@ -43,7 +43,7 @@ include("../includes/a_config.php");
                                 <form action="/action_page.php">
                                     <!-- Email input -->
                                     <div class="margenInferior">
-                                        <label for="Email" class="form-label">Email</label>
+                                        <label for="email" class="form-label">Email</label>
                                         <input type="email" class="roundedInput form-control" id="email" name="Email"
                                             pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
                                     </div>
@@ -53,10 +53,10 @@ include("../includes/a_config.php");
                         <!-- Card footer with links to login and registration -->
                         <div class="card-footer text-center">
                             <!-- Link to registration page -->
-                            <a href="register.php" class="nav-link text-light col-sm-12 text-center">No tengo cuenta</a>
+                            <a href="register.php" class="nav-link text-light col-sm-12 text-center"><span class="material-symbols-outlined">link</span>No tengo cuenta</a>
                             <div class="text-center">
                                 <!-- Link to login page -->
-                                <a href="login.php" class="nav-link text-light textoNoWrap">Identificarse</a>
+                                <a href="login.php" class="nav-link text-light textoNoWrap"><span class="material-symbols-outlined">link</span>Identificarse</a>
                             </div>
                             <div class="text-center">
                                 <!-- Submit button for sending the password recovery email -->

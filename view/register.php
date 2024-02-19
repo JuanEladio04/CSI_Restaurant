@@ -250,7 +250,7 @@ if (isset($_POST['crear'])) {
                             </div>
                             <!-- Card footer with a link to the login page -->
                             <div class="card-footer text-center">
-                                <a href="login.php" class="nav-link text-light">Ya estoy registrado</a>
+                                <a href="login.php" class="nav-link text-light"><span class="material-symbols-outlined">link</span>Ya estoy registrado</a>
                             </div>
 
                         </div>
