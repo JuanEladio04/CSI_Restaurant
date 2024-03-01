@@ -4,6 +4,8 @@ require_once('../controller/sessionController.php');
 
 $comentarios = comentarioController::getAllComentarios();
 
+
+
 if (isset($_SESSION['usuario'])) {
     $usuario = $_SESSION['usuario'];
     $reservasUsuario = reservaController::getReservasById($usuario->id);
@@ -18,7 +20,7 @@ if (isset($_POST['borrar'])) {
 
 <!DOCTYPE html>
 
-<html>
+<html lang="es">
 
 <head>
     <?php include("../includes/head-tag-contents.php"); ?>
@@ -47,7 +49,7 @@ if (isset($_POST['borrar'])) {
                             En nuestro restaurante tu voz importa.
                         </p>
 
-                        <p class="parrafo ">¿Quieres hablar?</p>
+                        <h3 class="parrafo ">¿Quieres hablar?</h3>
 
                         <p class="parrafo roboto">
                             Deja tu opinión a continuación:
@@ -62,25 +64,25 @@ if (isset($_POST['borrar'])) {
                                         src="../<?php echo $usuario->imagen ?>" width="50px" height="50px" />
                                 </div>
 
-                                <div class="username d-flex align-items-center justify-content-center">
-                                    <?php echo $usuario->nombre . " " . $usuario->apellidos ?>
-                                </div>
-
+                                    <div class="username d-flex align-items-center justify-content-center">
+                                        <?php echo $usuario->nombre . " " . $usuario->apellidos ?>
+                                    </div>
                                 <div id="crearCalificacion"
                                     class="stars d-flex align-items-center justify-content-center margen">
-                                    <i class="fa-regular fa-2x fa-star text-danger estrella" id="1"></i>
+                                    <i class="fa-regular fa-2x fa-star text-danger estrella" id="1" tabindex="0"></i>
 
-                                    <i class="fa-regular fa-2x fa-star text-danger estrella" id="2"></i>
+                                    <i class="fa-regular fa-2x fa-star text-danger estrella" id="2" tabindex="0"></i>
 
-                                    <i class="fa-regular fa-2x fa-star text-danger estrella" id="3"></i>
+                                    <i class="fa-regular fa-2x fa-star text-danger estrella" id="3" tabindex="0"></i>
 
-                                    <i class="fa-regular fa-2x fa-star text-danger estrella" id="4"></i>
+                                    <i class="fa-regular fa-2x fa-star text-danger estrella" id="4" tabindex="0"></i>
 
-                                    <i class="fa-regular fa-2x fa-star text-danger estrella" id="5"></i>
+                                    <i class="fa-regular fa-2x fa-star text-danger estrella" id="5" tabindex="0"></i>
                                 </div>
 
+                                <label for="reservas"></label>
                                 <select name="reservas" id="reservas" onchange="ocultarSeleccion(), habilitarBoton()">
-                                    <option value="" selected>Seleccione una reserva</option>
+                                    <option value="" id="reservas" selected>Seleccione una reserva</option>
                                     <?php
                                     foreach ($reservasUsuario as $r) {
                                         $fecha = date("d M Y - H:i:s", $r->fecha);
@@ -167,7 +169,7 @@ if (isset($_POST['borrar'])) {
                             } ?>">
                                 <?php
                                 if (isset($usuario) && $c->id_usuario == $usuario->id) {
-                                    echo "<span class='animated'>";
+                                    echo "<span class=''>";
                                     echo $c->nombre_usuario . " " . $c->apellidos_usuario;
                                     echo "</span>";
                                 } else {
@@ -189,7 +191,7 @@ if (isset($_POST['borrar'])) {
                         </div>
                         <div class="comentario">
                             <?php echo $c->comentario; ?>
-                            <div class="d-flex align-items-end justify-content-end">
+                            <div class="text-end">
                                 <?php
                                 if (isset($usuario)) {
                                     if ($c->id_usuario == $usuario->id || $usuario->admin == 1) {
@@ -209,6 +211,33 @@ if (isset($_POST['borrar'])) {
             </div>
         </div>
     </section>
+
+    <!-- Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    
+      <!-- Encabezado del modal -->
+      <div class="modal-header">
+        <h4 class="modal-title">Mensaje</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      
+      <!-- Contenido del modal -->
+      <div class="modal-body">
+        <p>Comentario guardado correctamente</p>
+      </div>
+      
+      <!-- Pie del modal -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="cerrar()">Cerrar</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
 
     <script src="../js/estrellas.js"></script>
     <script src="../js/opinion.js"></script>

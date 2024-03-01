@@ -60,7 +60,7 @@ if (isset($_POST['crear'])) {
     <body class="bg-dark" id="background-<?php echo $CURRENT_PAGE; ?>">
 
         <header class="col-12 text-center">
-            <a href="../index.php"><img src="../img/logos/BigLogo.png" width="300px"></a>
+            <a href="../index.php"><img alt="logo restaurante Pizzeria Luna Della Rossa" src="../img/logos/BigLogo.png" width="300px"></a>
         </header>
 
         <!-- Main section containing the registration form -->
@@ -87,7 +87,7 @@ if (isset($_POST['crear'])) {
                                         <!--CF2: ¿Por qué usas sm-6 si tus compañeros usan md y lg-->
                                         <div class="col-sm-6 margenInferior">
                                             <label for="FirstN" class="form-label">Nombre</label>
-                                            <input type="text" class="roundedInput form-control" name="FirstN"
+                                            <input id="FirstN"  type="text" class="roundedInput form-control" name="FirstN"
                                                 pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" value="<?php
                                                 if (isset($_SESSION['nombre'])) {
                                                     print $_SESSION['nombre'];
@@ -104,7 +104,7 @@ if (isset($_POST['crear'])) {
                                         <div class="col-sm-6 margenInferior">
                                             <label for="LastN" class="form-label">Apellidos</label>
 
-                                            <input type="text" class="roundedInput form-control" name="LastN"
+                                            <input id="LastN" type="text" class="roundedInput form-control" name="LastN"
                                                 pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" value="<?php
                                                 if (isset($_SESSION['apellido'])) {
                                                     print $_SESSION['apellido'];
@@ -119,7 +119,7 @@ if (isset($_POST['crear'])) {
 
                                     <!-- Email input with margin -->
                                     <div class="margenInferior">
-                                        <label for="Email" class="form-label">Email</label>
+                                        <label for="email" class="form-label">Email</label>
                                         <input type="email" class="roundedInput form-control" id="email" name="Email"
                                             pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" value="<?php
                                             if (isset($_SESSION['emailGoogle'])) {
@@ -137,14 +137,14 @@ if (isset($_POST['crear'])) {
                                     </div>
                                     <!-- Password inputs with margin -->
                                     <div class="col margenInferior">
-                                        <label for="Password1" class="form-label"> Contraseña:</label>
+                                        <label for="clave" class="form-label"> Contraseña:</label>
                                         <ul class="listaError" id="errores"></ul>
                                         <input type="password" class="roundedInput form-control" name="Password1" id="clave"
                                             pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$" required
                                             oninput="verificarClave()">
                                     </div>
                                     <div class="col margenInferior">
-                                        <label for="Passwordw" class="form-label">Confirmar contraseña</label>
+                                        <label for="claveRep" class="form-label">Confirmar contraseña</label>
                                         <input type="password" class="roundedInput form-control" id="claveRep"
                                             name="Password2" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$"
                                             required oninput="verificarClave()" required>
@@ -153,7 +153,7 @@ if (isset($_POST['crear'])) {
                                     <p class="oculto" id="passIncorrecta">Las contraseñas no coinciden</p>
                                     <div class="row">
                                         <div class="col-sm-6 margenInferior">
-                                            <label for="date" class="form-label">Fecha de nacimiento</label>
+                                            <label for="fecha" class="form-label">Fecha de nacimiento</label>
                                             <input type="date" class="roundedInput form-control" id="fecha" name="date"
                                                 min="1900-01-01" max="<?php print date("Y-m-d"); ?>" value="<?php if(isset($_POST['date'])){print $_POST['date'];} ?>" required>
                                         </div>
@@ -170,7 +170,7 @@ if (isset($_POST['crear'])) {
                                                 name="country" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$" required></select>
                                         </div>
                                         <div class="col-sm-6 margenInferior mb-3">
-                                            <label for="postalCode" class="form-label">Código postal</label>
+                                            <label for="codPostal" class="form-label">Código postal</label>
                                             <input id="codPostal" type="text" class="roundedInput form-control"
                                                 name="postalCode" pattern="^[0-9]+$" required value="<?php
                                                     if(isset($_POST['postalCode'])) {
@@ -184,15 +184,17 @@ if (isset($_POST['crear'])) {
                                     <div class="d-block mb-3">
                                         <input type="checkbox" name="acepto" id="terminos" value="Aceptar términos"
                                             class="rounded-checkbox" required>
-                                        <label for="acepto">Acepto los términos</label>
+                                        <label for="terminos">Acepto los términos</label>
                                     </div>
 
                                     <!-- Captcha -->
                                     <div class="captcha mb-3">
                                         <div class="fondoCaptcha">
                                             <div class="checkboxCaptcha">
-                                                <label class="content-input">
-                                                    <input type="checkbox" name="captcha" class="checkbox" id="checkbox">
+                                                <label for="checkbox" class="content-input">
+                                                  checkbox  
+                                                </label>
+                                                <input type="checkbox" name="captcha" class="checkbox" id="checkbox">
                                                     <i onclick="captcha()" id="icono" <?php if (isset($_POST['resolverCaptcha'])) {
                                                         if ($_SESSION['captcha_text'] == $_POST['resolverCaptcha']) {
                                                             echo "class='checkbox-checked'";
@@ -200,17 +202,16 @@ if (isset($_POST['crear'])) {
                                                         ;
                                                     }
                                                     ; ?>></i>
-                                                </label>
                                             </div>
                                             <div class="textoCaptcha">
                                                 <p class="text">No eres un robot</p>
                                             </div>
-                                            <div class="imgCaptcha"><img src="../img/logos/SmallLogo.png" class="img"></div>
+                                            <div class="imgCaptcha"><img alt="logo pizzeria" src="../img/logos/SmallLogo.png" class="img"></div>
                                         </div>
                                         <div class="overlay" id="overlay"></div>
                                         <div id="contenedorCaptcha" class="oculto row">
                                             <div class="col-12 tituloCaptcha">
-                                                <img src="../img/logos/SmallLogo.png" width="100px">
+                                                <img alt="logo pizzeria" src="../img/logos/SmallLogo.png" width="100px">
                                                 <h2>Completa el CAPTCHA</h2>
                                             </div>
                                             <div class="col-12">
@@ -219,10 +220,11 @@ if (isset($_POST['crear'])) {
                                                     class="col-12"></canvas> -->
 
                                                 <!-- Aqui esta el capcha con php -->
-                                                <img src="../includes/captcha.php" class="captcha-image">
+                                                <img alt="imgaen del captcha" src="../includes/captcha.php" class="captcha-image">
                                                 <i class="fas fa-redo refresh-captcha col-12"></i>
                                             </div>
                                             <div class="col-12 form-captcha">
+                                                <label for="resolverCaptcha">´Código</label>
                                                 <input type="text" name="resolverCaptcha" id="resolverCaptcha"
                                                     class="tamaño">
 
@@ -257,7 +259,7 @@ if (isset($_POST['crear'])) {
                             </div>
                             <!-- Card footer with a link to the login page -->
                             <div class="card-footer text-center">
-                                <a href="login.php" class="nav-link text-light">Ya estoy registrado</a>
+                                <a href="login.php" class="nav-link text-light"><span class="material-symbols-outlined">link</span>Ya estoy registrado</a>
                             </div>
 
                         </div>

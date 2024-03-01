@@ -5,7 +5,7 @@ require_once('../controller/sessionController.php');
 <!-- Including configuration file -->
 
 <!doctype html>
-<html>
+<html lang="es">
 
 <head>
     <?php include("../includes/head-tag-contents.php"); ?>
@@ -52,25 +52,27 @@ require_once('../controller/sessionController.php');
                     </div>
                     <div class="controls">
                         <button class="btn btn-lg btn-video-playpause" data-bs-toggle="tooltip" title="Play Video"
-                            type="button"><i class="bi bi-play-fill text-dark"><img src="..\img\logos\tocar.png"/></i><i
-                                class="bi bi-pause-fill d-none text-dark"><img src="..\img\logos\pausa.png"/></i></button>
+                            type="button"><i class="bi bi-play-fill text-dark"><img alt="play" src="..\img\logos\tocar.png"/></i><i
+                                class="bi bi-pause-fill d-none text-dark"><img alt="pause" src="..\img\logos\pausa.png"/></i></button>
                         <div class="p-0 w-100">
                             <div class="progress">
                                 <div class="progress-bar"></div>
                             </div>
                         </div>
-                        <button class="btn btn-lg text-dark btn-video-pip" title="Play picture in picture"><img src="..\img\logos\minimizar.png"/><i
+                        <button class="btn btn-lg text-dark btn-video-pip" title="Play picture in picture"><img alt="play-picture-in-picture" src="..\img\logos\minimizar.png"/><i
                                 class="bi bi-pip"></i></button><button class="btn btn-lg btn-video-fullscreen p-1"><i
-                                class="bi bi-arrows-fullscreen"><img src="..\img\logos\pantalla-completa.png"/></i></button>
+                                class="bi bi-arrows-fullscreen"><img alt="fullscreen" src="..\img\logos\pantalla-completa.png"/></i></button>
                         <div class="dropup">
                             <button class="btn btn-lg" data-bs-toggle="dropdown" title="Volume"><i
-                                    class="bi bi-volume-mute-fill"><img src="..\img\logos\audio.png"/></i></button>
+                                    class="bi bi-volume-mute-fill"><img alt="audio" src="..\img\logos\audio.png"/></i></button>
                             <div class="dropdown-menu dropdown-menu-end dropup-volume">
-                                <input class="form-range form-range-volume" type="range">
+                                <label for="volume-range">Volumen vídeo
+                                <input id="volume-range" class="form-range form-range-volume" type="range">
+                                </label>
                             </div>
                         </div>
                         <div class="dropup">
-                            <button class="btn btn-lg" data-bs-toggle="dropdown" title="More..."><img src="..\img\logos\about.png"/><i
+                            <button class="btn btn-lg" data-bs-toggle="dropdown" title="More..."><img alt="about-us" src="..\img\logos\about.png"/><i
                                     class="bi bi-three-dots-vertical"></i></button>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <a class="dropdown-item" href="#"><i class="bi bi-info-circle-fill"></i> About</a>
@@ -92,7 +94,7 @@ require_once('../controller/sessionController.php');
                 <div class="row">
                     <div class="col-lg-6 d-none d-lg-flex justify-content-center">
                         <!-- Image of the chef -->
-                        <img class="img-fluid" src="..\img\stockImages\aboutUs_StockImages\cocineroFoto.png"
+                        <img class="img-fluid" alt="chef cocinando" src="..\img\stockImages\aboutUs_StockImages\cocineroFoto.png"
                             style="width: 100%;" frameborder="0">
                     </div>
                     <div class="col-lg-6 p-5">

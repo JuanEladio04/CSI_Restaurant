@@ -52,14 +52,17 @@ if (isset($_POST["gIdentify"])) {
 
 <body class="bg-dark" id="background-<?php echo $CURRENT_PAGE; ?>">
 
-    <header class="col-12 text-center">
+    <header class="col-12 text-center bg-dark">
         <!-- Restaurant logo -->
-        <a href="../index.php"><img src="../img/logos/BigLogo.png" width="300px"></a>
+        <a href="../index.php"><img src="../img/logos/BigLogo.png" width="300px" alt="Logo del restaurante"></a>
+        <h1 class="text-light">
+            Ristorante Luna della Rossa
+        </h1>
     </header>
 
     <!-- Main content container -->
 
-    <main class="container-fluid">
+    <main class="container-fluid my-5">
         <div class="row">
 
 
@@ -80,15 +83,17 @@ if (isset($_POST["gIdentify"])) {
                             <form action="" method="POST">
                                 <!-- Email input -->
                                 <div class="margenInferior">
-                                    <label for="Email" class="form-label">Correo electrónico</label>
-                                    <input type="Email" class="roundedInput form-control" id="pwd" name="Email"
-                                        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+                                    <label for="emailInput" class="form-label">Correo electrónico</label>
+                                    <input type="Email" class="roundedInput form-control" id="emailInput" name="Email"
+                                        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required
+                                        placeholder="Introduce el correo electrónico[correo@proveedor.extension]">
                                 </div>
                                 <!-- Password input -->
                                 <div class="col margenInferior">
-                                    <label for="Password1" class="form-label">Contraseña</label>
-                                    <input type="password" name="password"
-                                        class="roundedInput form-control margenInferior" required>
+                                    <label for="passwordInput" class="form-label">Contraseña</label>
+                                    <input type="password" name="password" id="passwordInput"
+                                        class="roundedInput form-control margenInferior" required
+                                        placeholder="Introduce la contraseña">
                                     <p class="text-center">
                                         <?php
                                         if (isset($error)) {
@@ -103,11 +108,15 @@ if (isset($_POST["gIdentify"])) {
 
                         <!-- Footer with links and login button ---------------------------------------------------------------------------------------->
                         <div class="card-footer text-center">
-                            <a href="forgottenPassword.php" class="nav-link text-light col-sm-12 text-center">Contraseña
-                                olvidada</a>
+                            <a href="forgottenPassword.php" class="nav-link text-light col-sm-12 text-center">
+                                <span class="material-symbols-outlined">link</span>
+                                Contraseña olvidada
+                            </a>
                             <div class="text-center ">
-                                <a href="register.php" class="nav-link text-light textoNoWrap">No estoy
-                                    registrado</a>
+                                <a href="register.php" class="nav-link text-light textoNoWrap">
+                                    <span class="material-symbols-outlined">link</span>
+                                    No estoy registrado
+                                </a>
                                 <div id="fb-root"></div>
                             </div>
 
@@ -124,20 +133,31 @@ if (isset($_POST["gIdentify"])) {
                                 O inicia sesión con otra plataforma:
                             </p>
                             <!-- Facebook -->
-                            <div class="fb-login-button col-2 eLogin-button" data-width="400" data-size=""
-                                data-button-type="" data-layout="" data-auto-logout-link="false"
-                                data-use-continue-as="false" onlogin="checkLoginState()">
-                                
+                            <div class="col-3 border-secondary eLogin-button row">
+                                <div class="fb-login-button col-12" data-width="400" data-size="" data-button-type=""
+                                    data-layout="" data-auto-logout-link="false" data-use-continue-as="false"
+                                    onlogin="checkLoginState()">
+                                </div>
+                                <p class="col-12 text-dark">
+                                    Iniciar sesión con Facebook
+                                </p>
                             </div>
 
                             <!-- Google -->
-                            <button class="col-2 border-secondary eLogin-button" type="submit" name="gIdentify">
-                                <img class="img-fluid" src="/img/stockImages/login_register/googleLogo.png" alt="">
+                            <button class="col-3 border-secondary eLogin-button row" type="submit" name="gIdentify">
+                                <img class="img-fluid col-12" src="/img/stockImages/login_register/googleLogo.png"
+                                    alt="">
+                                <p class="col-12 text-dark">
+                                    Iniciar sesión con Google
+                                </p>
                             </button>
 
                             <!-- X -->
-                            <button name="xIdentify" class="col-2 eLogin-button">
-                                <img class="img-fluid" src="/img/stockImages/login_register/xLogo.png" alt="">
+                            <button name="xIdentify" class="col-3 eLogin-button row">
+                                <img class="img-fluid col-12" src="/img/stockImages/login_register/xLogo.png" alt="">
+                                <p class="col-12 text-dark">
+                                    Iniciar sesión con Twitter
+                                </p>
                             </button>
                         </form>
 
